@@ -1,16 +1,17 @@
-from interfaces.ui_header import Ui_frm_header
+from tools import subtasks_list
 from subtasks.subtask import Subtask
-from tools.subtasks_list import *
 from tools.combo_lists import *
 from tools.format_tools import *
 from tools.validation_tools import *
 from tools.message_boxes import *
 
+from interfaces.ui_header import Ui_frm_header
+
 
 class Header(Subtask, Ui_frm_header):
     def __init__(self):
         super().__init__()
-        self.task = tasks_list["Header"]["Description"]
+        self.task = subtasks_list.tasks_list["Header"]["Description"]
         self.image = "header.png"
 
         self.cbx_mch.addItems(machines_list)
@@ -54,11 +55,11 @@ class Header(Subtask, Ui_frm_header):
         self.packer(data)
 
     def packer(self, data: dict) -> None:
-        modified = self.modified_data
         data1 = (self.task, data)
-        self.data_pack = [modified, data1]
+        self.data_pack = [data1]
         self.collected_data_signal.emit()
         self.close()
+        self.modified_data = False
 
     def generator(self, data: dict) -> None:
         pass
@@ -86,19 +87,9 @@ class Header(Subtask, Ui_frm_header):
         # self.subtask1.show()
 
     def processor(self, data: dict) -> None:
-        """Procesa las condiciones y datos de programa
-
-        Args:
-            data (dict): Diccionario de datos recopilados
-        """
-
         pass
 
-    def button_switcher(self, data: dict) -> None:
-        """Actualiza las condiciones de los botones
+    def button_switcher(self, main_window) -> None:
 
-        Args:
-            data (dict): Diccionario de datos recopilados
-        """
-
-        pass
+        for button in main_window.main_buttons_list:
+            button.setEnabled(False)

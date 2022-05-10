@@ -1,0 +1,1530 @@
+[
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "site",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "site",
+        "description": "site",
+        "detail": "site",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "PySide6.QtCore",
+        "description": "PySide6.QtCore",
+        "isExtraImport": true,
+        "detail": "PySide6.QtCore",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "PySide6.QtCore",
+        "description": "PySide6.QtCore",
+        "isExtraImport": true,
+        "detail": "PySide6.QtCore",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "PySide6.QtCore",
+        "description": "PySide6.QtCore",
+        "isExtraImport": true,
+        "detail": "PySide6.QtCore",
+        "documentation": {}
+    },
+    {
+        "label": "Signal",
+        "importPath": "PySide6.QtCore",
+        "description": "PySide6.QtCore",
+        "isExtraImport": true,
+        "detail": "PySide6.QtCore",
+        "documentation": {}
+    },
+    {
+        "label": "QLibraryInfo",
+        "importPath": "PySide6.QtCore",
+        "description": "PySide6.QtCore",
+        "isExtraImport": true,
+        "detail": "PySide6.QtCore",
+        "documentation": {}
+    },
+    {
+        "label": "QTranslator",
+        "importPath": "PySide6.QtCore",
+        "description": "PySide6.QtCore",
+        "isExtraImport": true,
+        "detail": "PySide6.QtCore",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "PySide6.QtGui",
+        "description": "PySide6.QtGui",
+        "isExtraImport": true,
+        "detail": "PySide6.QtGui",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "PySide6.QtGui",
+        "description": "PySide6.QtGui",
+        "isExtraImport": true,
+        "detail": "PySide6.QtGui",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "PySide6.QtGui",
+        "description": "PySide6.QtGui",
+        "isExtraImport": true,
+        "detail": "PySide6.QtGui",
+        "documentation": {}
+    },
+    {
+        "label": "QPixmap",
+        "importPath": "PySide6.QtGui",
+        "description": "PySide6.QtGui",
+        "isExtraImport": true,
+        "detail": "PySide6.QtGui",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QMainWindow",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QMainWindow",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QMessageBox",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QLabel",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QAbstractItemView",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QApplication",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QMainWindow",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QTableWidgetItem",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "resources_rc",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "resources_rc",
+        "description": "resources_rc",
+        "detail": "resources_rc",
+        "documentation": {}
+    },
+    {
+        "label": "image_load",
+        "importPath": "tools.subtasks_tools",
+        "description": "tools.subtasks_tools",
+        "isExtraImport": true,
+        "detail": "tools.subtasks_tools",
+        "documentation": {}
+    },
+    {
+        "label": "key_pressed",
+        "importPath": "tools.subtasks_tools",
+        "description": "tools.subtasks_tools",
+        "isExtraImport": true,
+        "detail": "tools.subtasks_tools",
+        "documentation": {}
+    },
+    {
+        "label": "Helper",
+        "importPath": "subtasks.helper",
+        "description": "subtasks.helper",
+        "isExtraImport": true,
+        "detail": "subtasks.helper",
+        "documentation": {}
+    },
+    {
+        "label": "Ui_frm_helper",
+        "importPath": "interfaces.ui_helper",
+        "description": "interfaces.ui_helper",
+        "isExtraImport": true,
+        "detail": "interfaces.ui_helper",
+        "documentation": {}
+    },
+    {
+        "label": "subtasks_list",
+        "importPath": "tools",
+        "description": "tools",
+        "isExtraImport": true,
+        "detail": "tools",
+        "documentation": {}
+    },
+    {
+        "label": "subtasks_list",
+        "importPath": "tools",
+        "description": "tools",
+        "isExtraImport": true,
+        "detail": "tools",
+        "documentation": {}
+    },
+    {
+        "label": "subtasks_list",
+        "importPath": "tools",
+        "description": "tools",
+        "isExtraImport": true,
+        "detail": "tools",
+        "documentation": {}
+    },
+    {
+        "label": "subtasks_list",
+        "importPath": "tools",
+        "description": "tools",
+        "isExtraImport": true,
+        "detail": "tools",
+        "documentation": {}
+    },
+    {
+        "label": "subtasks_list",
+        "importPath": "tools",
+        "description": "tools",
+        "isExtraImport": true,
+        "detail": "tools",
+        "documentation": {}
+    },
+    {
+        "label": "subtasks_list",
+        "importPath": "tools",
+        "description": "tools",
+        "isExtraImport": true,
+        "detail": "tools",
+        "documentation": {}
+    },
+    {
+        "label": "Subtask",
+        "importPath": "subtasks.subtask",
+        "description": "subtasks.subtask",
+        "isExtraImport": true,
+        "detail": "subtasks.subtask",
+        "documentation": {}
+    },
+    {
+        "label": "Subtask",
+        "importPath": "subtasks.subtask",
+        "description": "subtasks.subtask",
+        "isExtraImport": true,
+        "detail": "subtasks.subtask",
+        "documentation": {}
+    },
+    {
+        "label": "Subtask",
+        "importPath": "subtasks.subtask",
+        "description": "subtasks.subtask",
+        "isExtraImport": true,
+        "detail": "subtasks.subtask",
+        "documentation": {}
+    },
+    {
+        "label": "Subtask",
+        "importPath": "subtasks.subtask",
+        "description": "subtasks.subtask",
+        "isExtraImport": true,
+        "detail": "subtasks.subtask",
+        "documentation": {}
+    },
+    {
+        "label": "Subtask",
+        "importPath": "subtasks.subtask",
+        "description": "subtasks.subtask",
+        "isExtraImport": true,
+        "detail": "subtasks.subtask",
+        "documentation": {}
+    },
+    {
+        "label": "Subtask",
+        "importPath": "subtasks.subtask",
+        "description": "subtasks.subtask",
+        "isExtraImport": true,
+        "detail": "subtasks.subtask",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "tools.combo_lists",
+        "description": "tools.combo_lists",
+        "isExtraImport": true,
+        "detail": "tools.combo_lists",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "tools.combo_lists",
+        "description": "tools.combo_lists",
+        "isExtraImport": true,
+        "detail": "tools.combo_lists",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "tools.combo_lists",
+        "description": "tools.combo_lists",
+        "isExtraImport": true,
+        "detail": "tools.combo_lists",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "tools.combo_lists",
+        "description": "tools.combo_lists",
+        "isExtraImport": true,
+        "detail": "tools.combo_lists",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "tools.combo_lists",
+        "description": "tools.combo_lists",
+        "isExtraImport": true,
+        "detail": "tools.combo_lists",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "tools.combo_lists",
+        "description": "tools.combo_lists",
+        "isExtraImport": true,
+        "detail": "tools.combo_lists",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "tools.format_tools",
+        "description": "tools.format_tools",
+        "isExtraImport": true,
+        "detail": "tools.format_tools",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "tools.format_tools",
+        "description": "tools.format_tools",
+        "isExtraImport": true,
+        "detail": "tools.format_tools",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "tools.format_tools",
+        "description": "tools.format_tools",
+        "isExtraImport": true,
+        "detail": "tools.format_tools",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "tools.format_tools",
+        "description": "tools.format_tools",
+        "isExtraImport": true,
+        "detail": "tools.format_tools",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "tools.format_tools",
+        "description": "tools.format_tools",
+        "isExtraImport": true,
+        "detail": "tools.format_tools",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "tools.format_tools",
+        "description": "tools.format_tools",
+        "isExtraImport": true,
+        "detail": "tools.format_tools",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "tools.validation_tools",
+        "description": "tools.validation_tools",
+        "isExtraImport": true,
+        "detail": "tools.validation_tools",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "tools.validation_tools",
+        "description": "tools.validation_tools",
+        "isExtraImport": true,
+        "detail": "tools.validation_tools",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "tools.validation_tools",
+        "description": "tools.validation_tools",
+        "isExtraImport": true,
+        "detail": "tools.validation_tools",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "tools.validation_tools",
+        "description": "tools.validation_tools",
+        "isExtraImport": true,
+        "detail": "tools.validation_tools",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "tools.validation_tools",
+        "description": "tools.validation_tools",
+        "isExtraImport": true,
+        "detail": "tools.validation_tools",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "tools.validation_tools",
+        "description": "tools.validation_tools",
+        "isExtraImport": true,
+        "detail": "tools.validation_tools",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "tools.message_boxes",
+        "description": "tools.message_boxes",
+        "isExtraImport": true,
+        "detail": "tools.message_boxes",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "tools.message_boxes",
+        "description": "tools.message_boxes",
+        "isExtraImport": true,
+        "detail": "tools.message_boxes",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "tools.message_boxes",
+        "description": "tools.message_boxes",
+        "isExtraImport": true,
+        "detail": "tools.message_boxes",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "tools.message_boxes",
+        "description": "tools.message_boxes",
+        "isExtraImport": true,
+        "detail": "tools.message_boxes",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "tools.message_boxes",
+        "description": "tools.message_boxes",
+        "isExtraImport": true,
+        "detail": "tools.message_boxes",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "tools.message_boxes",
+        "description": "tools.message_boxes",
+        "isExtraImport": true,
+        "detail": "tools.message_boxes",
+        "documentation": {}
+    },
+    {
+        "label": "Ui_frm_header",
+        "importPath": "interfaces.ui_header",
+        "description": "interfaces.ui_header",
+        "isExtraImport": true,
+        "detail": "interfaces.ui_header",
+        "documentation": {}
+    },
+    {
+        "label": "Ui_frm_header",
+        "importPath": "interfaces.ui_header",
+        "description": "interfaces.ui_header",
+        "isExtraImport": true,
+        "detail": "interfaces.ui_header",
+        "documentation": {}
+    },
+    {
+        "label": "Ui_frm_header",
+        "importPath": "interfaces.ui_header",
+        "description": "interfaces.ui_header",
+        "isExtraImport": true,
+        "detail": "interfaces.ui_header",
+        "documentation": {}
+    },
+    {
+        "label": "Ui_frm_header",
+        "importPath": "interfaces.ui_header",
+        "description": "interfaces.ui_header",
+        "isExtraImport": true,
+        "detail": "interfaces.ui_header",
+        "documentation": {}
+    },
+    {
+        "label": "Ui_frm_header",
+        "importPath": "interfaces.ui_header",
+        "description": "interfaces.ui_header",
+        "isExtraImport": true,
+        "detail": "interfaces.ui_header",
+        "documentation": {}
+    },
+    {
+        "label": "Ui_frm_header",
+        "importPath": "interfaces.ui_header",
+        "description": "interfaces.ui_header",
+        "isExtraImport": true,
+        "detail": "interfaces.ui_header",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "contextlib",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "contextlib",
+        "description": "contextlib",
+        "detail": "contextlib",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "tools.constants",
+        "description": "tools.constants",
+        "isExtraImport": true,
+        "detail": "tools.constants",
+        "documentation": {}
+    },
+    {
+        "label": "date",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "QtCore",
+        "importPath": "PySide6",
+        "description": "PySide6",
+        "isExtraImport": true,
+        "detail": "PySide6",
+        "documentation": {}
+    },
+    {
+        "label": "QtCore",
+        "importPath": "PySide6",
+        "description": "PySide6",
+        "isExtraImport": true,
+        "detail": "PySide6",
+        "documentation": {}
+    },
+    {
+        "label": "QtCore",
+        "importPath": "PySide6",
+        "description": "PySide6",
+        "isExtraImport": true,
+        "detail": "PySide6",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "header",
+        "importPath": "subtasks",
+        "description": "subtasks",
+        "isExtraImport": true,
+        "detail": "subtasks",
+        "documentation": {}
+    },
+    {
+        "label": "free",
+        "importPath": "subtasks",
+        "description": "subtasks",
+        "isExtraImport": true,
+        "detail": "subtasks",
+        "documentation": {}
+    },
+    {
+        "label": "comment",
+        "importPath": "subtasks",
+        "description": "subtasks",
+        "isExtraImport": true,
+        "detail": "subtasks",
+        "documentation": {}
+    },
+    {
+        "label": "subrutine",
+        "importPath": "subtasks",
+        "description": "subtasks",
+        "isExtraImport": true,
+        "detail": "subtasks",
+        "documentation": {}
+    },
+    {
+        "label": "collect",
+        "importPath": "subtasks",
+        "description": "subtasks",
+        "isExtraImport": true,
+        "detail": "subtasks",
+        "documentation": {}
+    },
+    {
+        "label": "end",
+        "importPath": "subtasks",
+        "description": "subtasks",
+        "isExtraImport": true,
+        "detail": "subtasks",
+        "documentation": {}
+    },
+    {
+        "label": "Ui_MainWindow",
+        "importPath": "interfaces.ui_MainWindow",
+        "description": "interfaces.ui_MainWindow",
+        "isExtraImport": true,
+        "detail": "interfaces.ui_MainWindow",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "tools.data_tools",
+        "description": "tools.data_tools",
+        "isExtraImport": true,
+        "detail": "tools.data_tools",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "tools.directories_tools",
+        "description": "tools.directories_tools",
+        "isExtraImport": true,
+        "detail": "tools.directories_tools",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "tools.subtasks_list",
+        "description": "tools.subtasks_list",
+        "isExtraImport": true,
+        "detail": "tools.subtasks_list",
+        "documentation": {}
+    },
+    {
+        "label": "bin_dir",
+        "kind": 5,
+        "importPath": "venv.Scripts.activate_this",
+        "description": "venv.Scripts.activate_this",
+        "peekOfCode": "bin_dir = os.path.dirname(abs_file)\nbase = bin_dir[: -len(\"Scripts\") - 1]  # strip away the bin part from the __file__, plus the path separator\n# prepend bin to PATH (this file is inside the bin directory)\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir] + os.environ.get(\"PATH\", \"\").split(os.pathsep))\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"..\\Lib\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)",
+        "detail": "venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "base",
+        "kind": 5,
+        "importPath": "venv.Scripts.activate_this",
+        "description": "venv.Scripts.activate_this",
+        "peekOfCode": "base = bin_dir[: -len(\"Scripts\") - 1]  # strip away the bin part from the __file__, plus the path separator\n# prepend bin to PATH (this file is inside the bin directory)\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir] + os.environ.get(\"PATH\", \"\").split(os.pathsep))\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"..\\Lib\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]",
+        "detail": "venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"PATH\"]",
+        "kind": 5,
+        "importPath": "venv.Scripts.activate_this",
+        "description": "venv.Scripts.activate_this",
+        "peekOfCode": "os.environ[\"PATH\"] = os.pathsep.join([bin_dir] + os.environ.get(\"PATH\", \"\").split(os.pathsep))\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"..\\Lib\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"VIRTUAL_ENV\"]",
+        "kind": 5,
+        "importPath": "venv.Scripts.activate_this",
+        "description": "venv.Scripts.activate_this",
+        "peekOfCode": "os.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"..\\Lib\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "prev_length",
+        "kind": 5,
+        "importPath": "venv.Scripts.activate_this",
+        "description": "venv.Scripts.activate_this",
+        "peekOfCode": "prev_length = len(sys.path)\nfor lib in \"..\\Lib\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.path[:]",
+        "kind": 5,
+        "importPath": "venv.Scripts.activate_this",
+        "description": "venv.Scripts.activate_this",
+        "peekOfCode": "sys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.real_prefix",
+        "kind": 5,
+        "importPath": "venv.Scripts.activate_this",
+        "description": "venv.Scripts.activate_this",
+        "peekOfCode": "sys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.prefix",
+        "kind": 5,
+        "importPath": "venv.Scripts.activate_this",
+        "description": "venv.Scripts.activate_this",
+        "peekOfCode": "sys.prefix = base",
+        "detail": "venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "Ui_MainWindow",
+        "kind": 6,
+        "importPath": "interfaces.ui_MainWindow",
+        "description": "interfaces.ui_MainWindow",
+        "peekOfCode": "class Ui_MainWindow(object):\n    def setupUi(self, MainWindow):\n        if not MainWindow.objectName():\n            MainWindow.setObjectName(u\"MainWindow\")\n        MainWindow.resize(1190, 1294)\n        sizePolicy = QSizePolicy(QSizePolicy.Minimum, QSizePolicy.Minimum)\n        sizePolicy.setHorizontalStretch(0)\n        sizePolicy.setVerticalStretch(0)\n        sizePolicy.setHeightForWidth(MainWindow.sizePolicy().hasHeightForWidth())\n        MainWindow.setSizePolicy(sizePolicy)",
+        "detail": "interfaces.ui_MainWindow",
+        "documentation": {}
+    },
+    {
+        "label": "Ui_frm_helper",
+        "kind": 6,
+        "importPath": "interfaces.ui_helper",
+        "description": "interfaces.ui_helper",
+        "peekOfCode": "class Ui_frm_helper(object):\n    def setupUi(self, frm_helper):\n        if not frm_helper.objectName():\n            frm_helper.setObjectName(u\"frm_helper\")\n        frm_helper.resize(600, 600)\n        sizePolicy = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)\n        sizePolicy.setHorizontalStretch(0)\n        sizePolicy.setVerticalStretch(0)\n        sizePolicy.setHeightForWidth(frm_helper.sizePolicy().hasHeightForWidth())\n        frm_helper.setSizePolicy(sizePolicy)",
+        "detail": "interfaces.ui_helper",
+        "documentation": {}
+    },
+    {
+        "label": "Ui_frm_header",
+        "kind": 6,
+        "importPath": "interfaces.ui_header",
+        "description": "interfaces.ui_header",
+        "peekOfCode": "class Ui_frm_header(object):\n    def setupUi(self, frm_header):\n        if not frm_header.objectName():\n            frm_header.setObjectName(u\"frm_header\")\n        frm_header.resize(210, 530)\n        sizePolicy = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)\n        sizePolicy.setHorizontalStretch(0)\n        sizePolicy.setVerticalStretch(0)\n        sizePolicy.setHeightForWidth(frm_header.sizePolicy().hasHeightForWidth())\n        frm_header.setSizePolicy(sizePolicy)",
+        "detail": "interfaces.ui_header",
+        "documentation": {}
+    },
+    {
+        "label": "Subtask",
+        "kind": 6,
+        "importPath": "subtasks.subtask",
+        "description": "subtasks.subtask",
+        "peekOfCode": "class Subtask(QMainWindow):\n    collected_data_signal = Signal()\n    updated_data_signal = Signal()\n    def __init__(self):\n        super().__init__()\n        self.helper1 = Helper()\n        self.setupUi(self)\n        self.move(0, 0)\n        self.data_pack = None\n        self.modified_data = False",
+        "detail": "subtasks.subtask",
+        "documentation": {}
+    },
+    {
+        "label": "Helper",
+        "kind": 6,
+        "importPath": "subtasks.helper",
+        "description": "subtasks.helper",
+        "peekOfCode": "class Helper(QMainWindow, Ui_frm_helper):\n    def __init__(self):\n        super().__init__()\n        self.setupUi(self)\n    def closeEvent(self, event):\n        self.close()",
+        "detail": "subtasks.helper",
+        "documentation": {}
+    },
+    {
+        "label": "Header",
+        "kind": 6,
+        "importPath": "subtasks.header",
+        "description": "subtasks.header",
+        "peekOfCode": "class Header(Subtask, Ui_frm_header):\n    def __init__(self):\n        super().__init__()\n        self.task = subtasks_list.tasks_list[\"Header\"][\"Description\"]\n        self.image = \"header.png\"\n        self.cbx_mch.addItems(machines_list)\n        self.cbx_cof.addItems(cutoff_list)\n        self.cbx_wrk.addItems(work_offset_list)\n    def collector(self) -> None:\n        data = {",
+        "detail": "subtasks.header",
+        "documentation": {}
+    },
+    {
+        "label": "Free",
+        "kind": 6,
+        "importPath": "subtasks.free",
+        "description": "subtasks.free",
+        "peekOfCode": "class Free(Subtask, Ui_frm_header):\n    def __init__(self):\n        super().__init__()\n        self.task = subtasks_list.tasks_list[\"Header\"][\"Description\"]\n        self.image = \"header.png\"",
+        "detail": "subtasks.free",
+        "documentation": {}
+    },
+    {
+        "label": "Comment",
+        "kind": 6,
+        "importPath": "subtasks.comment",
+        "description": "subtasks.comment",
+        "peekOfCode": "class Comment(Subtask, Ui_frm_header):\n    def __init__(self):\n        super().__init__()\n        self.task = subtasks_list.tasks_list[\"Header\"][\"Description\"]\n        self.image = \"header.png\"",
+        "detail": "subtasks.comment",
+        "documentation": {}
+    },
+    {
+        "label": "Subrutine",
+        "kind": 6,
+        "importPath": "subtasks.subrutine",
+        "description": "subtasks.subrutine",
+        "peekOfCode": "class Subrutine(Subtask, Ui_frm_header):\n    def __init__(self):\n        super().__init__()\n        self.task = subtasks_list.tasks_list[\"Header\"][\"Description\"]\n        self.image = \"header.png\"",
+        "detail": "subtasks.subrutine",
+        "documentation": {}
+    },
+    {
+        "label": "Collect",
+        "kind": 6,
+        "importPath": "subtasks.collect",
+        "description": "subtasks.collect",
+        "peekOfCode": "class Collect(Subtask, Ui_frm_header):\n    def __init__(self):\n        super().__init__()\n        self.task = subtasks_list.tasks_list[\"Header\"][\"Description\"]\n        self.image = \"header.png\"",
+        "detail": "subtasks.collect",
+        "documentation": {}
+    },
+    {
+        "label": "End",
+        "kind": 6,
+        "importPath": "subtasks.end",
+        "description": "subtasks.end",
+        "peekOfCode": "class End(Subtask, Ui_frm_header):\n    def __init__(self):\n        super().__init__()\n        self.task = subtasks_list.tasks_list[\"Header\"][\"Description\"]\n        self.image = \"header.png\"",
+        "detail": "subtasks.end",
+        "documentation": {}
+    },
+    {
+        "label": "save_config_file",
+        "kind": 2,
+        "importPath": "tools.files_tools",
+        "description": "tools.files_tools",
+        "peekOfCode": "def save_config_file(name: str, source: list) -> None:\n    if not source:\n        return\n    file = f\"{name}.json\"\n    with open(file, \"w\") as file:\n        json.dump(source, file)\ndef update_file_name():\n    return \"nada\"",
+        "detail": "tools.files_tools",
+        "documentation": {}
+    },
+    {
+        "label": "update_file_name",
+        "kind": 2,
+        "importPath": "tools.files_tools",
+        "description": "tools.files_tools",
+        "peekOfCode": "def update_file_name():\n    return \"nada\"",
+        "detail": "tools.files_tools",
+        "documentation": {}
+    },
+    {
+        "label": "prefab_space",
+        "kind": 2,
+        "importPath": "tools.prefab_blocks",
+        "description": "tools.prefab_blocks",
+        "peekOfCode": "def prefab_space() -> list:\n    return [\n        \" \",\n        {\n            \"Fre\": \" \",\n        },\n    ]\ndef prefab_comment(comment: str, side: str) -> list:\n    return [\n        \"        Comentario\",",
+        "detail": "tools.prefab_blocks",
+        "documentation": {}
+    },
+    {
+        "label": "prefab_comment",
+        "kind": 2,
+        "importPath": "tools.prefab_blocks",
+        "description": "tools.prefab_blocks",
+        "peekOfCode": "def prefab_comment(comment: str, side: str) -> list:\n    return [\n        \"        Comentario\",\n        {\n            \"Com\": comment,\n            \"Sde\": side,\n            \"Blk\": False,\n        },\n    ]\ndef prefab_tool_close(tool: int, side: str, bar: float) -> list:",
+        "detail": "tools.prefab_blocks",
+        "documentation": {}
+    },
+    {
+        "label": "prefab_tool_close",
+        "kind": 2,
+        "importPath": "tools.prefab_blocks",
+        "description": "tools.prefab_blocks",
+        "peekOfCode": "def prefab_tool_close(tool: int, side: str, bar: float) -> list:\n    return [\n        \"    Cerrar herramienta\",\n        {\n            \"Tol\": tool,\n            \"Sde\": side,\n            \"Dia\": bar,\n            \"Blk\": False,\n        },\n    ]",
+        "detail": "tools.prefab_blocks",
+        "documentation": {}
+    },
+    {
+        "label": "prefab_spindle",
+        "kind": 2,
+        "importPath": "tools.prefab_blocks",
+        "description": "tools.prefab_blocks",
+        "peekOfCode": "def prefab_spindle(speed: int, rotation: str, side: str) -> list:\n    return [\n        \"        Giro husillo\",\n        {\"Spd\": speed, \"Rot\": rotation, \"Sde\": side, \"Blk\": False},\n    ]",
+        "detail": "tools.prefab_blocks",
+        "documentation": {}
+    },
+    {
+        "label": "Config_folders",
+        "kind": 6,
+        "importPath": "tools.directories_tools",
+        "description": "tools.directories_tools",
+        "peekOfCode": "class Config_folders:\n    def __init__(self) -> None:\n        self.root = ROOT_DIR\n        self.machines = MACHINES\n    def create_machine_folders(self) -> None:\n        with contextlib.suppress(FileExistsError):\n            os.mkdir(self.root)\n        os.chdir(self.root)\n        with contextlib.suppress(FileExistsError):\n            for machine in self.machines:",
+        "detail": "tools.directories_tools",
+        "documentation": {}
+    },
+    {
+        "label": "ROOT_DIR",
+        "kind": 5,
+        "importPath": "tools.constants",
+        "description": "tools.constants",
+        "peekOfCode": "ROOT_DIR = \"C:/GCodeEditor\"\nMACHINES = (\"B12\", \"A16\")",
+        "detail": "tools.constants",
+        "documentation": {}
+    },
+    {
+        "label": "MACHINES",
+        "kind": 5,
+        "importPath": "tools.constants",
+        "description": "tools.constants",
+        "peekOfCode": "MACHINES = (\"B12\", \"A16\")",
+        "detail": "tools.constants",
+        "documentation": {}
+    },
+    {
+        "label": "ftext",
+        "kind": 2,
+        "importPath": "tools.format_tools",
+        "description": "tools.format_tools",
+        "peekOfCode": "def ftext(text_string: str) -> str:\n    return text_string.upper()\ndef ftape(machine: str, tape_number: int) -> str:\n    if machine != \"OMNITURN\":\n        tape_number = str(tape_number)\n        if len(tape_number) < 4:\n            if machine == \"MAZAK\":\n                while len(tape_number) != 8:\n                    tape_number = f\"0{tape_number}\"\n            else:",
+        "detail": "tools.format_tools",
+        "documentation": {}
+    },
+    {
+        "label": "ftape",
+        "kind": 2,
+        "importPath": "tools.format_tools",
+        "description": "tools.format_tools",
+        "peekOfCode": "def ftape(machine: str, tape_number: int) -> str:\n    if machine != \"OMNITURN\":\n        tape_number = str(tape_number)\n        if len(tape_number) < 4:\n            if machine == \"MAZAK\":\n                while len(tape_number) != 8:\n                    tape_number = f\"0{tape_number}\"\n            else:\n                while len(tape_number) != 4:\n                    tape_number = f\"0{tape_number}\"",
+        "detail": "tools.format_tools",
+        "documentation": {}
+    },
+    {
+        "label": "foper",
+        "kind": 2,
+        "importPath": "tools.format_tools",
+        "description": "tools.format_tools",
+        "peekOfCode": "def foper(operation: str) -> float:\n    result = \"\"\n    if operation != \"\":\n        try:\n            result = eval(operation)\n            result = float(fnum4(result))\n        except NameError:\n            result = 0\n    return result\ndef fdia(diameter: str) -> str:",
+        "detail": "tools.format_tools",
+        "documentation": {}
+    },
+    {
+        "label": "fdia",
+        "kind": 2,
+        "importPath": "tools.format_tools",
+        "description": "tools.format_tools",
+        "peekOfCode": "def fdia(diameter: str) -> str:\n    diameter = \"{0:.3f}\".format(float(diameter))\n    while True:\n        if diameter[0] == \"-\":\n            if diameter[1] != \"0\":\n                break\n            diameter = f\"-{diameter[2:]}\"\n        elif diameter[0] != \"0\":\n            break\n        else:",
+        "detail": "tools.format_tools",
+        "documentation": {}
+    },
+    {
+        "label": "fnum3",
+        "kind": 2,
+        "importPath": "tools.format_tools",
+        "description": "tools.format_tools",
+        "peekOfCode": "def fnum3(number_string: str) -> str:\n    number_string = \"{0:.3f}\".format(float(number_string))\n    while number_string[-1] == \"0\" and number_string[-2] != \".\":\n        number_string = number_string[:-1]\n    while True:\n        if number_string[0] == \"-\":\n            if number_string[1] != \"0\":\n                break\n            number_string = f\"-{number_string[2:]}\"\n        elif number_string[0] != \"0\":",
+        "detail": "tools.format_tools",
+        "documentation": {}
+    },
+    {
+        "label": "fnum4",
+        "kind": 2,
+        "importPath": "tools.format_tools",
+        "description": "tools.format_tools",
+        "peekOfCode": "def fnum4(number_string: str) -> str:\n    number_string = \"{0:.4f}\".format(float(number_string))\n    while number_string[-1] == \"0\" and number_string[-2] != \".\":\n        number_string = number_string[:-1]\n    while True:\n        if number_string[0] == \"-\":\n            if number_string[1] != \"0\":\n                break\n            number_string = f\"-{number_string[2:]}\"\n        elif number_string[0] != \"0\":",
+        "detail": "tools.format_tools",
+        "documentation": {}
+    },
+    {
+        "label": "fversion",
+        "kind": 2,
+        "importPath": "tools.format_tools",
+        "description": "tools.format_tools",
+        "peekOfCode": "def fversion() -> str:\n    return date.today().strftime(\"V%m.%d.%y\")\ndef fspace() -> str:\n    return \" \"\ndef fcom(tool: int, compensations: list) -> float:\n    return compensations[tool] if tool in compensations else False\ndef fparam(parameter_value: float) -> str:\n    parameter_value = str(int(float(fnum3(parameter_value)) * 10000))\n    while len(parameter_value) < 10:\n        parameter_value = f\"0{parameter_value}\"",
+        "detail": "tools.format_tools",
+        "documentation": {}
+    },
+    {
+        "label": "fspace",
+        "kind": 2,
+        "importPath": "tools.format_tools",
+        "description": "tools.format_tools",
+        "peekOfCode": "def fspace() -> str:\n    return \" \"\ndef fcom(tool: int, compensations: list) -> float:\n    return compensations[tool] if tool in compensations else False\ndef fparam(parameter_value: float) -> str:\n    parameter_value = str(int(float(fnum3(parameter_value)) * 10000))\n    while len(parameter_value) < 10:\n        parameter_value = f\"0{parameter_value}\"\n    return parameter_value\ndef ffed(feed_string: str) -> str:",
+        "detail": "tools.format_tools",
+        "documentation": {}
+    },
+    {
+        "label": "fcom",
+        "kind": 2,
+        "importPath": "tools.format_tools",
+        "description": "tools.format_tools",
+        "peekOfCode": "def fcom(tool: int, compensations: list) -> float:\n    return compensations[tool] if tool in compensations else False\ndef fparam(parameter_value: float) -> str:\n    parameter_value = str(int(float(fnum3(parameter_value)) * 10000))\n    while len(parameter_value) < 10:\n        parameter_value = f\"0{parameter_value}\"\n    return parameter_value\ndef ffed(feed_string: str) -> str:\n    try:\n        feed_string = \"{0:.4f}\".format(float(feed_string))",
+        "detail": "tools.format_tools",
+        "documentation": {}
+    },
+    {
+        "label": "fparam",
+        "kind": 2,
+        "importPath": "tools.format_tools",
+        "description": "tools.format_tools",
+        "peekOfCode": "def fparam(parameter_value: float) -> str:\n    parameter_value = str(int(float(fnum3(parameter_value)) * 10000))\n    while len(parameter_value) < 10:\n        parameter_value = f\"0{parameter_value}\"\n    return parameter_value\ndef ffed(feed_string: str) -> str:\n    try:\n        feed_string = \"{0:.4f}\".format(float(feed_string))\n        while feed_string[-1] == \"0\":\n            feed_string = feed_string[:-1]",
+        "detail": "tools.format_tools",
+        "documentation": {}
+    },
+    {
+        "label": "ffed",
+        "kind": 2,
+        "importPath": "tools.format_tools",
+        "description": "tools.format_tools",
+        "peekOfCode": "def ffed(feed_string: str) -> str:\n    try:\n        feed_string = \"{0:.4f}\".format(float(feed_string))\n        while feed_string[-1] == \"0\":\n            feed_string = feed_string[:-1]\n        while feed_string[0] == \"0\":\n            feed_string = feed_string[1:]\n    except IndexError:\n        feed_string = \".0005\"\n    feed_string = \"0\" if feed_string == \".\" else feed_string",
+        "detail": "tools.format_tools",
+        "documentation": {}
+    },
+    {
+        "label": "new_tape_question",
+        "kind": 2,
+        "importPath": "tools.message_boxes",
+        "description": "tools.message_boxes",
+        "peekOfCode": "def new_tape_question(self) -> QMessageBox:\n    return QMessageBox.question(\n        self,\n        \"Nuevo programa\",\n        \"¿Desea comenzar un nuevo programa en blanco?\",\n        buttons=QMessageBox.Yes | QMessageBox.No,\n        defaultButton=QMessageBox.No,\n    )\ndef data_type_error(self) -> QMessageBox:\n    return QMessageBox.critical(",
+        "detail": "tools.message_boxes",
+        "documentation": {}
+    },
+    {
+        "label": "data_type_error",
+        "kind": 2,
+        "importPath": "tools.message_boxes",
+        "description": "tools.message_boxes",
+        "peekOfCode": "def data_type_error(self) -> QMessageBox:\n    return QMessageBox.critical(\n        self,\n        \"Error en tipo de datos\",\n        \"Tipo de datos no válido\",\n    )\ndef blank_data_error(self) -> QMessageBox:\n    return QMessageBox.critical(\n        self,\n        \"Datos requeridos faltantes\",",
+        "detail": "tools.message_boxes",
+        "documentation": {}
+    },
+    {
+        "label": "blank_data_error",
+        "kind": 2,
+        "importPath": "tools.message_boxes",
+        "description": "tools.message_boxes",
+        "peekOfCode": "def blank_data_error(self) -> QMessageBox:\n    return QMessageBox.critical(\n        self,\n        \"Datos requeridos faltantes\",\n        \"No puede haber datos en blanco\",\n    )\ndef all_blank_data_error(self) -> QMessageBox:\n    return QMessageBox.critical(\n        self,\n        \"Datos requeridos faltantes\",",
+        "detail": "tools.message_boxes",
+        "documentation": {}
+    },
+    {
+        "label": "all_blank_data_error",
+        "kind": 2,
+        "importPath": "tools.message_boxes",
+        "description": "tools.message_boxes",
+        "peekOfCode": "def all_blank_data_error(self) -> QMessageBox:\n    return QMessageBox.critical(\n        self,\n        \"Datos requeridos faltantes\",\n        \"No pueden quedar todos los datos en blanco\",\n    )\ndef required_data_error(self) -> QMessageBox:\n    return QMessageBox.critical(\n        self,\n        \"Datos requeridos faltantes\",",
+        "detail": "tools.message_boxes",
+        "documentation": {}
+    },
+    {
+        "label": "required_data_error",
+        "kind": 2,
+        "importPath": "tools.message_boxes",
+        "description": "tools.message_boxes",
+        "peekOfCode": "def required_data_error(self) -> QMessageBox:\n    return QMessageBox.critical(\n        self,\n        \"Datos requeridos faltantes\",\n        \"Digite los datos requeridos para la operación\",\n    )\ndef movement_error_information(self) -> QMessageBox:\n    return QMessageBox.information(\n        self,\n        \"Movimiento no permitido\",",
+        "detail": "tools.message_boxes",
+        "documentation": {}
+    },
+    {
+        "label": "movement_error_information",
+        "kind": 2,
+        "importPath": "tools.message_boxes",
+        "description": "tools.message_boxes",
+        "peekOfCode": "def movement_error_information(self) -> QMessageBox:\n    return QMessageBox.information(\n        self,\n        \"Movimiento no permitido\",\n        \"El encabezado y fin de programa\\nno deben ser movidos\",\n    )\ndef delete_header_information(self) -> QMessageBox:\n    return QMessageBox.information(\n        self,\n        \"Borrando encabezado\",",
+        "detail": "tools.message_boxes",
+        "documentation": {}
+    },
+    {
+        "label": "delete_header_information",
+        "kind": 2,
+        "importPath": "tools.message_boxes",
+        "description": "tools.message_boxes",
+        "peekOfCode": "def delete_header_information(self) -> QMessageBox:\n    return QMessageBox.information(\n        self,\n        \"Borrando encabezado\",\n        \"El encabezado del programa no debe ser borrado\",\n    )\ndef delete_lines_warning(self) -> QMessageBox:\n    return QMessageBox.warning(\n        self,\n        \"Borrar líneas\",",
+        "detail": "tools.message_boxes",
+        "documentation": {}
+    },
+    {
+        "label": "delete_lines_warning",
+        "kind": 2,
+        "importPath": "tools.message_boxes",
+        "description": "tools.message_boxes",
+        "peekOfCode": "def delete_lines_warning(self) -> QMessageBox:\n    return QMessageBox.warning(\n        self,\n        \"Borrar líneas\",\n        \"¿Desea borrar las líneas seleccionadas?\",\n        buttons=QMessageBox.Yes | QMessageBox.No,\n        defaultButton=QMessageBox.No,\n    )\ndef duplicate_header_information(self) -> QMessageBox:\n    return QMessageBox.information(",
+        "detail": "tools.message_boxes",
+        "documentation": {}
+    },
+    {
+        "label": "duplicate_header_information",
+        "kind": 2,
+        "importPath": "tools.message_boxes",
+        "description": "tools.message_boxes",
+        "peekOfCode": "def duplicate_header_information(self) -> QMessageBox:\n    return QMessageBox.information(\n        self,\n        \"Duplicando encabezado\",\n        \"El encabezado no debe ser duplicado\",\n    )\ndef file_open_error(self) -> QMessageBox:\n    return QMessageBox.critical(\n        self,\n        \"Error al abrir archivo\",",
+        "detail": "tools.message_boxes",
+        "documentation": {}
+    },
+    {
+        "label": "file_open_error",
+        "kind": 2,
+        "importPath": "tools.message_boxes",
+        "description": "tools.message_boxes",
+        "peekOfCode": "def file_open_error(self) -> QMessageBox:\n    return QMessageBox.critical(\n        self,\n        \"Error al abrir archivo\",\n        \"No se puede cargar el programa seleccionado\",\n    )",
+        "detail": "tools.message_boxes",
+        "documentation": {}
+    },
+    {
+        "label": "key_pressed",
+        "kind": 2,
+        "importPath": "tools.subtasks_tools",
+        "description": "tools.subtasks_tools",
+        "peekOfCode": "def key_pressed(self, qKeyEvent) -> None:\n    if qKeyEvent.key() in [\n        QtCore.Qt.Key_Return,\n        QtCore.Qt.Key_Enter,\n        QtCore.Qt.Key_Down,\n    ]:\n        self.focusNextChild()\n    if qKeyEvent.key() == QtCore.Qt.Key_Up:\n        self.focusPreviousChild()\n    elif qKeyEvent.key() == QtCore.Qt.Key_Escape:",
+        "detail": "tools.subtasks_tools",
+        "documentation": {}
+    },
+    {
+        "label": "abs_path",
+        "kind": 2,
+        "importPath": "tools.subtasks_tools",
+        "description": "tools.subtasks_tools",
+        "peekOfCode": "def abs_path(file: str) -> str:\n    return str(Path(__file__).parent.absolute() / file)\ndef image_load(label: QLabel, image: str) -> None:\n    image = QPixmap(abs_path(f\"../resources/{image}\"))\n    label.setPixmap(image)\n    label.setScaledContents(True)",
+        "detail": "tools.subtasks_tools",
+        "documentation": {}
+    },
+    {
+        "label": "image_load",
+        "kind": 2,
+        "importPath": "tools.subtasks_tools",
+        "description": "tools.subtasks_tools",
+        "peekOfCode": "def image_load(label: QLabel, image: str) -> None:\n    image = QPixmap(abs_path(f\"../resources/{image}\"))\n    label.setPixmap(image)\n    label.setScaledContents(True)",
+        "detail": "tools.subtasks_tools",
+        "documentation": {}
+    },
+    {
+        "label": "all_empty",
+        "kind": 2,
+        "importPath": "tools.validation_tools",
+        "description": "tools.validation_tools",
+        "peekOfCode": "def all_empty(data: dict) -> bool:\n    items_list = list(data.items())\n    filtered_list = items_list[:-1]\n    empties = sum(item[1] == \"\" for item in filtered_list)\n    if empties == len(data) - 1:\n        return True\ndef any_empty(data: dict) -> bool:\n    empties = sum(value == \"\" for _, value in data.items())\n    if empties > 0:\n        return True",
+        "detail": "tools.validation_tools",
+        "documentation": {}
+    },
+    {
+        "label": "any_empty",
+        "kind": 2,
+        "importPath": "tools.validation_tools",
+        "description": "tools.validation_tools",
+        "peekOfCode": "def any_empty(data: dict) -> bool:\n    empties = sum(value == \"\" for _, value in data.items())\n    if empties > 0:\n        return True",
+        "detail": "tools.validation_tools",
+        "documentation": {}
+    },
+    {
+        "label": "tasks_list",
+        "kind": 5,
+        "importPath": "tools.subtasks_list",
+        "description": "tools.subtasks_list",
+        "peekOfCode": "tasks_list = {\n    \"Header\": {\n        \"Name\": header.Header,\n        \"Description\": \"Inicio de programa\",\n    },\n    \"Free\": {\n        \"Name\": free.Free,\n        \"Description\": \" \",\n    },\n    \"Comment\": {",
+        "detail": "tools.subtasks_list",
+        "documentation": {}
+    },
+    {
+        "label": "Data_lists",
+        "kind": 6,
+        "importPath": "tools.data_tools",
+        "description": "tools.data_tools",
+        "peekOfCode": "class Data_lists:\n    def __init__(self) -> None:\n        self.config_list = []\n        self.tape1_list = []\n        self.tape2_list = []\n        self.subtask1 = None\nclass Names_list:\n    def __init__(self) -> None:\n        self.config_file_name = \"\"",
+        "detail": "tools.data_tools",
+        "documentation": {}
+    },
+    {
+        "label": "Names_list",
+        "kind": 6,
+        "importPath": "tools.data_tools",
+        "description": "tools.data_tools",
+        "peekOfCode": "class Names_list:\n    def __init__(self) -> None:\n        self.config_file_name = \"\"",
+        "detail": "tools.data_tools",
+        "documentation": {}
+    },
+    {
+        "label": "kswiss_to_swiss",
+        "kind": 2,
+        "importPath": "tools.compensation_tools",
+        "description": "tools.compensation_tools",
+        "peekOfCode": "def kswiss_to_swiss(tool: int, side: str) -> int:\n    tools1 = {1: 11, 2: 12, 3: 13, 4: 14, 5: 15}\n    tools2 = {11: 16, 12: 17, 13: 18, 14: 18}\n    if side == \"$1\" and tool in tools1:\n        tool = tools1[tool]\n    elif side == \"$3\" and tool in tools2:\n        tool = tools2[tool]\n    return tool\ndef swiss_to_kswiss(tool: int, side: str) -> int:\n    tools1 = {11: 1, 12: 2, 13: 3, 14: 4, 15: 5}",
+        "detail": "tools.compensation_tools",
+        "documentation": {}
+    },
+    {
+        "label": "swiss_to_kswiss",
+        "kind": 2,
+        "importPath": "tools.compensation_tools",
+        "description": "tools.compensation_tools",
+        "peekOfCode": "def swiss_to_kswiss(tool: int, side: str) -> int:\n    tools1 = {11: 1, 12: 2, 13: 3, 14: 4, 15: 5}\n    tools2 = {16: 11, 17: 12, 18: 13}\n    if side == \"$1\" and tool in tools1:\n        tool = tools1[tool]\n    elif side == \"$3\" and tool in tools2:\n        tool = tools2[tool]\n    return tool",
+        "detail": "tools.compensation_tools",
+        "documentation": {}
+    },
+    {
+        "label": "swiss_compensations",
+        "kind": 5,
+        "importPath": "tools.compensation_tools",
+        "description": "tools.compensation_tools",
+        "peekOfCode": "swiss_compensations = {\n    11: 0.06,\n    14: 0.1,\n    15: 0.03,\n    16: 0.295,\n    17: 0.295,\n    18: 0.295,\n}\nkswiss_compensations = {\n    1: 0.06,",
+        "detail": "tools.compensation_tools",
+        "documentation": {}
+    },
+    {
+        "label": "kswiss_compensations",
+        "kind": 5,
+        "importPath": "tools.compensation_tools",
+        "description": "tools.compensation_tools",
+        "peekOfCode": "kswiss_compensations = {\n    1: 0.06,\n    4: 0.1,\n    5: 0.03,\n    11: 0.394,\n    12: 0.394,\n    13: 0.394,\n    14: 0.394,\n}\nswiss_kswiss_tools = {",
+        "detail": "tools.compensation_tools",
+        "documentation": {}
+    },
+    {
+        "label": "swiss_kswiss_tools",
+        "kind": 5,
+        "importPath": "tools.compensation_tools",
+        "description": "tools.compensation_tools",
+        "peekOfCode": "swiss_kswiss_tools = {\n    11: 1,\n    12: 2,\n    13: 3,\n    14: 4,\n    15: 5,\n    16: 11,\n    17: 12,\n    18: 13,\n}",
+        "detail": "tools.compensation_tools",
+        "documentation": {}
+    },
+    {
+        "label": "kswiss_swiss_tools",
+        "kind": 5,
+        "importPath": "tools.compensation_tools",
+        "description": "tools.compensation_tools",
+        "peekOfCode": "kswiss_swiss_tools = {\n    1: 11,\n    2: 12,\n    3: 13,\n    4: 14,\n    5: 15,\n    11: 16,\n    12: 17,\n    13: 18,\n    14: 18,",
+        "detail": "tools.compensation_tools",
+        "documentation": {}
+    },
+    {
+        "label": "tape_sides_list",
+        "kind": 5,
+        "importPath": "tools.combo_lists",
+        "description": "tools.combo_lists",
+        "peekOfCode": "tape_sides_list = (\n    \"$1\",\n    \"$2\",\n    \"$3\",\n)\nmachines_list = (\n    \"B12\",\n    \"A16\",\n    \"K16\",\n    \"E16\",",
+        "detail": "tools.combo_lists",
+        "documentation": {}
+    },
+    {
+        "label": "machines_list",
+        "kind": 5,
+        "importPath": "tools.combo_lists",
+        "description": "tools.combo_lists",
+        "peekOfCode": "machines_list = (\n    \"B12\",\n    \"A16\",\n    \"K16\",\n    \"E16\",\n    \"OMNITURN\",\n    \"ROMI\",\n    \"HARDINGE\",\n    \"MAZAK\",\n)",
+        "detail": "tools.combo_lists",
+        "documentation": {}
+    },
+    {
+        "label": "cutoff_list",
+        "kind": 5,
+        "importPath": "tools.combo_lists",
+        "description": "tools.combo_lists",
+        "peekOfCode": "cutoff_list = (\n    \"DERECHA\",\n    \"IZQUIERDA\",\n    \"NO APLICA\",\n)\nwork_offset_list = (\n    \"G50 (TORNO)\",\n    \"G54 (PLATO 30 PIEZAS)\",\n    \"G55 (PRENSA PRECISION)\",\n    \"G56 (PRENSA PRECISION)\",",
+        "detail": "tools.combo_lists",
+        "documentation": {}
+    },
+    {
+        "label": "work_offset_list",
+        "kind": 5,
+        "importPath": "tools.combo_lists",
+        "description": "tools.combo_lists",
+        "peekOfCode": "work_offset_list = (\n    \"G50 (TORNO)\",\n    \"G54 (PLATO 30 PIEZAS)\",\n    \"G55 (PRENSA PRECISION)\",\n    \"G56 (PRENSA PRECISION)\",\n    \"G57 (APARATO DIVISOR)\",\n    \"G59 (BASE RACKS)\",\n)\ntool_list = (\n    \"CUCHILLA\",",
+        "detail": "tools.combo_lists",
+        "documentation": {}
+    },
+    {
+        "label": "tool_list",
+        "kind": 5,
+        "importPath": "tools.combo_lists",
+        "description": "tools.combo_lists",
+        "peekOfCode": "tool_list = (\n    \"CUCHILLA\",\n    \"FRESA\",\n    \"BROCA\",\n    \"SPOT\",\n    \"BARRA TORNEAR\",\n    \"DISCO SIERRA\",\n    \"VOLADOR\",\n    \"RIMA\",\n    \"MACHO ROSCAR\",",
+        "detail": "tools.combo_lists",
+        "documentation": {}
+    },
+    {
+        "label": "rotation_directions_list",
+        "kind": 5,
+        "importPath": "tools.combo_lists",
+        "description": "tools.combo_lists",
+        "peekOfCode": "rotation_directions_list = (\n    \"NORMAL\",\n    \"REVERSA\",\n    \"DETENER\",\n)\nprogram_stops_list = (\n    \"\",\n    \"PROGRAMADA\",\n    \"OPCIONAL\",\n)",
+        "detail": "tools.combo_lists",
+        "documentation": {}
+    },
+    {
+        "label": "program_stops_list",
+        "kind": 5,
+        "importPath": "tools.combo_lists",
+        "description": "tools.combo_lists",
+        "peekOfCode": "program_stops_list = (\n    \"\",\n    \"PROGRAMADA\",\n    \"OPCIONAL\",\n)\ncollet_operations_list = (\n    \"\",\n    \"ABRIR\",\n    \"CERRAR\",\n)",
+        "detail": "tools.combo_lists",
+        "documentation": {}
+    },
+    {
+        "label": "collet_operations_list",
+        "kind": 5,
+        "importPath": "tools.combo_lists",
+        "description": "tools.combo_lists",
+        "peekOfCode": "collet_operations_list = (\n    \"\",\n    \"ABRIR\",\n    \"CERRAR\",\n)\ncoolant_operations_list = (\n    \"\",\n    \"ACTIVAR\",\n    \"DESACTIVAR\",\n)",
+        "detail": "tools.combo_lists",
+        "documentation": {}
+    },
+    {
+        "label": "coolant_operations_list",
+        "kind": 5,
+        "importPath": "tools.combo_lists",
+        "description": "tools.combo_lists",
+        "peekOfCode": "coolant_operations_list = (\n    \"\",\n    \"ACTIVAR\",\n    \"DESACTIVAR\",\n)\nwork_planes_list = (\n    \"G17(- PLANO X-Y -)\",\n    \"G18(- PLANO X-Z -)\",\n    \"G19(- PLANO Y-Z -)\",\n)",
+        "detail": "tools.combo_lists",
+        "documentation": {}
+    },
+    {
+        "label": "work_planes_list",
+        "kind": 5,
+        "importPath": "tools.combo_lists",
+        "description": "tools.combo_lists",
+        "peekOfCode": "work_planes_list = (\n    \"G17(- PLANO X-Y -)\",\n    \"G18(- PLANO X-Z -)\",\n    \"G19(- PLANO Y-Z -)\",\n)\ncollect_modes = (\n    \"AUTOMATICO\",\n    \"MANUAL\",\n)\nlineal_moves_list = (",
+        "detail": "tools.combo_lists",
+        "documentation": {}
+    },
+    {
+        "label": "collect_modes",
+        "kind": 5,
+        "importPath": "tools.combo_lists",
+        "description": "tools.combo_lists",
+        "peekOfCode": "collect_modes = (\n    \"AUTOMATICO\",\n    \"MANUAL\",\n)\nlineal_moves_list = (\n    \"\",\n    \"RAPIDO\",\n    \"CORTE\",\n)\nradial_moves_list = (",
+        "detail": "tools.combo_lists",
+        "documentation": {}
+    },
+    {
+        "label": "lineal_moves_list",
+        "kind": 5,
+        "importPath": "tools.combo_lists",
+        "description": "tools.combo_lists",
+        "peekOfCode": "lineal_moves_list = (\n    \"\",\n    \"RAPIDO\",\n    \"CORTE\",\n)\nradial_moves_list = (\n    \"A FAVOR\",\n    \"EN CONTRA\",\n)",
+        "detail": "tools.combo_lists",
+        "documentation": {}
+    },
+    {
+        "label": "radial_moves_list",
+        "kind": 5,
+        "importPath": "tools.combo_lists",
+        "description": "tools.combo_lists",
+        "peekOfCode": "radial_moves_list = (\n    \"A FAVOR\",\n    \"EN CONTRA\",\n)",
+        "detail": "tools.combo_lists",
+        "documentation": {}
+    },
+    {
+        "label": "swiss_m_codes",
+        "kind": 5,
+        "importPath": "tools.cnc_codes",
+        "description": "tools.cnc_codes",
+        "peekOfCode": "swiss_m_codes = {\n    \"\": \"\",\n    \"PARADA PROGRAMADA\": \"M00\",\n    \"PARADA OPCIONAL\": \"M01\",\n    \"GIRO NORMAL\": \"M03\",\n    \"GIRO REVERSA\": \"M04\",\n    \"GIRO DETENER\": \"M05\",\n    \"CERRAR BOQUILLA\": \"M06\",\n    \"ABRIR BOQUILLA\": \"M07\",\n    \"ACTIVAR REFRIGERANTE\": \"M08\",",
+        "detail": "tools.cnc_codes",
+        "documentation": {}
+    },
+    {
+        "label": "swiss_g_codes",
+        "kind": 5,
+        "importPath": "tools.cnc_codes",
+        "description": "tools.cnc_codes",
+        "peekOfCode": "swiss_g_codes = {\n    \"\": \"\",\n    \"MOVIMIENTO RAPIDO\": \"G00\",\n    \"MOVIMIENTO CORTE\": \"G01\",\n    \"GIRO A FAVOR DEL RELOJ\": \"G02\",\n    \"GIRO EN CONTRA DEL RELOJ\": \"G03\",\n}\nlathe_g_codes = {\n    \"\": \"\",\n    \"MOVIMIENTO RAPIDO\": \"G00\",",
+        "detail": "tools.cnc_codes",
+        "documentation": {}
+    },
+    {
+        "label": "lathe_g_codes",
+        "kind": 5,
+        "importPath": "tools.cnc_codes",
+        "description": "tools.cnc_codes",
+        "peekOfCode": "lathe_g_codes = {\n    \"\": \"\",\n    \"MOVIMIENTO RAPIDO\": \"G00\",\n    \"MOVIMIENTO CORTE\": \"G01\",\n    \"GIRO A FAVOR DEL RELOJ\": \"G02\",\n    \"GIRO EN CONTRA DEL RELOJ\": \"G03\",\n}\nswiss_k_m_codes = {\n    \"\": \"\",\n    \"PARADA PROGRAMADA\": \"M00\",",
+        "detail": "tools.cnc_codes",
+        "documentation": {}
+    },
+    {
+        "label": "swiss_k_m_codes",
+        "kind": 5,
+        "importPath": "tools.cnc_codes",
+        "description": "tools.cnc_codes",
+        "peekOfCode": "swiss_k_m_codes = {\n    \"\": \"\",\n    \"PARADA PROGRAMADA\": \"M00\",\n    \"PARADA OPCIONAL\": \"M01\",\n    \"GIRO NORMAL $1\": \"M03\",\n    \"GIRO REVERSA $1\": \"M04\",\n    \"GIRO DETENER $1\": \"M05\",\n    \"CERRAR BOQUILLA $1\": \"M06\",\n    \"ABRIR BOQUILLA $1\": \"M07\",\n    \"ACTIVAR REFRIGERANTE\": \"M08\",",
+        "detail": "tools.cnc_codes",
+        "documentation": {}
+    },
+    {
+        "label": "omni_m_codes",
+        "kind": 5,
+        "importPath": "tools.cnc_codes",
+        "description": "tools.cnc_codes",
+        "peekOfCode": "omni_m_codes = {\n    \"\": \"\",\n    \"PARADA PROGRAMADA\": \"M00\",\n    \"PARADA OPCIONAL\": \"M01\",\n    \"GIRO NORMAL\": \"M03\",\n    \"GIRO REVERSA\": \"M04\",\n    \"GIRO DETENER\": \"M05\",\n    \"CERRAR BOQUILLA\": \"M12\",\n    \"ABRIR BOQUILLA\": \"M13\",\n    \"ACTIVAR REFRIGERANTE\": \"M08\",",
+        "detail": "tools.cnc_codes",
+        "documentation": {}
+    },
+    {
+        "label": "romi_m_codes",
+        "kind": 5,
+        "importPath": "tools.cnc_codes",
+        "description": "tools.cnc_codes",
+        "peekOfCode": "romi_m_codes = {\n    \"\": \"\",\n    \"PARADA PROGRAMADA\": \"M00\",\n    \"PARADA OPCIONAL\": \"M01\",\n    \"GIRO NORMAL\": \"M03\",\n    \"GIRO REVERSA\": \"M04\",\n    \"GIRO DETENER\": \"M05\",\n    \"ACTIVAR REFRIGERANTE\": \"M08\",\n    \"DESACTIVAR REFRIGERANTE\": \"M09\",\n    \"ABRIR BOQUILLA\": \"M24\",",
+        "detail": "tools.cnc_codes",
+        "documentation": {}
+    },
+    {
+        "label": "hardinge_m_codes",
+        "kind": 5,
+        "importPath": "tools.cnc_codes",
+        "description": "tools.cnc_codes",
+        "peekOfCode": "hardinge_m_codes = {\n    \"\": \"\",\n    \"PARADA PROGRAMADA\": \"M00\",\n    \"PARADA OPCIONAL\": \"M01\",\n    \"GIRO NORMAL\": \"M03\",\n    \"GIRO REVERSA\": \"M04\",\n    \"GIRO DETENER\": \"M05\",\n    \"ACTIVAR REFRIGERANTE\": \"M08\",\n    \"DESACTIVAR REFRIGERANTE\": \"M09\",\n    \"ABRIR BOQUILLA\": \"M21\",",
+        "detail": "tools.cnc_codes",
+        "documentation": {}
+    },
+    {
+        "label": "mazak_m_codes",
+        "kind": 5,
+        "importPath": "tools.cnc_codes",
+        "description": "tools.cnc_codes",
+        "peekOfCode": "mazak_m_codes = {\n    \"\": \"\",\n    \"PARADA PROGRAMADA\": \"M00\",\n    \"PARADA OPCIONAL\": \"M01\",\n    \"GIRO NORMAL\": \"M03\",\n    \"GIRO REVERSA\": \"M04\",\n    \"GIRO DETENER\": \"M05\",\n    \"ACTIVAR REFRIGERANTE\": \"M08\",\n    \"DESACTIVAR REFRIGERANTE\": \"M09\",\n    \"CERRAR BOQUILLA\": \"\",",
+        "detail": "tools.cnc_codes",
+        "documentation": {}
+    },
+    {
+        "label": "MainWindow",
+        "kind": 6,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "class MainWindow(QMainWindow, Ui_MainWindow):\n    # ?\n    # ?\n    # ? Inicialización de la clase principal *\n    # ? --------------------------------------------------------------------- *\n    # ?\n    # ?\n    def __init__(self):\n        super().__init__()\n        self.setupUi(self)",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "qInitResources",
+        "kind": 2,
+        "importPath": "resources_rc",
+        "description": "resources_rc",
+        "peekOfCode": "def qInitResources():\n    QtCore.qRegisterResourceData(0x03, qt_resource_struct, qt_resource_name, qt_resource_data)\ndef qCleanupResources():\n    QtCore.qUnregisterResourceData(0x03, qt_resource_struct, qt_resource_name, qt_resource_data)\nqInitResources()",
+        "detail": "resources_rc",
+        "documentation": {}
+    },
+    {
+        "label": "qCleanupResources",
+        "kind": 2,
+        "importPath": "resources_rc",
+        "description": "resources_rc",
+        "peekOfCode": "def qCleanupResources():\n    QtCore.qUnregisterResourceData(0x03, qt_resource_struct, qt_resource_name, qt_resource_data)\nqInitResources()",
+        "detail": "resources_rc",
+        "documentation": {}
+    },
+    {
+        "label": "qt_resource_data",
+        "kind": 5,
+        "importPath": "resources_rc",
+        "description": "resources_rc",
+        "peekOfCode": "qt_resource_data = b\"\\\n\\x00\\x008\\xab\\\n\\x89\\\nPNG\\x0d\\x0a\\x1a\\x0a\\x00\\x00\\x00\\x0dIHDR\\x00\\\n\\x00\\x02\\x00\\x00\\x00\\x02\\x00\\x08\\x06\\x00\\x00\\x00\\xf4x\\xd4\\xfa\\\n\\x00\\x00\\x00\\x04sBIT\\x08\\x08\\x08\\x08|\\x08d\\x88\\\n\\x00\\x00\\x00\\x09pHYs\\x00\\x00\\x0eH\\x00\\x00\\x0eH\\\n\\x01ko\\x0d\\xff\\x00\\x00\\x00\\x19tEXtSof\\\ntware\\x00www.inksca\\\npe.org\\x9b\\xee<\\x1a\\x00\\x008(ID\\",
+        "detail": "resources_rc",
+        "documentation": {}
+    },
+    {
+        "label": "qt_resource_name",
+        "kind": 5,
+        "importPath": "resources_rc",
+        "description": "resources_rc",
+        "peekOfCode": "qt_resource_name = b\"\\\n\\x00\\x05\\\n\\x00o\\xa6S\\\n\\x00i\\\n\\x00c\\x00o\\x00n\\x00s\\\n\\x00\\x0c\\\n\\x03v\\xc2\\x07\\\n\\x00q\\\n\\x00u\\x00e\\x00s\\x00t\\x00i\\x00o\\x00n\\x00.\\x00p\\x00n\\x00g\\\n\\x00\\x08\\",
+        "detail": "resources_rc",
+        "documentation": {}
+    },
+    {
+        "label": "qt_resource_struct",
+        "kind": 5,
+        "importPath": "resources_rc",
+        "description": "resources_rc",
+        "peekOfCode": "qt_resource_struct = b\"\\\n\\x00\\x00\\x00\\x00\\x00\\x02\\x00\\x00\\x00\\x01\\x00\\x00\\x00\\x01\\\n\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\\n\\x00\\x00\\x00\\x00\\x00\\x02\\x00\\x00\\x00\\x05\\x00\\x00\\x00\\x02\\\n\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\\n\\x00\\x00\\x00\\x10\\x00\\x00\\x00\\x00\\x00\\x01\\x00\\x00\\x00\\x00\\\n\\x00\\x00\\x01\\x80f\\xf7\\x88\\x0f\\\n\\x00\\x00\\x00D\\x00\\x00\\x00\\x00\\x00\\x01\\x00\\x00pB\\\n\\x00\\x00\\x01|\\xe0\\x9a\\xb9\\xe8\\\n\\x00\\x00\\x00.\\x00\\x00\\x00\\x00\\x00\\x01\\x00\\x008\\xaf\\",
+        "detail": "resources_rc",
+        "documentation": {}
+    }
+]

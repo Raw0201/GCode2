@@ -3,6 +3,7 @@ class Data_lists:
         self.config_list = []
         self.tape1_list = []
         self.tape2_list = []
+
         self.subtask1 = None
 
 

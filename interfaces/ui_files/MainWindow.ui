@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1002</width>
+    <width>1190</width>
     <height>1294</height>
    </rect>
   </property>
@@ -20,7 +20,7 @@
    <string>CNC Editor</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="../Gcode Editor 2.0/resources.qrc">
+   <iconset>
     <normaloff>:/icons/resources/gear.png</normaloff>:/icons/resources/gear.png</iconset>
   </property>
   <property name="styleSheet">
@@ -2331,7 +2331,7 @@ PlotWidget {
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1002</width>
+     <width>1190</width>
      <height>31</height>
     </rect>
    </property>
@@ -4054,7 +4054,7 @@ PlotWidget {
   <tabstop>config_widget</tabstop>
  </tabstops>
  <resources>
-  <include location="../Gcode Editor 2.0/resources.qrc"/>
+  <include location="../../resources/resources.qrc"/>
  </resources>
  <connections>
   <connection>
