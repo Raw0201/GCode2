@@ -42,6 +42,16 @@ kswiss_swiss_tools = {
 
 
 def kswiss_to_swiss(tool: int, side: str) -> int:
+    """Convierte números de herramienta desde K
+
+    Args:
+        tool (int): Número de herramienta
+        side (str): Lado del programa
+
+    Returns:
+        int: Número de herramienta convertido
+    """
+
     tools1 = {1: 11, 2: 12, 3: 13, 4: 14, 5: 15}
     tools2 = {11: 16, 12: 17, 13: 18, 14: 18}
 
@@ -54,6 +64,16 @@ def kswiss_to_swiss(tool: int, side: str) -> int:
 
 
 def swiss_to_kswiss(tool: int, side: str) -> int:
+    """Convierte números de herramienta hacia K
+
+    Args:
+        tool (int): Número de herramienta
+        side (str): Lado del programa
+
+    Returns:
+        int: Número de herramienta convertido
+    """
+
     tools1 = {11: 1, 12: 2, 13: 3, 14: 4, 15: 5}
     tools2 = {16: 11, 17: 12, 18: 13}
 

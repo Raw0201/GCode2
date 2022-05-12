@@ -1,4 +1,10 @@
 def prefab_space() -> list:
+    """Bloque prefabricado de espacio
+
+    Returns:
+        list: Bloque prefabricado
+    """
+
     return [
         " ",
         {
@@ -8,6 +14,12 @@ def prefab_space() -> list:
 
 
 def prefab_comment(comment: str, side: str) -> list:
+    """Bloque prefabricado de comentario
+
+    Returns:
+        list: Bloque prefabricado
+    """
+
     return [
         "        Comentario",
         {
@@ -19,6 +31,12 @@ def prefab_comment(comment: str, side: str) -> list:
 
 
 def prefab_tool_close(tool: int, side: str, bar: float) -> list:
+    """Bloque prefabricado de cierre de herramienta
+
+    Returns:
+        list: Bloque prefabricado
+    """
+
     return [
         "    Cerrar herramienta",
         {
@@ -31,6 +49,12 @@ def prefab_tool_close(tool: int, side: str, bar: float) -> list:
 
 
 def prefab_spindle(speed: int, rotation: str, side: str) -> list:
+    """Bloque prefabricado de activación de husillo
+
+    Returns:
+        list: Bloque prefabricado
+    """
+
     return [
         "        Giro husillo",
         {"Spd": speed, "Rot": rotation, "Sde": side, "Blk": False},

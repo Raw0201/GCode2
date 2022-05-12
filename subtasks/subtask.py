@@ -1,4 +1,3 @@
-from PySide6.QtCore import Signal
 from PySide6.QtWidgets import QMainWindow
 
 from tools.subtasks_tools import image_load, key_pressed
@@ -6,9 +5,6 @@ from subtasks.helper import Helper
 
 
 class Subtask(QMainWindow):
-    collected_data_signal = Signal()
-    updated_data_signal = Signal()
-
     def __init__(self):
         super().__init__()
         self.helper1 = Helper()
@@ -16,7 +12,7 @@ class Subtask(QMainWindow):
         self.move(0, 0)
 
         self.data_pack = None
-        self.modified_data = False
+        self.modification = False
         self.btn_save.clicked.connect(self.collector)
 
         self.image = ""

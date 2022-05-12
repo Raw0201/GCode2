@@ -20,8 +20,8 @@
    <string>CNC Editor - Gráfico</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="../Gcode Editor 2.0/resources.qrc">
-    <normaloff>:/icons/resources/gear.png</normaloff>:/icons/resources/gear.png</iconset>
+   <iconset resource="../../resources/resources.qrc">
+    <normaloff>:/icons/gear.png</normaloff>:/icons/gear.png</iconset>
   </property>
   <property name="styleSheet">
    <string notr="true">/* ---------------------------------------------------------------------------
@@ -2764,7 +2764,7 @@ PlotWidget {
   <tabstop>btn_free</tabstop>
  </tabstops>
  <resources>
-  <include location="../Gcode Editor 2.0/resources.qrc"/>
+  <include location="../../resources/resources.qrc"/>
  </resources>
  <connections>
   <connection>

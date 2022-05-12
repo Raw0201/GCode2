@@ -1,17 +1,23 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'headerdKPMZR.ui'
+## Form generated from reading UI file 'headerreoMoo.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.1.1
+## Created by: Qt User Interface Compiler version 6.3.0
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
 
-from PySide6.QtCore import *  # type: ignore
-from PySide6.QtGui import *  # type: ignore
-from PySide6.QtWidgets import *  # type: ignore
-
+from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
+    QMetaObject, QObject, QPoint, QRect,
+    QSize, QTime, QUrl, Qt)
+from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
+    QFont, QFontDatabase, QGradient, QIcon,
+    QImage, QKeySequence, QLinearGradient, QPainter,
+    QPalette, QPixmap, QRadialGradient, QTransform)
+from PySide6.QtWidgets import (QApplication, QComboBox, QFrame, QLabel,
+    QLineEdit, QMainWindow, QPushButton, QSizePolicy,
+    QToolButton, QWidget)
 import resources_rc
 
 class Ui_frm_header(object):
@@ -27,7 +33,7 @@ class Ui_frm_header(object):
         frm_header.setMinimumSize(QSize(210, 530))
         frm_header.setMaximumSize(QSize(210, 530))
         icon = QIcon()
-        icon.addFile(u":/icons/resources/gear.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon.addFile(u":/icons/gear.png", QSize(), QIcon.Normal, QIcon.Off)
         frm_header.setWindowIcon(icon)
         frm_header.setStyleSheet(u"/* ---------------------------------------------------------------------------\n"
 "\n"
@@ -2398,14 +2404,7 @@ class Ui_frm_header(object):
         font.setBold(True)
         self.btn_help.setFont(font)
         icon1 = QIcon()
-        icon1.addFile(u":/icons/resources/question.png", QSize(), QIcon.Normal, QIcon.Off)
-        icon1.addFile(u":/icons/resources/question.png", QSize(), QIcon.Normal, QIcon.On)
-        icon1.addFile(u":/icons/resources/question.png", QSize(), QIcon.Disabled, QIcon.Off)
-        icon1.addFile(u":/icons/resources/question.png", QSize(), QIcon.Disabled, QIcon.On)
-        icon1.addFile(u":/icons/resources/question.png", QSize(), QIcon.Active, QIcon.Off)
-        icon1.addFile(u":/icons/resources/question.png", QSize(), QIcon.Active, QIcon.On)
-        icon1.addFile(u":/icons/resources/question.png", QSize(), QIcon.Selected, QIcon.Off)
-        icon1.addFile(u":/icons/resources/question.png", QSize(), QIcon.Selected, QIcon.On)
+        icon1.addFile(u":/icons/question.png", QSize(), QIcon.Normal, QIcon.Off)
         self.btn_help.setIcon(icon1)
         self.btn_help.setIconSize(QSize(20, 20))
         frm_header.setCentralWidget(self.centralwidget)

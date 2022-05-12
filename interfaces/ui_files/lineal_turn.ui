@@ -32,8 +32,8 @@
    <string>GCode Editor</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="../Gcode Editor 2.0/resources.qrc">
-    <normaloff>:/icons/resources/gear.png</normaloff>:/icons/resources/gear.png</iconset>
+   <iconset resource="../../resources/resources.qrc">
+    <normaloff>:/icons/gear.png</normaloff>:/icons/gear.png</iconset>
   </property>
   <property name="styleSheet">
    <string notr="true">/* ---------------------------------------------------------------------------
@@ -2534,15 +2534,8 @@ PlotWidget {
      <string/>
     </property>
     <property name="icon">
-     <iconset resource="../Gcode Editor 2.0/resources.qrc">
-      <normaloff>:/icons/resources/question.png</normaloff>
-      <normalon>:/icons/resources/question.png</normalon>
-      <disabledoff>:/icons/resources/question.png</disabledoff>
-      <disabledon>:/icons/resources/question.png</disabledon>
-      <activeoff>:/icons/resources/question.png</activeoff>
-      <activeon>:/icons/resources/question.png</activeon>
-      <selectedoff>:/icons/resources/question.png</selectedoff>
-      <selectedon>:/icons/resources/question.png</selectedon>:/icons/resources/question.png</iconset>
+     <iconset resource="../../resources/resources.qrc">
+      <normaloff>:/icons/question.png</normaloff>:/icons/question.png</iconset>
     </property>
     <property name="iconSize">
      <size>
@@ -2567,7 +2560,7 @@ PlotWidget {
   <tabstop>btn_switch</tabstop>
  </tabstops>
  <resources>
-  <include location="../Gcode Editor 2.0/resources.qrc"/>
+  <include location="../../resources/resources.qrc"/>
  </resources>
  <connections/>
 </ui>

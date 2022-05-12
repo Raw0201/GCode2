@@ -1,17 +1,22 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'helperIRYrgr.ui'
+## Form generated from reading UI file 'helperrnCJGw.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.1.1
+## Created by: Qt User Interface Compiler version 6.3.0
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
 
-from PySide6.QtCore import *  # type: ignore
-from PySide6.QtGui import *  # type: ignore
-from PySide6.QtWidgets import *  # type: ignore
-
+from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
+    QMetaObject, QObject, QPoint, QRect,
+    QSize, QTime, QUrl, Qt)
+from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
+    QFont, QFontDatabase, QGradient, QIcon,
+    QImage, QKeySequence, QLinearGradient, QPainter,
+    QPalette, QPixmap, QRadialGradient, QTransform)
+from PySide6.QtWidgets import (QApplication, QLabel, QMainWindow, QSizePolicy,
+    QVBoxLayout, QWidget)
 import resources_rc
 
 class Ui_frm_helper(object):
@@ -27,7 +32,7 @@ class Ui_frm_helper(object):
         frm_helper.setMinimumSize(QSize(600, 600))
         frm_helper.setMaximumSize(QSize(1200, 1200))
         icon = QIcon()
-        icon.addFile(u":/icons/resources/gear.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon.addFile(u":/icons/gear.png", QSize(), QIcon.Normal, QIcon.Off)
         frm_helper.setWindowIcon(icon)
         frm_helper.setStyleSheet(u"/* ---------------------------------------------------------------------------\n"
 "\n"

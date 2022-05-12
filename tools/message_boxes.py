@@ -2,6 +2,12 @@ from PySide6.QtWidgets import QMessageBox
 
 
 def new_tape_question(self) -> QMessageBox:
+    """Mensaje de nuevo programa en blanco
+
+    Returns:
+        QMessageBox: Caja de texto
+    """
+
     return QMessageBox.question(
         self,
         "Nuevo programa",
@@ -12,6 +18,12 @@ def new_tape_question(self) -> QMessageBox:
 
 
 def data_type_error(self) -> QMessageBox:
+    """Mensaje de error en tipo de datos
+
+    Returns:
+        QMessageBox: Caja de texto
+    """
+
     return QMessageBox.critical(
         self,
         "Error en tipo de datos",
@@ -20,6 +32,12 @@ def data_type_error(self) -> QMessageBox:
 
 
 def blank_data_error(self) -> QMessageBox:
+    """Mensaje de datos en blanco
+
+    Returns:
+        QMessageBox: Caja de texto
+    """
+
     return QMessageBox.critical(
         self,
         "Datos requeridos faltantes",
@@ -28,6 +46,12 @@ def blank_data_error(self) -> QMessageBox:
 
 
 def all_blank_data_error(self) -> QMessageBox:
+    """Mensaje de todos los datos en blanco
+
+    Returns:
+        QMessageBox: Caja de texto
+    """
+
     return QMessageBox.critical(
         self,
         "Datos requeridos faltantes",
@@ -36,6 +60,12 @@ def all_blank_data_error(self) -> QMessageBox:
 
 
 def required_data_error(self) -> QMessageBox:
+    """Mensaje de error en datos requeridos
+
+    Returns:
+        QMessageBox: Caja de texto
+    """
+
     return QMessageBox.critical(
         self,
         "Datos requeridos faltantes",
@@ -44,6 +74,12 @@ def required_data_error(self) -> QMessageBox:
 
 
 def movement_error_information(self) -> QMessageBox:
+    """Mensaje de error en movimiento de líneas
+
+    Returns:
+        QMessageBox: Caja de texto
+    """
+
     return QMessageBox.information(
         self,
         "Movimiento no permitido",
@@ -52,6 +88,12 @@ def movement_error_information(self) -> QMessageBox:
 
 
 def delete_header_information(self) -> QMessageBox:
+    """Mensaje de error en borrado de información
+
+    Returns:
+        QMessageBox: Caja de texto
+    """
+
     return QMessageBox.information(
         self,
         "Borrando encabezado",
@@ -60,6 +102,12 @@ def delete_header_information(self) -> QMessageBox:
 
 
 def delete_lines_warning(self) -> QMessageBox:
+    """Mensaje de confirmación de borrado de información
+
+    Returns:
+        QMessageBox: Caja de texto
+    """
+
     return QMessageBox.warning(
         self,
         "Borrar líneas",
@@ -70,6 +118,12 @@ def delete_lines_warning(self) -> QMessageBox:
 
 
 def duplicate_header_information(self) -> QMessageBox:
+    """Mensaje de información de duplicación de información
+
+    Returns:
+        QMessageBox: Caja de texto
+    """
+
     return QMessageBox.information(
         self,
         "Duplicando encabezado",
@@ -78,6 +132,12 @@ def duplicate_header_information(self) -> QMessageBox:
 
 
 def file_open_error(self) -> QMessageBox:
+    """Mensaje de error en apertura de archivo
+
+    Returns:
+        QMessageBox: Caja de texto
+    """
+
     return QMessageBox.critical(
         self,
         "Error al abrir archivo",

@@ -6,6 +6,12 @@ from PySide6.QtWidgets import QLabel
 
 
 def key_pressed(self, qKeyEvent) -> None:
+    """Evento de accionamiento de tecla
+
+    Args:
+        qKeyEvent (QEvent): Evento de tecla presionada
+    """
+
     if qKeyEvent.key() in [
         QtCore.Qt.Key_Return,
         QtCore.Qt.Key_Enter,
@@ -25,10 +31,26 @@ def key_pressed(self, qKeyEvent) -> None:
 
 
 def abs_path(file: str) -> str:
+    """Obtiene la ruta absoluta a un archivo
+
+    Args:
+        file (str): Archivo
+
+    Returns:
+        str: Ruta absoluta
+    """
+
     return str(Path(__file__).parent.absolute() / file)
 
 
 def image_load(label: QLabel, image: str) -> None:
+    """Carga de imágenes en una etiqueta
+
+    Args:
+        label (QLabel): Etiqueta del widget
+        image (str): Imagen a mostrar
+    """
+
     image = QPixmap(abs_path(f"../resources/{image}"))
     label.setPixmap(image)
     label.setScaledContents(True)
