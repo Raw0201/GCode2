@@ -3118,7 +3118,7 @@ PlotWidget {
              <number>5</number>
             </property>
             <item row="3" column="0">
-             <widget class="QPushButton" name="btn_radial_3">
+             <widget class="QPushButton" name="btn_radial_mill">
               <property name="toolTip">
                <string>Realizar un movimiento radial de mecanizado para fresado</string>
               </property>
@@ -3144,7 +3144,7 @@ PlotWidget {
              </widget>
             </item>
             <item row="2" column="0">
-             <widget class="QPushButton" name="btn_lineal_3">
+             <widget class="QPushButton" name="btn_lineal_mill">
               <property name="toolTip">
                <string>Realizar un movimiento lineal de mecanizado o posicionamiento para fresado</string>
               </property>
@@ -3217,7 +3217,7 @@ PlotWidget {
              <number>5</number>
             </property>
             <item row="4" column="0">
-             <widget class="QPushButton" name="btn_bevel">
+             <widget class="QPushButton" name="btn_bevel_mill">
               <property name="toolTip">
                <string>Realizar un mecanizado de bisel</string>
               </property>
@@ -3230,7 +3230,7 @@ PlotWidget {
              </widget>
             </item>
             <item row="5" column="0">
-             <widget class="QPushButton" name="btn_facing">
+             <widget class="QPushButton" name="btn_facing_mill">
               <property name="toolTip">
                <string>Realizar un mecanizado de refrentado</string>
               </property>
@@ -3243,7 +3243,7 @@ PlotWidget {
              </widget>
             </item>
             <item row="2" column="0">
-             <widget class="QPushButton" name="btn_flat">
+             <widget class="QPushButton" name="btn_flat_mill">
               <property name="toolTip">
                <string>Realizar un mecanizado de palete</string>
               </property>
@@ -3256,7 +3256,7 @@ PlotWidget {
              </widget>
             </item>
             <item row="3" column="0">
-             <widget class="QPushButton" name="btn_face">
+             <widget class="QPushButton" name="btn_face_mill">
               <property name="toolTip">
                <string>Realizar un mecanizado de caras</string>
               </property>
@@ -3269,7 +3269,7 @@ PlotWidget {
              </widget>
             </item>
             <item row="7" column="0">
-             <widget class="QPushButton" name="btn_concaver">
+             <widget class="QPushButton" name="btn_concaver_mill">
               <property name="toolTip">
                <string>Realizar un mecanizado de chócola</string>
               </property>
@@ -3282,7 +3282,7 @@ PlotWidget {
              </widget>
             </item>
             <item row="6" column="0">
-             <widget class="QPushButton" name="btn_slotting">
+             <widget class="QPushButton" name="btn_slotting_mill">
               <property name="toolTip">
                <string>Realizar un mecanizado de ranurado</string>
               </property>
@@ -3480,7 +3480,7 @@ PlotWidget {
              </widget>
             </item>
             <item row="7" column="0">
-             <widget class="QPushButton" name="btn_lineal_rgh_y">
+             <widget class="QPushButton" name="btn_lineal_rgh_y_sub">
               <property name="toolTip">
                <string>Agrega el desbaste vertical a la subrutina</string>
               </property>
@@ -3493,7 +3493,7 @@ PlotWidget {
              </widget>
             </item>
             <item row="3" column="0">
-             <widget class="QPushButton" name="btn_flatten">
+             <widget class="QPushButton" name="btn_flatten_sub">
               <property name="toolTip">
                <string>Agrega el refrentado de platina a la subrutina</string>
               </property>
@@ -3545,7 +3545,7 @@ PlotWidget {
              </widget>
             </item>
             <item row="5" column="0">
-             <widget class="QPushButton" name="btn_lineal_rgh_x">
+             <widget class="QPushButton" name="btn_lineal_rgh_x_sub">
               <property name="toolTip">
                <string>Agrega el desbaste horizontal a la subrutina</string>
               </property>
@@ -4018,6 +4018,9 @@ PlotWidget {
    <property name="statusTip">
     <string>Duplicar las líneas seleccionadas</string>
    </property>
+   <property name="shortcut">
+    <string>Alt+D</string>
+   </property>
   </action>
  </widget>
  <tabstops>
@@ -4030,12 +4033,12 @@ PlotWidget {
   <tabstop>btn_radial_turn</tabstop>
   <tabstop>btn_thread</tabstop>
   <tabstop>btn_cutoff</tabstop>
-  <tabstop>btn_flat</tabstop>
-  <tabstop>btn_face</tabstop>
-  <tabstop>btn_bevel</tabstop>
-  <tabstop>btn_facing</tabstop>
-  <tabstop>btn_slotting</tabstop>
-  <tabstop>btn_concaver</tabstop>
+  <tabstop>btn_flat_mill</tabstop>
+  <tabstop>btn_face_mill</tabstop>
+  <tabstop>btn_bevel_mill</tabstop>
+  <tabstop>btn_facing_mill</tabstop>
+  <tabstop>btn_slotting_mill</tabstop>
+  <tabstop>btn_concaver_mill</tabstop>
   <tabstop>btn_center</tabstop>
   <tabstop>btn_drill</tabstop>
   <tabstop>btn_csink</tabstop>
@@ -4043,11 +4046,11 @@ PlotWidget {
   <tabstop>btn_platter_data</tabstop>
   <tabstop>btn_call_square</tabstop>
   <tabstop>btn_call_flatten</tabstop>
-  <tabstop>btn_flatten</tabstop>
+  <tabstop>btn_flatten_sub</tabstop>
   <tabstop>btn_call_lineal_x</tabstop>
-  <tabstop>btn_lineal_rgh_x</tabstop>
+  <tabstop>btn_lineal_rgh_x_sub</tabstop>
   <tabstop>btn_call_lineal_y</tabstop>
-  <tabstop>btn_lineal_rgh_y</tabstop>
+  <tabstop>btn_lineal_rgh_y_sub</tabstop>
   <tabstop>tabWidget_principal</tabstop>
   <tabstop>tape1_widget</tabstop>
   <tabstop>tape2_widget</tabstop>

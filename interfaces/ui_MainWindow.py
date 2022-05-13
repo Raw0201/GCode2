@@ -1,26 +1,17 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'MainWindowpAcWOW.ui'
+## Form generated from reading UI file 'MainWindowCZMhBB.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.3.0
+## Created by: Qt User Interface Compiler version 6.1.1
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
 
-from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
-    QMetaObject, QObject, QPoint, QRect,
-    QSize, QTime, QUrl, Qt)
-from PySide6.QtGui import (QAction, QBrush, QColor, QConicalGradient,
-    QCursor, QFont, QFontDatabase, QGradient,
-    QIcon, QImage, QKeySequence, QLinearGradient,
-    QPainter, QPalette, QPixmap, QRadialGradient,
-    QTransform)
-from PySide6.QtWidgets import (QAbstractItemView, QApplication, QDockWidget, QGridLayout,
-    QGroupBox, QHBoxLayout, QHeaderView, QMainWindow,
-    QMenu, QMenuBar, QPushButton, QSizePolicy,
-    QSpacerItem, QStatusBar, QTabWidget, QTableWidget,
-    QTableWidgetItem, QVBoxLayout, QWidget)
+from PySide6.QtCore import *  # type: ignore
+from PySide6.QtGui import *  # type: ignore
+from PySide6.QtWidgets import *  # type: ignore
+
 import resources_rc
 
 class Ui_MainWindow(object):
@@ -2696,20 +2687,20 @@ class Ui_MainWindow(object):
         self.gridLayout_10.setHorizontalSpacing(3)
         self.gridLayout_10.setVerticalSpacing(5)
         self.gridLayout_10.setContentsMargins(1, 10, 1, 1)
-        self.btn_radial_3 = QPushButton(self.groupBox_milling)
-        self.btn_radial_3.setObjectName(u"btn_radial_3")
+        self.btn_radial_mill = QPushButton(self.groupBox_milling)
+        self.btn_radial_mill.setObjectName(u"btn_radial_mill")
 
-        self.gridLayout_10.addWidget(self.btn_radial_3, 3, 0, 1, 1)
+        self.gridLayout_10.addWidget(self.btn_radial_mill, 3, 0, 1, 1)
 
         self.btn_mill_end = QPushButton(self.groupBox_milling)
         self.btn_mill_end.setObjectName(u"btn_mill_end")
 
         self.gridLayout_10.addWidget(self.btn_mill_end, 1, 0, 1, 1)
 
-        self.btn_lineal_3 = QPushButton(self.groupBox_milling)
-        self.btn_lineal_3.setObjectName(u"btn_lineal_3")
+        self.btn_lineal_mill = QPushButton(self.groupBox_milling)
+        self.btn_lineal_mill.setObjectName(u"btn_lineal_mill")
 
-        self.gridLayout_10.addWidget(self.btn_lineal_3, 2, 0, 1, 1)
+        self.gridLayout_10.addWidget(self.btn_lineal_mill, 2, 0, 1, 1)
 
         self.btn_mill_ini = QPushButton(self.groupBox_milling)
         self.btn_mill_ini.setObjectName(u"btn_mill_ini")
@@ -2735,35 +2726,35 @@ class Ui_MainWindow(object):
         self.gridLayout_7.setHorizontalSpacing(3)
         self.gridLayout_7.setVerticalSpacing(5)
         self.gridLayout_7.setContentsMargins(1, 10, 1, 1)
-        self.btn_bevel = QPushButton(self.groupBox_mill_cycles)
-        self.btn_bevel.setObjectName(u"btn_bevel")
+        self.btn_bevel_mill = QPushButton(self.groupBox_mill_cycles)
+        self.btn_bevel_mill.setObjectName(u"btn_bevel_mill")
 
-        self.gridLayout_7.addWidget(self.btn_bevel, 4, 0, 1, 1)
+        self.gridLayout_7.addWidget(self.btn_bevel_mill, 4, 0, 1, 1)
 
-        self.btn_facing = QPushButton(self.groupBox_mill_cycles)
-        self.btn_facing.setObjectName(u"btn_facing")
+        self.btn_facing_mill = QPushButton(self.groupBox_mill_cycles)
+        self.btn_facing_mill.setObjectName(u"btn_facing_mill")
 
-        self.gridLayout_7.addWidget(self.btn_facing, 5, 0, 1, 1)
+        self.gridLayout_7.addWidget(self.btn_facing_mill, 5, 0, 1, 1)
 
-        self.btn_flat = QPushButton(self.groupBox_mill_cycles)
-        self.btn_flat.setObjectName(u"btn_flat")
+        self.btn_flat_mill = QPushButton(self.groupBox_mill_cycles)
+        self.btn_flat_mill.setObjectName(u"btn_flat_mill")
 
-        self.gridLayout_7.addWidget(self.btn_flat, 2, 0, 1, 1)
+        self.gridLayout_7.addWidget(self.btn_flat_mill, 2, 0, 1, 1)
 
-        self.btn_face = QPushButton(self.groupBox_mill_cycles)
-        self.btn_face.setObjectName(u"btn_face")
+        self.btn_face_mill = QPushButton(self.groupBox_mill_cycles)
+        self.btn_face_mill.setObjectName(u"btn_face_mill")
 
-        self.gridLayout_7.addWidget(self.btn_face, 3, 0, 1, 1)
+        self.gridLayout_7.addWidget(self.btn_face_mill, 3, 0, 1, 1)
 
-        self.btn_concaver = QPushButton(self.groupBox_mill_cycles)
-        self.btn_concaver.setObjectName(u"btn_concaver")
+        self.btn_concaver_mill = QPushButton(self.groupBox_mill_cycles)
+        self.btn_concaver_mill.setObjectName(u"btn_concaver_mill")
 
-        self.gridLayout_7.addWidget(self.btn_concaver, 7, 0, 1, 1)
+        self.gridLayout_7.addWidget(self.btn_concaver_mill, 7, 0, 1, 1)
 
-        self.btn_slotting = QPushButton(self.groupBox_mill_cycles)
-        self.btn_slotting.setObjectName(u"btn_slotting")
+        self.btn_slotting_mill = QPushButton(self.groupBox_mill_cycles)
+        self.btn_slotting_mill.setObjectName(u"btn_slotting_mill")
 
-        self.gridLayout_7.addWidget(self.btn_slotting, 6, 0, 1, 1)
+        self.gridLayout_7.addWidget(self.btn_slotting_mill, 6, 0, 1, 1)
 
 
         self.verticalLayout_3.addWidget(self.groupBox_mill_cycles)
@@ -2838,15 +2829,15 @@ class Ui_MainWindow(object):
 
         self.gridLayout_6.addWidget(self.btn_call_square, 1, 0, 1, 1)
 
-        self.btn_lineal_rgh_y = QPushButton(self.groupBox_platter)
-        self.btn_lineal_rgh_y.setObjectName(u"btn_lineal_rgh_y")
+        self.btn_lineal_rgh_y_sub = QPushButton(self.groupBox_platter)
+        self.btn_lineal_rgh_y_sub.setObjectName(u"btn_lineal_rgh_y_sub")
 
-        self.gridLayout_6.addWidget(self.btn_lineal_rgh_y, 7, 0, 1, 1)
+        self.gridLayout_6.addWidget(self.btn_lineal_rgh_y_sub, 7, 0, 1, 1)
 
-        self.btn_flatten = QPushButton(self.groupBox_platter)
-        self.btn_flatten.setObjectName(u"btn_flatten")
+        self.btn_flatten_sub = QPushButton(self.groupBox_platter)
+        self.btn_flatten_sub.setObjectName(u"btn_flatten_sub")
 
-        self.gridLayout_6.addWidget(self.btn_flatten, 3, 0, 1, 1)
+        self.gridLayout_6.addWidget(self.btn_flatten_sub, 3, 0, 1, 1)
 
         self.btn_call_lineal_y = QPushButton(self.groupBox_platter)
         self.btn_call_lineal_y.setObjectName(u"btn_call_lineal_y")
@@ -2863,10 +2854,10 @@ class Ui_MainWindow(object):
 
         self.gridLayout_6.addWidget(self.btn_call_flatten, 2, 0, 1, 1)
 
-        self.btn_lineal_rgh_x = QPushButton(self.groupBox_platter)
-        self.btn_lineal_rgh_x.setObjectName(u"btn_lineal_rgh_x")
+        self.btn_lineal_rgh_x_sub = QPushButton(self.groupBox_platter)
+        self.btn_lineal_rgh_x_sub.setObjectName(u"btn_lineal_rgh_x_sub")
 
-        self.gridLayout_6.addWidget(self.btn_lineal_rgh_x, 5, 0, 1, 1)
+        self.gridLayout_6.addWidget(self.btn_lineal_rgh_x_sub, 5, 0, 1, 1)
 
         self.btn_platter_data = QPushButton(self.groupBox_platter)
         self.btn_platter_data.setObjectName(u"btn_platter_data")
@@ -2894,25 +2885,25 @@ class Ui_MainWindow(object):
         QWidget.setTabOrder(self.btn_lineal_turn, self.btn_radial_turn)
         QWidget.setTabOrder(self.btn_radial_turn, self.btn_thread)
         QWidget.setTabOrder(self.btn_thread, self.btn_cutoff)
-        QWidget.setTabOrder(self.btn_cutoff, self.btn_flat)
-        QWidget.setTabOrder(self.btn_flat, self.btn_face)
-        QWidget.setTabOrder(self.btn_face, self.btn_bevel)
-        QWidget.setTabOrder(self.btn_bevel, self.btn_facing)
-        QWidget.setTabOrder(self.btn_facing, self.btn_slotting)
-        QWidget.setTabOrder(self.btn_slotting, self.btn_concaver)
-        QWidget.setTabOrder(self.btn_concaver, self.btn_center)
+        QWidget.setTabOrder(self.btn_cutoff, self.btn_flat_mill)
+        QWidget.setTabOrder(self.btn_flat_mill, self.btn_face_mill)
+        QWidget.setTabOrder(self.btn_face_mill, self.btn_bevel_mill)
+        QWidget.setTabOrder(self.btn_bevel_mill, self.btn_facing_mill)
+        QWidget.setTabOrder(self.btn_facing_mill, self.btn_slotting_mill)
+        QWidget.setTabOrder(self.btn_slotting_mill, self.btn_concaver_mill)
+        QWidget.setTabOrder(self.btn_concaver_mill, self.btn_center)
         QWidget.setTabOrder(self.btn_center, self.btn_drill)
         QWidget.setTabOrder(self.btn_drill, self.btn_csink)
         QWidget.setTabOrder(self.btn_csink, self.btn_ream)
         QWidget.setTabOrder(self.btn_ream, self.btn_platter_data)
         QWidget.setTabOrder(self.btn_platter_data, self.btn_call_square)
         QWidget.setTabOrder(self.btn_call_square, self.btn_call_flatten)
-        QWidget.setTabOrder(self.btn_call_flatten, self.btn_flatten)
-        QWidget.setTabOrder(self.btn_flatten, self.btn_call_lineal_x)
-        QWidget.setTabOrder(self.btn_call_lineal_x, self.btn_lineal_rgh_x)
-        QWidget.setTabOrder(self.btn_lineal_rgh_x, self.btn_call_lineal_y)
-        QWidget.setTabOrder(self.btn_call_lineal_y, self.btn_lineal_rgh_y)
-        QWidget.setTabOrder(self.btn_lineal_rgh_y, self.tabWidget_principal)
+        QWidget.setTabOrder(self.btn_call_flatten, self.btn_flatten_sub)
+        QWidget.setTabOrder(self.btn_flatten_sub, self.btn_call_lineal_x)
+        QWidget.setTabOrder(self.btn_call_lineal_x, self.btn_lineal_rgh_x_sub)
+        QWidget.setTabOrder(self.btn_lineal_rgh_x_sub, self.btn_call_lineal_y)
+        QWidget.setTabOrder(self.btn_call_lineal_y, self.btn_lineal_rgh_y_sub)
+        QWidget.setTabOrder(self.btn_lineal_rgh_y_sub, self.tabWidget_principal)
         QWidget.setTabOrder(self.tabWidget_principal, self.tape1_widget)
         QWidget.setTabOrder(self.tape1_widget, self.tape2_widget)
         QWidget.setTabOrder(self.tape2_widget, self.config_widget)
@@ -3265,6 +3256,9 @@ class Ui_MainWindow(object):
 #if QT_CONFIG(statustip)
         self.actionDuplicate.setStatusTip(QCoreApplication.translate("MainWindow", u"Duplicar las l\u00edneas seleccionadas", None))
 #endif // QT_CONFIG(statustip)
+#if QT_CONFIG(shortcut)
+        self.actionDuplicate.setShortcut(QCoreApplication.translate("MainWindow", u"Alt+D", None))
+#endif // QT_CONFIG(shortcut)
         ___qtablewidgetitem = self.tape1_widget.horizontalHeaderItem(0)
         ___qtablewidgetitem.setText(QCoreApplication.translate("MainWindow", u"1 - Programa principal", None));
         ___qtablewidgetitem1 = self.tape2_widget.horizontalHeaderItem(0)
@@ -3408,12 +3402,12 @@ class Ui_MainWindow(object):
         self.tabWidget_functions.setTabText(self.tabWidget_functions.indexOf(self.tabWidget_functions_turning), "")
         self.groupBox_milling.setTitle(QCoreApplication.translate("MainWindow", u"Fresado", None))
 #if QT_CONFIG(tooltip)
-        self.btn_radial_3.setToolTip(QCoreApplication.translate("MainWindow", u"Realizar un movimiento radial de mecanizado para fresado", None))
+        self.btn_radial_mill.setToolTip(QCoreApplication.translate("MainWindow", u"Realizar un movimiento radial de mecanizado para fresado", None))
 #endif // QT_CONFIG(tooltip)
 #if QT_CONFIG(statustip)
-        self.btn_radial_3.setStatusTip(QCoreApplication.translate("MainWindow", u"Realizar un movimiento radial de mecanizado para fresado", None))
+        self.btn_radial_mill.setStatusTip(QCoreApplication.translate("MainWindow", u"Realizar un movimiento radial de mecanizado para fresado", None))
 #endif // QT_CONFIG(statustip)
-        self.btn_radial_3.setText(QCoreApplication.translate("MainWindow", u"Fresado radial", None))
+        self.btn_radial_mill.setText(QCoreApplication.translate("MainWindow", u"Fresado radial", None))
 #if QT_CONFIG(tooltip)
         self.btn_mill_end.setToolTip(QCoreApplication.translate("MainWindow", u"Agrega los comandos de finalizaci\u00f3n para fresados", None))
 #endif // QT_CONFIG(tooltip)
@@ -3422,12 +3416,12 @@ class Ui_MainWindow(object):
 #endif // QT_CONFIG(statustip)
         self.btn_mill_end.setText(QCoreApplication.translate("MainWindow", u"Finalizar Fresados", None))
 #if QT_CONFIG(tooltip)
-        self.btn_lineal_3.setToolTip(QCoreApplication.translate("MainWindow", u"Realizar un movimiento lineal de mecanizado o posicionamiento para fresado", None))
+        self.btn_lineal_mill.setToolTip(QCoreApplication.translate("MainWindow", u"Realizar un movimiento lineal de mecanizado o posicionamiento para fresado", None))
 #endif // QT_CONFIG(tooltip)
 #if QT_CONFIG(statustip)
-        self.btn_lineal_3.setStatusTip(QCoreApplication.translate("MainWindow", u"Realizar un movimiento lineal de mecanizado o posicionamiento para fresado", None))
+        self.btn_lineal_mill.setStatusTip(QCoreApplication.translate("MainWindow", u"Realizar un movimiento lineal de mecanizado o posicionamiento para fresado", None))
 #endif // QT_CONFIG(statustip)
-        self.btn_lineal_3.setText(QCoreApplication.translate("MainWindow", u"Fresado lineal", None))
+        self.btn_lineal_mill.setText(QCoreApplication.translate("MainWindow", u"Fresado lineal", None))
 #if QT_CONFIG(tooltip)
         self.btn_mill_ini.setToolTip(QCoreApplication.translate("MainWindow", u"Agrega los comandos de preparaci\u00f3n para fresados", None))
 #endif // QT_CONFIG(tooltip)
@@ -3438,47 +3432,47 @@ class Ui_MainWindow(object):
         self.tabWidget_functions.setTabText(self.tabWidget_functions.indexOf(self.tabWidget_functions_milling), "")
         self.groupBox_mill_cycles.setTitle(QCoreApplication.translate("MainWindow", u"Ciclos de fresado", None))
 #if QT_CONFIG(tooltip)
-        self.btn_bevel.setToolTip(QCoreApplication.translate("MainWindow", u"Realizar un mecanizado de bisel", None))
+        self.btn_bevel_mill.setToolTip(QCoreApplication.translate("MainWindow", u"Realizar un mecanizado de bisel", None))
 #endif // QT_CONFIG(tooltip)
 #if QT_CONFIG(statustip)
-        self.btn_bevel.setStatusTip(QCoreApplication.translate("MainWindow", u"Realizar un mecanizado de bisel", None))
+        self.btn_bevel_mill.setStatusTip(QCoreApplication.translate("MainWindow", u"Realizar un mecanizado de bisel", None))
 #endif // QT_CONFIG(statustip)
-        self.btn_bevel.setText(QCoreApplication.translate("MainWindow", u"Bisel", None))
+        self.btn_bevel_mill.setText(QCoreApplication.translate("MainWindow", u"Bisel", None))
 #if QT_CONFIG(tooltip)
-        self.btn_facing.setToolTip(QCoreApplication.translate("MainWindow", u"Realizar un mecanizado de refrentado", None))
+        self.btn_facing_mill.setToolTip(QCoreApplication.translate("MainWindow", u"Realizar un mecanizado de refrentado", None))
 #endif // QT_CONFIG(tooltip)
 #if QT_CONFIG(statustip)
-        self.btn_facing.setStatusTip(QCoreApplication.translate("MainWindow", u"Realizar un mecanizado de refrentado", None))
+        self.btn_facing_mill.setStatusTip(QCoreApplication.translate("MainWindow", u"Realizar un mecanizado de refrentado", None))
 #endif // QT_CONFIG(statustip)
-        self.btn_facing.setText(QCoreApplication.translate("MainWindow", u"Refrentado", None))
+        self.btn_facing_mill.setText(QCoreApplication.translate("MainWindow", u"Refrentado", None))
 #if QT_CONFIG(tooltip)
-        self.btn_flat.setToolTip(QCoreApplication.translate("MainWindow", u"Realizar un mecanizado de palete", None))
+        self.btn_flat_mill.setToolTip(QCoreApplication.translate("MainWindow", u"Realizar un mecanizado de palete", None))
 #endif // QT_CONFIG(tooltip)
 #if QT_CONFIG(statustip)
-        self.btn_flat.setStatusTip(QCoreApplication.translate("MainWindow", u"Realizar un mecanizado de palete", None))
+        self.btn_flat_mill.setStatusTip(QCoreApplication.translate("MainWindow", u"Realizar un mecanizado de palete", None))
 #endif // QT_CONFIG(statustip)
-        self.btn_flat.setText(QCoreApplication.translate("MainWindow", u"Paleta", None))
+        self.btn_flat_mill.setText(QCoreApplication.translate("MainWindow", u"Paleta", None))
 #if QT_CONFIG(tooltip)
-        self.btn_face.setToolTip(QCoreApplication.translate("MainWindow", u"Realizar un mecanizado de caras", None))
+        self.btn_face_mill.setToolTip(QCoreApplication.translate("MainWindow", u"Realizar un mecanizado de caras", None))
 #endif // QT_CONFIG(tooltip)
 #if QT_CONFIG(statustip)
-        self.btn_face.setStatusTip(QCoreApplication.translate("MainWindow", u"Realizar un mecanizado de caras", None))
+        self.btn_face_mill.setStatusTip(QCoreApplication.translate("MainWindow", u"Realizar un mecanizado de caras", None))
 #endif // QT_CONFIG(statustip)
-        self.btn_face.setText(QCoreApplication.translate("MainWindow", u"Caras", None))
+        self.btn_face_mill.setText(QCoreApplication.translate("MainWindow", u"Caras", None))
 #if QT_CONFIG(tooltip)
-        self.btn_concaver.setToolTip(QCoreApplication.translate("MainWindow", u"Realizar un mecanizado de ch\u00f3cola", None))
+        self.btn_concaver_mill.setToolTip(QCoreApplication.translate("MainWindow", u"Realizar un mecanizado de ch\u00f3cola", None))
 #endif // QT_CONFIG(tooltip)
 #if QT_CONFIG(statustip)
-        self.btn_concaver.setStatusTip(QCoreApplication.translate("MainWindow", u"Realizar un mecanizado de ch\u00f3cola", None))
+        self.btn_concaver_mill.setStatusTip(QCoreApplication.translate("MainWindow", u"Realizar un mecanizado de ch\u00f3cola", None))
 #endif // QT_CONFIG(statustip)
-        self.btn_concaver.setText(QCoreApplication.translate("MainWindow", u"Ch\u00f3cola", None))
+        self.btn_concaver_mill.setText(QCoreApplication.translate("MainWindow", u"Ch\u00f3cola", None))
 #if QT_CONFIG(tooltip)
-        self.btn_slotting.setToolTip(QCoreApplication.translate("MainWindow", u"Realizar un mecanizado de ranurado", None))
+        self.btn_slotting_mill.setToolTip(QCoreApplication.translate("MainWindow", u"Realizar un mecanizado de ranurado", None))
 #endif // QT_CONFIG(tooltip)
 #if QT_CONFIG(statustip)
-        self.btn_slotting.setStatusTip(QCoreApplication.translate("MainWindow", u"Realizar un mecanizado de ranurado", None))
+        self.btn_slotting_mill.setStatusTip(QCoreApplication.translate("MainWindow", u"Realizar un mecanizado de ranurado", None))
 #endif // QT_CONFIG(statustip)
-        self.btn_slotting.setText(QCoreApplication.translate("MainWindow", u"Ranurado", None))
+        self.btn_slotting_mill.setText(QCoreApplication.translate("MainWindow", u"Ranurado", None))
         self.tabWidget_functions.setTabText(self.tabWidget_functions.indexOf(self.tabWidget_functions_mill_cycles), "")
         self.groupBox_drilling.setTitle(QCoreApplication.translate("MainWindow", u"Perforado", None))
 #if QT_CONFIG(tooltip)
@@ -3533,19 +3527,19 @@ class Ui_MainWindow(object):
 #endif // QT_CONFIG(statustip)
         self.btn_call_square.setText(QCoreApplication.translate("MainWindow", u"Generar matriz", None))
 #if QT_CONFIG(tooltip)
-        self.btn_lineal_rgh_y.setToolTip(QCoreApplication.translate("MainWindow", u"Agrega el desbaste vertical a la subrutina", None))
+        self.btn_lineal_rgh_y_sub.setToolTip(QCoreApplication.translate("MainWindow", u"Agrega el desbaste vertical a la subrutina", None))
 #endif // QT_CONFIG(tooltip)
 #if QT_CONFIG(statustip)
-        self.btn_lineal_rgh_y.setStatusTip(QCoreApplication.translate("MainWindow", u"Agrega el desbaste vertical a la subrutina", None))
+        self.btn_lineal_rgh_y_sub.setStatusTip(QCoreApplication.translate("MainWindow", u"Agrega el desbaste vertical a la subrutina", None))
 #endif // QT_CONFIG(statustip)
-        self.btn_lineal_rgh_y.setText(QCoreApplication.translate("MainWindow", u"Sub vertical", None))
+        self.btn_lineal_rgh_y_sub.setText(QCoreApplication.translate("MainWindow", u"Sub vertical", None))
 #if QT_CONFIG(tooltip)
-        self.btn_flatten.setToolTip(QCoreApplication.translate("MainWindow", u"Agrega el refrentado de platina a la subrutina", None))
+        self.btn_flatten_sub.setToolTip(QCoreApplication.translate("MainWindow", u"Agrega el refrentado de platina a la subrutina", None))
 #endif // QT_CONFIG(tooltip)
 #if QT_CONFIG(statustip)
-        self.btn_flatten.setStatusTip(QCoreApplication.translate("MainWindow", u"Agrega el refrentado de platina a la subrutina", None))
+        self.btn_flatten_sub.setStatusTip(QCoreApplication.translate("MainWindow", u"Agrega el refrentado de platina a la subrutina", None))
 #endif // QT_CONFIG(statustip)
-        self.btn_flatten.setText(QCoreApplication.translate("MainWindow", u"Sub refrentado", None))
+        self.btn_flatten_sub.setText(QCoreApplication.translate("MainWindow", u"Sub refrentado", None))
 #if QT_CONFIG(tooltip)
         self.btn_call_lineal_y.setToolTip(QCoreApplication.translate("MainWindow", u"Agrega el desbaste vertical al programa principal", None))
 #endif // QT_CONFIG(tooltip)
@@ -3568,12 +3562,12 @@ class Ui_MainWindow(object):
 #endif // QT_CONFIG(statustip)
         self.btn_call_flatten.setText(QCoreApplication.translate("MainWindow", u"Refrenta platina", None))
 #if QT_CONFIG(tooltip)
-        self.btn_lineal_rgh_x.setToolTip(QCoreApplication.translate("MainWindow", u"Agrega el desbaste horizontal a la subrutina", None))
+        self.btn_lineal_rgh_x_sub.setToolTip(QCoreApplication.translate("MainWindow", u"Agrega el desbaste horizontal a la subrutina", None))
 #endif // QT_CONFIG(tooltip)
 #if QT_CONFIG(statustip)
-        self.btn_lineal_rgh_x.setStatusTip(QCoreApplication.translate("MainWindow", u"Agrega el desbaste horizontal a la subrutina", None))
+        self.btn_lineal_rgh_x_sub.setStatusTip(QCoreApplication.translate("MainWindow", u"Agrega el desbaste horizontal a la subrutina", None))
 #endif // QT_CONFIG(statustip)
-        self.btn_lineal_rgh_x.setText(QCoreApplication.translate("MainWindow", u"Sub horizontal", None))
+        self.btn_lineal_rgh_x_sub.setText(QCoreApplication.translate("MainWindow", u"Sub horizontal", None))
 #if QT_CONFIG(tooltip)
         self.btn_platter_data.setToolTip(QCoreApplication.translate("MainWindow", u"Agrega los datos de la matriz de piezas", None))
 #endif // QT_CONFIG(tooltip)

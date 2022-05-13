@@ -1,4 +1,4 @@
-from tools import subtasks_list
+from tools import subtasks_tools
 from subtasks.subtask import Subtask
 from tools.combo_lists import *
 from tools.format_tools import *
@@ -9,7 +9,7 @@ from interfaces.ui_header import Ui_frm_header
 
 
 class Subrutine(Subtask, Ui_frm_header):
-    def __init__(self):
+    def __init__(self, main_window):
         super().__init__()
-        self.task = subtasks_list.tasks_list["Header"]["Description"]
+        self.task = subtasks_tools.tasks_list["Header"]["Description"]
         self.image = "header.png"

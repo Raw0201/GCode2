@@ -1,18 +1,21 @@
 from PySide6.QtWidgets import QMainWindow
 
-from tools import subtasks_list
+from tools import subtasks_tools
 from tools.combo_lists import *
 from tools.format_tools import *
 from tools.message_boxes import *
 from tools.validation_tools import *
+from tools.default_data_tools import *
+from tools.config_list_tools import *
+
 from subtasks.generators.free_gen import free_gen
 
 
 class Free(QMainWindow):
     def __init__(self, main_window):
         super().__init__()
-        self.main_window = main_window
-        self.task = subtasks_list.tasks_list["Free"]["Description"]
+        self.window = main_window
+        self.task = subtasks_tools.tasks_list["Free"]["Description"]
         self.image = "free.png"
         self.modification = False
 
@@ -53,7 +56,8 @@ class Free(QMainWindow):
         data1 = (self.task, data)
         self.data_pack = [data1]
 
-        self.main_window.store_config_data(
+        store_config_data(
+            self.window,
             self.data_pack,
             self.modification,
         )
@@ -83,21 +87,21 @@ class Free(QMainWindow):
 
         pass
 
-    def processor(self, main_window: QMainWindow, data: dict) -> None:
+    def processor(self, window: QMainWindow, data: dict) -> None:
         """Procesa los datos de configuración para cambiar valores de variables
 
         Args:
-            main_window (QMainWindow): Clase principal de la aplicación
+            window (QMainWindow): Clase principal de la aplicación
             data (dict): Diccionario de datos de configuración
         """
 
-        pass
+        window.save_required = True
 
-    def switcher(self, main_window: QMainWindow, data: dict):
+    def switcher(self, window: QMainWindow, data: dict):
         """Cambia el estado de los botones según los datos de configuración
 
         Args:
-            main_window (QMainWindow): Clase principal de la aplicación
+            window (QMainWindow): Clase principal de la aplicación
             data (dict): Diccionario de datos de configuración
         """
 

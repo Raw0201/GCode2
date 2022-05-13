@@ -1,6 +1,6 @@
 from PySide6.QtWidgets import QMainWindow
 
-from tools.subtasks_tools import image_load, key_pressed
+from tools.subwindows_tools import image_load, key_pressed
 from subtasks.helper import Helper
 
 

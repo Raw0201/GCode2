@@ -1,56 +1,41 @@
-from PySide6 import QtCore
-from PySide6.QtGui import QPixmap
-from pathlib import Path
+from subtasks import header, free, comment, subrutine, collect, end
 
-from PySide6.QtWidgets import QLabel
-
-
-def key_pressed(self, qKeyEvent) -> None:
-    """Evento de accionamiento de tecla
-
-    Args:
-        qKeyEvent (QEvent): Evento de tecla presionada
-    """
-
-    if qKeyEvent.key() in [
-        QtCore.Qt.Key_Return,
-        QtCore.Qt.Key_Enter,
-        QtCore.Qt.Key_Down,
-    ]:
-        self.focusNextChild()
-    if qKeyEvent.key() == QtCore.Qt.Key_Up:
-        self.focusPreviousChild()
-    elif qKeyEvent.key() == QtCore.Qt.Key_Escape:
-        self.modified_task = False
-        self.close()
-    elif qKeyEvent.modifiers() == QtCore.Qt.ControlModifier:
-        if qKeyEvent.key() == QtCore.Qt.Key_S:
-            self.collector()
-    else:
-        return
+tasks_list = {
+    "Header": {
+        "Name": header.Header,
+        "Description": "Inicio de programa",
+    },
+    "Free": {
+        "Name": free.Free,
+        "Description": " ",
+    },
+    "Comment": {
+        "Name": comment.Comment,
+        "Description": "    Comentario",
+    },
+    "Subrut": {
+        "Name": subrutine.Subrutine,
+        "Description": "    -> Subrutina",
+    },
+    "Collect": {
+        "Name": collect.Collect,
+        "Description": "    Recolectar pieza",
+    },
+    "End": {
+        "Name": end.End,
+        "Description": "Fin de programa",
+    },
+}
 
 
-def abs_path(file: str) -> str:
-    """Obtiene la ruta absoluta a un archivo
+def get_task_class(description):
+    main_values = list(tasks_list.values())
 
-    Args:
-        file (str): Archivo
+    names_list, descriptions_list = [], []
+    for dictionary in main_values:
+        names_list.append(dictionary["Name"])
+        descriptions_list.append(dictionary["Description"])
 
-    Returns:
-        str: Ruta absoluta
-    """
+    description_index = descriptions_list.index(description)
 
-    return str(Path(__file__).parent.absolute() / file)
-
-
-def image_load(label: QLabel, image: str) -> None:
-    """Carga de imágenes en una etiqueta
-
-    Args:
-        label (QLabel): Etiqueta del widget
-        image (str): Imagen a mostrar
-    """
-
-    image = QPixmap(abs_path(f"../resources/{image}"))
-    label.setPixmap(image)
-    label.setScaledContents(True)
+    return names_list[description_index]

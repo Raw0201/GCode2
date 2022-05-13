@@ -1,26 +1,27 @@
 from PySide6.QtWidgets import QMainWindow
 from main import *
 
-from PySide6 import QtCore
-
-# from PySide6.QtCore import Signal
-# from PySide6.QtCore import QtObject, Signal
-from tools import subtasks_list
+from tools import subtasks_tools
 from tools.combo_lists import *
 from tools.format_tools import *
 from tools.message_boxes import *
 from tools.validation_tools import *
+from tools.default_data_tools import *
+from tools.config_list_tools import *
+from tools.file_tools import *
+from tools.directories_tools import *
+from tools.main_window_tools import *
 from subtasks.subtask import Subtask
-from subtasks.generators.header_gen import header_gen
 
+from subtasks.generators.header_gen import header_gen
 from interfaces.ui_header import Ui_frm_header
 
 
 class Header(Subtask, Ui_frm_header):
     def __init__(self, main_window):
         super().__init__()
-        self.main_window = main_window
-        self.task = subtasks_list.tasks_list["Header"]["Description"]
+        self.window = main_window
+        self.task = subtasks_tools.tasks_list["Header"]["Description"]
         self.image = "header.png"
 
         self.cbx_mch.addItems(machines_list)
@@ -85,7 +86,8 @@ class Header(Subtask, Ui_frm_header):
 
         data1 = (self.task, data)
         self.data_pack = [data1]
-        self.main_window.store_config_data(
+        store_config_data(
+            self.window,
             self.data_pack,
             self.modification,
         )
@@ -129,28 +131,67 @@ class Header(Subtask, Ui_frm_header):
         self.btn_save.setText("Actualizar")
         self.show()
 
-    def processor(self, main_window: QMainWindow, data: dict) -> None:
+    def processor(self, window: QMainWindow, data: dict) -> None:
         """Procesa los datos de configuración para cambiar valores de variables
 
         Args:
-            main_window (QMainWindow): Clase principal de la aplicación
+            window (QMainWindow): Clase principal de la aplicación
             data (dict): Diccionario de datos de configuración
         """
 
-        main_window.current_machine = data["Mch"]
+        window.save_required = True
+        window.current_machine = data["Mch"]
+        window.main_tape_active = True
+        window.current_side = "$1"
+        window.current_machine = data["Mch"]
+        window.part_name = data["Prt"]
+        window.main_tape_number = data["Pgr"]
+        window.tape_description = data["Dsc"]
+        window.current_bar_diameter = data["Dia"]
+        window.current_part_lenght = data["Lgt"]
+        window.current_chuck_position = data["Chk"]
+        window.current_cutoff_tool = data["Cof"]
+        window.current_work_offset = data["Wrk"]
+        window.swiss_back_machining = data["Chk"] > 0
 
-    def switcher(self, main_window: QMainWindow, data: dict):
+        update_file_name(window)
+        update_file_dir(window)
+        load_main_title(window)
+
+    def switcher(self, window: QMainWindow, data: dict):
         """Cambia el estado de los botones según los datos de configuración
 
         Args:
-            main_window (QMainWindow): Clase principal de la aplicación
+            window (QMainWindow): Clase principal de la aplicación
             data (dict): Diccionario de datos de configuración
         """
 
-        for button in main_window.main_buttons_list:
-            button.setEnabled(True)
+        load_default_buttons_status(window)
+        load_default_tape_conditions(window)
 
+        for button_list in (
+            window.program_buttons_list,
+            window.tool_buttons_list,
+            window.machine_buttons_list,
+            window.turning_buttons_list,
+            window.milling_buttons_list,
+            window.milling_cycle_buttons_list,
+            window.drilling_buttons_list,
+        ):
+            for button in button_list:
+                button.setEnabled(True)
 
-# class Signal_emitter(QtCore.QObject):
-#     print("Creando señal")
-#     collected_data_signal = QtCore.Signal()
+        if window.current_machine != "Mazak":
+            for button in window.plate_buttons_list:
+                button.setEnabled(False)
+
+        if window.current_machine == "Mazak":
+            for button in window.turning_buttons_list:
+                button.setEnabled(False)
+
+        window.btn_header.setEnabled(False)
+        window.btn_tool_close.setEnabled(False)
+        # window.btn_collect.setEnabled(False)
+
+        end_enabled = not window.main_tape_active
+        window.btn_end.setEnabled(end_enabled)
