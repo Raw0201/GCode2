@@ -1,4 +1,19 @@
-from subtasks import header, free, comment, subrutine, collect, end
+from subtasks import (
+    header,
+    free,
+    comment,
+    subrutine,
+    collect,
+    end,
+    tool_call,
+    tool_close,
+    spindle,
+    spindle_index,
+    misc,
+    turn_ini,
+    lineal_turn,
+    radial_turn,
+)
 
 tasks_list = {
     "Header": {
@@ -11,19 +26,51 @@ tasks_list = {
     },
     "Comment": {
         "Name": comment.Comment,
-        "Description": "    Comentario",
+        "Description": "        Comentario",
     },
-    "Subrut": {
+    "Subrutine": {
         "Name": subrutine.Subrutine,
-        "Description": "    -> Subrutina",
+        "Description": "        -> Subrutina",
     },
     "Collect": {
         "Name": collect.Collect,
-        "Description": "    Recolectar pieza",
+        "Description": "        Recolectar pieza",
     },
     "End": {
         "Name": end.End,
         "Description": "Fin de programa",
+    },
+    "Tool_call": {
+        "Name": tool_call.Tool_call,
+        "Description": "    Llamar herramienta",
+    },
+    "Tool_close": {
+        "Name": tool_close.Tool_close,
+        "Description": "    Cerrar herramienta",
+    },
+    "Spindle": {
+        "Name": spindle.Spindle,
+        "Description": "        Giro del husillo",
+    },
+    "Spindle_index": {
+        "Name": spindle_index.Spindle_index,
+        "Description": "        Orientar husillo",
+    },
+    "Misc": {
+        "Name": misc.Misc,
+        "Description": "        Funciones misceláneas",
+    },
+    "Turn_ini": {
+        "Name": turn_ini.Turn_ini,
+        "Description": "        Iniciar torneados",
+    },
+    "Lineal_turn": {
+        "Name": lineal_turn.Lineal_turn,
+        "Description": "        Torneado lineal",
+    },
+    "Radial_turn": {
+        "Name": radial_turn.Radial_turn,
+        "Description": "        Torneado radial",
     },
 }
 

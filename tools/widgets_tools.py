@@ -153,7 +153,6 @@ def config_selected(window):
                 item.row() for item in selected_items if item.column() == 0
             )
             window.current_selection = sorted(list(set(config_lines)))
-            print(window.current_selection)
 
             update_tape1_widget_selection(window)
             update_tape2_widget_selection(window)

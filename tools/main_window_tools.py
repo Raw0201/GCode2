@@ -6,7 +6,7 @@ from tools.message_boxes import *
 from tools.default_data_tools import *
 from tools.buttons_tools import *
 from tools.format_tools import *
-from tools.config_list_tools import *
+from tools.config_tools import *
 from tools.tape_lists_tools import *
 from tools.file_tools import *
 from tools.directories_tools import *
@@ -98,7 +98,7 @@ def save_config(window) -> None:
     update_data(window)
     update_file_dir(window)
 
-    file = f"{window.file_name}.json"
+    file = f"{window.config_file_name}.json"
     with open(file, "w") as file:
         json.dump(window.config_list, file)
     save_tape(window)
@@ -113,7 +113,7 @@ def save_tape(window) -> None:
     os.chdir(ROOT_DIR)
     complete_tape = make_tape(window)
 
-    file = f"{window.file_name}{window.file_extension}"
+    file = f"{window.config_file_name}{window.file_extension}"
     with open(file, "w") as tape:
         for lines in complete_tape:
             tape.write(lines + "\n")
@@ -341,70 +341,3 @@ def update_data(window) -> None:
     update_tape2_widget_selection(window)
 
     window.modified_task = False
-
-
-def load_menu_actions(window) -> None:
-    """Cargar acciones del menú"""
-
-    window.actionNew.triggered.connect(lambda: new_tape(window))
-    window.actionOpen.triggered.connect(lambda: open_file(window))
-    window.actionSave.triggered.connect(lambda: save_config(window))
-    window.actionClose.triggered.connect(lambda: close_app(window))
-
-    window.actionDelete.triggered.connect(lambda: delete_lines(window))
-    window.actionDuplicate.triggered.connect(lambda: duplicate_lines(window))
-    window.actionBlock.triggered.connect(lambda: block_lines(window))
-    window.actionMove_up.triggered.connect(lambda: movement(window, "up"))
-    window.actionMove_down.triggered.connect(lambda: movement(window, "down"))
-
-    # window.actionGraph.triggered.connect(lambda: graph(window))
-    # window.actionVersion.triggered.connect(lambda: version(window))
-
-    window.actionShow_functions.triggered.connect(
-        lambda: component_view(window, window.dock_functions)
-    )
-    window.actionShow_tape1_widget.triggered.connect(
-        lambda: component_view(window, window.tape1_widget)
-    )
-    window.actionShow_tape2_widget.triggered.connect(
-        lambda: component_view(window, window.tape2_widget)
-    )
-    window.actionShow_config_widget.triggered.connect(
-        lambda: component_view(window, window.config_widget)
-    )
-    window.actionSubrut_up.triggered.connect(
-        lambda: param_mod(window, "Sub", "up", 1.0)
-    )
-    window.actionSubrut_down.triggered.connect(
-        lambda: param_mod(window, "Sub", "down", 1.0)
-    )
-    window.actionLoop_up.triggered.connect(
-        lambda: param_mod(window, "Rep", "up", 1.0)
-    )
-    window.actionLoop_down.triggered.connect(
-        lambda: param_mod(window, "Rep", "down", 1.0)
-    )
-    window.actionX_up.triggered.connect(
-        lambda: param_mod(window, "Xin", "up", 0.001)
-    )
-    window.actionX_down.triggered.connect(
-        lambda: param_mod(window, "Xin", "down", 0.001)
-    )
-    window.actionY_up.triggered.connect(
-        lambda: param_mod(window, "Yin", "up", 0.001)
-    )
-    window.actionY_down.triggered.connect(
-        lambda: param_mod(window, "Yin", "down", 0.001)
-    )
-    window.actionZ_up.triggered.connect(
-        lambda: param_mod(window, "Zin", "up", 0.001)
-    )
-    window.actionZ_down.triggered.connect(
-        lambda: param_mod(window, "Zin", "down", 0.001)
-    )
-    window.actionFeed_up.triggered.connect(
-        lambda: param_mod(window, "Fed", "up", 0.001)
-    )
-    window.actionFeed_down.triggered.connect(
-        lambda: param_mod(window, "Fed", "down", 0.001)
-    )

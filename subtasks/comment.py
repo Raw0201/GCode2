@@ -1,15 +1,19 @@
 from PySide6.QtWidgets import QMainWindow
-from main import *
 
+from main import *
 from tools import subtasks_tools
+from tools.file_tools import *
 from tools.combo_lists import *
 from tools.format_tools import *
+from tools.config_tools import *
 from tools.message_boxes import *
+from tools.prefab_blocks import *
 from tools.validation_tools import *
+from tools.directories_tools import *
+from tools.main_window_tools import *
 from tools.default_data_tools import *
-from tools.config_list_tools import *
-from subtasks.subtask import Subtask
 
+from subtasks.subtask import Subtask
 from subtasks.generators.comment_gen import comment_gen
 from interfaces.ui_comment import Ui_frm_comment
 

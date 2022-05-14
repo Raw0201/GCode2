@@ -14,7 +14,7 @@ def collect_data(window, data_class: str):
     subtask_class = tools.subtasks_tools.tasks_list[data_class]["Name"]
     window.subtask1 = subtask_class(window)
 
-    if data_class not in {"Free"}:
+    if data_class not in {"Free", "End", "Tool_close", "Turn_ini"}:
         window.subtask1.show()
     else:
         window.subtask1.collector()
@@ -51,6 +51,7 @@ def update_modified_data(window, data_pack: list):
     data = data_pack[0][1]
     index = window.current_selection[0]
     window.config_list[index] = [task, data]
+    tools.main_window_tools.update_data(window)
 
 
 def append_new_data(window, data_pack: list):

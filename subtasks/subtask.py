@@ -2,6 +2,7 @@ from PySide6.QtWidgets import QMainWindow
 
 from tools.subwindows_tools import image_load, key_pressed
 from subtasks.helper import Helper
+from tools.config_tools import *
 
 
 class Subtask(QMainWindow):
@@ -17,6 +18,16 @@ class Subtask(QMainWindow):
 
         self.image = ""
         self.btn_help.clicked.connect(lambda: self.helper(self.image))
+
+    def change_to(self, window, task) -> None:
+        """Cambia a la función indicada
+
+        Args:
+            task (method): Función indicada
+        """
+
+        self.close()
+        collect_data(window, task)
 
     def collector(self):
         pass

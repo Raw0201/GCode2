@@ -1,12 +1,7 @@
 from PySide6.QtWidgets import QMainWindow
 
 from tools import subtasks_tools
-from tools.combo_lists import *
-from tools.format_tools import *
-from tools.message_boxes import *
-from tools.validation_tools import *
-from tools.default_data_tools import *
-from tools.config_list_tools import *
+from tools.config_tools import *
 
 from subtasks.generators.free_gen import free_gen
 
@@ -16,7 +11,6 @@ class Free(QMainWindow):
         super().__init__()
         self.window = main_window
         self.task = subtasks_tools.tasks_list["Free"]["Description"]
-        self.image = "free.png"
         self.modification = False
 
     def collector(self) -> None:

@@ -1,18 +1,19 @@
 from PySide6.QtWidgets import QMainWindow
-from main import *
 
+from main import *
 from tools import subtasks_tools
+from tools.file_tools import *
 from tools.combo_lists import *
 from tools.format_tools import *
+from tools.config_tools import *
 from tools.message_boxes import *
+from tools.prefab_blocks import *
 from tools.validation_tools import *
-from tools.default_data_tools import *
-from tools.config_list_tools import *
-from tools.file_tools import *
 from tools.directories_tools import *
 from tools.main_window_tools import *
-from subtasks.subtask import Subtask
+from tools.default_data_tools import *
 
+from subtasks.subtask import Subtask
 from subtasks.generators.header_gen import header_gen
 from interfaces.ui_header import Ui_frm_header
 
@@ -140,7 +141,6 @@ class Header(Subtask, Ui_frm_header):
         """
 
         window.save_required = True
-        window.current_machine = data["Mch"]
         window.main_tape_active = True
         window.current_side = "$1"
         window.current_machine = data["Mch"]
@@ -181,13 +181,17 @@ class Header(Subtask, Ui_frm_header):
             for button in button_list:
                 button.setEnabled(True)
 
-        if window.current_machine != "Mazak":
+        if window.current_machine != "MAZAK":
             for button in window.plate_buttons_list:
                 button.setEnabled(False)
+            for button in window.turning_buttons_list:
+                button.setEnabled(True)
 
-        if window.current_machine == "Mazak":
+        if window.current_machine == "MAZAK":
             for button in window.turning_buttons_list:
                 button.setEnabled(False)
+            for button in window.plate_buttons_list:
+                button.setEnabled(True)
 
         window.btn_header.setEnabled(False)
         window.btn_tool_close.setEnabled(False)

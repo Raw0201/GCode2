@@ -38,5 +38,5 @@ def update_file_name(window) -> None:
         file_name = f"O{window.main_tape_number}"
         file_extension = ".CNC"
 
-    window.file_name = file_name
+    window.config_file_name = file_name
     window.file_extension = file_extension

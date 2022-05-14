@@ -1,4 +1,4 @@
-from tools.config_list_tools import *
+from tools.config_tools import *
 
 
 def load_main_buttons(window):
@@ -101,11 +101,35 @@ def load_main_buttons_connections(window):
         lambda: collect_data(window, "Comment"),
     )
     window.btn_subrutine.clicked.connect(
-        lambda: collect_data(window, "Subrut")
+        lambda: collect_data(window, "Subrutine")
     )
     window.btn_collect.clicked.connect(
         lambda: collect_data(window, "Collect"),
     )
     window.btn_end.clicked.connect(
         lambda: collect_data(window, "End"),
+    )
+    window.btn_tool_call.clicked.connect(
+        lambda: collect_data(window, "Tool_call"),
+    )
+    window.btn_tool_close.clicked.connect(
+        lambda: collect_data(window, "Tool_close"),
+    )
+    window.btn_spindle.clicked.connect(
+        lambda: collect_data(window, "Spindle"),
+    )
+    window.btn_spindle_index.clicked.connect(
+        lambda: collect_data(window, "Spindle_index"),
+    )
+    window.btn_misc.clicked.connect(
+        lambda: collect_data(window, "Misc"),
+    )
+    window.btn_turn_ini.clicked.connect(
+        lambda: collect_data(window, "Turn_ini"),
+    )
+    window.btn_lineal_turn.clicked.connect(
+        lambda: collect_data(window, "Lineal_turn"),
+    )
+    window.btn_radial_turn.clicked.connect(
+        lambda: collect_data(window, "Radial_turn"),
     )
