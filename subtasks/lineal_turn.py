@@ -33,7 +33,7 @@ class Lineal_turn(Subtask, Ui_frm_lineal_turn):
         self.cbx_sde.addItems(tape_sides_list)
         self.cbx_sde.setCurrentText(self.window.current_side)
 
-    def collector(self) -> None:
+    def collector(self):
         """Recolecta los datos de la subtarea ingresados por el usuario"""
 
         data = {
@@ -47,7 +47,7 @@ class Lineal_turn(Subtask, Ui_frm_lineal_turn):
 
         self.validator(data)
 
-    def validator(self, data: dict) -> None:
+    def validator(self, data: dict):
         """Valida los datos del diccionario recopilado
 
         Args:
@@ -60,7 +60,7 @@ class Lineal_turn(Subtask, Ui_frm_lineal_turn):
 
         self.converter(data)
 
-    def converter(self, data: dict) -> None:
+    def converter(self, data: dict):
         """Formatea los datos del diccionario recopilado
 
         Args:
@@ -78,7 +78,7 @@ class Lineal_turn(Subtask, Ui_frm_lineal_turn):
 
         self.packer(data)
 
-    def packer(self, data: dict) -> None:
+    def packer(self, data: dict):
         """Agrega datos al paquete de datos a exportar
 
         Args:
@@ -110,7 +110,7 @@ class Lineal_turn(Subtask, Ui_frm_lineal_turn):
 
         return lineal_turn_gen(machine, data)
 
-    def modifier(self, data: dict) -> None:
+    def modifier(self, data: dict):
         """Modifica la línea de configuración seleccionada
 
         Args:
@@ -130,11 +130,11 @@ class Lineal_turn(Subtask, Ui_frm_lineal_turn):
         self.btn_switch.setEnabled(False)
         self.show()
 
-    def processor(self, window: QMainWindow, data: dict) -> None:
+    def processor(self, window: QMainWindow, data: dict):
         """Procesa los datos de configuración para cambiar valores de variables
 
         Args:
-            window (QMainWindow): Clase principal de la aplicación
+            window (QMainWindow): Ventana principal
             data (dict): Diccionario de datos de configuración
         """
 
@@ -144,7 +144,7 @@ class Lineal_turn(Subtask, Ui_frm_lineal_turn):
         """Cambia el estado de los botones según los datos de configuración
 
         Args:
-            window (QMainWindow): Clase principal de la aplicación
+            window (QMainWindow): Ventana principal
             data (dict): Diccionario de datos de configuración
         """
 

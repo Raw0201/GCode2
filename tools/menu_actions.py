@@ -1,13 +1,19 @@
-from tools.main_window_tools import *
 from subtasks import version, graph
 
-def load_menu_actions(window) -> None:
-    """Cargar acciones del menú"""
+from tools.main_window_tools import *
+
+
+def load_menu_actions(window):
+    """Cargar acciones del menú
+
+    Args:
+        window (QMainWindow): Ventana principal
+    """
 
     window.actionNew.triggered.connect(lambda: new_tape(window))
     window.actionOpen.triggered.connect(lambda: open_file(window))
     window.actionSave.triggered.connect(lambda: save_config(window))
-    window.actionClose.triggered.connect(lambda: close_app(window))
+    window.actionClose.triggered.connect(lambda: close_action(window))
 
     window.actionDelete.triggered.connect(lambda: delete_lines(window))
     window.actionDuplicate.triggered.connect(lambda: duplicate_lines(window))
@@ -42,6 +48,15 @@ def load_menu_actions(window) -> None:
     window.actionLoop_down.triggered.connect(
         lambda: param_mod(window, "Rep", "down", 1.0)
     )
+    window.actionX_invert.triggered.connect(
+        lambda: param_invert(window, "Xin")
+    )
+    window.actionY_invert.triggered.connect(
+        lambda: param_invert(window, "Yin")
+    )
+    window.actionZ_invert.triggered.connect(
+        lambda: param_invert(window, "Zin")
+    )
     window.actionX_up.triggered.connect(
         lambda: param_mod(window, "Xin", "up", 0.001)
     )
@@ -66,13 +81,31 @@ def load_menu_actions(window) -> None:
     window.actionFeed_down.triggered.connect(
         lambda: param_mod(window, "Fed", "down", 0.001)
     )
+    window.actionSpeed_up.triggered.connect(
+        lambda: param_mod(window, "Spd", "up", 100)
+    )
+    window.actionSpeed_down.triggered.connect(
+        lambda: param_mod(window, "Spd", "down", 100)
+    )
 
 
-def graph_window(window):
+def graph_window(window: QMainWindow):
+    """Crea la ventana de gráfico de tape
+
+    Args:
+        window (QMainWindow): Ventana principal
+    """
+
     window.subwindow = graph.Graph()
     window.subwindow.show()
 
 
-def version_window(window):
+def version_window(window: QMainWindow):
+    """Crea la ventana de info de versión
+
+    Args:
+        window (QMainWindow): Ventana principal
+    """
+
     window.subwindow = version.Version()
     window.subwindow.show()

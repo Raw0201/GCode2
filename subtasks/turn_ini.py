@@ -23,7 +23,7 @@ class Turn_ini(QMainWindow):
         self.task = subtasks_tools.tasks_list["Turn_ini"]["Description"]
         self.modification = False
 
-    def collector(self) -> None:
+    def collector(self):
         """Recolecta los datos de la subtarea ingresados por el usuario"""
 
         data = {
@@ -33,7 +33,7 @@ class Turn_ini(QMainWindow):
 
         self.validator(data)
 
-    def validator(self, data: dict) -> None:
+    def validator(self, data: dict):
         """Valida los datos del diccionario recopilado
 
         Args:
@@ -42,7 +42,7 @@ class Turn_ini(QMainWindow):
 
         self.converter(data)
 
-    def converter(self, data: dict) -> None:
+    def converter(self, data: dict):
         """Formatea los datos del diccionario recopilado
 
         Args:
@@ -51,7 +51,7 @@ class Turn_ini(QMainWindow):
 
         self.packer(data)
 
-    def packer(self, data: dict) -> None:
+    def packer(self, data: dict):
         """Agrega datos al paquete de datos a exportar
 
         Args:
@@ -92,11 +92,11 @@ class Turn_ini(QMainWindow):
 
         pass
 
-    def processor(self, window: QMainWindow, data: dict) -> None:
+    def processor(self, window: QMainWindow, data: dict):
         """Procesa los datos de configuración para cambiar valores de variables
 
         Args:
-            window (QMainWindow): Clase principal de la aplicación
+            window (QMainWindow): Ventana principal
             data (dict): Diccionario de datos de configuración
         """
 
@@ -106,7 +106,7 @@ class Turn_ini(QMainWindow):
         """Cambia el estado de los botones según los datos de configuración
 
         Args:
-            window (QMainWindow): Clase principal de la aplicación
+            window (QMainWindow): Ventana principal
             data (dict): Diccionario de datos de configuración
         """
 

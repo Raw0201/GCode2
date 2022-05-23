@@ -31,7 +31,7 @@ class Misc(Subtask, Ui_frm_misc):
         self.cbx_sde.addItems(tape_sides_list)
         self.cbx_sde.setCurrentText(self.window.current_side)
 
-    def collector(self) -> None:
+    def collector(self):
         """Recolecta los datos de la subtarea ingresados por el usuario"""
 
         data = {
@@ -45,7 +45,7 @@ class Misc(Subtask, Ui_frm_misc):
 
         self.validator(data)
 
-    def validator(self, data: dict) -> None:
+    def validator(self, data: dict):
         """Valida los datos del diccionario recopilado
 
         Args:
@@ -57,7 +57,7 @@ class Misc(Subtask, Ui_frm_misc):
             return
         self.converter(data)
 
-    def converter(self, data: dict) -> None:
+    def converter(self, data: dict):
         """Formatea los datos del diccionario recopilado
 
         Args:
@@ -73,7 +73,7 @@ class Misc(Subtask, Ui_frm_misc):
 
         self.packer(data)
 
-    def packer(self, data: dict) -> None:
+    def packer(self, data: dict):
         """Agrega datos al paquete de datos a exportar
 
         Args:
@@ -105,7 +105,7 @@ class Misc(Subtask, Ui_frm_misc):
 
         return misc_gen(machine, data)
 
-    def modifier(self, data: dict) -> None:
+    def modifier(self, data: dict):
         """Modifica la línea de configuración seleccionada
 
         Args:
@@ -124,11 +124,11 @@ class Misc(Subtask, Ui_frm_misc):
         self.btn_save.setText("Actualizar")
         self.show()
 
-    def processor(self, window: QMainWindow, data: dict) -> None:
+    def processor(self, window: QMainWindow, data: dict):
         """Procesa los datos de configuración para cambiar valores de variables
 
         Args:
-            window (QMainWindow): Clase principal de la aplicación
+            window (QMainWindow): Ventana principal
             data (dict): Diccionario de datos de configuración
         """
 
@@ -139,7 +139,7 @@ class Misc(Subtask, Ui_frm_misc):
         """Cambia el estado de los botones según los datos de configuración
 
         Args:
-            window (QMainWindow): Clase principal de la aplicación
+            window (QMainWindow): Ventana principal
             data (dict): Diccionario de datos de configuración
         """
 

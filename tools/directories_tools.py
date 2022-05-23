@@ -1,10 +1,13 @@
-import contextlib
 import os
+import contextlib
 
 from tools.constants import *
+from PySide6.QtWidgets import QMainWindow
 
 
 def create_machine_folders():
+    """Crea los folders por defecto para los archivos de configuración"""
+
     root = ROOT_DIR
     machines = MACHINES
 
@@ -17,8 +20,12 @@ def create_machine_folders():
             os.mkdir(machine)
 
 
-def update_file_dir(window) -> None:
-    """Actualiza el forder de guardado"""
+def update_file_dir(window: QMainWindow):
+    """Actualiza el forder de guardado
+
+    Args:
+        window (QMainWindow): Ventana principal
+    """
 
     root = ROOT_DIR
     window.current_folder = f"{root}/{window.current_machine}"

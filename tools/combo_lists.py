@@ -90,3 +90,18 @@ radial_moves_list = (
     "A FAVOR",
     "EN CONTRA",
 )
+
+thread_types = (
+    "EXTERNA",
+    "INTERNA",
+)
+
+positions_list = (
+    "POSITIVA",
+    "NEGATIVA",
+)
+
+yes_no_list = (
+    "SÍ",
+    "NO",
+)

@@ -2,20 +2,26 @@ import os
 import json
 import tools
 
-from tools.message_boxes import *
-from tools.default_data_tools import *
-from tools.buttons_tools import *
+from PySide6.QtWidgets import QMainWindow, QFileDialog
+from PySide6.QtCore import QEvent
+
+from tools.constants import *
+from tools.file_tools import *
 from tools.format_tools import *
 from tools.config_tools import *
+from tools.buttons_tools import *
+from tools.message_boxes import *
 from tools.tape_lists_tools import *
-from tools.file_tools import *
 from tools.directories_tools import *
-from tools.constants import *
-from PySide6.QtWidgets import QFileDialog
+from tools.default_data_tools import *
 
 
-def load_main_title(window) -> None:
-    """Actualiza el título de la ventana"""
+def load_main_title(window: QMainWindow):
+    """Actualiza el título de la ventana
+
+    Args:
+        window (QMainWindow): Ventana principal
+    """
 
     app_name = "G-Code Editor"
     machine_type = window.current_machine
@@ -34,16 +40,24 @@ def load_main_title(window) -> None:
     window.setWindowTitle(main_title)
 
 
-def new_tape(window) -> None:
-    """Crear un nuevo tape"""
+def new_tape(window: QMainWindow):
+    """Crear un nuevo tape
+
+    Args:
+        window (QMainWindow): Ventana principal
+    """
 
     dialog = new_tape_question(window)
     if dialog == QMessageBox.Yes:
         create_new_tape(window)
 
 
-def create_new_tape(window):
-    """Crea el nuevo tape"""
+def create_new_tape(window: QMainWindow):
+    """Limpia los datos para iniciar un nuevo tape
+
+    Args:
+        window (QMainWindow): Ventana principal
+    """
 
     load_default_data_lists(window)
     load_default_variables(window)
@@ -60,8 +74,12 @@ def create_new_tape(window):
     window.tape2_widget.setRowCount(0)
 
 
-def open_file(window) -> None:
-    """Abrir un archivo de configuración"""
+def open_file(window: QMainWindow):
+    """Abrir un archivo de configuración
+
+    Args:
+        window (QMainWindow): Ventana principal
+    """
 
     try:
         os.chdir(window.current_folder)
@@ -89,8 +107,12 @@ def open_file(window) -> None:
         window.create_new_tape()
 
 
-def save_config(window) -> None:
-    """Guardar el archivo de configuración"""
+def save_config(window: QMainWindow):
+    """Guardar el archivo de configuración
+
+    Args:
+        window (QMainWindow): Ventana principal
+    """
 
     if not window.tape1_list:
         return
@@ -104,8 +126,12 @@ def save_config(window) -> None:
     save_tape(window)
 
 
-def save_tape(window) -> None:
-    """Guardar el archivo de configuración"""
+def save_tape(window: QMainWindow):
+    """Guardar el archivo de configuración
+
+    Args:
+        window (QMainWindow): Ventana principal
+    """
 
     if not window.tape1_list:
         return
@@ -122,8 +148,11 @@ def save_tape(window) -> None:
     load_main_title(window)
 
 
-def make_tape(window) -> list:
+def make_tape(window: QMainWindow) -> list:
     """Crea las líneas del tape
+
+    Args:
+        window (QMainWindow): Ventana principal
 
     Returns:
         list: Tape completo
@@ -140,16 +169,17 @@ def make_tape(window) -> list:
         data = line[1]
         if data != blank_space:
             tape.append(data)
-
     return tape
 
 
-def close_app(window) -> None:
-    """Cerrar la aplicación"""
-    window.close()
+def close_app(window: QMainWindow, event: QEvent):
+    """Evento de cierre de la ventana
 
+    Args:
+        window (QMainWindow): Ventana principal
+        event (QEvent): Evento de cierre de ventana
+    """
 
-def closeEvent(window, event) -> None:
     result = QMessageBox.question(
         window,
         "Cerrar la aplicación",
@@ -161,13 +191,27 @@ def closeEvent(window, event) -> None:
     if result == QMessageBox.Yes:
         if window.subtask1:
             window.subtask1.close()
-        if window.helper1:
-            window.helper1.close()
         event.accept()
 
 
-def delete_lines(window) -> None:
-    """Borra las líneas seleccionadas"""
+def close_action(window: QMainWindow):
+    """Evento de cierre de la ventana
+
+    Args:
+        window (QMainWindow): Ventana principal
+        event (QEvent): Evento de cierre de ventana
+    """
+
+    window.close()
+
+
+def delete_lines(window: QMainWindow):
+    """Borra las líneas seleccionadas
+
+    Args:
+        window (QMainWindow): Ventana principal
+    """
+
     if not window.config_list or not window.current_selection:
         return
 
@@ -184,8 +228,12 @@ def delete_lines(window) -> None:
         update_data(window)
 
 
-def duplicate_lines(window) -> None:
-    """Duplica las líneas seleccionadas"""
+def duplicate_lines(window: QMainWindow):
+    """Duplica las líneas seleccionadas
+
+    Args:
+        window (QMainWindow): Ventana principal
+    """
 
     index_list = window.current_selection
     if index_list[0] == 0:
@@ -205,10 +253,11 @@ def duplicate_lines(window) -> None:
     update_data(window)
 
 
-def movement(window, direction: str) -> None:
+def movement(window: QMainWindow, direction: str):
     """Valida el movimiento de las líneas seleccionadas
 
     Args:
+        window (QMainWindow): Ventana principal
         direction (str): Dirección del movimiento
     """
 
@@ -230,10 +279,11 @@ def movement(window, direction: str) -> None:
     move_lines(window, index_list, direction)
 
 
-def move_lines(window, index_list: list, direction: str) -> None:
+def move_lines(window: QMainWindow, index_list: list, direction: str):
     """Mueve las líneas de configuración
 
     Args:
+        window (QMainWindow): Ventana principal
         index_list (list): Lista de índices a mover
         direction (str): Dirección del movimiento
     """
@@ -254,36 +304,58 @@ def move_lines(window, index_list: list, direction: str) -> None:
     update_data(window)
 
 
-def param_mod(window, parameter: str, direction: str, amount: float) -> None:
+def param_mod(window: QMainWindow, param: str, direction: str, amount: float):
     """Modifica un parámetro en las líneas seleccionadas
 
     Args:
-        parameter (str): Parámetro a modificar
+        window (QMainWindow): Ventana principal
+        param (str): Parámetro a modificar
         direction (str): Dirección de la modificación
         amount (float): Dimensión de la modificación
     """
 
-    par = parameter
     mod = amount if direction == "up" else amount * -1
 
-    if par in {"Sub", "Rep"}:
+    if param in {"Sub", "Rep"}:
         mod = int(mod)
-    elif window.current_machine == "OMNITURN" and par == "Fed":
+    elif window.current_machine == "OMNITURN" and param == "Fed":
         mod *= 1000
 
     index_list = window.current_selection
     for index in index_list:
         with contextlib.suppress(KeyError):
-            modded = window.config_list[index][1][par]
-            window.config_list[index][1][par] = modded + mod
+            modded = window.config_list[index][1][param]
+            window.config_list[index][1][param] = modded + mod
 
     update_data(window)
 
 
-def component_view(window, component: object) -> None:
+def param_invert(window: QMainWindow, param: str):
+    """Modifica un parámetro en las líneas seleccionadas
+
+    Args:
+        window (QMainWindow): Ventana principal
+        param (str): Parámetro a modificar
+        direction (str): Dirección de la modificación
+        amount (float): Dimensión de la modificación
+    """
+
+    mod = -1
+
+    index_list = window.current_selection
+    for index in index_list:
+        with contextlib.suppress(KeyError):
+            modded = window.config_list[index][1][param]
+            window.config_list[index][1][param] = modded * mod
+
+    update_data(window)
+
+
+def component_view(window: QMainWindow, component: object):
     """Muestra u oculta el componente seleccionado
 
     Args:
+        window(QMainWindow): Ventana principal
         component (QtWidget): Componente a mostrar u ocultar
     """
 
@@ -297,28 +369,48 @@ def component_view(window, component: object) -> None:
     window.window_components[component] = state
 
 
-def home_position(window) -> None:
-    """Obtiene la línea inicial del programa"""
+def home_position(window: QMainWindow):
+    """Obtiene la línea inicial del programa
+
+    Args:
+        window (QMainWindow): Ventana principal
+    """
+
     line = 0
     go_to_position(window, line)
 
 
-def end_position(window) -> None:
-    """Obtiene la línea final del programa"""
+def end_position(window: QMainWindow):
+    """Obtiene la línea final del programa
+
+    Args:
+        window (QMainWindow): Ventana principal
+    """
+
     line = len(window.config_list) - 1
     go_to_position(window, line)
 
 
-def go_to_position(window, line):
-    """Ir a la línea indicada"""
+def go_to_position(window: QMainWindow, line: list):
+    """Ir a la línea indicada
+
+    Args:
+        window (QMainWindow): Ventana principal
+        line (list): Línea a la que desplazarse
+    """
+
     window.config_widget.setCurrentCell(line, 0)
     window.current_selection = [line]
     update_tape1_widget_selection(window)
     update_tape2_widget_selection(window)
 
 
-def block_lines(window) -> None:
-    """Bloquea o desbloquea las líneas seleccionadas"""
+def block_lines(window: QMainWindow):
+    """Bloquea o desbloquea las líneas seleccionadas
+
+    Args:
+        window (QMainWindow): Ventana principal
+    """
 
     index_list = window.current_selection
     for index in index_list:
@@ -328,14 +420,18 @@ def block_lines(window) -> None:
     update_data(window)
 
 
-def update_data(window) -> None:
-    """Actualiza pantalla después de abrir"""
+def update_data(window: QMainWindow):
+    """Actualiza pantalla después de abrir
+
+    Args:
+        window (QMainWindow): Ventana principal
+    """
 
     load_default_machining_data(window)
     generate_tape_lines(window, window.config_list)
     update_config_widget(window)
-    update_tape_widget(window, window.tape1_widget, window.tape1_list)
-    update_tape_widget(window, window.tape2_widget, window.tape2_list)
+    update_tape_widget(window.tape1_widget, window.tape1_list)
+    update_tape_widget(window.tape2_widget, window.tape2_list)
     update_config_widget_selection(window)
     update_tape1_widget_selection(window)
     update_tape2_widget_selection(window)

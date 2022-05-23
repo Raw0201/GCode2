@@ -1,4 +1,5 @@
 from PySide6.QtWidgets import QMainWindow
+from PySide6.QtCore import QEvent
 
 from tools.subwindows_tools import image_load, key_pressed
 from subtasks.helper import Helper
@@ -19,7 +20,7 @@ class Subtask(QMainWindow):
         self.image = ""
         self.btn_help.clicked.connect(lambda: self.helper(self.image))
 
-    def change_to(self, window, task) -> None:
+    def change_to(self, window, task):
         """Cambia a la función indicada
 
         Args:
@@ -39,5 +40,12 @@ class Subtask(QMainWindow):
     def keyPressEvent(self, qKeyEvent) -> None:
         key_pressed(self, qKeyEvent)
 
-    def closeEvent(self, event):
-        self.close()
+    def closeEvent(self, event: QEvent):
+        """Evento de cierre de la ventana
+
+        Args:
+            event (QEvent): Evento de cierre
+        """
+
+        if self.helper1:
+            self.helper1.close()

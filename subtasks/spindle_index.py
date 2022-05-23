@@ -38,7 +38,7 @@ class Spindle_index(Subtask, Ui_frm_spindle_index):
 
         self.validator(data)
 
-    def validator(self, data: dict) -> None:
+    def validator(self, data: dict):
         """Valida los datos del diccionario recopilado
 
         Args:
@@ -50,7 +50,7 @@ class Spindle_index(Subtask, Ui_frm_spindle_index):
             return
         self.converter(data)
 
-    def converter(self, data: dict) -> None:
+    def converter(self, data: dict):
         """Formatea los datos del diccionario recopilado
 
         Args:
@@ -66,7 +66,7 @@ class Spindle_index(Subtask, Ui_frm_spindle_index):
 
         self.packer(data)
 
-    def packer(self, data: dict) -> None:
+    def packer(self, data: dict):
         """Agrega datos al paquete de datos a exportar
 
         Args:
@@ -97,7 +97,7 @@ class Spindle_index(Subtask, Ui_frm_spindle_index):
 
         return spindle_index_gen(machine, data)
 
-    def modifier(self, data: dict) -> None:
+    def modifier(self, data: dict):
         """Modifica la línea de configuración seleccionada
 
         Args:
@@ -113,11 +113,11 @@ class Spindle_index(Subtask, Ui_frm_spindle_index):
         self.btn_save.setText("Actualizar")
         self.show()
 
-    def processor(self, window: QMainWindow, data: dict) -> None:
+    def processor(self, window: QMainWindow, data: dict):
         """Procesa los datos de configuración para cambiar valores de variables
 
         Args:
-            window (QMainWindow): Clase principal de la aplicación
+            window (QMainWindow): Ventana principal
             data (dict): Diccionario de datos de configuración
         """
 
@@ -128,7 +128,7 @@ class Spindle_index(Subtask, Ui_frm_spindle_index):
         """Cambia el estado de los botones según los datos de configuración
 
         Args:
-            window (QMainWindow): Clase principal de la aplicación
+            window (QMainWindow): Ventana principal
             data (dict): Diccionario de datos de configuración
         """
 

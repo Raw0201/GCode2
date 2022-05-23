@@ -1,11 +1,12 @@
+from pathlib import Path
 from PySide6 import QtCore
 from PySide6.QtGui import QPixmap
-from pathlib import Path
+from PySide6.QtCore import QEvent
 
 from PySide6.QtWidgets import QLabel
 
 
-def key_pressed(self, qKeyEvent) -> None:
+def key_pressed(self, qKeyEvent: QEvent) -> None:
     """Evento de accionamiento de tecla
 
     Args:

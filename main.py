@@ -4,13 +4,14 @@ from PySide6 import QtCore
 from PySide6.QtCore import QLibraryInfo, QTranslator
 from PySide6.QtWidgets import QApplication, QMainWindow
 
-from interfaces.ui_MainWindow import Ui_MainWindow
-from tools.default_data_tools import *
-from tools.directories_tools import *
-from tools.subtasks_tools import *
+from tools.menu_actions import *
 from tools.buttons_tools import *
 from tools.widgets_tools import *
-from tools.menu_actions import *
+from tools.subtasks_tools import *
+from tools.directories_tools import *
+from tools.default_data_tools import *
+
+from interfaces.ui_MainWindow import Ui_MainWindow
 
 
 class MainWindow(QMainWindow, Ui_MainWindow):
@@ -26,12 +27,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         load_default_tape_conditions(self)
         load_default_machining_data(self)
 
-        # ? Folders de almacenamiento *
-        # ? ----------------------------------------------------------------- *
-
-        create_machine_folders()
-
-        # ? Botones de la pantalla principal *
+        # ? Botones y acciones de la pantalla principal *
         # ? ----------------------------------------------------------------- *
 
         load_main_buttons(self)
@@ -44,6 +40,20 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
         load_default_window_components(self)
         load_main_widgets_connections(self)
+
+        # ? Folders de almacenamiento *
+        # ? ----------------------------------------------------------------- *
+
+        create_machine_folders()
+
+    def closeEvent(self, event: QEvent):
+        """Evento de cierre de la ventana
+
+        Args:
+            event (QEvent): Evento de cierre
+        """
+
+        close_app(self, event)
 
 
 if __name__ == "__main__":

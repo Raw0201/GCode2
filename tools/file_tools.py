@@ -1,4 +1,3 @@
-import os
 import json
 
 
@@ -9,6 +8,7 @@ def save_config_file(name: str, source: list) -> None:
         name (str): _description_
         source (list): _description_
     """
+
     if not source:
         return
 
@@ -18,7 +18,11 @@ def save_config_file(name: str, source: list) -> None:
 
 
 def update_file_name(window) -> None:
-    """Actualiza el nombre del archivo"""
+    """Actualiza el nombre del archivo
+
+    Args:
+        window (QMainWindow): Ventana principal
+    """
 
     back = "(H)" if window.swiss_back_machining else ""
     machine = window.current_machine

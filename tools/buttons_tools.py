@@ -1,8 +1,12 @@
 from tools.config_tools import *
 
 
-def load_main_buttons(window):
-    """Carga la lista de botones de la pantalla principal"""
+def load_main_buttons(window: QMainWindow):
+    """Carga la lista de botones de la pantalla principal
+
+    Args:
+        window (QMainWindow): Ventana principal
+    """
 
     window.program_buttons_list = (
         window.btn_header,
@@ -69,8 +73,12 @@ def load_main_buttons(window):
     )
 
 
-def load_default_buttons_status(window) -> None:
-    """Actualiza estado inicial de los botones"""
+def load_default_buttons_status(window: QMainWindow):
+    """Actualiza estado inicial de los botones
+
+    Args:
+        window (QMainWindow): Ventana principal
+    """
 
     for button_list in (
         window.program_buttons_list,
@@ -88,8 +96,12 @@ def load_default_buttons_status(window) -> None:
     window.btn_header.setEnabled(True)
 
 
-def load_main_buttons_connections(window):
-    """Carga las conexiones de los botones de la pantalla principal"""
+def load_main_buttons_connections(window: QMainWindow):
+    """Carga las conexiones de los botones de la pantalla principal
+
+    Args:
+        window (QMainWindow): Ventana principal
+    """
 
     window.btn_header.clicked.connect(
         lambda: collect_data(window, "Header"),
@@ -132,4 +144,7 @@ def load_main_buttons_connections(window):
     )
     window.btn_radial_turn.clicked.connect(
         lambda: collect_data(window, "Radial_turn"),
+    )
+    window.btn_thread.clicked.connect(
+        lambda: collect_data(window, "Thread"),
     )

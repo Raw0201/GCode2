@@ -1,10 +1,13 @@
 import tools
 
+from PySide6.QtWidgets import QMainWindow
 
-def generate_tape_lines(window, data_list: list):
+
+def generate_tape_lines(window: QMainWindow, data_list: list):
     """Genera las líneas de tape a partir de la lista de configuración
 
     Args:
+        window (QMainWindow): Ventana principal
         data_list (list): Lista de configuración
     """
 
@@ -29,10 +32,11 @@ def generate_tape_lines(window, data_list: list):
         store_tape_data(window, tape_lines, parameters)
 
 
-def store_tape_data(window, tape_lines: list, parameters: dict) -> None:
+def store_tape_data(window: QMainWindow, tape_lines: list, parameters: dict):
     """Guarda las líneas de tape en las listas respectivas
 
     Args:
+        window (QMainWindow): Ventana principal
         tape_lines (list): Líneas generadas de tape
         parameters (dict): Diccionario de parámetros actuales
     """
@@ -53,8 +57,11 @@ def store_tape_data(window, tape_lines: list, parameters: dict) -> None:
             )
 
 
-def get_parameters(window) -> dict:
+def get_parameters(window: QMainWindow) -> dict:
     """Obtiene los parámetros actuales de configuración
+
+    Args:
+        window (QMainWindow): Ventana principal
 
     Returns:
         dict: Diccionario de parámetros

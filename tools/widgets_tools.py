@@ -1,11 +1,21 @@
-import contextlib
 import tools
+import contextlib
 
-from PySide6.QtWidgets import QAbstractItemView, QTableWidget, QTableWidgetItem
+from PySide6.QtWidgets import (
+    QMainWindow,
+    QAbstractItemView,
+    QTableWidget,
+    QTableWidgetItem,
+    QWidget,
+)
 
 
-def load_main_widgets_connections(window):
-    """Carga las conexiones de los widgets de la pantalla principal"""
+def load_main_widgets_connections(window: QMainWindow):
+    """Carga las conexiones de los widgets de la pantalla principal
+
+    Args:
+        window (QMainWindow): Ventana principal
+    """
 
     window.config_widget.clicked.connect(
         lambda: widget_clicked(window, "conf")
@@ -38,8 +48,12 @@ def load_main_widgets_connections(window):
     )
 
 
-def update_config_widget(window) -> None:
-    """Actualiza los datos en el widget de configuración"""
+def update_config_widget(window: QMainWindow):
+    """Actualiza los datos en el widget de configuración
+
+    Args:
+        window (QMainWindow): Ventana principal
+    """
 
     config_lines = window.config_list
     window.config_widget.setRowCount(len(config_lines))
@@ -48,16 +62,25 @@ def update_config_widget(window) -> None:
         window.config_widget.setItem(num, 0, QTableWidgetItem(task_name))
 
 
-def update_tape_widget(window, widget: QTableWidget, tape: list):
-    """Actualiza los datos en el widget de tape"""
+def update_tape_widget(widget: QTableWidget, tape: list):
+    """Actualiza los datos en el widget de tape
+
+    Args:
+        widget (QTableWidget): Widget de visualización de datos
+        tape (list): Lista de líneas de tape
+    """
 
     widget.setRowCount(len(tape))
     for num, line in enumerate(tape):
         widget.setItem(num, 0, QTableWidgetItem(line[1]))
 
 
-def update_config_widget_selection(window):
-    """Actualiza la selección de items en el widget de configuración"""
+def update_config_widget_selection(window: QMainWindow):
+    """Actualiza la selección de items en el widget de configuración
+
+    Args:
+        window (QMainWindow): Ventana principal
+    """
 
     all_items = [
         window.config_widget.item(index_number, 0)
@@ -70,8 +93,12 @@ def update_config_widget_selection(window):
     items_selector(all_items, items, window.config_widget)
 
 
-def update_tape1_widget_selection(window):
-    """Actualiza la seleccion de items en el widget de tape1"""
+def update_tape1_widget_selection(window: QMainWindow):
+    """Actualiza la seleccion de items en el widget de tape1
+
+    Args:
+        window (QMainWindow): Ventana principal
+    """
 
     all_items = [
         window.tape1_widget.item(index_number, 0)
@@ -89,8 +116,12 @@ def update_tape1_widget_selection(window):
     items_selector(all_items, items, window.tape1_widget)
 
 
-def update_tape2_widget_selection(window):
-    """Actualiza la seleccion de items en el widget de tape2"""
+def update_tape2_widget_selection(window: QMainWindow):
+    """Actualiza la seleccion de items en el widget de tape2
+
+    Args:
+        window (QMainWindow): Ventana principal
+    """
 
     all_items = [
         window.tape2_widget.item(index_number, 0)
@@ -108,7 +139,7 @@ def update_tape2_widget_selection(window):
     items_selector(all_items, items, window.tape2_widget)
 
 
-def items_selector(all_items: list, items: list, widget: object):
+def items_selector(all_items: list, items: list, widget: QWidget):
     """Selector de items en los widgets
 
     Args:
@@ -126,10 +157,11 @@ def items_selector(all_items: list, items: list, widget: object):
         widget.scrollToItem(items[-1], view.PositionAtCenter)
 
 
-def widget_clicked(window, widget: str):
+def widget_clicked(window: QMainWindow, widget: str):
     """Recibe la señal de item seleccionado en los widgets
 
     Args:
+        window (QMainWindow): Ventana principal
         widget (str): Widget del item seleccionado
     """
 
@@ -143,8 +175,12 @@ def widget_clicked(window, widget: str):
         tape2_selected(window)
 
 
-def config_selected(window):
-    """Actualiza la lista de índices seleccionados en la configuración"""
+def config_selected(window: QMainWindow):
+    """Actualiza la lista de índices seleccionados en la configuración
+
+    Args:
+        window (QMainWindow): Ventana principal
+    """
 
     if window.current_widget == "conf":
         if selected_items := window.config_widget.selectedItems():
@@ -158,24 +194,37 @@ def config_selected(window):
             update_tape2_widget_selection(window)
 
 
-def tape1_selected(window):
-    """Actualiza la lista de índices seleccionados en el tape1"""
+def tape1_selected(window: QMainWindow):
+    """Actualiza la lista de índices seleccionados en el tape1
+
+    Args:
+        window (QMainWindow): Ventana principal
+    """
 
     if window.current_widget == "tape1":
         if selected_items := window.tape1_widget.selectedItems():
             items_selection(window, selected_items)
 
 
-def tape2_selected(window):
-    """Actualiza la lista de índices seleccionados en el tape2"""
+def tape2_selected(window: QMainWindow):
+    """Actualiza la lista de índices seleccionados en el tape2
+
+    Args:
+        window (QMainWindow): Ventana principal
+    """
 
     if window.current_widget == "tape2":
         if selected_items := window.tape2_widget.selectedItems():
             items_selection(window, selected_items)
 
 
-def items_selection(window, selected_items):
-    """Actualiza la lista de índices seleccionados"""
+def items_selection(window: QMainWindow, selected_items: list):
+    """Actualiza la lista de índices seleccionados
+
+    Args:
+        window (QMainWindow): Ventana principal
+        selected_items (list): Lista de items seleccionados
+    """
 
     selected_list = []
     selected_list.extend(
@@ -193,8 +242,12 @@ def items_selection(window, selected_items):
         update_tape1_widget_selection(window)
 
 
-def item_modifier(window) -> None:
-    """Obtiene la línea de configuración a modificar"""
+def item_modifier(window: QMainWindow):
+    """Obtiene la línea de configuración a modificar
+
+    Args:
+        window (QMainWindow): Ventana principal
+    """
 
     line = window.current_selection
     task = window.config_list[line[0]][0]
@@ -205,12 +258,16 @@ def item_modifier(window) -> None:
     window.subtask1.modifier(data)
 
 
-def update_data_widgets(window):
-    """Actualiza los datos en los widgets"""
+def update_data_widgets(window: QMainWindow):
+    """Actualiza los datos en los widgets
+
+    Args:
+        window (QMainWindow): Ventana principal
+    """
 
     update_config_widget(window)
-    update_tape_widget(window, window.tape1_widget, window.tape1_list)
-    update_tape_widget(window, window.tape2_widget, window.tape2_list)
+    update_tape_widget(window.tape1_widget, window.tape1_list)
+    update_tape_widget(window.tape2_widget, window.tape2_list)
 
     update_config_widget_selection(window)
     update_tape1_widget_selection(window)

@@ -1,15 +1,25 @@
 from tools.constants import *
 
+from PySide6.QtWidgets import QMainWindow
 
-def load_default_tape_conditions(window) -> None:
-    """Cargar condiciones del tape"""
+
+def load_default_tape_conditions(window: QMainWindow):
+    """Cargar condiciones del tape
+
+    Args:
+        window (QMainWindow): Ventana principal
+    """
 
     window.modified_task = False
     window.save_required = False
 
 
-def load_default_data_lists(window):
-    """Carga los valores por defecto de las listas"""
+def load_default_data_lists(window: QMainWindow):
+    """Carga los valores por defecto de las listas
+
+    Args:
+        window (QMainWindow): Ventana principal
+    """
 
     window.config_list = []
     window.tape1_list = []
@@ -17,8 +27,12 @@ def load_default_data_lists(window):
     window.current_selection = []
 
 
-def load_default_variables(window):
-    """Carga los valores por defecto de las variables principales"""
+def load_default_variables(window: QMainWindow):
+    """Carga los valores por defecto de las variables principales
+
+    Args:
+        window (QMainWindow): Ventana principal
+    """
 
     window.subtask1 = None
     window.current_widget = None
@@ -31,8 +45,12 @@ def load_default_variables(window):
     window.current_folder = ROOT_DIR
 
 
-def load_default_machining_data(window):
-    """Carga los valores por defecto de datos de mecanizado"""
+def load_default_machining_data(window: QMainWindow):
+    """Carga los valores por defecto de datos de mecanizado
+
+    Args:
+        window (QMainWindow): Ventana principal
+    """
 
     window.current_machine = ""
     window.current_comment = ""
@@ -61,8 +79,12 @@ def load_default_machining_data(window):
     window.first_zps = None
 
 
-def load_default_window_components(window):
-    """Carga el estado por defecto de componentes de la ventana principal"""
+def load_default_window_components(window: QMainWindow):
+    """Carga el estado por defecto de componentes de la ventana principal
+
+    Args:
+        window (QMainWindow): Ventana principal
+    """
 
     window.window_components = {
         window.dock_functions: True,

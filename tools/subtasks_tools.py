@@ -13,6 +13,7 @@ from subtasks import (
     turn_ini,
     lineal_turn,
     radial_turn,
+    thread,
 )
 
 tasks_list = {
@@ -72,10 +73,23 @@ tasks_list = {
         "Name": radial_turn.Radial_turn,
         "Description": "        Torneado radial",
     },
+    "Thread": {
+        "Name": thread.Thread,
+        "Description": "        Ciclo roscado",
+    },
 }
 
 
-def get_task_class(description):
+def get_task_class(description: str) -> object:
+    """Obtiene la clase de la subtarea
+
+    Args:
+        description (str): Descripción de la subtarea
+
+    Returns:
+        object: Clase de la subtarea
+    """
+
     main_values = list(tasks_list.values())
 
     names_list, descriptions_list = [], []

@@ -4,10 +4,11 @@ from tools.widgets_tools import *
 from tools.tape_lists_tools import *
 
 
-def collect_data(window, data_class: str):
+def collect_data(window: QMainWindow, data_class: str):
     """Crea una subtarea para recolectar datos de configuración
 
     Args:
+        window (QMainWindow): Ventana principal
         data_class (str): Clase de la subtarea
     """
 
@@ -20,15 +21,16 @@ def collect_data(window, data_class: str):
         window.subtask1.collector()
 
 
-def store_config_data(window, data_pack: list, modification: bool):
+def store_config_data(window: QMainWindow, data_pack: list, modif: bool):
     """Almacena los datos recolectados en la lista de configuración
 
     Args:
+        window (QMainWindow): Ventana principal
         data_pack (list): Lista de datos recolectados
-        modification (bool): Indicador de datos modificados
+        modif (bool): Indicador de datos modificados
     """
 
-    if modification:
+    if modif:
         update_modified_data(window, data_pack)
     elif not window.current_selection:
         append_new_data(window, data_pack)
@@ -40,10 +42,11 @@ def store_config_data(window, data_pack: list, modification: bool):
     update_data_widgets(window)
 
 
-def update_modified_data(window, data_pack: list):
+def update_modified_data(window: QMainWindow, data_pack: list):
     """Actualiza los datos modificados en la lista de configuración
 
     Args:
+        window (QMainWindow): Ventana principal
         data_pack (list): Paquete de datos modificados
     """
 
@@ -54,10 +57,11 @@ def update_modified_data(window, data_pack: list):
     tools.main_window_tools.update_data(window)
 
 
-def append_new_data(window, data_pack: list):
+def append_new_data(window: QMainWindow, data_pack: list):
     """Agrega los datos recolectados al final de la lista
 
     Args:
+        window (QMainWindow): Ventana principal
         data_pack (list): Paquete de datos recolectados
     """
 
@@ -70,7 +74,7 @@ def append_new_data(window, data_pack: list):
         window.current_selection = [end_line]
 
 
-def insert_new_data(window, data_pack: list):
+def insert_new_data(window: QMainWindow, data_pack: list):
     """Inserta los datos recolectados en una posición de la lista
 
     Args:

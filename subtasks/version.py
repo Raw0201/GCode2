@@ -9,5 +9,5 @@ class Version(QMainWindow, Ui_frm_version):
         super().__init__()
         self.setupUi(self)
 
-    def keyPressEvent(self, qKeyEvent) -> None:
+    def keyPressEvent(self, qKeyEvent):
         key_pressed(self, qKeyEvent)
