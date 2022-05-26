@@ -14,6 +14,7 @@ from subtasks import (
     lineal_turn,
     radial_turn,
     thread,
+    cutoff,
 )
 
 tasks_list = {
@@ -76,6 +77,10 @@ tasks_list = {
     "Thread": {
         "Name": thread.Thread,
         "Description": "        Ciclo roscado",
+    },
+    "Cutoff": {
+        "Name": cutoff.Cutoff,
+        "Description": "        Tronzado de pieza",
     },
 }
 

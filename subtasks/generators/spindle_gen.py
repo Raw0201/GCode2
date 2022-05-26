@@ -1,5 +1,5 @@
-from tools.format_tools import *
 from tools.cnc_codes import *
+from tools.formatting import *
 
 
 def spindle_gen(machine: str, data: list) -> list:

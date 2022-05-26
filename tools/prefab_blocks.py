@@ -63,6 +63,34 @@ def prefab_thread_tool_call(tool: int, xin: float, zin: float) -> list:
     ]
 
 
+def prefab_cutoff_tool_call(tool: int, xin: float, zin: float) -> list:
+    """Bloque prefabricado de llamada de herramienta
+
+    Args:
+        tool (int): Número de herramienta
+        xin (float): Posición inicial eje X
+        zin (float): Posición inicial eje Z
+
+    Returns:
+        list: Bloque prefabricado
+    """
+
+    return [
+        "    Llamar herramienta",
+        {
+            "Tol": tool,
+            "Typ": "CUCHILLA",
+            "Dia": 0,
+            "Spc": "TRONZAR",
+            "Sde": "$1",
+            "Xin": xin,
+            "Yin": 0,
+            "Zin": zin,
+            "Blk": False,
+        },
+    ]
+
+
 def prefab_tool_close(tool: int, side: str, bar: float) -> list:
     """Bloque prefabricado de cierre de herramienta
 

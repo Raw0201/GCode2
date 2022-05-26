@@ -1,7 +1,7 @@
 from PySide6.QtWidgets import QMainWindow
 
-from tools import subtasks_tools
-from tools.config_tools import *
+from tools import subtasks
+from tools.config_list import *
 
 from subtasks.generators.free_gen import free_gen
 
@@ -10,7 +10,7 @@ class Free(QMainWindow):
     def __init__(self, main_window):
         super().__init__()
         self.window = main_window
-        self.task = subtasks_tools.tasks_list["Free"]["Description"]
+        self.task = subtasks.tasks_list["Free"]["Description"]
         self.modification = False
 
     def collector(self):

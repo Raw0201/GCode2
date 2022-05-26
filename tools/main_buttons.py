@@ -1,4 +1,4 @@
-from tools.config_tools import *
+from tools.config_list import *
 
 
 def load_main_buttons(window: QMainWindow):
@@ -147,4 +147,7 @@ def load_main_buttons_connections(window: QMainWindow):
     )
     window.btn_thread.clicked.connect(
         lambda: collect_data(window, "Thread"),
+    )
+    window.btn_cutoff.clicked.connect(
+        lambda: collect_data(window, "Cutoff"),
     )

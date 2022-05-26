@@ -253,7 +253,7 @@ def item_modifier(window: QMainWindow):
     task = window.config_list[line[0]][0]
     data = window.config_list[line[0]][1]
 
-    task_class = tools.subtasks_tools.get_task_class(task)
+    task_class = tools.subtasks.get_task_class(task)
     window.subtask1 = task_class(window)
     window.subtask1.modifier(data)
 

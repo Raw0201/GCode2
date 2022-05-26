@@ -1,4 +1,4 @@
-from tools.format_tools import *
+from tools.formatting import *
 
 
 def comment_gen(machine: str, data: list) -> list:

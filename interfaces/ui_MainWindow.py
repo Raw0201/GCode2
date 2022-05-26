@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'MainWindowIjYacS.ui'
+## Form generated from reading UI file 'MainWindowJnPlMw.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.1.1
 ##
@@ -3398,10 +3398,10 @@ class Ui_MainWindow(object):
 #endif // QT_CONFIG(statustip)
         self.btn_thread.setText(QCoreApplication.translate("MainWindow", u"Roscado", None))
 #if QT_CONFIG(tooltip)
-        self.btn_cutoff.setToolTip(QCoreApplication.translate("MainWindow", u"Realizar un maquinado de tronzado", None))
+        self.btn_cutoff.setToolTip(QCoreApplication.translate("MainWindow", u"Realizar el tronzado de la pieza (torno suizo)", None))
 #endif // QT_CONFIG(tooltip)
 #if QT_CONFIG(statustip)
-        self.btn_cutoff.setStatusTip(QCoreApplication.translate("MainWindow", u"Realizar un maquinado de tronzado", None))
+        self.btn_cutoff.setStatusTip(QCoreApplication.translate("MainWindow", u"Realizar el tronzado de la pieza (torno suizo)", None))
 #endif // QT_CONFIG(statustip)
         self.btn_cutoff.setText(QCoreApplication.translate("MainWindow", u"Tronzado", None))
 #if QT_CONFIG(tooltip)

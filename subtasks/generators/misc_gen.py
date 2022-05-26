@@ -1,5 +1,5 @@
-from tools.format_tools import *
 from tools.cnc_codes import *
+from tools.formatting import *
 
 
 def misc_gen(machine: str, data: list) -> list:
@@ -49,9 +49,9 @@ def gen_b12(data: list) -> list:
         return [[blank_space], [blank_space]]
 
     com = "" if com == "" else f"(- {com} -)"
-    stp = swiss_m_codes[f"PARADA {stp}"]
-    chk = swiss_m_codes[f"{chk} BOQUILLA"]
-    col = swiss_m_codes[f"{col} REFRIGERANTE"]
+    stp = swiss_m_codes[f"PARADA {stp}"] if stp != "" else ""
+    chk = swiss_m_codes[f"{chk} BOQUILLA"] if chk != "" else ""
+    col = swiss_m_codes[f"{col} REFRIGERANTE"] if col != "" else ""
 
     lines1 = [f"{blk}{stp}{chk}{col}{com}"]
     lines2 = [blank_space]

@@ -1,9 +1,9 @@
 from PySide6.QtWidgets import QMainWindow
 from PySide6.QtCore import QEvent
 
-from tools.subwindows_tools import image_load, key_pressed
+from tools.subwindows import image_load, key_pressed
 from subtasks.helper import Helper
-from tools.config_tools import *
+from tools.config_list import *
 
 
 class Subtask(QMainWindow):

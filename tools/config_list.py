@@ -1,7 +1,7 @@
 import tools
-from tools.default_data_tools import *
-from tools.widgets_tools import *
-from tools.tape_lists_tools import *
+from tools.widgets import *
+from tools.tape_lists import *
+from tools.default_data import *
 
 
 def collect_data(window: QMainWindow, data_class: str):
@@ -12,7 +12,7 @@ def collect_data(window: QMainWindow, data_class: str):
         data_class (str): Clase de la subtarea
     """
 
-    subtask_class = tools.subtasks_tools.tasks_list[data_class]["Name"]
+    subtask_class = tools.subtasks.tasks_list[data_class]["Name"]
     window.subtask1 = subtask_class(window)
 
     if data_class not in {"Free", "End", "Tool_close", "Turn_ini"}:
@@ -54,7 +54,7 @@ def update_modified_data(window: QMainWindow, data_pack: list):
     data = data_pack[0][1]
     index = window.current_selection[0]
     window.config_list[index] = [task, data]
-    tools.main_window_tools.update_data(window)
+    tools.main_window.update_data(window)
 
 
 def append_new_data(window: QMainWindow, data_pack: list):

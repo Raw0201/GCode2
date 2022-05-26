@@ -4,12 +4,12 @@ from PySide6 import QtCore
 from PySide6.QtCore import QLibraryInfo, QTranslator
 from PySide6.QtWidgets import QApplication, QMainWindow
 
+from tools.widgets import *
+from tools.subtasks import *
+from tools.directories import *
 from tools.menu_actions import *
-from tools.buttons_tools import *
-from tools.widgets_tools import *
-from tools.subtasks_tools import *
-from tools.directories_tools import *
-from tools.default_data_tools import *
+from tools.main_buttons import *
+from tools.default_data import *
 
 from interfaces.ui_MainWindow import Ui_MainWindow
 

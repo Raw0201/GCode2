@@ -1,5 +1,5 @@
-from tools.format_tools import *
-from tools.compensation_tools import *
+from tools.formatting import *
+from tools.compensations import *
 
 
 def tool_call_gen(machine, data) -> list:

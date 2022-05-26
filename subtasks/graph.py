@@ -1,6 +1,6 @@
 from PySide6.QtWidgets import QMainWindow
 
-from tools.subwindows_tools import key_pressed
+from tools.subwindows import key_pressed
 from interfaces.ui_graph import Ui_frm_graph
 
 

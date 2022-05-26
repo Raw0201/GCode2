@@ -3002,10 +3002,10 @@ PlotWidget {
             <item row="4" column="0">
              <widget class="QPushButton" name="btn_cutoff">
               <property name="toolTip">
-               <string>Realizar un maquinado de tronzado</string>
+               <string>Realizar el tronzado de la pieza (torno suizo)</string>
               </property>
               <property name="statusTip">
-               <string>Realizar un maquinado de tronzado</string>
+               <string>Realizar el tronzado de la pieza (torno suizo)</string>
               </property>
               <property name="text">
                <string>Tronzado</string>

@@ -21,7 +21,7 @@ def generate_tape_lines(window: QMainWindow, data_list: list):
         if task != "Inicio de programa":
             window.current_config_line += 1
 
-        task_class = tools.subtasks_tools.get_task_class(task)
+        task_class = tools.subtasks.get_task_class(task)
         task_class.processor(window, window, data)
         task_class.switcher(window, window, data)
 

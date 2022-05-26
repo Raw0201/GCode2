@@ -1,18 +1,18 @@
 from PySide6.QtWidgets import QMainWindow
 
 from main import *
-from tools import subtasks_tools
-from tools.file_tools import *
-from tools.combo_lists import *
-from tools.thread_table import *
-from tools.format_tools import *
-from tools.config_tools import *
+from tools import subtasks
+from tools.formatting import *
+from tools.config_list import *
+from tools.validations import *
+from tools.directories import *
+from tools.main_window import *
+from tools.default_data import *
+from tools.thread_tables import *
 from tools.message_boxes import *
 from tools.prefab_blocks import *
-from tools.validation_tools import *
-from tools.directories_tools import *
-from tools.main_window_tools import *
-from tools.default_data_tools import *
+from tools.combobox_lists import *
+from tools.file_management import *
 
 from subtasks.subtask import Subtask
 from subtasks.generators.thread_gen import thread_gen
@@ -23,7 +23,7 @@ class Thread(Subtask, Ui_frm_thread):
     def __init__(self, main_window):
         super().__init__()
         self.window = main_window
-        self.task = subtasks_tools.tasks_list["Thread"]["Description"]
+        self.task = subtasks.tasks_list["Thread"]["Description"]
         self.image = "thread.png"
 
         self.cbx_thd.addItems(thread_table)

@@ -1,6 +1,6 @@
-from tools.format_tools import *
-from tools.compensation_tools import *
-from tools.thread_table import *
+from tools.formatting import *
+from tools.compensations import *
+from tools.thread_tables import *
 
 
 def thread_gen(machine, data) -> list:

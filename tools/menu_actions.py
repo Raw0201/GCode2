@@ -1,6 +1,6 @@
 from subtasks import version, graph
 
-from tools.main_window_tools import *
+from tools.main_window import *
 
 
 def load_menu_actions(window):

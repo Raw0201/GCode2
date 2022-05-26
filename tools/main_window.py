@@ -6,14 +6,14 @@ from PySide6.QtWidgets import QMainWindow, QFileDialog
 from PySide6.QtCore import QEvent
 
 from tools.constants import *
-from tools.file_tools import *
-from tools.format_tools import *
-from tools.config_tools import *
-from tools.buttons_tools import *
+from tools.formatting import *
+from tools.tape_lists import *
+from tools.config_list import *
+from tools.directories import *
+from tools.default_data import *
+from tools.main_buttons import *
 from tools.message_boxes import *
-from tools.tape_lists_tools import *
-from tools.directories_tools import *
-from tools.default_data_tools import *
+from tools.file_management import *
 
 
 def load_main_title(window: QMainWindow):
@@ -63,7 +63,7 @@ def create_new_tape(window: QMainWindow):
     load_default_variables(window)
     load_default_tape_conditions(window)
     load_default_machining_data(window)
-    tools.buttons_tools.load_default_buttons_status(window)
+    tools.main_buttons.load_default_buttons_status(window)
     load_main_title(window)
 
     window.config_widget.clearContents()
