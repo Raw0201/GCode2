@@ -141,9 +141,16 @@ class Header(Subtask, Ui_frm_header):
         """
 
         window.save_required = True
+
+        if (
+            window.current_folder == ""
+            or window.current_machine != data["Mch"]
+        ):
+            window.current_machine = data["Mch"]
+            update_file_dir(window)
+
         window.main_tape_active = True
         window.current_side = "$1"
-        window.current_machine = data["Mch"]
         window.part_name = data["Prt"]
         window.main_tape_number = data["Pgr"]
         window.tape_description = data["Dsc"]
@@ -155,7 +162,6 @@ class Header(Subtask, Ui_frm_header):
         window.swiss_back_machining = data["Chk"] > 0
 
         update_file_name(window)
-        update_file_dir(window)
         load_main_title(window)
 
     def switcher(self, window: QMainWindow, data: dict):
@@ -195,7 +201,7 @@ class Header(Subtask, Ui_frm_header):
 
         window.btn_header.setEnabled(False)
         window.btn_tool_close.setEnabled(False)
-        # window.btn_collect.setEnabled(False)
+        window.btn_collect.setEnabled(False)
 
         end_enabled = not window.main_tape_active
         window.btn_end.setEnabled(end_enabled)

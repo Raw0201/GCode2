@@ -18,7 +18,7 @@ def generate_tape_lines(window: QMainWindow, data_list: list):
     for line in data_list:
         task = line[0]
         data = line[1]
-        if task != "Inicio de programa":
+        if task not in {"Inicio de programa", "Inicio de subrutina"}:
             window.current_config_line += 1
 
         task_class = tools.subtasks.get_task_class(task)
@@ -41,19 +41,17 @@ def store_tape_data(window: QMainWindow, tape_lines: list, parameters: dict):
         parameters (dict): Diccionario de parámetros actuales
     """
 
-    config_line = parameters["Config_line"]
-    current_tool = parameters["Current_tool"]
-    current_comment = parameters["Current_comment"]
+    config_line, tool, ttype, diameter, spec, comment = parameters.values()
 
     for tape_line in tape_lines[0]:
         if tape_line != "":
             window.tape1_list.append(
-                (config_line, tape_line, current_tool, current_comment)
+                (config_line, tape_line, tool, ttype, diameter, spec, comment)
             )
     for tape_line in tape_lines[1]:
         if tape_line != "":
             window.tape2_list.append(
-                (config_line, tape_line, current_tool, current_comment)
+                (config_line, tape_line, tool, ttype, diameter, spec, comment)
             )
 
 
@@ -70,5 +68,8 @@ def get_parameters(window: QMainWindow) -> dict:
     return {
         "Config_line": window.current_config_line,
         "Current_tool": window.current_tool,
+        "Current_type": window.current_tool_type,
+        "Current_diameter": window.current_tool_diameter,
+        "Current_specification": window.current_tool_specification,
         "Current_comment": window.current_comment,
     }

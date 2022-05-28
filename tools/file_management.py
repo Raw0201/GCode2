@@ -24,13 +24,13 @@ def update_file_name(window) -> None:
         window (QMainWindow): Ventana principal
     """
 
-    back = "(H)" if window.swiss_back_machining else ""
+    back = " (H)" if window.swiss_back_machining else ""
     machine = window.current_machine
     file_extension = ""
     file_name = ""
 
     if machine in ("B12", "A16", "K16", "E16"):
-        file_name = f"({window.current_machine}) {window.part_name} {back}"
+        file_name = f"({window.current_machine}) {window.part_name}{back}"
         file_extension = ".CNC"
     elif machine == "OMNITURN":
         file_name = window.main_tape_number
@@ -39,7 +39,7 @@ def update_file_name(window) -> None:
     elif machine == "HARDINGE":
         file_name = f"H{window.main_tape_number}"
     elif machine == "MAZAK":
-        file_name = f"O{window.main_tape_number}"
+        file_name = f"{window.main_tape_number}"
         file_extension = ".CNC"
 
     window.config_file_name = file_name

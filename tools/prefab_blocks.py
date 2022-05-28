@@ -1,3 +1,6 @@
+from PySide6.QtWidgets import QMainWindow
+
+
 def prefab_space() -> list:
     """Bloque prefabricado de espacio
 
@@ -129,4 +132,29 @@ def prefab_spindle(speed: int, rotation: str, side: str) -> list:
     return [
         "        Giro del husillo",
         {"Spd": speed, "Rot": rotation, "Sde": side, "Blk": False},
+    ]
+
+
+def prefab_sub_header(window: QMainWindow) -> list:
+    """Bloque prefabricado de encabezado de subrutina
+
+    Args:
+        window (QMainWindow): Ventana principal
+
+    Returns:
+        list: Bloque prefabricado
+    """
+
+    return [
+        "Inicio de subrutina",
+        {
+            "Pgr": window.current_subrutine,
+            "Mnp": window.current_main_program,
+            "Plt": window.platter_data,
+            "Tol": window.subrutine_tool,
+            "Typ": window.subrutine_tool_type,
+            "Dia": window.subrutine_tool_diameter,
+            "Spc": window.subrutine_tool_specification,
+            "Mch": window.subrutine_machine,
+        },
     ]

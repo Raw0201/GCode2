@@ -1,3 +1,4 @@
+from operator import sub
 from subtasks import version, graph
 
 from tools.main_window import *
@@ -23,6 +24,9 @@ def load_menu_actions(window):
 
     window.actionGraph.triggered.connect(lambda: graph_window(window))
     window.actionVersion.triggered.connect(lambda: version_window(window))
+
+    window.actionGo_to.triggered.connect(lambda: subrutine_prep(window))
+    window.actionReturn_to.triggered.connect(lambda: return_to(window))
 
     window.actionShow_functions.triggered.connect(
         lambda: component_view(window, window.dock_functions)

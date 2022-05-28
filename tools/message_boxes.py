@@ -17,6 +17,22 @@ def new_tape_question(self) -> QMessageBox:
     )
 
 
+def new_subrutine_question(self) -> QMessageBox:
+    """Mensaje de creación de nueva subrutina
+
+    Returns:
+        QMessageBox: Caja de texto
+    """
+
+    return QMessageBox.question(
+        self,
+        "Subrutina no encontrada",
+        "¿Desea crear una nueva subrutina?",
+        buttons=QMessageBox.Yes | QMessageBox.No,
+        defaultButton=QMessageBox.No,
+    )
+
+
 def data_type_error(self) -> QMessageBox:
     """Mensaje de error en tipo de datos
 

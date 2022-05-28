@@ -24,8 +24,10 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
         load_default_data_lists(self)
         load_default_variables(self)
+        load_persistent_data(self)
         load_default_tape_conditions(self)
         load_default_machining_data(self)
+        load_default_subrutine_data(self)
 
         # ? Botones y acciones de la pantalla principal *
         # ? ----------------------------------------------------------------- *

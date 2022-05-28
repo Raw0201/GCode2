@@ -1,5 +1,6 @@
 from subtasks import (
     header,
+    header_sub,
     free,
     comment,
     subrutine,
@@ -21,6 +22,10 @@ tasks_list = {
     "Header": {
         "Name": header.Header,
         "Description": "Inicio de programa",
+    },
+    "Header_sub": {
+        "Name": header_sub.Header_sub,
+        "Description": "Inicio de subrutina",
     },
     "Free": {
         "Name": free.Free,

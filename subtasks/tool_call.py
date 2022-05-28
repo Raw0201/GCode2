@@ -163,7 +163,10 @@ class Tool_call(Subtask, Ui_frm_tool_call):
         """
 
         window.save_required = True
-        window.current_tool = int(data["Tol"])
+        window.current_tool = data["Tol"]
+        window.current_tool_type = data["Typ"]
+        window.current_tool_diameter = data["Dia"]
+        window.current_tool_specification = data["Spc"]
         window.current_side = data["Sde"]
 
         window.first_tool_number = (
@@ -208,3 +211,4 @@ class Tool_call(Subtask, Ui_frm_tool_call):
         window.btn_tool_call.setEnabled(True)
         window.btn_tool_close.setEnabled(True)
         window.btn_end.setEnabled(True)
+        window.btn_collect.setEnabled(True)

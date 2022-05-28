@@ -123,7 +123,7 @@ class Subrutine(Subtask, Ui_frm_subrutine):
         """
 
         window.save_required = True
-        window.current_side = "PRINCIPAL"
+        window.current_side = "$1"
         window.last_subrutine_number = data["Sub"]
 
     def switcher(self, window: QMainWindow, data: dict):

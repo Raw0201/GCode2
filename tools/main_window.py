@@ -1,3 +1,4 @@
+import contextlib
 import os
 import json
 import tools
@@ -7,6 +8,7 @@ from PySide6.QtCore import QEvent
 
 from tools.constants import *
 from tools.formatting import *
+from tools.prefab_blocks import prefab_comment, prefab_sub_header
 from tools.tape_lists import *
 from tools.config_list import *
 from tools.directories import *
@@ -28,8 +30,9 @@ def load_main_title(window: QMainWindow):
     file_name = window.config_file_name
     file_extension = window.file_extension
     folder = window.current_folder
+    folder = folder if folder == f"{ROOT_DIR}/" else f"{folder}/"
     file = f"{file_name}{file_extension}"
-    tape_name = f"- {folder}/{file} - " if file_name != "" else ""
+    tape_name = f"- {folder}{file} - " if file_name != "" else ""
     tape_description = f"{window.tape_description}"
     save_status = "*" if window.save_required else ""
 
@@ -94,6 +97,7 @@ def open_file(window: QMainWindow):
             window.config_list = json.load(file)
 
         window.current_folder = os.path.dirname(file_name[0])
+        window.current_machine = window.config_list[0][1]["Mch"]
         os.chdir(window.current_folder)
 
         update_data(window)
@@ -118,7 +122,6 @@ def save_config(window: QMainWindow):
         return
 
     update_data(window)
-    update_file_dir(window)
 
     file = f"{window.config_file_name}.json"
     with open(file, "w") as file:
@@ -146,6 +149,7 @@ def save_tape(window: QMainWindow):
 
     window.save_required = False
     load_main_title(window)
+    os.chdir(window.current_folder)
 
 
 def make_tape(window: QMainWindow) -> list:
@@ -399,8 +403,8 @@ def go_to_position(window: QMainWindow, line: list):
         line (list): Línea a la que desplazarse
     """
 
-    window.config_widget.setCurrentCell(line, 0)
     window.current_selection = [line]
+    window.config_widget.setCurrentCell(line, 0)
     update_tape1_widget_selection(window)
     update_tape2_widget_selection(window)
 
@@ -437,3 +441,143 @@ def update_data(window: QMainWindow):
     update_tape2_widget_selection(window)
 
     window.modified_task = False
+
+
+def subrutine_prep(window: QMainWindow):
+    """Verifica si se ha seleccionado una subrutina
+
+    Args:
+        window (QMainWindow): Ventana principal
+    """
+
+    index_list = window.current_selection
+    index = index_list[0] if index_list else 0
+    with contextlib.suppress(KeyError, IndexError):
+        if window.config_list[index][1]["Sub"]:
+            save_config(window)
+            load_subrutine_data(window, index)
+            search_subrutine(window)
+
+
+def load_subrutine_data(window: QMainWindow, index: int):
+    """Carga los datos para la subrutina
+
+    Args:
+        window (QMainWindow): Ventana principal
+        index (int): Ubicación de la subrutina en la lista de tapes
+    """
+
+    window.current_subrutine = window.config_list[index][1]["Sub"]
+    window.current_main_program = window.main_tape_number
+    window.subrutine_machine = window.current_machine
+    window.subrutine_folder = window.current_folder
+
+    for line in window.tape1_list:
+        window.subrutine_tool = line[2]
+        window.subrutine_tool_type = line[3]
+        window.subrutine_tool_diameter = line[4]
+        window.subrutine_tool_specification = line[5]
+        window.subrutine_comment = line[6]
+        while line[0] == index:
+            break
+
+
+def search_subrutine(window: QMainWindow):
+    """Busca o crea la subrutina
+
+    Args:
+        window (QMainWindow): Ventana principal
+    """
+
+    try:
+        subrutine = f"{window.current_subrutine}.json"
+        with open(subrutine) as file:
+            load_subrutine(window, file)
+    except FileNotFoundError:
+        dialog = new_subrutine_question(window)
+        if dialog == QMessageBox.Yes:
+            create_subrutine(window)
+
+
+def load_subrutine(window: QMainWindow, file: str):
+    """Carga una subrutina existente
+
+    Args:
+        window (QMainWindow): Ventana principal
+        file (str): Nombre de la subrutina
+    """
+
+    create_new_tape(window)
+    window.config_list = json.load(file)
+    window.config_list[0] = prefab_sub_header(window)
+    window.save_required = False
+    update_after_subrutine(window)
+
+
+def create_subrutine(window: QMainWindow):
+    """Crea una subrutina nueva
+
+    Args:
+        window (QMainWindow): Ventana principal
+    """
+
+    create_new_tape(window)
+    window.config_list = [prefab_sub_header(window)]
+    window.config_list.append(prefab_comment(window.subrutine_comment, "$1"))
+    window.save_required = True
+    update_after_subrutine(window)
+
+
+def update_after_subrutine(window: QMainWindow):
+    """Actualiza las ventanas después de la carga de subrutina
+
+    Args:
+        window (QMainWindow): Ventana principal
+    """
+
+    update_data(window)
+    load_main_title(window)
+    window.current_folder = window.subrutine_folder
+    os.chdir(window.current_folder)
+
+
+def return_to(window: QMainWindow):
+    """Regresa al programa raiz de la subrutina
+
+    Args:
+        window (QMainWindow): Ventana principal
+    """
+
+    subrutine = window.config_list[0][1]["Pgr"]
+
+    with contextlib.suppress(KeyError):
+        previous_program = window.config_list[0][1]["Mnp"]
+        program = f"{previous_program}.json"
+
+        try:
+            previous_program = window.config_list[0][1]["Mnp"]
+            program = f"{previous_program}.json"
+            with open(program) as file:
+                window.config_list = json.load(file)
+                update_after_subrutine(window)
+                find_subrutine(window, subrutine)
+        except FileNotFoundError:
+            file_open_error(window)
+
+
+def find_subrutine(window: QMainWindow, subrutine: str):
+    """Selecciona la posición de la subrutina seleccionada
+
+    Args:
+        window (QMainWindow): Ventana principal
+        subrutine (str): Subrutina seleccionada
+    """
+
+    for num, line in enumerate(window.config_list):
+        with contextlib.suppress(KeyError):
+            while line[1]["Sub"] == subrutine:
+                window.current_selection = [num]
+                update_config_widget_selection(window)
+                update_tape1_widget_selection(window)
+                update_tape2_widget_selection(window)
+                break
