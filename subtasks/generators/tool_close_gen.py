@@ -77,7 +77,7 @@ def gen_a16(data: list) -> list:
     blank_space = fspace()
     blk = "/" if blk else ""
 
-    if sde != "$1":
+    if sde == "$2":
         return [[blank_space], [blank_space]]
 
     xin = f"X{fnum3(dia + .02)}"

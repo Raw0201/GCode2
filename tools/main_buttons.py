@@ -151,3 +151,24 @@ def load_main_buttons_connections(window: QMainWindow):
     window.btn_cutoff.clicked.connect(
         lambda: collect_data(window, "Cutoff"),
     )
+    window.btn_mill_ini.clicked.connect(
+        lambda: collect_data(window, "Mill_ini"),
+    )
+    window.btn_mill_end.clicked.connect(
+        lambda: collect_data(window, "Mill_end"),
+    )
+    window.btn_lineal_mill.clicked.connect(
+        lambda: collect_data(window, "Lineal_mill"),
+    )
+    window.btn_radial_mill.clicked.connect(
+        lambda: collect_data(window, "Radial_mill"),
+    )
+    window.btn_drill_ini.clicked.connect(
+        lambda: collect_data(window, "Drill_ini"),
+    )
+    window.btn_drill_end.clicked.connect(
+        lambda: collect_data(window, "Drill_end"),
+    )
+    window.btn_center.clicked.connect(
+        lambda: collect_data(window, "Center_drill"),
+    )

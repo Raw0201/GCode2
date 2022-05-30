@@ -3,24 +3,15 @@
 ################################################################################
 ## Form generated from reading UI file 'MainWindow.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.3.0
+## Created by: Qt User Interface Compiler version 6.1.1
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
 
-from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
-    QMetaObject, QObject, QPoint, QRect,
-    QSize, QTime, QUrl, Qt)
-from PySide6.QtGui import (QAction, QBrush, QColor, QConicalGradient,
-    QCursor, QFont, QFontDatabase, QGradient,
-    QIcon, QImage, QKeySequence, QLinearGradient,
-    QPainter, QPalette, QPixmap, QRadialGradient,
-    QTransform)
-from PySide6.QtWidgets import (QAbstractItemView, QApplication, QDockWidget, QGridLayout,
-    QGroupBox, QHBoxLayout, QHeaderView, QMainWindow,
-    QMenu, QMenuBar, QPushButton, QSizePolicy,
-    QSpacerItem, QStatusBar, QTabWidget, QTableWidget,
-    QTableWidgetItem, QVBoxLayout, QWidget)
+from PySide6.QtCore import *  # type: ignore
+from PySide6.QtGui import *  # type: ignore
+from PySide6.QtWidgets import *  # type: ignore
+
 import resources_rc
 
 class Ui_MainWindow(object):
@@ -2346,6 +2337,12 @@ class Ui_MainWindow(object):
         self.actionSpeed_up.setObjectName(u"actionSpeed_up")
         self.actionSpeed_down = QAction(MainWindow)
         self.actionSpeed_down.setObjectName(u"actionSpeed_down")
+        self.actionS1_move = QAction(MainWindow)
+        self.actionS1_move.setObjectName(u"actionS1_move")
+        self.actionS2_move = QAction(MainWindow)
+        self.actionS2_move.setObjectName(u"actionS2_move")
+        self.actionS3_move = QAction(MainWindow)
+        self.actionS3_move.setObjectName(u"actionS3_move")
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.horizontalLayout = QHBoxLayout(self.centralwidget)
@@ -2472,7 +2469,7 @@ class Ui_MainWindow(object):
         self.dock_functions.setObjectName(u"dock_functions")
         sizePolicy.setHeightForWidth(self.dock_functions.sizePolicy().hasHeightForWidth())
         self.dock_functions.setSizePolicy(sizePolicy)
-        self.dock_functions.setMinimumSize(QSize(171, 858))
+        self.dock_functions.setMinimumSize(QSize(191, 858))
         self.dock_functions.setStyleSheet(u"")
         self.dockWidgetContents = QWidget()
         self.dockWidgetContents.setObjectName(u"dockWidgetContents")
@@ -2949,6 +2946,9 @@ class Ui_MainWindow(object):
         self.menuDecrementar_dims.addAction(self.actionZ_down)
         self.menuLines_selected.addAction(self.actionMove_up)
         self.menuLines_selected.addAction(self.actionMove_down)
+        self.menuLines_selected.addAction(self.actionS1_move)
+        self.menuLines_selected.addAction(self.actionS2_move)
+        self.menuLines_selected.addAction(self.actionS3_move)
         self.menuLines_selected.addSeparator()
         self.menuLines_selected.addAction(self.actionDuplicate)
         self.menuLines_selected.addAction(self.actionBlock)
@@ -3294,6 +3294,36 @@ class Ui_MainWindow(object):
 #if QT_CONFIG(shortcut)
         self.actionSpeed_down.setShortcut(QCoreApplication.translate("MainWindow", u"Ctrl+Shift+S", None))
 #endif // QT_CONFIG(shortcut)
+        self.actionS1_move.setText(QCoreApplication.translate("MainWindow", u"Mover a $1", None))
+#if QT_CONFIG(tooltip)
+        self.actionS1_move.setToolTip(QCoreApplication.translate("MainWindow", u"Mover las l\u00edneas seleccionadas a $1", None))
+#endif // QT_CONFIG(tooltip)
+#if QT_CONFIG(statustip)
+        self.actionS1_move.setStatusTip(QCoreApplication.translate("MainWindow", u"Mover las l\u00edneas seleccionadas a $1", None))
+#endif // QT_CONFIG(statustip)
+#if QT_CONFIG(shortcut)
+        self.actionS1_move.setShortcut(QCoreApplication.translate("MainWindow", u"Alt+1", None))
+#endif // QT_CONFIG(shortcut)
+        self.actionS2_move.setText(QCoreApplication.translate("MainWindow", u"Mover a $2", None))
+#if QT_CONFIG(tooltip)
+        self.actionS2_move.setToolTip(QCoreApplication.translate("MainWindow", u"Mover las l\u00edneas seleccionadas a $2", None))
+#endif // QT_CONFIG(tooltip)
+#if QT_CONFIG(statustip)
+        self.actionS2_move.setStatusTip(QCoreApplication.translate("MainWindow", u"Mover las l\u00edneas seleccionadas a $2", None))
+#endif // QT_CONFIG(statustip)
+#if QT_CONFIG(shortcut)
+        self.actionS2_move.setShortcut(QCoreApplication.translate("MainWindow", u"Alt+2", None))
+#endif // QT_CONFIG(shortcut)
+        self.actionS3_move.setText(QCoreApplication.translate("MainWindow", u"Mover a $3", None))
+#if QT_CONFIG(tooltip)
+        self.actionS3_move.setToolTip(QCoreApplication.translate("MainWindow", u"Mover las l\u00edneas seleccionadas a $3", None))
+#endif // QT_CONFIG(tooltip)
+#if QT_CONFIG(statustip)
+        self.actionS3_move.setStatusTip(QCoreApplication.translate("MainWindow", u"Mover las l\u00edneas seleccionadas a $3", None))
+#endif // QT_CONFIG(statustip)
+#if QT_CONFIG(shortcut)
+        self.actionS3_move.setShortcut(QCoreApplication.translate("MainWindow", u"Alt+3", None))
+#endif // QT_CONFIG(shortcut)
         ___qtablewidgetitem = self.tape1_widget.horizontalHeaderItem(0)
         ___qtablewidgetitem.setText(QCoreApplication.translate("MainWindow", u"1 - Programa principal", None));
         ___qtablewidgetitem1 = self.tape2_widget.horizontalHeaderItem(0)
@@ -3560,14 +3590,14 @@ class Ui_MainWindow(object):
 #if QT_CONFIG(statustip)
         self.btn_call_square.setStatusTip(QCoreApplication.translate("MainWindow", u"Agrega la matriz de piezas al programa principal", None))
 #endif // QT_CONFIG(statustip)
-        self.btn_call_square.setText(QCoreApplication.translate("MainWindow", u"Generar matriz", None))
+        self.btn_call_square.setText(QCoreApplication.translate("MainWindow", u"Llamar matriz", None))
 #if QT_CONFIG(tooltip)
         self.btn_lineal_rgh_y_sub.setToolTip(QCoreApplication.translate("MainWindow", u"Agrega el desbaste vertical a la subrutina", None))
 #endif // QT_CONFIG(tooltip)
 #if QT_CONFIG(statustip)
         self.btn_lineal_rgh_y_sub.setStatusTip(QCoreApplication.translate("MainWindow", u"Agrega el desbaste vertical a la subrutina", None))
 #endif // QT_CONFIG(statustip)
-        self.btn_lineal_rgh_y_sub.setText(QCoreApplication.translate("MainWindow", u"Sub vertical", None))
+        self.btn_lineal_rgh_y_sub.setText(QCoreApplication.translate("MainWindow", u"Sub desbaste ver.", None))
 #if QT_CONFIG(tooltip)
         self.btn_flatten_sub.setToolTip(QCoreApplication.translate("MainWindow", u"Agrega el refrentado de platina a la subrutina", None))
 #endif // QT_CONFIG(tooltip)
@@ -3602,14 +3632,14 @@ class Ui_MainWindow(object):
 #if QT_CONFIG(statustip)
         self.btn_lineal_rgh_x_sub.setStatusTip(QCoreApplication.translate("MainWindow", u"Agrega el desbaste horizontal a la subrutina", None))
 #endif // QT_CONFIG(statustip)
-        self.btn_lineal_rgh_x_sub.setText(QCoreApplication.translate("MainWindow", u"Sub horizontal", None))
+        self.btn_lineal_rgh_x_sub.setText(QCoreApplication.translate("MainWindow", u"Sub Desbaste hor.", None))
 #if QT_CONFIG(tooltip)
         self.btn_platter_data.setToolTip(QCoreApplication.translate("MainWindow", u"Agrega los datos de la matriz de piezas", None))
 #endif // QT_CONFIG(tooltip)
 #if QT_CONFIG(statustip)
         self.btn_platter_data.setStatusTip(QCoreApplication.translate("MainWindow", u"Agrega los datos de la matriz de piezas", None))
 #endif // QT_CONFIG(statustip)
-        self.btn_platter_data.setText(QCoreApplication.translate("MainWindow", u"Datos matriz", None))
+        self.btn_platter_data.setText(QCoreApplication.translate("MainWindow", u"Cargar datos matriz", None))
         self.tabWidget_functions.setTabText(self.tabWidget_functions.indexOf(self.tabWidget_functions_platter), "")
     # retranslateUi
 

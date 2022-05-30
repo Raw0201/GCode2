@@ -28,6 +28,7 @@ class Tool_call(Subtask, Ui_frm_tool_call):
         self.cbx_typ.addItems(tool_list)
         self.cbx_sde.addItems(tape_sides_list)
         self.cbx_sde.setCurrentText(self.window.current_side)
+        self.cbx_mcd.addItems(tool_m_codes)
 
     def collector(self):
         """Recolecta los datos de la subtarea ingresados por el usuario"""
@@ -41,6 +42,8 @@ class Tool_call(Subtask, Ui_frm_tool_call):
             "Xin": self.tbx_xin.text(),
             "Yin": self.tbx_yin.text(),
             "Zin": self.tbx_zin.text(),
+            "Mcd": self.cbx_mcd.currentText(),
+            "Com": self.tbx_com.text(),
             "Blk": False,
         }
 
@@ -72,6 +75,7 @@ class Tool_call(Subtask, Ui_frm_tool_call):
             data["Xin"] = foper(data["Xin"])
             data["Yin"] = foper(data["Yin"])
             data["Zin"] = foper(data["Zin"])
+            data["Com"] = ftext(data["Com"]) if data["Com"] != "" else ""
         except ValueError:
             data_type_error(self)
             return
@@ -140,7 +144,7 @@ class Tool_call(Subtask, Ui_frm_tool_call):
         """
 
         self.modification = True
-        tol, typ, dia, spc, sde, xin, yin, zin, blk = data.values()
+        tol, typ, dia, spc, sde, xin, yin, zin, mcd, com, blk = data.values()
 
         self.tbx_tol.setText(str(tol))
         self.tbx_tol.setSelection(0, 100)
@@ -151,6 +155,8 @@ class Tool_call(Subtask, Ui_frm_tool_call):
         self.tbx_xin.setText(str(xin))
         self.tbx_yin.setText(str(yin))
         self.tbx_zin.setText(str(zin))
+        self.cbx_mcd.setCurrentText(str(mcd))
+        self.tbx_com.setText(str(com))
         self.btn_save.setText("Actualizar")
         self.show()
 

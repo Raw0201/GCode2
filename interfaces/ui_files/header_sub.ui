@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>210</width>
-    <height>180</height>
+    <height>230</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -19,13 +19,13 @@
   <property name="minimumSize">
    <size>
     <width>210</width>
-    <height>180</height>
+    <height>230</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
     <width>210</width>
-    <height>180</height>
+    <height>230</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -2221,7 +2221,7 @@ PlotWidget {
       <x>10</x>
       <y>10</y>
       <width>190</width>
-      <height>160</height>
+      <height>210</height>
      </rect>
     </property>
     <property name="sizePolicy">
@@ -2233,13 +2233,13 @@ PlotWidget {
     <property name="minimumSize">
      <size>
       <width>190</width>
-      <height>160</height>
+      <height>210</height>
      </size>
     </property>
     <property name="maximumSize">
      <size>
       <width>190</width>
-      <height>160</height>
+      <height>210</height>
      </size>
     </property>
     <property name="frameShape">
@@ -2352,7 +2352,7 @@ PlotWidget {
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>130</y>
+       <y>180</y>
        <width>171</width>
        <height>24</height>
       </rect>
@@ -2383,6 +2383,53 @@ PlotWidget {
      </property>
      <property name="autoDefault">
       <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="tbx_dsc">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>130</y>
+       <width>170</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>170</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>170</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="toolTip">
+      <string>Digite una descripción para la subrutina</string>
+     </property>
+     <property name="toolTipDuration">
+      <number>-1</number>
+     </property>
+     <property name="statusTip">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lbl_dsc">
+     <property name="geometry">
+      <rect>
+       <x>17</x>
+       <y>110</y>
+       <width>71</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Descripción</string>
      </property>
     </widget>
    </widget>
@@ -2423,6 +2470,7 @@ PlotWidget {
  <tabstops>
   <tabstop>tbx_pgr</tabstop>
   <tabstop>tbx_mnp</tabstop>
+  <tabstop>tbx_dsc</tabstop>
   <tabstop>btn_save</tabstop>
   <tabstop>btn_help</tabstop>
  </tabstops>

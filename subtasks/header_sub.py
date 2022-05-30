@@ -29,8 +29,9 @@ class Header_sub(Subtask, Ui_frm_header_sub):
         """Recolecta los datos de la subtarea ingresados por el usuario"""
 
         data = {
-            "Prg": self.window.current_subrutine,
-            "Mnp": self.window.current_main_program,
+            "Pgr": self.tbx_pgr.text(),
+            "Mnp": self.tbx_mnp.text(),
+            "Dsc": self.tbx_dsc.text(),
             "Plt": self.window.platter_data,
             "Tol": self.window.subrutine_tool,
             "Typ": self.window.subrutine_tool_type,
@@ -62,6 +63,7 @@ class Header_sub(Subtask, Ui_frm_header_sub):
         try:
             data["Pgr"] = ftext(data["Pgr"]) if data["Pgr"] != "" else ""
             data["Mnp"] = ftext(data["Mnp"]) if data["Mnp"] != "" else ""
+            data["Dsc"] = ftext(data["Dsc"]) if data["Dsc"] != "" else ""
 
         except ValueError:
             data_type_error(self)
@@ -108,11 +110,12 @@ class Header_sub(Subtask, Ui_frm_header_sub):
         """
 
         self.modification = True
-        pgr, mnp, plt, tol, typ, dia, spc, mch = data.values()
+        pgr, mnp, dsc, plt, tol, typ, dia, spc, mch = data.values()
 
         self.tbx_pgr.setText(str(pgr))
         self.tbx_pgr.setSelection(0, 100)
         self.tbx_mnp.setText(str(mnp))
+        self.tbx_dsc.setText(str(dsc))
         self.btn_save.setText("Actualizar")
         self.show()
 

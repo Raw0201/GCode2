@@ -109,7 +109,7 @@ def gen_k16(data: list) -> list:
 
     if mta:
         zin = "Z0" if cof == "DERECHA" else "Z.44"
-        bar_dia = fparam(dia)
+        bar_dia = fparam(bar)
         mch_lgt = fparam(lgt + 0.2)
         rem_mat = fparam(lgt - chk) if chk > 0 else fparam(0)
         bck_typ = fparam(143) if chk > 0 else fparam(141)
@@ -120,7 +120,7 @@ def gen_k16(data: list) -> list:
             "/M109Q8999",
             "M09",
             "  ",
-            f"G00X-.1Z{zin}T00",
+            f"G00X-.1{zin}T00",
             "  ",
             "G600",
             "G999",
@@ -179,7 +179,7 @@ def gen_e16(data: list) -> list:
 
     if mta:
         zin = "Z0" if cof == "DERECHA" else "Z.44"
-        bar_dia = fparam(dia)
+        bar_dia = fparam(bar)
         mch_lgt = fparam(lgt + 0.2)
         rem_mat = fparam(lgt - chk) if chk > 0 else fparam(0)
         bck_typ = fparam(421) if chk > 0 else fparam(422)
@@ -190,7 +190,7 @@ def gen_e16(data: list) -> list:
             "/M109Q8999",
             "M09",
             "  ",
-            f"G00X-.1Z{zin}T00",
+            f"G00X-.1{zin}T00",
             "  ",
             "G600",
             "G999",

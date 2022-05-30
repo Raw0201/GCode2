@@ -1,37 +1,31 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'tool_callgOgjOx.ui'
+## Form generated from reading UI file 'tool_callfbbFBx.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.3.0
+## Created by: Qt User Interface Compiler version 6.1.1
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
 
-from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
-    QMetaObject, QObject, QPoint, QRect,
-    QSize, QTime, QUrl, Qt)
-from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
-    QFont, QFontDatabase, QGradient, QIcon,
-    QImage, QKeySequence, QLinearGradient, QPainter,
-    QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QComboBox, QFrame, QLabel,
-    QLineEdit, QMainWindow, QPushButton, QSizePolicy,
-    QToolButton, QWidget)
+from PySide6.QtCore import *  # type: ignore
+from PySide6.QtGui import *  # type: ignore
+from PySide6.QtWidgets import *  # type: ignore
+
 import resources_rc
 
 class Ui_frm_tool_call(object):
     def setupUi(self, frm_tool_call):
         if not frm_tool_call.objectName():
             frm_tool_call.setObjectName(u"frm_tool_call")
-        frm_tool_call.resize(210, 480)
+        frm_tool_call.resize(210, 580)
         sizePolicy = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(frm_tool_call.sizePolicy().hasHeightForWidth())
         frm_tool_call.setSizePolicy(sizePolicy)
-        frm_tool_call.setMinimumSize(QSize(210, 480))
-        frm_tool_call.setMaximumSize(QSize(210, 480))
+        frm_tool_call.setMinimumSize(QSize(210, 580))
+        frm_tool_call.setMaximumSize(QSize(210, 580))
         icon = QIcon()
         icon.addFile(u":/icons/gear.png", QSize(), QIcon.Normal, QIcon.Off)
         frm_tool_call.setWindowIcon(icon)
@@ -2204,14 +2198,14 @@ class Ui_frm_tool_call(object):
         self.centralwidget.setObjectName(u"centralwidget")
         self.frame = QFrame(self.centralwidget)
         self.frame.setObjectName(u"frame")
-        self.frame.setGeometry(QRect(10, 10, 190, 460))
+        self.frame.setGeometry(QRect(10, 10, 190, 560))
         sizePolicy1 = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Fixed)
         sizePolicy1.setHorizontalStretch(0)
         sizePolicy1.setVerticalStretch(0)
         sizePolicy1.setHeightForWidth(self.frame.sizePolicy().hasHeightForWidth())
         self.frame.setSizePolicy(sizePolicy1)
-        self.frame.setMinimumSize(QSize(190, 460))
-        self.frame.setMaximumSize(QSize(190, 460))
+        self.frame.setMinimumSize(QSize(190, 560))
+        self.frame.setMaximumSize(QSize(190, 560))
         self.frame.setFrameShape(QFrame.StyledPanel)
         self.frame.setFrameShadow(QFrame.Raised)
         self.tbx_tol = QLineEdit(self.frame)
@@ -2236,7 +2230,7 @@ class Ui_frm_tool_call(object):
         self.lbl_spc.setGeometry(QRect(20, 260, 131, 26))
         self.btn_save = QPushButton(self.frame)
         self.btn_save.setObjectName(u"btn_save")
-        self.btn_save.setGeometry(QRect(10, 430, 171, 24))
+        self.btn_save.setGeometry(QRect(10, 530, 171, 24))
         sizePolicy.setHeightForWidth(self.btn_save.sizePolicy().hasHeightForWidth())
         self.btn_save.setSizePolicy(sizePolicy)
         self.btn_save.setMinimumSize(QSize(88, 0))
@@ -2299,6 +2293,25 @@ class Ui_frm_tool_call(object):
         self.tbx_zin.setMinimumSize(QSize(170, 0))
         self.tbx_zin.setMaximumSize(QSize(170, 16777215))
         self.tbx_zin.setAlignment(Qt.AlignCenter)
+        self.cbx_mcd = QComboBox(self.frame)
+        self.cbx_mcd.setObjectName(u"cbx_mcd")
+        self.cbx_mcd.setGeometry(QRect(10, 430, 170, 26))
+        self.cbx_mcd.setMinimumSize(QSize(170, 26))
+        self.cbx_mcd.setMaximumSize(QSize(170, 16777215))
+        self.lbl_mcd = QLabel(self.frame)
+        self.lbl_mcd.setObjectName(u"lbl_mcd")
+        self.lbl_mcd.setEnabled(True)
+        self.lbl_mcd.setGeometry(QRect(20, 410, 115, 26))
+        self.lbl_com = QLabel(self.frame)
+        self.lbl_com.setObjectName(u"lbl_com")
+        self.lbl_com.setEnabled(True)
+        self.lbl_com.setGeometry(QRect(20, 460, 131, 26))
+        self.tbx_com = QLineEdit(self.frame)
+        self.tbx_com.setObjectName(u"tbx_com")
+        self.tbx_com.setGeometry(QRect(10, 480, 170, 26))
+        self.tbx_com.setMinimumSize(QSize(170, 0))
+        self.tbx_com.setMaximumSize(QSize(170, 16777215))
+        self.tbx_com.setAlignment(Qt.AlignCenter)
         self.tbx_tol.raise_()
         self.lbl_tol.raise_()
         self.tbx_spc.raise_()
@@ -2316,6 +2329,10 @@ class Ui_frm_tool_call(object):
         self.tbx_zin.raise_()
         self.lbl_zin.raise_()
         self.lbl_yin.raise_()
+        self.cbx_mcd.raise_()
+        self.lbl_mcd.raise_()
+        self.tbx_com.raise_()
+        self.lbl_com.raise_()
         self.btn_help = QToolButton(self.centralwidget)
         self.btn_help.setObjectName(u"btn_help")
         self.btn_help.setGeometry(QRect(183, -2, 29, 29))
@@ -2333,6 +2350,7 @@ class Ui_frm_tool_call(object):
         self.lbl_typ.setBuddy(self.lbl_typ)
         self.lbl_dia.setBuddy(self.lbl_dia)
         self.lbl_sde.setBuddy(self.lbl_typ)
+        self.lbl_mcd.setBuddy(self.lbl_typ)
 #endif // QT_CONFIG(shortcut)
         QWidget.setTabOrder(self.tbx_tol, self.tbx_dia)
         QWidget.setTabOrder(self.tbx_dia, self.tbx_xin)
@@ -2341,7 +2359,9 @@ class Ui_frm_tool_call(object):
         QWidget.setTabOrder(self.tbx_zin, self.tbx_spc)
         QWidget.setTabOrder(self.tbx_spc, self.cbx_typ)
         QWidget.setTabOrder(self.cbx_typ, self.cbx_sde)
-        QWidget.setTabOrder(self.cbx_sde, self.btn_save)
+        QWidget.setTabOrder(self.cbx_sde, self.cbx_mcd)
+        QWidget.setTabOrder(self.cbx_mcd, self.tbx_com)
+        QWidget.setTabOrder(self.tbx_com, self.btn_save)
         QWidget.setTabOrder(self.btn_save, self.btn_help)
 
         self.retranslateUi(frm_tool_call)
@@ -2417,6 +2437,19 @@ class Ui_frm_tool_call(object):
         self.tbx_zin.setStatusTip("")
 #endif // QT_CONFIG(statustip)
         self.tbx_zin.setPlaceholderText("")
+#if QT_CONFIG(tooltip)
+        self.cbx_mcd.setToolTip(QCoreApplication.translate("frm_tool_call", u"Seleccione un c\u00f3digo M adicional a utilizar con la herramienta", None))
+#endif // QT_CONFIG(tooltip)
+        self.lbl_mcd.setText(QCoreApplication.translate("frm_tool_call", u"C\u00f3digo M adicional", None))
+        self.lbl_com.setText(QCoreApplication.translate("frm_tool_call", u"Comentario c\u00f3digo M", None))
+#if QT_CONFIG(tooltip)
+        self.tbx_com.setToolTip(QCoreApplication.translate("frm_tool_call", u"Digite un comentario sobre el c\u00f3digo M", None))
+#endif // QT_CONFIG(tooltip)
+#if QT_CONFIG(statustip)
+        self.tbx_com.setStatusTip("")
+#endif // QT_CONFIG(statustip)
+        self.tbx_com.setText(QCoreApplication.translate("frm_tool_call", u"-", None))
+        self.tbx_com.setPlaceholderText("")
         self.btn_help.setText("")
 #if QT_CONFIG(shortcut)
         self.btn_help.setShortcut(QCoreApplication.translate("frm_tool_call", u"F1", None))

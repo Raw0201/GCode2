@@ -40,7 +40,8 @@ class Radial_turn(Subtask, Ui_frm_radial_turn):
             "Xin": self.tbx_xin.text(),
             "Zin": self.tbx_zin.text(),
             "Fed": self.tbx_fed.text(),
-            "Rad": self.tbx_rad.text(),
+            "Xcn": self.tbx_xcn.text(),
+            "Zcn": self.tbx_zcn.text(),
             "Rot": self.cbx_rot.currentText(),
             "Sde": self.cbx_sde.currentText(),
             "Blk": False,
@@ -55,7 +56,11 @@ class Radial_turn(Subtask, Ui_frm_radial_turn):
             data (dict): Diccionario de datos recopilados
         """
 
-        if data["Xin"] == "" or data["Zin"] == "" or data["Rad"] == "":
+        if (
+            data["Xin"] == ""
+            or data["Zin"] == ""
+            or data["Xcn"] == ""
+        ):
             required_data_error(self)
             return
         self.converter(data)
@@ -71,7 +76,8 @@ class Radial_turn(Subtask, Ui_frm_radial_turn):
             data["Xin"] = foper(data["Xin"])
             data["Zin"] = foper(data["Zin"])
             data["Fed"] = foper(data["Fed"])
-            data["Rad"] = foper(data["Rad"])
+            data["Xcn"] = foper(data["Xcn"])
+            data["Zcn"] = foper(data["Zcn"])
 
         except ValueError:
             data_type_error(self)
@@ -119,13 +125,14 @@ class Radial_turn(Subtask, Ui_frm_radial_turn):
         """
 
         self.modification = True
-        xin, zin, fed, rad, rot, sde, blk = data.values()
+        xin, zin, fed, xcn, zcn, rot, sde, blk = data.values()
 
         self.tbx_xin.setText(str(xin))
         self.tbx_xin.setSelection(0, 100)
         self.tbx_zin.setText(str(zin))
         self.tbx_fed.setText(str(fed))
-        self.tbx_rad.setText(str(rad))
+        self.tbx_xcn.setText(str(xcn))
+        self.tbx_zcn.setText(str(zcn))
         self.cbx_rot.setCurrentText(str(rot))
         self.cbx_sde.setCurrentText(str(sde))
         self.btn_save.setText("Actualizar")

@@ -41,7 +41,7 @@ def gen_b12(data: list) -> list:
         list: Lista de líneas de tape generadas
     """
 
-    xin, zin, fed, rad, rot, sde, blk = data.values()
+    xin, zin, fed, xcn, zcn, rot, sde, blk = data.values()
     blank_space = fspace()
     blk = "/" if blk else ""
 
@@ -50,9 +50,15 @@ def gen_b12(data: list) -> list:
 
     xin = "" if xin == "" else f"X{fnum4(xin)}"
     zin = "" if zin == "" else f"Z{fnum4(zin)}"
-    rad = "" if rad == "" else f"R{fnum4(rad)}"
     fed = "" if fed == "" else f"F{ffed(fed)}"
-    rot = "" if rot == "" else swiss_g_codes[f"GIRO {rot} DEL RELOJ"]
+    rot = "" if rot == "" else swiss_g_codes[f"GIRO {rot}"]
+
+    if xcn != "" and zcn == "":
+        rad = "" if xcn == "" else f"R{fnum4(xcn)}"
+    else:
+        xcn = f"I{fnum4(xcn)}"
+        zcn = f"K{fnum4(zcn)}"
+        rad = f"{xcn}{zcn}"
 
     lines1 = [f"{blk}{rot}{xin}{zin}{rad}{fed}"]
     lines2 = [blank_space]
@@ -70,7 +76,7 @@ def gen_a16(data: list) -> list:
         list: Lista de líneas de tape generadas
     """
 
-    xin, zin, fed, rad, rot, sde, blk = data.values()
+    xin, zin, fed, xcn, zcn, rot, sde, blk = data.values()
     blank_space = fspace()
     blk = "/" if blk else ""
 
@@ -79,9 +85,15 @@ def gen_a16(data: list) -> list:
 
     xin = "" if xin == "" else f"X{fnum4(xin)}"
     zin = "" if zin == "" else f"Z{fnum4(zin)}"
-    rad = "" if rad == "" else f"R{fnum4(rad)}"
     fed = "" if fed == "" else f"F{ffed(fed)}"
-    rot = "" if rot == "" else swiss_g_codes[f"GIRO {rot} DEL RELOJ"]
+    rot = "" if rot == "" else swiss_g_codes[f"GIRO {rot}"]
+
+    if xcn != "" and zcn == "":
+        rad = "" if xcn == "" else f"R{fnum4(xcn)}"
+    else:
+        xcn = f"I{fnum4(xcn)}"
+        zcn = f"K{fnum4(zcn)}"
+        rad = f"{xcn}{zcn}"
 
     lines1 = [f"{blk}{rot}{xin}{zin}{rad}{fed}"]
     lines2 = [blank_space]
@@ -99,15 +111,21 @@ def gen_k16(data: list) -> list:
         list: Lista de líneas de tape generadas
     """
 
-    xin, zin, fed, rad, rot, sde, blk = data.values()
+    xin, zin, fed, xcn, zcn, rot, sde, blk = data.values()
     blank_space = fspace()
     blk = "/" if blk else ""
 
     xin = "" if xin == "" else f"X{fnum4(xin)}"
     zin = "" if zin == "" else f"Z{fnum4(zin)}"
-    rad = "" if rad == "" else f"R{fnum4(rad)}"
     fed = "" if fed == "" else f"F{ffed(fed)}"
-    rot = "" if rot == "" else swiss_g_codes[f"GIRO {rot} DEL RELOJ"]
+    rot = "" if rot == "" else swiss_g_codes[f"GIRO {rot}"]
+
+    if xcn != "" and zcn == "":
+        rad = "" if xcn == "" else f"R{fnum4(xcn)}"
+    else:
+        xcn = f"I{fnum4(xcn)}"
+        zcn = f"K{fnum4(zcn)}"
+        rad = f"{xcn}{zcn}"
 
     lines1 = [f"{blk}{rot}{xin}{zin}{rad}{fed}"]
     lines2 = [blank_space]
@@ -125,15 +143,21 @@ def gen_e16(data: list) -> list:
         list: Lista de líneas de tape generadas
     """
 
-    xin, zin, fed, rad, rot, sde, blk = data.values()
+    xin, zin, fed, xcn, zcn, rot, sde, blk = data.values()
     blank_space = fspace()
     blk = "/" if blk else ""
 
     xin = "" if xin == "" else f"X{fnum4(xin)}"
     zin = "" if zin == "" else f"Z{fnum4(zin)}"
-    rad = "" if rad == "" else f"R{fnum4(rad)}"
     fed = "" if fed == "" else f"F{ffed(fed)}"
-    rot = "" if rot == "" else swiss_g_codes[f"GIRO {rot} DEL RELOJ"]
+    rot = "" if rot == "" else swiss_g_codes[f"GIRO {rot}"]
+
+    if xcn != "" and zcn == "":
+        rad = "" if xcn == "" else f"R{fnum4(xcn)}"
+    else:
+        xcn = f"I{fnum4(xcn)}"
+        zcn = f"K{fnum4(zcn)}"
+        rad = f"{xcn}{zcn}"
 
     lines1 = [f"{blk}{rot}{xin}{zin}{rad}{fed}"]
     lines2 = [blank_space]
@@ -151,7 +175,7 @@ def gen_omni(data: list) -> list:
         list: Lista de líneas de tape generadas
     """
 
-    xin, zin, fed, rad, rot, sde, blk = data.values()
+    xin, zin, fed, xcn, zcn, rot, sde, blk = data.values()
     blank_space = fspace()
     blk = "/" if blk else ""
 
@@ -160,9 +184,15 @@ def gen_omni(data: list) -> list:
 
     xin = "" if xin == "" else f"X{fnum4(xin)}"
     zin = "" if zin == "" else f"Z{fnum4(zin)}"
-    rad = "" if rad == "" else f"R{fnum4(rad)}"
     fed = "" if fed == "" else f"F{ffed(fed)}"
-    rot = "" if rot == "" else lathe_g_codes[f"GIRO {rot} DEL RELOJ"]
+    rot = "" if rot == "" else lathe_g_codes[f"GIRO {rot}"]
+
+    if xcn != "" and zcn == "":
+        rad = "" if xcn == "" else f"R{fnum4(xcn)}"
+    else:
+        xcn = f"I{fnum4(xcn)}"
+        zcn = f"K{fnum4(zcn)}"
+        rad = f"{xcn}{zcn}"
 
     lines1 = [f"{blk}{rot}{xin}{zin}{rad}{fed}"]
     lines2 = [blank_space]
@@ -180,7 +210,7 @@ def gen_romi(data: list) -> list:
         list: Lista de líneas de tape generadas
     """
 
-    xin, zin, fed, rad, rot, sde, blk = data.values()
+    xin, zin, fed, xcn, zcn, rot, sde, blk = data.values()
     blank_space = fspace()
     blk = "/" if blk else ""
 
@@ -189,9 +219,15 @@ def gen_romi(data: list) -> list:
 
     xin = "" if xin == "" else f"X{fnum4(xin)}"
     zin = "" if zin == "" else f"Z{fnum4(zin)}"
-    rad = "" if rad == "" else f"R{fnum4(rad)}"
     fed = "" if fed == "" else f"F{ffed(fed)}"
-    rot = "" if rot == "" else lathe_g_codes[f"GIRO {rot} DEL RELOJ"]
+    rot = "" if rot == "" else lathe_g_codes[f"GIRO {rot}"]
+
+    if xcn != "" and zcn == "":
+        rad = "" if xcn == "" else f"R{fnum4(xcn)}"
+    else:
+        xcn = f"I{fnum4(xcn)}"
+        zcn = f"K{fnum4(zcn)}"
+        rad = f"{xcn}{zcn}"
 
     lines1 = [f"{blk}{rot}{xin}{zin}{rad}{fed}"]
     lines2 = [blank_space]
@@ -209,7 +245,7 @@ def gen_hardinge(data: list) -> list:
         list: Lista de líneas de tape generadas
     """
 
-    xin, zin, fed, rad, rot, sde, blk = data.values()
+    xin, zin, fed, xcn, zcn, rot, sde, blk = data.values()
     blank_space = fspace()
     blk = "/" if blk else ""
 
@@ -218,9 +254,15 @@ def gen_hardinge(data: list) -> list:
 
     xin = "" if xin == "" else f"X{fnum4(xin)}"
     zin = "" if zin == "" else f"Z{fnum4(zin)}"
-    rad = "" if rad == "" else f"R{fnum4(rad)}"
     fed = "" if fed == "" else f"F{ffed(fed)}"
-    rot = "" if rot == "" else lathe_g_codes[f"GIRO {rot} DEL RELOJ"]
+    rot = "" if rot == "" else lathe_g_codes[f"GIRO {rot}"]
+
+    if xcn != "" and zcn == "":
+        rad = "" if xcn == "" else f"R{fnum4(xcn)}"
+    else:
+        xcn = f"I{fnum4(xcn)}"
+        zcn = f"K{fnum4(zcn)}"
+        rad = f"{xcn}{zcn}"
 
     lines1 = [f"{blk}{rot}{xin}{zin}{rad}{fed}"]
     lines2 = [blank_space]
@@ -238,7 +280,7 @@ def gen_mazak(data: list) -> list:
         list: Lista de líneas de tape generadas
     """
 
-    xin, zin, fed, mov, sde, blk = data.values()
+    xin, zin, fed, xcn, zcn, rot, sde, blk = data.values()
     blank_space = fspace()
     blk = "/" if blk else ""
 

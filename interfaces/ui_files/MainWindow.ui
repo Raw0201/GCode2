@@ -2387,6 +2387,9 @@ PlotWidget {
      </property>
      <addaction name="actionMove_up"/>
      <addaction name="actionMove_down"/>
+     <addaction name="actionS1_move"/>
+     <addaction name="actionS2_move"/>
+     <addaction name="actionS3_move"/>
      <addaction name="separator"/>
      <addaction name="actionDuplicate"/>
      <addaction name="actionBlock"/>
@@ -2480,7 +2483,7 @@ PlotWidget {
    </property>
    <property name="minimumSize">
     <size>
-     <width>171</width>
+     <width>191</width>
      <height>858</height>
     </size>
    </property>
@@ -3477,7 +3480,7 @@ PlotWidget {
                <string>Agrega la matriz de piezas al programa principal</string>
               </property>
               <property name="text">
-               <string>Generar matriz</string>
+               <string>Llamar matriz</string>
               </property>
              </widget>
             </item>
@@ -3490,7 +3493,7 @@ PlotWidget {
                <string>Agrega el desbaste vertical a la subrutina</string>
               </property>
               <property name="text">
-               <string>Sub vertical</string>
+               <string>Sub desbaste ver.</string>
               </property>
              </widget>
             </item>
@@ -3555,7 +3558,7 @@ PlotWidget {
                <string>Agrega el desbaste horizontal a la subrutina</string>
               </property>
               <property name="text">
-               <string>Sub horizontal</string>
+               <string>Sub Desbaste hor.</string>
               </property>
              </widget>
             </item>
@@ -3568,7 +3571,7 @@ PlotWidget {
                <string>Agrega los datos de la matriz de piezas</string>
               </property>
               <property name="text">
-               <string>Datos matriz</string>
+               <string>Cargar datos matriz</string>
               </property>
              </widget>
             </item>
@@ -4050,6 +4053,48 @@ PlotWidget {
    </property>
    <property name="shortcut">
     <string>Ctrl+Shift+S</string>
+   </property>
+  </action>
+  <action name="actionS1_move">
+   <property name="text">
+    <string>Mover a $1</string>
+   </property>
+   <property name="toolTip">
+    <string>Mover las líneas seleccionadas a $1</string>
+   </property>
+   <property name="statusTip">
+    <string>Mover las líneas seleccionadas a $1</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+1</string>
+   </property>
+  </action>
+  <action name="actionS2_move">
+   <property name="text">
+    <string>Mover a $2</string>
+   </property>
+   <property name="toolTip">
+    <string>Mover las líneas seleccionadas a $2</string>
+   </property>
+   <property name="statusTip">
+    <string>Mover las líneas seleccionadas a $2</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+2</string>
+   </property>
+  </action>
+  <action name="actionS3_move">
+   <property name="text">
+    <string>Mover a $3</string>
+   </property>
+   <property name="toolTip">
+    <string>Mover las líneas seleccionadas a $3</string>
+   </property>
+   <property name="statusTip">
+    <string>Mover las líneas seleccionadas a $3</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+3</string>
    </property>
   </action>
  </widget>

@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>210</width>
-    <height>430</height>
+    <height>480</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -19,13 +19,13 @@
   <property name="minimumSize">
    <size>
     <width>210</width>
-    <height>430</height>
+    <height>480</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
     <width>210</width>
-    <height>430</height>
+    <height>480</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -2154,7 +2154,7 @@ PlotWidget {
       <x>10</x>
       <y>10</y>
       <width>190</width>
-      <height>410</height>
+      <height>460</height>
      </rect>
     </property>
     <property name="sizePolicy">
@@ -2166,13 +2166,13 @@ PlotWidget {
     <property name="minimumSize">
      <size>
       <width>190</width>
-      <height>410</height>
+      <height>460</height>
      </size>
     </property>
     <property name="maximumSize">
      <size>
       <width>190</width>
-      <height>410</height>
+      <height>460</height>
      </size>
     </property>
     <property name="frameShape">
@@ -2238,7 +2238,7 @@ PlotWidget {
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>330</y>
+       <y>380</y>
        <width>171</width>
        <height>24</height>
       </rect>
@@ -2278,7 +2278,7 @@ PlotWidget {
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>210</y>
+       <y>260</y>
        <width>118</width>
        <height>26</height>
       </rect>
@@ -2294,7 +2294,7 @@ PlotWidget {
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>230</y>
+       <y>280</y>
        <width>170</width>
        <height>26</height>
       </rect>
@@ -2319,7 +2319,7 @@ PlotWidget {
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>280</y>
+       <y>330</y>
        <width>170</width>
        <height>26</height>
       </rect>
@@ -2347,7 +2347,7 @@ PlotWidget {
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>260</y>
+       <y>310</y>
        <width>103</width>
        <height>26</height>
       </rect>
@@ -2469,7 +2469,7 @@ PlotWidget {
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>380</y>
+       <y>430</y>
        <width>171</width>
        <height>24</height>
       </rect>
@@ -2502,7 +2502,7 @@ PlotWidget {
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QLineEdit" name="tbx_rad">
+    <widget class="QLineEdit" name="tbx_xcn">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -2524,7 +2524,7 @@ PlotWidget {
       </size>
      </property>
      <property name="toolTip">
-      <string>Digite la dimensión del radio</string>
+      <string>Digite la dimensión del radio o el punto centro en el eje X</string>
      </property>
      <property name="statusTip">
       <string/>
@@ -2536,7 +2536,7 @@ PlotWidget {
       <string/>
      </property>
     </widget>
-    <widget class="QLabel" name="lbl_rad">
+    <widget class="QLabel" name="lbl_xcn">
      <property name="enabled">
       <bool>true</bool>
      </property>
@@ -2544,12 +2544,65 @@ PlotWidget {
       <rect>
        <x>20</x>
        <y>160</y>
+       <width>131</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Radio / Punto centro X</string>
+     </property>
+     <property name="buddy">
+      <cstring>lbl_xin</cstring>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="tbx_zcn">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>230</y>
+       <width>170</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>170</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>170</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="toolTip">
+      <string>Digite la dimensión del punto centro del radio en el eje Z</string>
+     </property>
+     <property name="statusTip">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="placeholderText">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lbl_zcn">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>210</y>
        <width>118</width>
        <height>26</height>
       </rect>
      </property>
      <property name="text">
-      <string>Dimensión del radio</string>
+      <string>Punto centro Z</string>
      </property>
      <property name="buddy">
       <cstring>lbl_xin</cstring>
@@ -2567,8 +2620,10 @@ PlotWidget {
     <zorder>tbx_fed</zorder>
     <zorder>lbl_fed</zorder>
     <zorder>btn_switch</zorder>
-    <zorder>tbx_rad</zorder>
-    <zorder>lbl_rad</zorder>
+    <zorder>tbx_xcn</zorder>
+    <zorder>lbl_xcn</zorder>
+    <zorder>tbx_zcn</zorder>
+    <zorder>lbl_zcn</zorder>
    </widget>
    <widget class="QToolButton" name="btn_help">
     <property name="geometry">
@@ -2608,12 +2663,13 @@ PlotWidget {
   <tabstop>tbx_xin</tabstop>
   <tabstop>tbx_zin</tabstop>
   <tabstop>tbx_fed</tabstop>
-  <tabstop>tbx_rad</tabstop>
+  <tabstop>tbx_xcn</tabstop>
+  <tabstop>tbx_zcn</tabstop>
   <tabstop>cbx_rot</tabstop>
   <tabstop>cbx_sde</tabstop>
   <tabstop>btn_save</tabstop>
-  <tabstop>btn_help</tabstop>
   <tabstop>btn_switch</tabstop>
+  <tabstop>btn_help</tabstop>
  </tabstops>
  <resources>
   <include location="../../resources/resources.qrc"/>

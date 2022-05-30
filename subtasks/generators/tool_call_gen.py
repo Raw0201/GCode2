@@ -41,7 +41,7 @@ def gen_b12(data: list) -> list:
         list: Lista de líneas de tape generadas
     """
 
-    tol, typ, dia, spc, sde, xin, yin, zin, blk = data.values()
+    tol, typ, dia, spc, sde, xin, yin, zin, mcd, com, blk = data.values()
     blank_space = fspace()
     blk = "/" if blk else ""
 
@@ -57,14 +57,19 @@ def gen_b12(data: list) -> list:
     dia = "" if dia == 0 else f" {fdia(dia)}"
     spc = "" if spc == "0" else f" {spc}"
     zin = f"Z{fnum3(zin)}"
+    com = "" if com == "-" else f"(- {com} -)"
+    mcd = "" if mcd in {"NO", "M140"} else f"{blk}{mcd}{com}"
 
     lines1 = [
         f"{blk}{tol}00({typ}{dia}{spc})",
+        mcd,
         sft,
         f"{blk}G00{zin}{tol}",
     ]
     lines2 = [blank_space for _ in lines1]
     if not sft:
+        del lines2[-1]
+    if not mcd:
         del lines2[-1]
 
     return [lines1, lines2]
@@ -80,11 +85,11 @@ def gen_a16(data: list) -> list:
         list: Lista de líneas de tape generadas
     """
 
-    tol, typ, dia, spc, sde, xin, yin, zin, blk = data.values()
+    tol, typ, dia, spc, sde, xin, yin, zin, mcd, com, blk = data.values()
     blank_space = fspace()
     blk = "/" if blk else ""
 
-    if sde != "$1":
+    if sde == "$2":
         return [[blank_space], [blank_space]]
 
     tol = kswiss_to_swiss(tol, sde)
@@ -97,13 +102,19 @@ def gen_a16(data: list) -> list:
     spc = "" if spc == "0" else f" {spc}"
     zin = f"Z{fnum3(zin)}"
 
+    com = "" if com == "-" else f"(- {com} -)"
+    mcd = "" if mcd in {"NO", "M140"} else f"{blk}{mcd}{com}"
+
     lines1 = [
         f"{blk}{tol}00({typ}{dia}{spc})",
+        mcd,
         sft,
         f"{blk}G00{zin}{tol}",
     ]
     lines2 = [blank_space for _ in lines1]
     if not sft:
+        del lines2[-1]
+    if not mcd:
         del lines2[-1]
 
     return [lines1, lines2]
@@ -119,7 +130,7 @@ def gen_k16(data: list) -> list:
         list: Lista de líneas de tape generadas
     """
 
-    tol, typ, dia, spc, sde, xin, yin, zin, blk = data.values()
+    tol, typ, dia, spc, sde, xin, yin, zin, mcd, com, blk = data.values()
     blank_space = fspace()
     blk = "/" if blk else ""
 
@@ -132,14 +143,19 @@ def gen_k16(data: list) -> list:
     dia = "" if dia == 0 else f" {fdia(dia)}"
     spc = "" if spc == "0" else f" {spc}"
     zin = f"Z{fnum3(zin)}"
+    com = "" if com == "-" else f"(- {com} -)"
+    mcd = "" if mcd == "NO" else f"{blk}{mcd}{com}"
 
     lines1 = [
         f"{blk}{tol}00({typ}{dia}{spc})",
+        mcd,
         sft,
         f"{blk}G00{zin}{tol}",
     ]
     lines2 = [blank_space for _ in lines1]
     if not sft:
+        del lines2[-1]
+    if not mcd:
         del lines2[-1]
 
     return [lines2, lines1] if sde == "$2" else [lines1, lines2]
@@ -155,7 +171,7 @@ def gen_e16(data: list) -> list:
         list: Lista de líneas de tape generadas
     """
 
-    tol, typ, dia, spc, sde, xin, yin, zin, blk = data.values()
+    tol, typ, dia, spc, sde, xin, yin, zin, mcd, com, blk = data.values()
     blank_space = fspace()
     blk = "/" if blk else ""
 
@@ -168,14 +184,19 @@ def gen_e16(data: list) -> list:
     dia = "" if dia == 0 else f" {fdia(dia)}"
     spc = "" if spc == "0" else f" {spc}"
     zin = f"Z{fnum3(zin)}"
+    com = "" if com == "-" else f"(- {com} -)"
+    mcd = "" if mcd == "NO" else f"{blk}{mcd}{com}"
 
     lines1 = [
         f"{blk}{tol}00({typ}{dia}{spc})",
+        mcd,
         sft,
         f"{blk}G00{zin}{tol}",
     ]
     lines2 = [blank_space for _ in lines1]
     if not sft:
+        del lines2[-1]
+    if not mcd:
         del lines2[-1]
 
     return [lines2, lines1] if sde == "$2" else [lines1, lines2]
@@ -191,7 +212,7 @@ def gen_omni(data: list) -> list:
         list: Lista de líneas de tape generadas
     """
 
-    tol, typ, dia, spc, sde, xin, yin, zin, blk = data.values()
+    tol, typ, dia, spc, sde, xin, yin, zin, mcd, com, blk = data.values()
     blank_space = fspace()
     blk = "/" if blk else ""
 
@@ -203,12 +224,18 @@ def gen_omni(data: list) -> list:
     spc = "" if spc == "0" else f" {spc}"
     xin = f"X{fnum3(xin)}"
     zin = f"Z{fnum3(zin)}"
+    com = "" if com == "-" else f"(- {com} -)"
+    mcd = "" if mcd in {"NO", "M140"} else f"{blk}{mcd}{com}"
 
     lines1 = [
         f"{blk}{tol}({typ}{dia}{spc})",
         f"{blk}{xin}{zin}",
+        mcd,
     ]
     lines2 = [blank_space for _ in lines1]
+    if not mcd:
+        del lines2[-1]
+
     return [lines1, lines2]
 
 
@@ -222,7 +249,7 @@ def gen_romi(data: list) -> list:
         list: Lista de líneas de tape generadas
     """
 
-    tol, typ, dia, spc, sde, xin, yin, zin, blk = data.values()
+    tol, typ, dia, spc, sde, xin, yin, zin, mcd, com, blk = data.values()
     blank_space = fspace()
     blk = "/" if blk else ""
 
@@ -234,9 +261,17 @@ def gen_romi(data: list) -> list:
     spc = "" if spc == "0" else f" {spc}"
     xin = f"X{fnum3(xin)}"
     zin = f"Z{fnum3(zin)}"
+    com = "" if com == "-" else f"(- {com} -)"
+    mcd = "" if mcd in {"NO", "M140"} else f"{blk}{mcd}{com}"
 
-    lines1 = [f"{blk}{tol}{tol}G54({typ}{dia}{spc})", f"{blk}G00{xin}{zin}M08"]
+    lines1 = [
+        f"{blk}{tol}{tol}G54({typ}{dia}{spc})",
+        mcd,
+        f"{blk}G00{xin}{zin}M08",
+    ]
     lines2 = [blank_space for _ in lines1]
+    if not mcd:
+        del lines2[-1]
 
     return [lines1, lines2]
 
@@ -251,7 +286,7 @@ def gen_hardinge(data: list) -> list:
         list: Lista de líneas de tape generadas
     """
 
-    tol, typ, dia, spc, sde, xin, yin, zin, blk = data.values()
+    tol, typ, dia, spc, sde, xin, yin, zin, mcd, com, blk = data.values()
     blank_space = fspace()
     blk = "/" if blk else ""
 
@@ -263,9 +298,17 @@ def gen_hardinge(data: list) -> list:
     spc = "" if spc == "0" else f" {spc}"
     xin = f"X{fnum3(xin)}"
     zin = f"Z{fnum3(zin)}"
+    com = "" if com == "-" else f"(- {com} -)"
+    mcd = "" if mcd in {"NO", "M140"} else f"{blk}{mcd}{com}"
 
-    lines1 = [f"{blk}{tol}({typ}{dia}{spc})", f"{blk}G00{xin}{zin}M08"]
+    lines1 = [
+        f"{blk}{tol}({typ}{dia}{spc})",
+        mcd,
+        f"{blk}G00{xin}{zin}M08",
+    ]
     lines2 = [blank_space for _ in lines1]
+    if not mcd:
+        del lines2[-1]
 
     return [lines1, lines2]
 
@@ -280,7 +323,7 @@ def gen_mazak(data: list) -> list:
         list: Lista de líneas de tape generadas
     """
 
-    tol, typ, dia, spc, sde, xin, yin, zin, blk = data.values()
+    tol, typ, dia, spc, sde, xin, yin, zin, mcd, com, blk = data.values()
     blank_space = fspace()
     blk = "/" if blk else ""
 
@@ -293,11 +336,16 @@ def gen_mazak(data: list) -> list:
     xin = f"X{fnum3(xin)}"
     yin = f"Y{fnum3(yin)}"
     zin = f"Z{fnum3(zin)}"
+    com = "" if com == "-" else f"(- {com} -)"
+    mcd = "" if mcd in {"NO", "M140"} else f"{blk}{mcd}{com}"
 
     lines1 = [
         f"{blk}{tol}T00M06({typ}{dia}{spc})",
+        mcd,
         f"{blk}G90G00{xin}{yin}{zin}",
     ]
     lines2 = [blank_space for _ in lines1]
+    if not mcd:
+        del lines2[-1]
 
     return [lines1, lines2]

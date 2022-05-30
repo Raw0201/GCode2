@@ -69,7 +69,7 @@ def gen_a16(data: list) -> list:
     blk = "/" if blk else ""
     com = " " if com == "" else com
 
-    if sde != "$1":
+    if sde == "$2":
         return [[blank_space], [blank_space]]
 
     lines1 = [f"{blk}(-- {com} --)"]

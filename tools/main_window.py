@@ -339,9 +339,7 @@ def param_invert(window: QMainWindow, param: str):
 
     Args:
         window (QMainWindow): Ventana principal
-        param (str): Parámetro a modificar
-        direction (str): Dirección de la modificación
-        amount (float): Dimensión de la modificación
+        param (str): Parámetro a invertir
     """
 
     mod = -1
@@ -351,6 +349,23 @@ def param_invert(window: QMainWindow, param: str):
         with contextlib.suppress(KeyError):
             modded = window.config_list[index][1][param]
             window.config_list[index][1][param] = modded * mod
+
+    update_data(window)
+
+
+def side_changer(window: QMainWindow, side: str):
+    """Modifica un parámetro en las líneas seleccionadas
+
+    Args:
+        window (QMainWindow): Ventana principal
+        side (str): Lado a desplazar
+    """
+
+    index_list = window.current_selection
+    for index in index_list:
+        with contextlib.suppress(KeyError):
+            modded = window.config_list[index][1]["Sde"]
+            window.config_list[index][1]["Sde"] = side
 
     update_data(window)
 
@@ -491,6 +506,9 @@ def search_subrutine(window: QMainWindow):
 
     try:
         subrutine = f"{window.current_subrutine}.json"
+        machine = window.current_machine
+        if machine in {"B12", "A16", "K16", "E16"}:
+            subrutine = f"({machine}) {subrutine}"
         with open(subrutine) as file:
             load_subrutine(window, file)
     except FileNotFoundError:
@@ -509,7 +527,8 @@ def load_subrutine(window: QMainWindow, file: str):
 
     create_new_tape(window)
     window.config_list = json.load(file)
-    window.config_list[0] = prefab_sub_header(window)
+    description = window.config_list[0][1]["Dsc"]
+    window.config_list[0] = prefab_sub_header(window, description)
     window.save_required = False
     update_after_subrutine(window)
 
@@ -522,7 +541,8 @@ def create_subrutine(window: QMainWindow):
     """
 
     create_new_tape(window)
-    window.config_list = [prefab_sub_header(window)]
+    description = ""
+    window.config_list = [prefab_sub_header(window, description)]
     window.config_list.append(prefab_comment(window.subrutine_comment, "$1"))
     window.save_required = True
     update_after_subrutine(window)

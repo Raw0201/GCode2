@@ -16,6 +16,13 @@ from subtasks import (
     radial_turn,
     thread,
     cutoff,
+    mill_ini,
+    mill_end,
+    lineal_mill,
+    radial_mill,
+    drill_ini,
+    drill_end,
+    center_drill,
 )
 
 tasks_list = {
@@ -69,7 +76,7 @@ tasks_list = {
     },
     "Turn_ini": {
         "Name": turn_ini.Turn_ini,
-        "Description": "        Iniciar torneados",
+        "Description": "    * Iniciar torneados",
     },
     "Lineal_turn": {
         "Name": lineal_turn.Lineal_turn,
@@ -86,6 +93,34 @@ tasks_list = {
     "Cutoff": {
         "Name": cutoff.Cutoff,
         "Description": "        Tronzado de pieza",
+    },
+    "Mill_ini": {
+        "Name": mill_ini.Mill_ini,
+        "Description": "    * Iniciar fresados",
+    },
+    "Mill_end": {
+        "Name": mill_end.Mill_end,
+        "Description": "    * Finalizar fresados",
+    },
+    "Lineal_mill": {
+        "Name": lineal_mill.Lineal_mill,
+        "Description": "        Fresado lineal",
+    },
+    "Radial_mill": {
+        "Name": radial_mill.Radial_mill,
+        "Description": "        Fresado radial",
+    },
+    "Drill_ini": {
+        "Name": drill_ini.Drill_ini,
+        "Description": "    * Iniciar perforados",
+    },
+    "Drill_end": {
+        "Name": drill_end.Drill_end,
+        "Description": "    * Finalizar perforados",
+    },
+    "Center_drill": {
+        "Name": center_drill.Center_drill,
+        "Description": "        Agujero centro",
     },
 }
 

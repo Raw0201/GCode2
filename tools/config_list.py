@@ -15,7 +15,16 @@ def collect_data(window: QMainWindow, data_class: str):
     subtask_class = tools.subtasks.tasks_list[data_class]["Name"]
     window.subtask1 = subtask_class(window)
 
-    if data_class not in {"Free", "End", "Tool_close", "Turn_ini"}:
+    if data_class not in {
+        "Free",
+        "End",
+        "Tool_close",
+        "Turn_ini",
+        "Mill_ini",
+        "Mill_end",
+        "Drill_ini",
+        "Drill_end",
+    }:
         window.subtask1.show()
     else:
         window.subtask1.collector()

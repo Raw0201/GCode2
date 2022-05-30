@@ -61,6 +61,15 @@ def load_menu_actions(window):
     window.actionZ_invert.triggered.connect(
         lambda: param_invert(window, "Zin")
     )
+    window.actionS1_move.triggered.connect(
+        lambda: side_changer(window, "$1")
+    )
+    window.actionS2_move.triggered.connect(
+        lambda: side_changer(window, "$2")
+    )
+    window.actionS3_move.triggered.connect(
+        lambda: side_changer(window, "$3")
+    )
     window.actionX_up.triggered.connect(
         lambda: param_mod(window, "Xin", "up", 0.001)
     )

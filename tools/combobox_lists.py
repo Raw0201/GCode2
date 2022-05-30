@@ -91,6 +91,25 @@ radial_moves_list = (
     "EN CONTRA",
 )
 
+coordinates_systems = (
+    "",
+    "ABSOLUTO",
+    "INCREMENTAL",
+)
+
+retraction_positions = (
+    "",
+    "Z INICIAL",
+    "PUNTO RETRACCION",
+)
+
+tool_compensations = (
+    "",
+    "IZQUIERDA",
+    "DERECHA",
+    "CANCELAR",
+)
+
 thread_types = (
     "EXTERNA",
     "INTERNA",
@@ -104,4 +123,10 @@ positions_list = (
 yes_no_list = (
     "SÍ",
     "NO",
+)
+
+tool_m_codes = (
+    "NO",
+    "M00",
+    "M140",
 )
