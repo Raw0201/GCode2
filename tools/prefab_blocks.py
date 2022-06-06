@@ -1,5 +1,7 @@
 from PySide6.QtWidgets import QMainWindow
 
+from tools.formatting import fnum3
+
 
 def prefab_space() -> list:
     """Bloque prefabricado de espacio
@@ -130,6 +132,71 @@ def prefab_center_drill_tool_call(
     ]
 
 
+def prefab_drill_tool_call(
+    tool: int, xin: float, yin: float, zin: float, side: str
+) -> list:
+    """Bloque prefabricado de llamada de herramienta de perforado
+
+    Args:
+        tool (int): Número de herramienta
+        xin (float): Posición inicial eje X
+        zin (float): Posición inicial eje Z
+
+    Returns:
+        list: Bloque prefabricado
+    """
+
+    return [
+        "    Llamar herramienta",
+        {
+            "Tol": tool,
+            "Typ": "BROCA",
+            "Dia": 0,
+            "Spc": 0,
+            "Sde": side,
+            "Xin": xin,
+            "Yin": yin,
+            "Zin": zin,
+            "Mcd": "NO",
+            "Com": "-",
+            "Blk": False,
+        },
+    ]
+
+
+def prefab_csink_tool_call(
+    tool: int, angle: float, xin: float, yin: float, zin: float, side: str
+) -> list:
+    """Bloque prefabricado de llamada de herramienta de perforado
+
+    Args:
+        tool (int): Número de herramienta
+        angle (float): Ángulo de la punta de la herramienta
+        xin (float): Posición inicial eje X
+        zin (float): Posición inicial eje Z
+
+    Returns:
+        list: Bloque prefabricado
+    """
+
+    return [
+        "    Llamar herramienta",
+        {
+            "Tol": tool,
+            "Typ": "SPOT",
+            "Dia": 0.25,
+            "Spc": f"{fnum3(angle)} GRD",
+            "Sde": side,
+            "Xin": xin,
+            "Yin": yin,
+            "Zin": zin,
+            "Mcd": "NO",
+            "Com": "-",
+            "Blk": False,
+        },
+    ]
+
+
 def prefab_tool_close(tool: int, side: str, bar: float) -> list:
     """Bloque prefabricado de cierre de herramienta
 
@@ -240,14 +307,14 @@ def prefab_center_drill(depth: float, feed: float) -> list:
         {
             "Dpt": depth,
             "Fed": feed,
-            "Xin": "",
-            "Yin": "",
+            "Xin": "0",
+            "Yin": "0",
             "Zin": -0.02,
-            "Rtr": "",
-            "Dwl": "",
+            "Rtr": "0",
+            "Dwl": "0",
             "Sde": "$1",
-            "Sys": "",
-            "Znd": "",
+            "Sys": "ABSOLUTO",
+            "Znd": "Z INICIAL",
             "Blk": False,
         },
     ]

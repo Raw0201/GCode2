@@ -1,5 +1,4 @@
 from tools.constants import *
-
 from PySide6.QtWidgets import QMainWindow
 
 

@@ -45,7 +45,7 @@ def gen_b12(data: list) -> list:
     blank_space = fspace()
     blk = "/" if blk else ""
 
-    if sde != "$1":
+    if sde == "$2":
         return [[blank_space], [blank_space]]
 
     xin = f"X{fnum3(dia + .02)}"
@@ -172,10 +172,10 @@ def gen_omni(data: list) -> list:
     blank_space = fspace()
     blk = "/" if blk else ""
 
-    if sde != "$1":
+    if sde == "$2":
         return [[blank_space], [blank_space]]
 
-    lines1 = [f"{blk}Z.5F300"]
+    lines1 = [f"{blk}Z.5F300."]
     lines2 = [blank_space for _ in lines1]
 
     return [lines1, lines2]
@@ -195,7 +195,7 @@ def gen_romi(data: list) -> list:
     blank_space = fspace()
     blk = "/" if blk else ""
 
-    if sde != "$1":
+    if sde == "$2":
         return [[blank_space], [blank_space]]
 
     lines1 = [f"{blk}G00Z.5"]
@@ -218,7 +218,7 @@ def gen_hardinge(data: list) -> list:
     blank_space = fspace()
     blk = "/" if blk else ""
 
-    if sde != "$1":
+    if sde == "$2":
         return [[blank_space], [blank_space]]
 
     lines1 = [f"{blk}G00Z.5"]
@@ -241,7 +241,7 @@ def gen_mazak(data: list) -> list:
     blank_space = fspace()
     blk = "/" if blk else ""
 
-    if sde != "$1":
+    if sde == "$2":
         return [[blank_space], [blank_space]]
 
     lines1 = [f"{blk}G90G00Z4.0M05M09"]

@@ -108,7 +108,7 @@ def fnum3(number_string: str) -> str:
             break
         else:
             number_string = number_string[1:]
-    number_string = "0" if number_string == ".0" else number_string
+    number_string = "0" if number_string in {".0", "-.0"} else number_string
 
     return number_string
 

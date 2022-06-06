@@ -45,7 +45,7 @@ def gen_b12(data: list) -> list:
     blk = "/" if blk else ""
     com = " " if com == "" else com
 
-    if sde != "$1":
+    if sde == "$2":
         return [[blank_space], [blank_space]]
 
     lines1 = [f"{blk}(-- {com} --)"]
@@ -135,7 +135,10 @@ def gen_omni(data: list) -> list:
     blk = "/" if blk else ""
     com = " " if com == "" else com
 
-    lines1 = [f"{blk}(-- {com} --)"] if sde == "$1" else [blank_space]
+    if sde == "$2":
+        return [[blank_space], [blank_space]]
+
+    lines1 = [f"{blk}(-- {com} --)"]
     lines2 = [blank_space]
 
     return [lines1, lines2]
@@ -156,7 +159,10 @@ def gen_romi(data: list) -> list:
     blk = "/" if blk else ""
     com = " " if com == "" else com
 
-    lines1 = [f"{blk}(-- {com} --)"] if sde == "$1" else [blank_space]
+    if sde == "$2":
+        return [[blank_space], [blank_space]]
+
+    lines1 = [f"{blk}(-- {com} --)"]
     lines2 = [blank_space]
 
     return [lines1, lines2]
@@ -177,7 +183,10 @@ def gen_hardinge(data: list) -> list:
     blk = "/" if blk else ""
     com = " " if com == "" else com
 
-    lines1 = [f"{blk}(-- {com} --)"] if sde == "$1" else [blank_space]
+    if sde == "$2":
+        return [[blank_space], [blank_space]]
+
+    lines1 = [f"{blk}(-- {com} --)"]
     lines2 = [blank_space]
 
     return [lines1, lines2]
@@ -198,7 +207,10 @@ def gen_mazak(data: list) -> list:
     blk = "/" if blk else ""
     com = " " if com == "" else com
 
-    lines1 = [f"{blk}(-- {com} --)"] if sde == "$1" else [blank_space]
+    if sde == "$2":
+        return [[blank_space], [blank_space]]
+
+    lines1 = [f"{blk}(-- {com} --)"]
     lines2 = [blank_space]
 
     return [lines1, lines2]

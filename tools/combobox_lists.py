@@ -103,6 +103,11 @@ retraction_positions = (
     "PUNTO RETRACCION",
 )
 
+programming_cycle = (
+    "CICLO DE PERFORADO",
+    "CORTES INDIVIDUALES",
+)
+
 tool_compensations = (
     "",
     "IZQUIERDA",

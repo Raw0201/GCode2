@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>frm_drill</class>
- <widget class="QMainWindow" name="frm_drill">
+ <class>frm_csink</class>
+ <widget class="QMainWindow" name="frm_csink">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
     <width>210</width>
-    <height>730</height>
+    <height>680</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -19,13 +19,13 @@
   <property name="minimumSize">
    <size>
     <width>210</width>
-    <height>730</height>
+    <height>680</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
     <width>210</width>
-    <height>730</height>
+    <height>680</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -2154,7 +2154,7 @@ PlotWidget {
       <x>10</x>
       <y>10</y>
       <width>190</width>
-      <height>710</height>
+      <height>660</height>
      </rect>
     </property>
     <property name="sizePolicy">
@@ -2166,13 +2166,13 @@ PlotWidget {
     <property name="minimumSize">
      <size>
       <width>190</width>
-      <height>710</height>
+      <height>660</height>
      </size>
     </property>
     <property name="maximumSize">
      <size>
       <width>190</width>
-      <height>710</height>
+      <height>660</height>
      </size>
     </property>
     <property name="frameShape">
@@ -2181,7 +2181,7 @@ PlotWidget {
     <property name="frameShadow">
      <enum>QFrame::Raised</enum>
     </property>
-    <widget class="QLineEdit" name="tbx_dpt">
+    <widget class="QLineEdit" name="tbx_lgt">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -2203,7 +2203,7 @@ PlotWidget {
       </size>
      </property>
      <property name="toolTip">
-      <string>Digite la profundidad del agujero</string>
+      <string>Digite la longitud del avellán</string>
      </property>
      <property name="statusTip">
       <string/>
@@ -2215,7 +2215,7 @@ PlotWidget {
       <string/>
      </property>
     </widget>
-    <widget class="QLabel" name="lbl_dpt">
+    <widget class="QLabel" name="lbl_lgt">
      <property name="enabled">
       <bool>true</bool>
      </property>
@@ -2223,18 +2223,18 @@ PlotWidget {
       <rect>
        <x>20</x>
        <y>10</y>
-       <width>139</width>
+       <width>121</width>
        <height>26</height>
       </rect>
      </property>
      <property name="text">
-      <string>Profundidad del agujero</string>
+      <string>Longitud del avellán</string>
      </property>
      <property name="buddy">
-      <cstring>lbl_dpt</cstring>
+      <cstring>lbl_lgt</cstring>
      </property>
     </widget>
-    <widget class="QLineEdit" name="tbx_cut">
+    <widget class="QLineEdit" name="tbx_dim">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -2256,7 +2256,7 @@ PlotWidget {
       </size>
      </property>
      <property name="toolTip">
-      <string>Digite la profundidad de corte por pasada</string>
+      <string>Digite el diámetro del agujero a avellanar</string>
      </property>
      <property name="statusTip">
       <string/>
@@ -2271,7 +2271,7 @@ PlotWidget {
       <string/>
      </property>
     </widget>
-    <widget class="QLabel" name="lbl_cut">
+    <widget class="QLabel" name="lbl_dim">
      <property name="enabled">
       <bool>true</bool>
      </property>
@@ -2279,19 +2279,19 @@ PlotWidget {
       <rect>
        <x>20</x>
        <y>60</y>
-       <width>101</width>
+       <width>121</width>
        <height>26</height>
       </rect>
      </property>
      <property name="text">
-      <string>Corte por pasada</string>
+      <string>Diámetro a avellanar</string>
      </property>
     </widget>
     <widget class="QPushButton" name="btn_save">
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>680</y>
+       <y>630</y>
        <width>171</width>
        <height>24</height>
       </rect>
@@ -2662,7 +2662,7 @@ PlotWidget {
       </size>
      </property>
      <property name="toolTip">
-      <string>Seleccione el punto de salida del perforado</string>
+      <string>Seleccione el punto de salida del avellanado</string>
      </property>
     </widget>
     <widget class="QLineEdit" name="tbx_rtr">
@@ -2718,50 +2718,6 @@ PlotWidget {
       <string>Punto de retracción</string>
      </property>
     </widget>
-    <widget class="QComboBox" name="cbx_cyl">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>630</y>
-       <width>170</width>
-       <height>26</height>
-      </rect>
-     </property>
-     <property name="minimumSize">
-      <size>
-       <width>170</width>
-       <height>26</height>
-      </size>
-     </property>
-     <property name="maximumSize">
-      <size>
-       <width>170</width>
-       <height>16777215</height>
-      </size>
-     </property>
-     <property name="toolTip">
-      <string>Seleccione si requiere un ciclo de perforado o cortes individuales</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="lbl_cyl">
-     <property name="enabled">
-      <bool>true</bool>
-     </property>
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>610</y>
-       <width>91</width>
-       <height>26</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Programación</string>
-     </property>
-     <property name="buddy">
-      <cstring>lbl_mov</cstring>
-     </property>
-    </widget>
     <widget class="QLineEdit" name="tbx_ang">
      <property name="geometry">
       <rect>
@@ -2784,7 +2740,7 @@ PlotWidget {
       </size>
      </property>
      <property name="toolTip">
-      <string>Digite el ángulo de la punta de la broca</string>
+      <string>Digite el ángulo total (incluido) del avellán</string>
      </property>
      <property name="statusTip">
       <string/>
@@ -2812,7 +2768,7 @@ PlotWidget {
       </rect>
      </property>
      <property name="text">
-      <string>Ángulo de la punta</string>
+      <string>Ángulo del avellán</string>
      </property>
     </widget>
     <widget class="QLabel" name="lbl_dwl">
@@ -2856,7 +2812,7 @@ PlotWidget {
       </size>
      </property>
      <property name="toolTip">
-      <string>Digite el tiempo de espera en segundos para pulir el fondo del agujero</string>
+      <string>Digite el tiempo de espera en segundos para pulir el fondo del avellán</string>
      </property>
      <property name="statusTip">
       <string/>
@@ -2868,10 +2824,10 @@ PlotWidget {
       <string/>
      </property>
     </widget>
-    <zorder>tbx_dpt</zorder>
-    <zorder>lbl_dpt</zorder>
-    <zorder>tbx_cut</zorder>
-    <zorder>lbl_cut</zorder>
+    <zorder>tbx_lgt</zorder>
+    <zorder>lbl_lgt</zorder>
+    <zorder>tbx_dim</zorder>
+    <zorder>lbl_dim</zorder>
     <zorder>btn_save</zorder>
     <zorder>tbx_fed</zorder>
     <zorder>lbl_fed</zorder>
@@ -2889,8 +2845,6 @@ PlotWidget {
     <zorder>tbx_rtr</zorder>
     <zorder>lbl_rtr</zorder>
     <zorder>lbl_znd</zorder>
-    <zorder>cbx_cyl</zorder>
-    <zorder>lbl_cyl</zorder>
     <zorder>tbx_ang</zorder>
     <zorder>lbl_ang</zorder>
     <zorder>tbx_dwl</zorder>
@@ -2931,8 +2885,8 @@ PlotWidget {
   </widget>
  </widget>
  <tabstops>
-  <tabstop>tbx_dpt</tabstop>
-  <tabstop>tbx_cut</tabstop>
+  <tabstop>tbx_lgt</tabstop>
+  <tabstop>tbx_dim</tabstop>
   <tabstop>tbx_ang</tabstop>
   <tabstop>tbx_fed</tabstop>
   <tabstop>tbx_dwl</tabstop>
@@ -2943,7 +2897,6 @@ PlotWidget {
   <tabstop>cbx_sde</tabstop>
   <tabstop>cbx_sys</tabstop>
   <tabstop>cbx_znd</tabstop>
-  <tabstop>cbx_cyl</tabstop>
   <tabstop>btn_save</tabstop>
   <tabstop>btn_help</tabstop>
  </tabstops>

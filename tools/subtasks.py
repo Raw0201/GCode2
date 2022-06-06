@@ -23,6 +23,8 @@ from subtasks import (
     drill_ini,
     drill_end,
     center_drill,
+    drill,
+    csink,
 )
 
 tasks_list = {
@@ -121,6 +123,14 @@ tasks_list = {
     "Center_drill": {
         "Name": center_drill.Center_drill,
         "Description": "        Agujero centro",
+    },
+    "Drill": {
+        "Name": drill.Drill,
+        "Description": "        Perforado",
+    },
+    "Csink": {
+        "Name": csink.Csink,
+        "Description": "        Avellanado",
     },
 }
 

@@ -172,3 +172,9 @@ def load_main_buttons_connections(window: QMainWindow):
     window.btn_center.clicked.connect(
         lambda: collect_data(window, "Center_drill"),
     )
+    window.btn_drill.clicked.connect(
+        lambda: collect_data(window, "Drill"),
+    )
+    window.btn_csink.clicked.connect(
+        lambda: collect_data(window, "Csink"),
+    )

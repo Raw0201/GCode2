@@ -45,7 +45,7 @@ def gen_b12(data: list) -> list:
     blank_space = fspace()
     blk = "/" if blk else ""
 
-    if sde != "$1":
+    if sde == "$2":
         return [[blank_space], [blank_space]]
 
     tol = kswiss_to_swiss(tol, sde)
@@ -216,7 +216,7 @@ def gen_omni(data: list) -> list:
     blank_space = fspace()
     blk = "/" if blk else ""
 
-    if sde != "$1":
+    if sde == "$2":
         return [[blank_space], [blank_space]]
 
     tol = f"T{tol}"
@@ -253,7 +253,7 @@ def gen_romi(data: list) -> list:
     blank_space = fspace()
     blk = "/" if blk else ""
 
-    if sde != "$1":
+    if sde == "$2":
         return [[blank_space], [blank_space]]
 
     tol = f"T0{tol}" if tol < 10 else f"T{tol}"
@@ -290,7 +290,7 @@ def gen_hardinge(data: list) -> list:
     blank_space = fspace()
     blk = "/" if blk else ""
 
-    if sde != "$1":
+    if sde == "$2":
         return [[blank_space], [blank_space]]
 
     tol = f"T0{tol}" if tol < 10 else f"T{tol}"
@@ -327,7 +327,7 @@ def gen_mazak(data: list) -> list:
     blank_space = fspace()
     blk = "/" if blk else ""
 
-    if sde != "$1":
+    if sde == "$2":
         return [[blank_space], [blank_space]]
 
     tol = f"T0{tol}" if tol < 10 else f"T{tol}"

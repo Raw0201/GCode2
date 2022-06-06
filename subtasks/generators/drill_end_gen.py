@@ -185,7 +185,7 @@ def gen_mazak(data: list) -> list:
     blank_space = fspace()
     blk = "/" if blk else ""
 
-    lines1 = [blank_space]
-    lines2 = [blank_space for _ in lines1]
+    lines1 = [f"{blk}G80G91G00Z.1"]
+    lines2 = [blank_space]
 
     return [lines1, lines2]

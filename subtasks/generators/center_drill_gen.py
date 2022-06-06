@@ -48,15 +48,14 @@ def gen_b12(data: list) -> list:
     if sde != "$1":
         return [[blank_space], [blank_space]]
 
-    dpt = "" if dpt == "" else f"{fnum3(dpt)}"
+    dpt = "" if dpt == "" else f"Z{fnum3(dpt)}"
     fed = "" if fed == "" else f"F{ffed(fed)}"
     xin = "" if xin == "" else f"X{fnum3(xin)}"
     zin = "" if zin == "" else f"Z{fnum3(zin)}"
     dwl = "" if dwl == "" else f"{blk}G04U{ffed(dwl)}"
     apx = "" if (xin == "" and zin == "") else f"{blk}G00{xin}{zin}"
 
-    axis = "Z"
-    lines1 = [apx, f"{blk}G01{axis}{dpt}{fed}", dwl]
+    lines1 = [apx, f"{blk}G01{dpt}{fed}", dwl]
     lines2 = [blank_space for _ in lines1]
 
     if not apx:
@@ -89,6 +88,8 @@ def gen_a16(data: list) -> list:
     xin = "" if xin == "" else f"X{fnum3(xin)}"
     yin = "" if yin == "" else f"Y{fnum3(yin)}"
     zin = "" if zin == "" else f"Z{fnum3(zin)}"
+    axs = "X" if sde == "$3" else "Z"
+
     dwl = "" if dwl == "" else f"{blk}G04U{ffed(dwl)}"
     apx = (
         ""
@@ -96,8 +97,7 @@ def gen_a16(data: list) -> list:
         else f"{blk}G00{xin}{yin}{zin}"
     )
 
-    axis = "X" if sde == "$3" else "Z"
-    lines1 = [apx, f"{blk}G01{axis}{dpt}{fed}", dwl]
+    lines1 = [apx, f"{blk}G01{axs}{dpt}{fed}", dwl]
     lines2 = [blank_space for _ in lines1]
 
     if not apx:
@@ -127,6 +127,8 @@ def gen_k16(data: list) -> list:
     xin = "" if xin == "" else f"X{fnum3(xin)}"
     yin = "" if yin == "" else f"Y{fnum3(yin)}"
     zin = "" if zin == "" else f"Z{fnum3(zin)}"
+    axs = "X" if sde == "$3" else "Z"
+
     dwl = "" if dwl == "" else f"{blk}G04U{ffed(dwl)}"
     apx = (
         ""
@@ -134,8 +136,7 @@ def gen_k16(data: list) -> list:
         else f"{blk}G00{xin}{yin}{zin}"
     )
 
-    axis = "X" if sde == "$3" else "Z"
-    lines1 = [apx, f"{blk}G01{axis}{dpt}{fed}", dwl]
+    lines1 = [apx, f"{blk}G01{axs}{dpt}{fed}", dwl]
     lines2 = [blank_space for _ in lines1]
 
     if not apx:
@@ -165,6 +166,8 @@ def gen_e16(data: list) -> list:
     xin = "" if xin == "" else f"X{fnum3(xin)}"
     yin = "" if yin == "" else f"Y{fnum3(yin)}"
     zin = "" if zin == "" else f"Z{fnum3(zin)}"
+    axs = "X" if sde == "$3" else "Z"
+
     dwl = "" if dwl == "" else f"{blk}G04U{ffed(dwl)}"
     apx = (
         ""
@@ -172,8 +175,7 @@ def gen_e16(data: list) -> list:
         else f"{blk}G00{xin}{yin}{zin}"
     )
 
-    axis = "X" if sde == "$3" else "Z"
-    lines1 = [apx, f"{blk}G01{axis}{dpt}{fed}", dwl]
+    lines1 = [apx, f"{blk}G01{axs}{dpt}{fed}", dwl]
     lines2 = [blank_space for _ in lines1]
 
     if not apx:
@@ -205,10 +207,12 @@ def gen_omni(data: list) -> list:
     fed = "" if fed == "" else f"F{ffed(fed)}"
     xin = "" if xin == "" else f"X{fnum3(xin)}"
     zin = "" if zin == "" else f"Z{fnum3(zin)}"
+    axs = "X" if sde == "$3" else "Z"
+
     dwl = "" if dwl == "" else f"{blk}G04F{ffed(dwl)}"
     apx = "" if xin == "" and zin == "" else f"{blk}{xin}{zin}"
 
-    lines1 = [apx, f"{blk}Z{dpt}{fed}", dwl]
+    lines1 = [apx, f"{blk}{axs}{dpt}{fed}", dwl]
     lines2 = [blank_space for _ in lines1]
 
     if not apx:
@@ -240,10 +244,12 @@ def gen_romi(data: list) -> list:
     fed = "" if fed == "" else f"F{ffed(fed)}"
     xin = "" if xin == "" else f"X{fnum3(xin)}"
     zin = "" if zin == "" else f"Z{fnum3(zin)}"
+    axs = "X" if sde == "$3" else "Z"
+
     dwl = "" if dwl == "" else f"{blk}G04F{ffed(dwl)}"
     apx = "" if xin == "" and zin == "" else f"{blk}G00{xin}{zin}"
 
-    lines1 = [apx, f"{blk}G01Z{dpt}{fed}", dwl]
+    lines1 = [apx, f"{blk}{axs}{dpt}{fed}", dwl]
     lines2 = [blank_space for _ in lines1]
 
     if not apx:
@@ -275,10 +281,12 @@ def gen_hardinge(data: list) -> list:
     fed = "" if fed == "" else f"F{ffed(fed)}"
     xin = "" if xin == "" else f"X{fnum3(xin)}"
     zin = "" if zin == "" else f"Z{fnum3(zin)}"
+    axs = "X" if sde == "$3" else "Z"
+
     dwl = "" if dwl == "" else f"{blk}G04F{ffed(dwl)}"
     apx = "" if xin == "" and zin == "" else f"{blk}G00{xin}{zin}"
 
-    lines1 = [apx, f"{blk}G01Z{dpt}{fed}", dwl]
+    lines1 = [apx, f"{blk}{axs}{dpt}{fed}", dwl]
     lines2 = [blank_space for _ in lines1]
 
     if not apx:
@@ -306,22 +314,23 @@ def gen_mazak(data: list) -> list:
     if sde == "$2":
         return [[blank_space], [blank_space]]
 
-    dpt = "" if dpt == "" else f"{fnum3(dpt)}"
+    dpt = "" if dpt == "" else f"Z{fnum3(dpt)}"
     fed = "" if fed == "" else f"F{ffed(fed)}"
     xin = "" if xin == "" else f"X{fnum3(xin)}"
     yin = "" if yin == "" else f"Y{fnum3(yin)}"
     zin = "" if zin == "" else f"Z{fnum3(zin)}"
-    dwl = "" if dwl == "" else f"{blk}G04U{ffed(dwl)}"
     rtr = "" if rtr == "" else f"R{fnum3(rtr)}"
-    sys = "" if sys == "" else mill_g_codes[f"SISTEMA {sys}"]
-    znd = "" if sys == "" else mill_g_codes[znd]
+
+    dwl = "" if dwl == "" else f"{blk}G04U{ffed(dwl)}"
+    sys = mill_g_codes[f"SISTEMA {sys}"]
+    znd = mill_g_codes[znd]
     apx = (
         ""
         if (xin == "" and yin == "" and zin == "")
         else f"{blk}G00{xin}{yin}{zin}"
     )
 
-    lines1 = [apx, f"{blk}{sys}{znd}G81Z{dpt}{rtr}{fed}", dwl]
+    lines1 = [apx, f"{blk}{sys}{znd}G81{dpt}{rtr}{fed}", dwl]
     lines2 = [blank_space for _ in lines1]
 
     if not apx:

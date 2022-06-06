@@ -45,7 +45,7 @@ def gen_b12(data: list) -> list:
     blank_space = fspace()
     blk = "/" if blk else ""
 
-    if sde != "$1":
+    if sde == "$2":
         return [[blank_space], [blank_space]]
 
     if spd == 0 and rot != "DETENER":
@@ -74,7 +74,7 @@ def gen_a16(data: list) -> list:
     blank_space = fspace()
     blk = "/" if blk else ""
 
-    if sde != "$1":
+    if sde == "$2":
         return [[blank_space], [blank_space]]
 
     if spd == 0 and rot != "DETENER":
@@ -159,7 +159,7 @@ def gen_omni(data: list) -> list:
     blank_space = fspace()
     blk = "/" if blk else ""
 
-    if sde != "$1":
+    if sde == "$2":
         return [[blank_space], [blank_space]]
 
     if spd == 0 and rot != "DETENER":
@@ -189,7 +189,7 @@ def gen_romi(data: list) -> list:
     blank_space = fspace()
     blk = "/" if blk else ""
 
-    if sde != "$1":
+    if sde == "$2":
         return [[blank_space], [blank_space]]
 
     if spd == 0 and rot != "DETENER":
@@ -219,7 +219,7 @@ def gen_hardinge(data: list) -> list:
     blank_space = fspace()
     blk = "/" if blk else ""
 
-    if sde != "$1":
+    if sde == "$2":
         return [[blank_space], [blank_space]]
 
     if spd == 0 and rot != "DETENER":
@@ -249,7 +249,7 @@ def gen_mazak(data: list) -> list:
     blank_space = fspace()
     blk = "/" if blk else ""
 
-    if sde != "$1":
+    if sde == "$2":
         return [[blank_space], [blank_space]]
 
     if spd == 0 and rot != "DETENER":

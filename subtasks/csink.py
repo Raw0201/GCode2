@@ -14,16 +14,16 @@ from tools.combobox_lists import *
 from tools.file_management import *
 
 from subtasks.subtask import Subtask
-from subtasks.generators.center_drill_gen import center_drill_gen
-from interfaces.ui_center_drill import Ui_frm_center_drill
+from subtasks.generators.csink_gen import csink_gen
+from interfaces.ui_csink import Ui_frm_csink
 
 
-class Center_drill(Subtask, Ui_frm_center_drill):
+class Csink(Subtask, Ui_frm_csink):
     def __init__(self, main_window):
         super().__init__()
         self.window = main_window
-        self.task = subtasks.tasks_list["Center_drill"]["Description"]
-        self.image = "center_drill.png"
+        self.task = subtasks.tasks_list["Csink"]["Description"]
+        self.image = "csink.png"
 
         self.cbx_sde.addItems(tape_sides_list)
         self.cbx_sde.setCurrentText(self.window.current_side)
@@ -34,13 +34,16 @@ class Center_drill(Subtask, Ui_frm_center_drill):
         """Recolecta los datos de la subtarea ingresados por el usuario"""
 
         data = {
-            "Dpt": self.tbx_dpt.text(),
+            "Lgt": self.tbx_lgt.text(),
+            "Dim": self.tbx_dim.text(),
+            "Ang": self.tbx_ang.text(),
+            "Dia": self.window.current_tool_diameter,
             "Fed": self.tbx_fed.text(),
+            "Dwl": self.tbx_dwl.text(),
             "Xin": self.tbx_xin.text(),
             "Yin": self.tbx_yin.text(),
             "Zin": self.tbx_zin.text(),
             "Rtr": self.tbx_rtr.text(),
-            "Dwl": self.tbx_dwl.text(),
             "Sde": self.cbx_sde.currentText(),
             "Sys": self.cbx_sys.currentText(),
             "Znd": self.cbx_znd.currentText(),
@@ -56,7 +59,7 @@ class Center_drill(Subtask, Ui_frm_center_drill):
             data (dict): Diccionario de datos recopilados
         """
 
-        if all_empty(data):
+        if any_empty(data):
             blank_data_error(self)
             return
         self.converter(data)
@@ -69,13 +72,15 @@ class Center_drill(Subtask, Ui_frm_center_drill):
         """
 
         try:
-            data["Dpt"] = foper(data["Dpt"])
+            data["Lgt"] = foper(data["Lgt"])
+            data["Dim"] = foper(data["Dim"])
+            data["Ang"] = foper(data["Ang"])
             data["Fed"] = foper(data["Fed"])
+            data["Dwl"] = foper(data["Dwl"])
             data["Xin"] = foper(data["Xin"])
             data["Yin"] = foper(data["Yin"])
             data["Zin"] = foper(data["Zin"])
             data["Rtr"] = foper(data["Rtr"])
-            data["Dwl"] = foper(data["Dwl"])
         except ValueError:
             data_type_error(self)
             return
@@ -91,9 +96,11 @@ class Center_drill(Subtask, Ui_frm_center_drill):
 
         data1 = (self.task, data)
         data2 = prefab_space()
-        data3 = prefab_center_drill_tool_call(21, 0, 0, -0.05, data["Sde"])
+        data3 = prefab_csink_tool_call(
+            23, data["Ang"], 0, 0, -0.05, data["Sde"]
+        )
         data4 = prefab_comment(
-            "AGUJERO CENTRO",
+            "CSINK",
             data["Sde"],
         )
         data5 = prefab_tool_close(
@@ -127,7 +134,8 @@ class Center_drill(Subtask, Ui_frm_center_drill):
             list: Lista de líneas de tape
         """
 
-        return center_drill_gen(machine, data)
+        data["Dia"] = self.current_tool_diameter
+        return csink_gen(machine, data)
 
     def modifier(self, data: dict):
         """Modifica la línea de configuración seleccionada
@@ -137,16 +145,33 @@ class Center_drill(Subtask, Ui_frm_center_drill):
         """
 
         self.modification = True
-        dpt, fed, xin, yin, zin, rtr, dwl, sde, sys, znd, blk = data.values()
+        (
+            lgt,
+            dim,
+            ang,
+            dia,
+            fed,
+            dwl,
+            xin,
+            yin,
+            zin,
+            rtr,
+            sde,
+            sys,
+            znd,
+            blk,
+        ) = data.values()
 
-        self.tbx_dpt.setText(str(dpt))
-        self.tbx_dpt.setSelection(0, 100)
+        self.tbx_lgt.setText(str(lgt))
+        self.tbx_lgt.setSelection(0, 100)
+        self.tbx_dim.setText(str(dim))
+        self.tbx_ang.setText(str(ang))
         self.tbx_fed.setText(str(fed))
+        self.tbx_dwl.setText(str(dwl))
         self.tbx_xin.setText(str(xin))
         self.tbx_yin.setText(str(yin))
         self.tbx_zin.setText(str(zin))
         self.tbx_rtr.setText(str(rtr))
-        self.tbx_dwl.setText(str(dwl))
         self.cbx_sde.setCurrentText(str(sde))
         self.cbx_sys.setCurrentText(str(sys))
         self.cbx_znd.setCurrentText(str(znd))
@@ -172,4 +197,4 @@ class Center_drill(Subtask, Ui_frm_center_drill):
             data (dict): Diccionario de datos de configuración
         """
 
-        window.btn_center.setEnabled(True)
+        window.btn_csink.setEnabled(True)
