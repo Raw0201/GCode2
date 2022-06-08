@@ -25,6 +25,7 @@ from subtasks import (
     center_drill,
     drill,
     csink,
+    tapping,
 )
 
 tasks_list = {
@@ -131,6 +132,10 @@ tasks_list = {
     "Csink": {
         "Name": csink.Csink,
         "Description": "        Avellanado",
+    },
+    "Tapping": {
+        "Name": tapping.Tapping,
+        "Description": "        Roscado rígido",
     },
 }
 

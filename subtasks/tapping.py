@@ -10,36 +10,41 @@ from tools.main_window import *
 from tools.default_data import *
 from tools.message_boxes import *
 from tools.prefab_blocks import *
+from tools.thread_tables import *
 from tools.combobox_lists import *
 from tools.file_management import *
 
 from subtasks.subtask import Subtask
-from subtasks.generators.misc_gen import misc_gen
-from interfaces.ui_misc import Ui_frm_misc
+from subtasks.generators.tapping_gen import tapping_gen
+from interfaces.ui_tapping import Ui_frm_tapping
 
 
-class Misc(Subtask, Ui_frm_misc):
+class Tapping(Subtask, Ui_frm_tapping):
     def __init__(self, main_window):
         super().__init__()
         self.window = main_window
-        self.task = subtasks.tasks_list["Misc"]["Description"]
-        self.image = "comment.png"
+        self.task = subtasks.tasks_list["Tapping"]["Description"]
+        self.image = "tapping.png"
 
-        self.cbx_stp.addItems(program_stops_list)
-        self.cbx_chk.addItems(collet_operations_list)
-        self.cbx_col.addItems(coolant_operations_list)
         self.cbx_sde.addItems(tape_sides_list)
         self.cbx_sde.setCurrentText(self.window.current_side)
+        self.cbx_thd.addItems(thread_table)
+        self.cbx_sys.addItems(coordinates_systems[1:])
+        self.cbx_znd.addItems(retraction_positions[1:])
 
     def collector(self):
         """Recolecta los datos de la subtarea ingresados por el usuario"""
 
         data = {
-            "Com": self.tbx_com.text(),
-            "Stp": self.cbx_stp.currentText(),
-            "Chk": self.cbx_chk.currentText(),
-            "Col": self.cbx_col.currentText(),
+            "Dpt": self.tbx_dpt.text(),
+            "Thd": self.cbx_thd.currentText(),
+            "Xin": self.tbx_xin.text(),
+            "Yin": self.tbx_yin.text(),
+            "Zin": self.tbx_zin.text(),
+            "Rtr": self.tbx_rtr.text(),
             "Sde": self.cbx_sde.currentText(),
+            "Sys": self.cbx_sys.currentText(),
+            "Znd": self.cbx_znd.currentText(),
             "Blk": False,
         }
 
@@ -52,8 +57,8 @@ class Misc(Subtask, Ui_frm_misc):
             data (dict): Diccionario de datos recopilados
         """
 
-        if all_empty(data):
-            all_blank_data_error(self)
+        if any_empty(data):
+            blank_data_error(self)
             return
         self.converter(data)
 
@@ -65,8 +70,11 @@ class Misc(Subtask, Ui_frm_misc):
         """
 
         try:
-            data["Com"] = ftext(data["Com"]) if data["Com"] != "" else ""
-
+            data["Dpt"] = foper(data["Dpt"])
+            data["Xin"] = foper(data["Xin"])
+            data["Yin"] = foper(data["Yin"])
+            data["Zin"] = foper(data["Zin"])
+            data["Rtr"] = foper(data["Rtr"])
         except ValueError:
             data_type_error(self)
             return
@@ -81,8 +89,24 @@ class Misc(Subtask, Ui_frm_misc):
         """
 
         data1 = (self.task, data)
-        self.data_pack = [data1]
+        data2 = prefab_space()
+        data3 = prefab_tapping_tool_call(24, 0, 0, -0.05, data["Sde"])
+        data4 = prefab_spindle(
+            800,
+            "NORMAL",
+            data["Sde"],
+        )
+        data5 = prefab_tool_close(
+            self.window.current_tool,
+            data["Sde"],
+            self.window.current_bar_diameter,
+        )
 
+        self.data_pack = (
+            [data1]
+            if self.modification
+            else [data2, data3, data4, data1, data5]
+        )
         store_config_data(
             self.window,
             self.data_pack,
@@ -103,7 +127,7 @@ class Misc(Subtask, Ui_frm_misc):
             list: Lista de líneas de tape
         """
 
-        return misc_gen(machine, data)
+        return tapping_gen(machine, data)
 
     def modifier(self, data: dict):
         """Modifica la línea de configuración seleccionada
@@ -113,14 +137,18 @@ class Misc(Subtask, Ui_frm_misc):
         """
 
         self.modification = True
-        com, stp, chk, col, sde, blk = data.values()
+        dpt, thd, xin, yin, zin, rtr, sde, sys, znd, blk = data.values()
 
-        self.tbx_com.setText(str(com))
-        self.tbx_com.setSelection(0, 100)
-        self.cbx_stp.setCurrentText(str(stp))
-        self.cbx_chk.setCurrentText(str(chk))
-        self.cbx_col.setCurrentText(str(col))
+        self.tbx_dpt.setText(str(dpt))
+        self.tbx_dpt.setSelection(0, 100)
+        self.cbx_thd.setCurrentText(str(thd))
+        self.tbx_xin.setText(str(xin))
+        self.tbx_yin.setText(str(yin))
+        self.tbx_zin.setText(str(zin))
+        self.tbx_rtr.setText(str(rtr))
         self.cbx_sde.setCurrentText(str(sde))
+        self.cbx_sys.setCurrentText(str(sys))
+        self.cbx_znd.setCurrentText(str(znd))
         self.btn_save.setText("Actualizar")
         self.show()
 
@@ -143,4 +171,4 @@ class Misc(Subtask, Ui_frm_misc):
             data (dict): Diccionario de datos de configuración
         """
 
-        pass
+        window.btn_tapping.setEnabled(True)

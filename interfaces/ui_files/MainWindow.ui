@@ -2484,7 +2484,7 @@ PlotWidget {
    <property name="minimumSize">
     <size>
      <width>191</width>
-     <height>858</height>
+     <height>1039</height>
     </size>
    </property>
    <property name="styleSheet">
@@ -2520,7 +2520,7 @@ PlotWidget {
          <item row="2" column="0">
           <widget class="QGroupBox" name="groupBox_machine">
            <property name="sizePolicy">
-            <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
              <horstretch>0</horstretch>
              <verstretch>0</verstretch>
             </sizepolicy>
@@ -2553,7 +2553,7 @@ PlotWidget {
             <item row="2" column="0">
              <widget class="QPushButton" name="btn_spindle_index">
               <property name="sizePolicy">
-               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
                 <horstretch>0</horstretch>
                 <verstretch>0</verstretch>
                </sizepolicy>
@@ -2566,7 +2566,7 @@ PlotWidget {
               </property>
               <property name="maximumSize">
                <size>
-                <width>120</width>
+                <width>16777215</width>
                 <height>16777215</height>
                </size>
               </property>
@@ -2583,6 +2583,12 @@ PlotWidget {
             </item>
             <item row="0" column="0">
              <widget class="QPushButton" name="btn_spindle">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
               <property name="toolTip">
                <string>Indique el sentido y velocidad de giro del husillo</string>
               </property>
@@ -2597,7 +2603,7 @@ PlotWidget {
             <item row="3" column="0">
              <widget class="QPushButton" name="btn_misc">
               <property name="sizePolicy">
-               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
                 <horstretch>0</horstretch>
                 <verstretch>0</verstretch>
                </sizepolicy>
@@ -2610,7 +2616,7 @@ PlotWidget {
               </property>
               <property name="maximumSize">
                <size>
-                <width>120</width>
+                <width>16777215</width>
                 <height>16777215</height>
                </size>
               </property>
@@ -2631,7 +2637,7 @@ PlotWidget {
          <item row="1" column="0">
           <widget class="QGroupBox" name="groupBox_tool">
            <property name="sizePolicy">
-            <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
              <horstretch>0</horstretch>
              <verstretch>0</verstretch>
             </sizepolicy>
@@ -2664,7 +2670,7 @@ PlotWidget {
             <item row="2" column="0">
              <widget class="QPushButton" name="btn_tool_call">
               <property name="sizePolicy">
-               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
                 <horstretch>0</horstretch>
                 <verstretch>0</verstretch>
                </sizepolicy>
@@ -2677,7 +2683,7 @@ PlotWidget {
               </property>
               <property name="maximumSize">
                <size>
-                <width>120</width>
+                <width>16777215</width>
                 <height>16777215</height>
                </size>
               </property>
@@ -2695,7 +2701,7 @@ PlotWidget {
             <item row="3" column="0">
              <widget class="QPushButton" name="btn_tool_close">
               <property name="sizePolicy">
-               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
                 <horstretch>0</horstretch>
                 <verstretch>0</verstretch>
                </sizepolicy>
@@ -2708,7 +2714,7 @@ PlotWidget {
               </property>
               <property name="maximumSize">
                <size>
-                <width>120</width>
+                <width>16777215</width>
                 <height>16777215</height>
                </size>
               </property>
@@ -2729,7 +2735,7 @@ PlotWidget {
          <item row="0" column="0">
           <widget class="QGroupBox" name="groupBox_program">
            <property name="sizePolicy">
-            <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
              <horstretch>0</horstretch>
              <verstretch>0</verstretch>
             </sizepolicy>
@@ -2763,72 +2769,13 @@ PlotWidget {
              <number>5</number>
             </property>
             <item row="3" column="0">
-             <widget class="QPushButton" name="btn_comment">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="minimumSize">
-               <size>
-                <width>28</width>
-                <height>0</height>
-               </size>
-              </property>
-              <property name="maximumSize">
-               <size>
-                <width>120</width>
-                <height>16777215</height>
-               </size>
-              </property>
-              <property name="toolTip">
-               <string>Agrega comentarios para facilitar la comprensión del programa</string>
-              </property>
-              <property name="statusTip">
-               <string>Agrega comentarios para facilitar la comprensión del programa</string>
-              </property>
-              <property name="text">
-               <string>&amp;Comentario</string>
-              </property>
-             </widget>
-            </item>
-            <item row="0" column="0">
-             <widget class="QPushButton" name="btn_header">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="minimumSize">
-               <size>
-                <width>28</width>
-                <height>0</height>
-               </size>
-              </property>
-              <property name="maximumSize">
-               <size>
-                <width>120</width>
-                <height>16777215</height>
-               </size>
-              </property>
-              <property name="toolTip">
-               <string>Agrega el encabezado del programa</string>
-              </property>
-              <property name="statusTip">
-               <string>Agrega el encabezado del programa</string>
-              </property>
-              <property name="text">
-               <string>&amp;Iniciar programa</string>
-              </property>
-              <property name="flat">
-               <bool>false</bool>
-              </property>
-             </widget>
-            </item>
-            <item row="5" column="0">
              <widget class="QPushButton" name="btn_subrutine">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
               <property name="toolTip">
                <string>Llama la subrutina dentro del programa principal</string>
               </property>
@@ -2840,10 +2787,10 @@ PlotWidget {
               </property>
              </widget>
             </item>
-            <item row="7" column="0">
-             <widget class="QPushButton" name="btn_end">
+            <item row="4" column="0">
+             <widget class="QPushButton" name="btn_collect">
               <property name="sizePolicy">
-               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
                 <horstretch>0</horstretch>
                 <verstretch>0</verstretch>
                </sizepolicy>
@@ -2856,7 +2803,38 @@ PlotWidget {
               </property>
               <property name="maximumSize">
                <size>
-                <width>120</width>
+                <width>16777215</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="toolTip">
+               <string>Activar el proceso de recolección de la pieza</string>
+              </property>
+              <property name="statusTip">
+               <string>Activar el proceso de recolección de la pieza</string>
+              </property>
+              <property name="text">
+               <string>Recolectar &amp;Pieza</string>
+              </property>
+             </widget>
+            </item>
+            <item row="5" column="0">
+             <widget class="QPushButton" name="btn_end">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>28</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
                 <height>16777215</height>
                </size>
               </property>
@@ -2871,8 +2849,14 @@ PlotWidget {
               </property>
              </widget>
             </item>
-            <item row="1" column="0">
-             <widget class="QPushButton" name="btn_free">
+            <item row="2" column="0">
+             <widget class="QPushButton" name="btn_comment">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
               <property name="minimumSize">
                <size>
                 <width>28</width>
@@ -2881,7 +2865,38 @@ PlotWidget {
               </property>
               <property name="maximumSize">
                <size>
-                <width>120</width>
+                <width>16777215</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="toolTip">
+               <string>Agrega comentarios para facilitar la comprensión del programa</string>
+              </property>
+              <property name="statusTip">
+               <string>Agrega comentarios para facilitar la comprensión del programa</string>
+              </property>
+              <property name="text">
+               <string>&amp;Comentario</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QPushButton" name="btn_free">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>28</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
                 <height>16777215</height>
                </size>
               </property>
@@ -2896,10 +2911,10 @@ PlotWidget {
               </property>
              </widget>
             </item>
-            <item row="6" column="0">
-             <widget class="QPushButton" name="btn_collect">
+            <item row="0" column="0">
+             <widget class="QPushButton" name="btn_header">
               <property name="sizePolicy">
-               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
                 <horstretch>0</horstretch>
                 <verstretch>0</verstretch>
                </sizepolicy>
@@ -2912,18 +2927,21 @@ PlotWidget {
               </property>
               <property name="maximumSize">
                <size>
-                <width>120</width>
+                <width>16777215</width>
                 <height>16777215</height>
                </size>
               </property>
               <property name="toolTip">
-               <string>Activar el proceso de recolección de la pieza</string>
+               <string>Agrega el encabezado del programa</string>
               </property>
               <property name="statusTip">
-               <string>Activar el proceso de recolección de la pieza</string>
+               <string>Agrega el encabezado del programa</string>
               </property>
               <property name="text">
-               <string>Recolectar &amp;Pieza</string>
+               <string>&amp;Iniciar programa</string>
+              </property>
+              <property name="flat">
+               <bool>false</bool>
               </property>
              </widget>
             </item>
@@ -2970,7 +2988,7 @@ PlotWidget {
            <property name="flat">
             <bool>true</bool>
            </property>
-           <layout class="QGridLayout" name="gridLayout_5">
+           <layout class="QGridLayout" name="gridLayout_11">
             <property name="leftMargin">
              <number>1</number>
             </property>
@@ -2989,19 +3007,6 @@ PlotWidget {
             <property name="verticalSpacing">
              <number>5</number>
             </property>
-            <item row="3" column="0">
-             <widget class="QPushButton" name="btn_thread">
-              <property name="toolTip">
-               <string>Realizar un maquinado de roscado</string>
-              </property>
-              <property name="statusTip">
-               <string>Realizar un maquinado de roscado</string>
-              </property>
-              <property name="text">
-               <string>Roscado</string>
-              </property>
-             </widget>
-            </item>
             <item row="4" column="0">
              <widget class="QPushButton" name="btn_cutoff">
               <property name="toolTip">
@@ -3018,7 +3023,7 @@ PlotWidget {
             <item row="1" column="0">
              <widget class="QPushButton" name="btn_lineal_turn">
               <property name="sizePolicy">
-               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
                 <horstretch>0</horstretch>
                 <verstretch>0</verstretch>
                </sizepolicy>
@@ -3031,7 +3036,7 @@ PlotWidget {
               </property>
               <property name="maximumSize">
                <size>
-                <width>120</width>
+                <width>16777215</width>
                 <height>16777215</height>
                </size>
               </property>
@@ -3043,6 +3048,19 @@ PlotWidget {
               </property>
               <property name="text">
                <string>Torneado lineal</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="0">
+             <widget class="QPushButton" name="btn_turn_ini">
+              <property name="toolTip">
+               <string>Agrega los comandos de preparación para torneados (Tornos K16-E16)</string>
+              </property>
+              <property name="statusTip">
+               <string>Agrega los comandos de preparación para torneados (Tornos K16-E16)</string>
+              </property>
+              <property name="text">
+               <string>Iniciar Torneados</string>
               </property>
              </widget>
             </item>
@@ -3059,16 +3077,16 @@ PlotWidget {
               </property>
              </widget>
             </item>
-            <item row="0" column="0">
-             <widget class="QPushButton" name="btn_turn_ini">
+            <item row="3" column="0">
+             <widget class="QPushButton" name="btn_thread">
               <property name="toolTip">
-               <string>Agrega los comandos de preparación para torneados (Tornos K16-E16)</string>
+               <string>Realizar un maquinado de roscado</string>
               </property>
               <property name="statusTip">
-               <string>Agrega los comandos de preparación para torneados (Tornos K16-E16)</string>
+               <string>Realizar un maquinado de roscado</string>
               </property>
               <property name="text">
-               <string>Iniciar Torneados</string>
+               <string>Roscado</string>
               </property>
              </widget>
             </item>
@@ -3346,6 +3364,45 @@ PlotWidget {
             <property name="verticalSpacing">
              <number>5</number>
             </property>
+            <item row="2" column="0">
+             <widget class="QPushButton" name="btn_center">
+              <property name="toolTip">
+               <string>Realizar un perforado de agujero de centro</string>
+              </property>
+              <property name="statusTip">
+               <string>Realizar un perforado de agujero de centro</string>
+              </property>
+              <property name="text">
+               <string>Agujero centro</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QPushButton" name="btn_drill_end">
+              <property name="toolTip">
+               <string>Agrega los comandos de finalización para perforados</string>
+              </property>
+              <property name="statusTip">
+               <string>Agrega los comandos de finalización para perforados</string>
+              </property>
+              <property name="text">
+               <string>Finalizar perforados</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="0">
+             <widget class="QPushButton" name="btn_drill_ini">
+              <property name="toolTip">
+               <string>Agrega los comandos de preparación para perforados</string>
+              </property>
+              <property name="statusTip">
+               <string>Agrega los comandos de preparación para perforados</string>
+              </property>
+              <property name="text">
+               <string>Iniciar perforados</string>
+              </property>
+             </widget>
+            </item>
             <item row="4" column="0">
              <widget class="QPushButton" name="btn_csink">
               <property name="toolTip">
@@ -3372,55 +3429,16 @@ PlotWidget {
               </property>
              </widget>
             </item>
-            <item row="0" column="0">
-             <widget class="QPushButton" name="btn_drill_ini">
-              <property name="toolTip">
-               <string>Agrega los comandos de preparación para perforados</string>
-              </property>
-              <property name="statusTip">
-               <string>Agrega los comandos de preparación para perforados</string>
-              </property>
-              <property name="text">
-               <string>Iniciar perforados</string>
-              </property>
-             </widget>
-            </item>
             <item row="5" column="0">
-             <widget class="QPushButton" name="btn_ream">
+             <widget class="QPushButton" name="btn_tapping">
               <property name="toolTip">
-               <string>Realizar un perforado de alisado (rimado)</string>
+               <string>Realiza un roscado con macho rígido</string>
               </property>
               <property name="statusTip">
-               <string>Realizar un perforado de alisado (rimado)</string>
+               <string>Realiza un roscado con macho rígido</string>
               </property>
               <property name="text">
-               <string>Rimado</string>
-              </property>
-             </widget>
-            </item>
-            <item row="1" column="0">
-             <widget class="QPushButton" name="btn_drill_end">
-              <property name="toolTip">
-               <string>Agrega los comandos de finalización para perforados</string>
-              </property>
-              <property name="statusTip">
-               <string>Agrega los comandos de finalización para perforados</string>
-              </property>
-              <property name="text">
-               <string>Finalizar perforados</string>
-              </property>
-             </widget>
-            </item>
-            <item row="2" column="0">
-             <widget class="QPushButton" name="btn_center">
-              <property name="toolTip">
-               <string>Realizar un perforado de agujero de centro</string>
-              </property>
-              <property name="statusTip">
-               <string>Realizar un perforado de agujero de centro</string>
-              </property>
-              <property name="text">
-               <string>Agujero centro</string>
+               <string>Roscado</string>
               </property>
              </widget>
             </item>
@@ -4104,10 +4122,6 @@ PlotWidget {
   <tabstop>btn_tool_call</tabstop>
   <tabstop>btn_tool_close</tabstop>
   <tabstop>btn_spindle_index</tabstop>
-  <tabstop>btn_lineal_turn</tabstop>
-  <tabstop>btn_radial_turn</tabstop>
-  <tabstop>btn_thread</tabstop>
-  <tabstop>btn_cutoff</tabstop>
   <tabstop>btn_flat_mill</tabstop>
   <tabstop>btn_face_mill</tabstop>
   <tabstop>btn_bevel_mill</tabstop>
@@ -4117,7 +4131,6 @@ PlotWidget {
   <tabstop>btn_center</tabstop>
   <tabstop>btn_drill</tabstop>
   <tabstop>btn_csink</tabstop>
-  <tabstop>btn_ream</tabstop>
   <tabstop>btn_platter_data</tabstop>
   <tabstop>btn_call_square</tabstop>
   <tabstop>btn_call_flatten</tabstop>

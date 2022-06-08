@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>frm_tool_call</class>
- <widget class="QMainWindow" name="frm_tool_call">
+ <class>frm_tapping</class>
+ <widget class="QMainWindow" name="frm_tapping">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
     <width>210</width>
-    <height>580</height>
+    <height>530</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -19,13 +19,13 @@
   <property name="minimumSize">
    <size>
     <width>210</width>
-    <height>580</height>
+    <height>530</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
     <width>210</width>
-    <height>580</height>
+    <height>530</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -2154,7 +2154,7 @@ PlotWidget {
       <x>10</x>
       <y>10</y>
       <width>190</width>
-      <height>560</height>
+      <height>510</height>
      </rect>
     </property>
     <property name="sizePolicy">
@@ -2166,13 +2166,13 @@ PlotWidget {
     <property name="minimumSize">
      <size>
       <width>190</width>
-      <height>560</height>
+      <height>510</height>
      </size>
     </property>
     <property name="maximumSize">
      <size>
       <width>190</width>
-      <height>560</height>
+      <height>510</height>
      </size>
     </property>
     <property name="frameShape">
@@ -2181,7 +2181,7 @@ PlotWidget {
     <property name="frameShadow">
      <enum>QFrame::Raised</enum>
     </property>
-    <widget class="QLineEdit" name="tbx_tol">
+    <widget class="QLineEdit" name="tbx_dpt">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -2203,7 +2203,7 @@ PlotWidget {
       </size>
      </property>
      <property name="toolTip">
-      <string>Digite el número de herramienta a llamar</string>
+      <string>Digite la profundidad del agujero</string>
      </property>
      <property name="statusTip">
       <string/>
@@ -2215,7 +2215,7 @@ PlotWidget {
       <string/>
      </property>
     </widget>
-    <widget class="QLabel" name="lbl_tol">
+    <widget class="QLabel" name="lbl_dpt">
      <property name="enabled">
       <bool>true</bool>
      </property>
@@ -2228,67 +2228,17 @@ PlotWidget {
       </rect>
      </property>
      <property name="text">
-      <string>Número de herramienta</string>
+      <string>Profundidad de la rosca</string>
      </property>
      <property name="buddy">
-      <cstring>lbl_tol</cstring>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="tbx_spc">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>280</y>
-       <width>170</width>
-       <height>26</height>
-      </rect>
-     </property>
-     <property name="minimumSize">
-      <size>
-       <width>170</width>
-       <height>0</height>
-      </size>
-     </property>
-     <property name="maximumSize">
-      <size>
-       <width>170</width>
-       <height>16777215</height>
-      </size>
-     </property>
-     <property name="toolTip">
-      <string>Digite las indicaciones especiales sobre la herramienta</string>
-     </property>
-     <property name="statusTip">
-      <string/>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-     <property name="placeholderText">
-      <string/>
-     </property>
-    </widget>
-    <widget class="QLabel" name="lbl_spc">
-     <property name="enabled">
-      <bool>true</bool>
-     </property>
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>260</y>
-       <width>131</width>
-       <height>26</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Indicaciones especiales</string>
+      <cstring>lbl_dpt</cstring>
      </property>
     </widget>
     <widget class="QPushButton" name="btn_save">
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>530</y>
+       <y>480</y>
        <width>171</width>
        <height>24</height>
       </rect>
@@ -2321,111 +2271,11 @@ PlotWidget {
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QLabel" name="lbl_typ">
-     <property name="enabled">
-      <bool>true</bool>
-     </property>
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>310</y>
-       <width>118</width>
-       <height>26</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Tipo de herramienta</string>
-     </property>
-     <property name="buddy">
-      <cstring>lbl_typ</cstring>
-     </property>
-    </widget>
-    <widget class="QLabel" name="lbl_dia">
-     <property name="enabled">
-      <bool>true</bool>
-     </property>
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>60</y>
-       <width>141</width>
-       <height>26</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Diámetro de herramienta</string>
-     </property>
-     <property name="buddy">
-      <cstring>lbl_dia</cstring>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="tbx_dia">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>80</y>
-       <width>170</width>
-       <height>26</height>
-      </rect>
-     </property>
-     <property name="minimumSize">
-      <size>
-       <width>170</width>
-       <height>0</height>
-      </size>
-     </property>
-     <property name="maximumSize">
-      <size>
-       <width>170</width>
-       <height>16777215</height>
-      </size>
-     </property>
-     <property name="toolTip">
-      <string>Digite el diámetro de la herramienta</string>
-     </property>
-     <property name="statusTip">
-      <string/>
-     </property>
-     <property name="text">
-      <string>0</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-     <property name="placeholderText">
-      <string/>
-     </property>
-    </widget>
-    <widget class="QComboBox" name="cbx_typ">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>330</y>
-       <width>170</width>
-       <height>26</height>
-      </rect>
-     </property>
-     <property name="minimumSize">
-      <size>
-       <width>170</width>
-       <height>26</height>
-      </size>
-     </property>
-     <property name="maximumSize">
-      <size>
-       <width>170</width>
-       <height>16777215</height>
-      </size>
-     </property>
-     <property name="toolTip">
-      <string>Seleccione el tipo de herramienta a utilizar</string>
-     </property>
-    </widget>
     <widget class="QComboBox" name="cbx_sde">
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>380</y>
+       <y>330</y>
        <width>170</width>
        <height>26</height>
       </rect>
@@ -2453,16 +2303,13 @@ PlotWidget {
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>360</y>
+       <y>310</y>
        <width>101</width>
        <height>26</height>
       </rect>
      </property>
      <property name="text">
       <string>Husillo de trabajo</string>
-     </property>
-     <property name="buddy">
-      <cstring>lbl_typ</cstring>
      </property>
     </widget>
     <widget class="QLineEdit" name="tbx_xin">
@@ -2624,7 +2471,70 @@ PlotWidget {
       <string/>
      </property>
     </widget>
-    <widget class="QComboBox" name="cbx_mcd">
+    <widget class="QComboBox" name="cbx_sys">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>380</y>
+       <width>170</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>170</width>
+       <height>26</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>170</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="toolTip">
+      <string>Seleccione el sistema de coordenadas a utilizar</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lbl_sys">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>360</y>
+       <width>138</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Sistema de coordenadas</string>
+     </property>
+     <property name="buddy">
+      <cstring>lbl_mov</cstring>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lbl_znd">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>410</y>
+       <width>105</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Posición de salida</string>
+     </property>
+     <property name="buddy">
+      <cstring>lbl_mov</cstring>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="cbx_znd">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -2646,49 +2556,14 @@ PlotWidget {
       </size>
      </property>
      <property name="toolTip">
-      <string>Seleccione un código M adicional a utilizar con la herramienta</string>
+      <string>Seleccione el punto de salida del perforado</string>
      </property>
     </widget>
-    <widget class="QLabel" name="lbl_mcd">
-     <property name="enabled">
-      <bool>true</bool>
-     </property>
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>410</y>
-       <width>115</width>
-       <height>26</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Código M adicional</string>
-     </property>
-     <property name="buddy">
-      <cstring>lbl_typ</cstring>
-     </property>
-    </widget>
-    <widget class="QLabel" name="lbl_com">
-     <property name="enabled">
-      <bool>true</bool>
-     </property>
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>460</y>
-       <width>131</width>
-       <height>26</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Comentario código M</string>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="tbx_com">
+    <widget class="QLineEdit" name="tbx_rtr">
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>480</y>
+       <y>280</y>
        <width>170</width>
        <height>26</height>
       </rect>
@@ -2706,13 +2581,13 @@ PlotWidget {
       </size>
      </property>
      <property name="toolTip">
-      <string>Digite un comentario sobre el código M</string>
+      <string>Digite la distancia de retracción</string>
      </property>
      <property name="statusTip">
       <string/>
      </property>
      <property name="text">
-      <string>-</string>
+      <string>0</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
@@ -2721,15 +2596,69 @@ PlotWidget {
       <string/>
      </property>
     </widget>
-    <zorder>tbx_tol</zorder>
-    <zorder>lbl_tol</zorder>
-    <zorder>tbx_spc</zorder>
-    <zorder>lbl_spc</zorder>
+    <widget class="QLabel" name="lbl_rtr">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>260</y>
+       <width>115</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Punto de retracción</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="cbx_thd">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>80</y>
+       <width>170</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>170</width>
+       <height>26</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>170</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="toolTip">
+      <string>Seleccione la dimensión de la rosca</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lbl_thd">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>60</y>
+       <width>131</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Dimensión de la rosca</string>
+     </property>
+     <property name="buddy">
+      <cstring>lbl_mov</cstring>
+     </property>
+    </widget>
+    <zorder>tbx_dpt</zorder>
+    <zorder>lbl_dpt</zorder>
     <zorder>btn_save</zorder>
-    <zorder>tbx_dia</zorder>
-    <zorder>cbx_typ</zorder>
-    <zorder>lbl_dia</zorder>
-    <zorder>lbl_typ</zorder>
     <zorder>cbx_sde</zorder>
     <zorder>lbl_sde</zorder>
     <zorder>tbx_xin</zorder>
@@ -2738,10 +2667,14 @@ PlotWidget {
     <zorder>tbx_zin</zorder>
     <zorder>lbl_zin</zorder>
     <zorder>lbl_yin</zorder>
-    <zorder>cbx_mcd</zorder>
-    <zorder>lbl_mcd</zorder>
-    <zorder>tbx_com</zorder>
-    <zorder>lbl_com</zorder>
+    <zorder>cbx_sys</zorder>
+    <zorder>lbl_sys</zorder>
+    <zorder>cbx_znd</zorder>
+    <zorder>tbx_rtr</zorder>
+    <zorder>lbl_rtr</zorder>
+    <zorder>lbl_znd</zorder>
+    <zorder>cbx_thd</zorder>
+    <zorder>lbl_thd</zorder>
    </widget>
    <widget class="QToolButton" name="btn_help">
     <property name="geometry">
@@ -2778,16 +2711,15 @@ PlotWidget {
   </widget>
  </widget>
  <tabstops>
-  <tabstop>tbx_tol</tabstop>
-  <tabstop>tbx_dia</tabstop>
+  <tabstop>tbx_dpt</tabstop>
+  <tabstop>cbx_thd</tabstop>
   <tabstop>tbx_xin</tabstop>
   <tabstop>tbx_yin</tabstop>
   <tabstop>tbx_zin</tabstop>
-  <tabstop>tbx_spc</tabstop>
-  <tabstop>cbx_typ</tabstop>
+  <tabstop>tbx_rtr</tabstop>
   <tabstop>cbx_sde</tabstop>
-  <tabstop>cbx_mcd</tabstop>
-  <tabstop>tbx_com</tabstop>
+  <tabstop>cbx_sys</tabstop>
+  <tabstop>cbx_znd</tabstop>
   <tabstop>btn_save</tabstop>
   <tabstop>btn_help</tabstop>
  </tabstops>

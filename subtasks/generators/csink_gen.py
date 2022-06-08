@@ -322,10 +322,15 @@ def csink_s1m(data: list, mod: str) -> list:
     fed = f"F{ffed(fed)}"
     dwl = f"E{int(dwl * 1000)}" if dwl > 0 else ""
 
+    zin = zin - (0.02 * mod)
+    zdp = (
+        f"Z{fnum3(point * mod)}"
+        if sys == "ABSOLUTO"
+        else f"Z{fnum3((point + zin) * mod)}"
+    )
     xin = f"X{fnum3(xin)}"
     yin = f"Y{fnum3(yin)}"
-    zin = f"Z{fnum3(zin - (0.02 * mod))}"
-    zdp = f"Z-{fnum3(point)}"
+    zin = f"Z{fnum3(zin)}"
     rtr = f"R{fnum3(rtr)}"
 
     sys = mill_g_codes[f"SISTEMA {sys}"]
@@ -333,7 +338,7 @@ def csink_s1m(data: list, mod: str) -> list:
 
     lines1 = [
         f"{blk}G00{xin}{yin}{zin}",
-        f"{blk}{sys}{znd}G82{zdp}{rtr}{dwl}{fed}"
+        f"{blk}{sys}{znd}G82{zdp}{rtr}{dwl}{fed}",
     ]
     lines2 = [blank_space for _ in lines1]
 

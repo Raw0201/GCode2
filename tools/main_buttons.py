@@ -58,7 +58,7 @@ def load_main_buttons(window: QMainWindow):
         window.btn_center,
         window.btn_drill,
         window.btn_csink,
-        window.btn_ream,
+        window.btn_tapping,
     )
 
     window.plate_buttons_list = (
@@ -177,4 +177,7 @@ def load_main_buttons_connections(window: QMainWindow):
     )
     window.btn_csink.clicked.connect(
         lambda: collect_data(window, "Csink"),
+    )
+    window.btn_tapping.clicked.connect(
+        lambda: collect_data(window, "Tapping"),
     )

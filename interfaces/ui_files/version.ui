@@ -2274,7 +2274,7 @@ PlotWidget {
  </widget>
  <resources>
   <include location="../../resources/resources.qrc"/>
-  <include location="../Gcode Editor 2.0/resources.qrc"/>
+  <include location="../../resources/resources.qrc"/>
  </resources>
  <connections/>
 </ui>

@@ -541,18 +541,24 @@ def drilling_cycle_s1m(data: dict, mod: int) -> list:
     params = dpt, cut, ang, dia
     point, final_depth, remanent = drilling_params_s1(params)
 
-    dpt = f"K{fnum3(final_depth * mod)}"
+    zin = zin - (0.02 * mod)
+    dpt = (
+        f"Z{fnum3(final_depth * mod)}"
+        if sys == "ABSOLUTO"
+        else f"Z{fnum3((final_depth + zin) * mod)}"
+    )
     cut = f"Q{int(cut * 10000)}"
     fed = f"F{ffed(fed)}"
     rtr = f"R{fnum3(rtr)}"
     xin = f"X{fnum3(xin)}"
-    zin = f"Z{fnum3(zin - (0.02 * mod))}"
+    yin = f"Y{fnum3(yin)}"
+    zin = f"Z{fnum3(zin)}"
 
     sys = mill_g_codes[f"SISTEMA {sys}"]
     znd = mill_g_codes[znd]
 
     lines1 = [
-        f"{blk}G00{xin}{zin}",
+        f"{blk}G00{xin}{yin}{zin}",
         f"{blk}{sys}{znd}G83{dpt}{cut}{rtr}{fed}",
     ]
     lines2 = [blank_space for _ in lines1]

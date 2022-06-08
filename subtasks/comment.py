@@ -23,7 +23,7 @@ class Comment(Subtask, Ui_frm_comment):
         super().__init__()
         self.window = main_window
         self.task = subtasks.tasks_list["Comment"]["Description"]
-        self.image = "free.png"
+        self.image = "comment.png"
 
         self.cbx_sde.addItems(tape_sides_list)
         self.cbx_sde.setCurrentText(self.window.current_side)

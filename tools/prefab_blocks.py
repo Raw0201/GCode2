@@ -108,7 +108,9 @@ def prefab_center_drill_tool_call(
     Args:
         tool (int): Número de herramienta
         xin (float): Posición inicial eje X
+        yin (float): Posición inicial eje Y
         zin (float): Posición inicial eje Z
+        side (str): Lado del programa
 
     Returns:
         list: Bloque prefabricado
@@ -140,7 +142,9 @@ def prefab_drill_tool_call(
     Args:
         tool (int): Número de herramienta
         xin (float): Posición inicial eje X
+        yin (float): Posición inicial eje Y
         zin (float): Posición inicial eje Z
+        side (str): Lado del programa
 
     Returns:
         list: Bloque prefabricado
@@ -164,6 +168,40 @@ def prefab_drill_tool_call(
     ]
 
 
+def prefab_tapping_tool_call(
+    tool: int, xin: float, yin: float, zin: float, side: str
+) -> list:
+    """Bloque prefabricado de llamada de herramienta de roscado
+
+    Args:
+        tool (int): Número de herramienta
+        xin (float): Posición inicial eje X
+        yin (float): Posición inicial eje Y
+        zin (float): Posición inicial eje Z
+        side (str): Lado del programa
+
+    Returns:
+        list: Bloque prefabricado
+    """
+
+    return [
+        "    Llamar herramienta",
+        {
+            "Tol": tool,
+            "Typ": "MACHO",
+            "Dia": 0,
+            "Spc": "ROSCADO",
+            "Sde": side,
+            "Xin": xin,
+            "Yin": yin,
+            "Zin": zin,
+            "Mcd": "NO",
+            "Com": "-",
+            "Blk": False,
+        },
+    ]
+
+
 def prefab_csink_tool_call(
     tool: int, angle: float, xin: float, yin: float, zin: float, side: str
 ) -> list:
@@ -173,7 +211,9 @@ def prefab_csink_tool_call(
         tool (int): Número de herramienta
         angle (float): Ángulo de la punta de la herramienta
         xin (float): Posición inicial eje X
+        yin (float): Posición inicial eje Y
         zin (float): Posición inicial eje Z
+        side (str): Lado del programa
 
     Returns:
         list: Bloque prefabricado
@@ -297,6 +337,10 @@ def prefab_drill_end() -> list:
 
 def prefab_center_drill(depth: float, feed: float) -> list:
     """Bloque prefabricado de cierre de perforados
+
+    Args:
+        depth (float): Profundidad del perforado
+        feed (float): Avance de corte
 
     Returns:
         list: Bloque prefabricado
