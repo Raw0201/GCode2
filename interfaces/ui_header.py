@@ -1,23 +1,17 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'headerreoMoo.ui'
+## Form generated from reading UI file 'headerZrPCuI.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.3.0
+## Created by: Qt User Interface Compiler version 6.1.1
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
 
-from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
-    QMetaObject, QObject, QPoint, QRect,
-    QSize, QTime, QUrl, Qt)
-from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
-    QFont, QFontDatabase, QGradient, QIcon,
-    QImage, QKeySequence, QLinearGradient, QPainter,
-    QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QComboBox, QFrame, QLabel,
-    QLineEdit, QMainWindow, QPushButton, QSizePolicy,
-    QToolButton, QWidget)
+from PySide6.QtCore import *  # type: ignore
+from PySide6.QtGui import *  # type: ignore
+from PySide6.QtWidgets import *  # type: ignore
+
 import resources_rc
 
 class Ui_frm_header(object):
@@ -2292,7 +2286,7 @@ class Ui_frm_header(object):
         self.lbl_prt = QLabel(self.frame)
         self.lbl_prt.setObjectName(u"lbl_prt")
         self.lbl_prt.setEnabled(True)
-        self.lbl_prt.setGeometry(QRect(20, 10, 112, 26))
+        self.lbl_prt.setGeometry(QRect(15, 10, 113, 26))
         self.tbx_pgr = QLineEdit(self.frame)
         self.tbx_pgr.setObjectName(u"tbx_pgr")
         self.tbx_pgr.setGeometry(QRect(13, 80, 170, 26))
@@ -2302,7 +2296,7 @@ class Ui_frm_header(object):
         self.tbx_pgr.setAlignment(Qt.AlignCenter)
         self.lbl_prg = QLabel(self.frame)
         self.lbl_prg.setObjectName(u"lbl_prg")
-        self.lbl_prg.setGeometry(QRect(20, 60, 123, 26))
+        self.lbl_prg.setGeometry(QRect(15, 60, 126, 26))
         self.tbx_dsc = QLineEdit(self.frame)
         self.tbx_dsc.setObjectName(u"tbx_dsc")
         self.tbx_dsc.setGeometry(QRect(13, 130, 170, 26))
@@ -2312,11 +2306,11 @@ class Ui_frm_header(object):
         self.lbl_dsc = QLabel(self.frame)
         self.lbl_dsc.setObjectName(u"lbl_dsc")
         self.lbl_dsc.setEnabled(True)
-        self.lbl_dsc.setGeometry(QRect(20, 110, 145, 26))
+        self.lbl_dsc.setGeometry(QRect(15, 110, 147, 26))
         self.lbl_mch = QLabel(self.frame)
         self.lbl_mch.setObjectName(u"lbl_mch")
         self.lbl_mch.setEnabled(True)
-        self.lbl_mch.setGeometry(QRect(20, 310, 101, 26))
+        self.lbl_mch.setGeometry(QRect(15, 310, 100, 26))
         self.cbx_mch = QComboBox(self.frame)
         self.cbx_mch.setObjectName(u"cbx_mch")
         self.cbx_mch.setGeometry(QRect(10, 330, 170, 26))
@@ -2337,10 +2331,10 @@ class Ui_frm_header(object):
         self.lbl_chk = QLabel(self.frame)
         self.lbl_chk.setObjectName(u"lbl_chk")
         self.lbl_chk.setEnabled(True)
-        self.lbl_chk.setGeometry(QRect(20, 260, 121, 26))
+        self.lbl_chk.setGeometry(QRect(15, 260, 122, 26))
         self.lbl_lgt = QLabel(self.frame)
         self.lbl_lgt.setObjectName(u"lbl_lgt")
-        self.lbl_lgt.setGeometry(QRect(20, 210, 117, 26))
+        self.lbl_lgt.setGeometry(QRect(15, 210, 117, 26))
         self.tbx_chk = QLineEdit(self.frame)
         self.tbx_chk.setObjectName(u"tbx_chk")
         self.tbx_chk.setGeometry(QRect(10, 280, 170, 26))
@@ -2357,11 +2351,11 @@ class Ui_frm_header(object):
         self.lbl_cof = QLabel(self.frame)
         self.lbl_cof.setObjectName(u"lbl_cof")
         self.lbl_cof.setEnabled(True)
-        self.lbl_cof.setGeometry(QRect(20, 360, 101, 26))
+        self.lbl_cof.setGeometry(QRect(15, 360, 96, 26))
         self.lbl_dia = QLabel(self.frame)
         self.lbl_dia.setObjectName(u"lbl_dia")
         self.lbl_dia.setEnabled(True)
-        self.lbl_dia.setGeometry(QRect(20, 160, 125, 26))
+        self.lbl_dia.setGeometry(QRect(15, 160, 125, 26))
         self.tbx_dia = QLineEdit(self.frame)
         self.tbx_dia.setObjectName(u"tbx_dia")
         self.tbx_dia.setGeometry(QRect(10, 180, 170, 26))
@@ -2371,7 +2365,7 @@ class Ui_frm_header(object):
         self.lbl_wrk = QLabel(self.frame)
         self.lbl_wrk.setObjectName(u"lbl_wrk")
         self.lbl_wrk.setEnabled(True)
-        self.lbl_wrk.setGeometry(QRect(20, 410, 138, 26))
+        self.lbl_wrk.setGeometry(QRect(15, 410, 137, 26))
         self.cbx_cof = QComboBox(self.frame)
         self.cbx_cof.setObjectName(u"cbx_cof")
         self.cbx_cof.setGeometry(QRect(10, 380, 170, 26))

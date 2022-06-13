@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>210</width>
-    <height>380</height>
+    <height>430</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -19,13 +19,13 @@
   <property name="minimumSize">
    <size>
     <width>210</width>
-    <height>380</height>
+    <height>430</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
     <width>210</width>
-    <height>380</height>
+    <height>430</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -2154,7 +2154,7 @@ PlotWidget {
       <x>10</x>
       <y>10</y>
       <width>190</width>
-      <height>360</height>
+      <height>410</height>
      </rect>
     </property>
     <property name="sizePolicy">
@@ -2166,13 +2166,13 @@ PlotWidget {
     <property name="minimumSize">
      <size>
       <width>190</width>
-      <height>360</height>
+      <height>410</height>
      </size>
     </property>
     <property name="maximumSize">
      <size>
       <width>190</width>
-      <height>360</height>
+      <height>410</height>
      </size>
     </property>
     <property name="frameShape">
@@ -2221,7 +2221,7 @@ PlotWidget {
      </property>
      <property name="geometry">
       <rect>
-       <x>20</x>
+       <x>15</x>
        <y>10</y>
        <width>105</width>
        <height>26</height>
@@ -2238,7 +2238,7 @@ PlotWidget {
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>280</y>
+       <y>330</y>
        <width>171</width>
        <height>24</height>
       </rect>
@@ -2277,8 +2277,8 @@ PlotWidget {
      </property>
      <property name="geometry">
       <rect>
-       <x>20</x>
-       <y>160</y>
+       <x>15</x>
+       <y>210</y>
        <width>118</width>
        <height>26</height>
       </rect>
@@ -2294,7 +2294,7 @@ PlotWidget {
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>180</y>
+       <y>230</y>
        <width>170</width>
        <height>26</height>
       </rect>
@@ -2319,7 +2319,7 @@ PlotWidget {
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>230</y>
+       <y>280</y>
        <width>170</width>
        <height>26</height>
       </rect>
@@ -2346,9 +2346,9 @@ PlotWidget {
      </property>
      <property name="geometry">
       <rect>
-       <x>20</x>
-       <y>210</y>
-       <width>103</width>
+       <x>15</x>
+       <y>260</y>
+       <width>104</width>
        <height>26</height>
       </rect>
      </property>
@@ -2399,7 +2399,7 @@ PlotWidget {
      </property>
      <property name="geometry">
       <rect>
-       <x>20</x>
+       <x>15</x>
        <y>60</y>
        <width>105</width>
        <height>26</height>
@@ -2452,9 +2452,9 @@ PlotWidget {
      </property>
      <property name="geometry">
       <rect>
-       <x>20</x>
+       <x>15</x>
        <y>110</y>
-       <width>98</width>
+       <width>97</width>
        <height>26</height>
       </rect>
      </property>
@@ -2469,7 +2469,7 @@ PlotWidget {
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>330</y>
+       <y>380</y>
        <width>171</width>
        <height>24</height>
       </rect>
@@ -2502,6 +2502,62 @@ PlotWidget {
       <bool>true</bool>
      </property>
     </widget>
+    <widget class="QLineEdit" name="tbx_seq">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>180</y>
+       <width>170</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>170</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>170</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="toolTip">
+      <string>Digite el número de línea</string>
+     </property>
+     <property name="statusTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>0</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="placeholderText">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lbl_seq">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>15</x>
+       <y>160</y>
+       <width>127</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Número de secuencia</string>
+     </property>
+     <property name="buddy">
+      <cstring>lbl_xin</cstring>
+     </property>
+    </widget>
     <zorder>tbx_xin</zorder>
     <zorder>lbl_xin</zorder>
     <zorder>btn_save</zorder>
@@ -2514,6 +2570,8 @@ PlotWidget {
     <zorder>tbx_fed</zorder>
     <zorder>lbl_fed</zorder>
     <zorder>btn_switch</zorder>
+    <zorder>tbx_seq</zorder>
+    <zorder>lbl_seq</zorder>
    </widget>
    <widget class="QToolButton" name="btn_help">
     <property name="geometry">
@@ -2553,11 +2611,12 @@ PlotWidget {
   <tabstop>tbx_xin</tabstop>
   <tabstop>tbx_zin</tabstop>
   <tabstop>tbx_fed</tabstop>
+  <tabstop>tbx_seq</tabstop>
   <tabstop>cbx_mov</tabstop>
   <tabstop>cbx_sde</tabstop>
   <tabstop>btn_save</tabstop>
-  <tabstop>btn_help</tabstop>
   <tabstop>btn_switch</tabstop>
+  <tabstop>btn_help</tabstop>
  </tabstops>
  <resources>
   <include location="../../resources/resources.qrc"/>

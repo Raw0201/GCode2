@@ -2222,7 +2222,7 @@ PlotWidget {
      </property>
      <property name="geometry">
       <rect>
-       <x>20</x>
+       <x>15</x>
        <y>10</y>
        <width>95</width>
        <height>26</height>
@@ -2241,9 +2241,9 @@ PlotWidget {
      </property>
      <property name="geometry">
       <rect>
-       <x>20</x>
+       <x>15</x>
        <y>60</y>
-       <width>111</width>
+       <width>103</width>
        <height>26</height>
       </rect>
      </property>

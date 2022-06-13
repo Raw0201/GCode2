@@ -1,23 +1,17 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'spindleMseCIT.ui'
+## Form generated from reading UI file 'spindlebUCYQp.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.3.0
+## Created by: Qt User Interface Compiler version 6.1.1
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
 
-from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
-    QMetaObject, QObject, QPoint, QRect,
-    QSize, QTime, QUrl, Qt)
-from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
-    QFont, QFontDatabase, QGradient, QIcon,
-    QImage, QKeySequence, QLinearGradient, QPainter,
-    QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QComboBox, QFrame, QLabel,
-    QLineEdit, QMainWindow, QPushButton, QSizePolicy,
-    QToolButton, QWidget)
+from PySide6.QtCore import *  # type: ignore
+from PySide6.QtGui import *  # type: ignore
+from PySide6.QtWidgets import *  # type: ignore
+
 import resources_rc
 
 class Ui_frm_spindle(object):
@@ -2224,11 +2218,11 @@ class Ui_frm_spindle(object):
         self.lbl_spd = QLabel(self.frame)
         self.lbl_spd.setObjectName(u"lbl_spd")
         self.lbl_spd.setEnabled(True)
-        self.lbl_spd.setGeometry(QRect(20, 10, 73, 26))
+        self.lbl_spd.setGeometry(QRect(15, 10, 102, 26))
         self.lbl_sde = QLabel(self.frame)
         self.lbl_sde.setObjectName(u"lbl_sde")
         self.lbl_sde.setEnabled(True)
-        self.lbl_sde.setGeometry(QRect(20, 110, 111, 26))
+        self.lbl_sde.setGeometry(QRect(15, 110, 105, 26))
         self.cbx_sde = QComboBox(self.frame)
         self.cbx_sde.setObjectName(u"cbx_sde")
         self.cbx_sde.setGeometry(QRect(10, 130, 170, 26))
@@ -2249,7 +2243,7 @@ class Ui_frm_spindle(object):
         self.lbl_rot = QLabel(self.frame)
         self.lbl_rot.setObjectName(u"lbl_rot")
         self.lbl_rot.setEnabled(True)
-        self.lbl_rot.setGeometry(QRect(20, 60, 111, 26))
+        self.lbl_rot.setGeometry(QRect(15, 60, 91, 26))
         self.tbx_spd.raise_()
         self.lbl_spd.raise_()
         self.cbx_sde.raise_()
@@ -2293,7 +2287,7 @@ class Ui_frm_spindle(object):
         self.tbx_spd.setStatusTip("")
 #endif // QT_CONFIG(statustip)
         self.tbx_spd.setPlaceholderText("")
-        self.lbl_spd.setText(QCoreApplication.translate("frm_spindle", u"Velocidad", None))
+        self.lbl_spd.setText(QCoreApplication.translate("frm_spindle", u"Velocidad de giro", None))
         self.lbl_sde.setText(QCoreApplication.translate("frm_spindle", u"Husillo de trabajo", None))
 #if QT_CONFIG(tooltip)
         self.cbx_sde.setToolTip(QCoreApplication.translate("frm_spindle", u"Seleccione el husillo de trabajo a utilizar", None))

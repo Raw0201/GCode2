@@ -202,6 +202,7 @@ class Header(Subtask, Ui_frm_header):
         window.btn_header.setEnabled(False)
         window.btn_tool_close.setEnabled(False)
         window.btn_collect.setEnabled(False)
+        window.btn_rough_turn_cycle_end.setEnabled(False)
 
         end_enabled = not window.main_tape_active
         window.btn_end.setEnabled(end_enabled)

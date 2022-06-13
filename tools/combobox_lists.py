@@ -135,3 +135,8 @@ tool_m_codes = (
     "M00",
     "M140",
 )
+directions_list = (
+    "ALTERNADOS",
+    "HACIA ADENTRO",
+    "HACIA AFUERA",
+)

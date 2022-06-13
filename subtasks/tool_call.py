@@ -23,7 +23,7 @@ class Tool_call(Subtask, Ui_frm_tool_call):
         super().__init__()
         self.window = main_window
         self.task = subtasks.tasks_list["Tool_call"]["Description"]
-        self.image = "tool_call.png"
+        self.image = "tool.png"
 
         self.cbx_typ.addItems(tool_list)
         self.cbx_sde.addItems(tape_sides_list)

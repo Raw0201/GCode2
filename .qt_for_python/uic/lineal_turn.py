@@ -3,35 +3,29 @@
 ################################################################################
 ## Form generated from reading UI file 'lineal_turn.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.3.0
+## Created by: Qt User Interface Compiler version 6.1.1
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
 
-from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
-    QMetaObject, QObject, QPoint, QRect,
-    QSize, QTime, QUrl, Qt)
-from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
-    QFont, QFontDatabase, QGradient, QIcon,
-    QImage, QKeySequence, QLinearGradient, QPainter,
-    QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QComboBox, QFrame, QLabel,
-    QLineEdit, QMainWindow, QPushButton, QSizePolicy,
-    QToolButton, QWidget)
+from PySide6.QtCore import *  # type: ignore
+from PySide6.QtGui import *  # type: ignore
+from PySide6.QtWidgets import *  # type: ignore
+
 import resources_rc
 
 class Ui_frm_lineal_turn(object):
     def setupUi(self, frm_lineal_turn):
         if not frm_lineal_turn.objectName():
             frm_lineal_turn.setObjectName(u"frm_lineal_turn")
-        frm_lineal_turn.resize(210, 380)
+        frm_lineal_turn.resize(210, 430)
         sizePolicy = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(frm_lineal_turn.sizePolicy().hasHeightForWidth())
         frm_lineal_turn.setSizePolicy(sizePolicy)
-        frm_lineal_turn.setMinimumSize(QSize(210, 380))
-        frm_lineal_turn.setMaximumSize(QSize(210, 380))
+        frm_lineal_turn.setMinimumSize(QSize(210, 430))
+        frm_lineal_turn.setMaximumSize(QSize(210, 430))
         icon = QIcon()
         icon.addFile(u":/icons/gear.png", QSize(), QIcon.Normal, QIcon.Off)
         frm_lineal_turn.setWindowIcon(icon)
@@ -2204,14 +2198,14 @@ class Ui_frm_lineal_turn(object):
         self.centralwidget.setObjectName(u"centralwidget")
         self.frame = QFrame(self.centralwidget)
         self.frame.setObjectName(u"frame")
-        self.frame.setGeometry(QRect(10, 10, 190, 360))
+        self.frame.setGeometry(QRect(10, 10, 190, 410))
         sizePolicy1 = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Fixed)
         sizePolicy1.setHorizontalStretch(0)
         sizePolicy1.setVerticalStretch(0)
         sizePolicy1.setHeightForWidth(self.frame.sizePolicy().hasHeightForWidth())
         self.frame.setSizePolicy(sizePolicy1)
-        self.frame.setMinimumSize(QSize(190, 360))
-        self.frame.setMaximumSize(QSize(190, 360))
+        self.frame.setMinimumSize(QSize(190, 410))
+        self.frame.setMaximumSize(QSize(190, 410))
         self.frame.setFrameShape(QFrame.StyledPanel)
         self.frame.setFrameShadow(QFrame.Raised)
         self.tbx_xin = QLineEdit(self.frame)
@@ -2223,10 +2217,10 @@ class Ui_frm_lineal_turn(object):
         self.lbl_xin = QLabel(self.frame)
         self.lbl_xin.setObjectName(u"lbl_xin")
         self.lbl_xin.setEnabled(True)
-        self.lbl_xin.setGeometry(QRect(20, 10, 105, 26))
+        self.lbl_xin.setGeometry(QRect(15, 10, 105, 26))
         self.btn_save = QPushButton(self.frame)
         self.btn_save.setObjectName(u"btn_save")
-        self.btn_save.setGeometry(QRect(10, 280, 171, 24))
+        self.btn_save.setGeometry(QRect(10, 330, 171, 24))
         sizePolicy.setHeightForWidth(self.btn_save.sizePolicy().hasHeightForWidth())
         self.btn_save.setSizePolicy(sizePolicy)
         self.btn_save.setMinimumSize(QSize(88, 0))
@@ -2234,21 +2228,21 @@ class Ui_frm_lineal_turn(object):
         self.lbl_mov = QLabel(self.frame)
         self.lbl_mov.setObjectName(u"lbl_mov")
         self.lbl_mov.setEnabled(True)
-        self.lbl_mov.setGeometry(QRect(20, 160, 118, 26))
+        self.lbl_mov.setGeometry(QRect(15, 210, 118, 26))
         self.cbx_mov = QComboBox(self.frame)
         self.cbx_mov.setObjectName(u"cbx_mov")
-        self.cbx_mov.setGeometry(QRect(10, 180, 170, 26))
+        self.cbx_mov.setGeometry(QRect(10, 230, 170, 26))
         self.cbx_mov.setMinimumSize(QSize(170, 26))
         self.cbx_mov.setMaximumSize(QSize(170, 16777215))
         self.cbx_sde = QComboBox(self.frame)
         self.cbx_sde.setObjectName(u"cbx_sde")
-        self.cbx_sde.setGeometry(QRect(10, 230, 170, 26))
+        self.cbx_sde.setGeometry(QRect(10, 280, 170, 26))
         self.cbx_sde.setMinimumSize(QSize(170, 26))
         self.cbx_sde.setMaximumSize(QSize(170, 16777215))
         self.lbl_sde = QLabel(self.frame)
         self.lbl_sde.setObjectName(u"lbl_sde")
         self.lbl_sde.setEnabled(True)
-        self.lbl_sde.setGeometry(QRect(20, 210, 103, 26))
+        self.lbl_sde.setGeometry(QRect(15, 260, 104, 26))
         self.tbx_zin = QLineEdit(self.frame)
         self.tbx_zin.setObjectName(u"tbx_zin")
         self.tbx_zin.setGeometry(QRect(10, 80, 170, 26))
@@ -2258,7 +2252,7 @@ class Ui_frm_lineal_turn(object):
         self.lbl_zin = QLabel(self.frame)
         self.lbl_zin.setObjectName(u"lbl_zin")
         self.lbl_zin.setEnabled(True)
-        self.lbl_zin.setGeometry(QRect(20, 60, 105, 26))
+        self.lbl_zin.setGeometry(QRect(15, 60, 105, 26))
         self.tbx_fed = QLineEdit(self.frame)
         self.tbx_fed.setObjectName(u"tbx_fed")
         self.tbx_fed.setGeometry(QRect(10, 130, 170, 26))
@@ -2268,14 +2262,24 @@ class Ui_frm_lineal_turn(object):
         self.lbl_fed = QLabel(self.frame)
         self.lbl_fed.setObjectName(u"lbl_fed")
         self.lbl_fed.setEnabled(True)
-        self.lbl_fed.setGeometry(QRect(20, 110, 98, 26))
+        self.lbl_fed.setGeometry(QRect(15, 110, 97, 26))
         self.btn_switch = QPushButton(self.frame)
         self.btn_switch.setObjectName(u"btn_switch")
-        self.btn_switch.setGeometry(QRect(10, 330, 171, 24))
+        self.btn_switch.setGeometry(QRect(10, 380, 171, 24))
         sizePolicy.setHeightForWidth(self.btn_switch.sizePolicy().hasHeightForWidth())
         self.btn_switch.setSizePolicy(sizePolicy)
         self.btn_switch.setMinimumSize(QSize(88, 0))
         self.btn_switch.setAutoDefault(True)
+        self.tbx_seq = QLineEdit(self.frame)
+        self.tbx_seq.setObjectName(u"tbx_seq")
+        self.tbx_seq.setGeometry(QRect(10, 180, 170, 26))
+        self.tbx_seq.setMinimumSize(QSize(170, 0))
+        self.tbx_seq.setMaximumSize(QSize(170, 16777215))
+        self.tbx_seq.setAlignment(Qt.AlignCenter)
+        self.lbl_seq = QLabel(self.frame)
+        self.lbl_seq.setObjectName(u"lbl_seq")
+        self.lbl_seq.setEnabled(True)
+        self.lbl_seq.setGeometry(QRect(15, 160, 127, 26))
         self.tbx_xin.raise_()
         self.lbl_xin.raise_()
         self.btn_save.raise_()
@@ -2288,6 +2292,8 @@ class Ui_frm_lineal_turn(object):
         self.tbx_fed.raise_()
         self.lbl_fed.raise_()
         self.btn_switch.raise_()
+        self.tbx_seq.raise_()
+        self.lbl_seq.raise_()
         self.btn_help = QToolButton(self.centralwidget)
         self.btn_help.setObjectName(u"btn_help")
         self.btn_help.setGeometry(QRect(183, -2, 29, 29))
@@ -2306,14 +2312,16 @@ class Ui_frm_lineal_turn(object):
         self.lbl_sde.setBuddy(self.lbl_mov)
         self.lbl_zin.setBuddy(self.lbl_xin)
         self.lbl_fed.setBuddy(self.lbl_xin)
+        self.lbl_seq.setBuddy(self.lbl_xin)
 #endif // QT_CONFIG(shortcut)
         QWidget.setTabOrder(self.tbx_xin, self.tbx_zin)
         QWidget.setTabOrder(self.tbx_zin, self.tbx_fed)
-        QWidget.setTabOrder(self.tbx_fed, self.cbx_mov)
+        QWidget.setTabOrder(self.tbx_fed, self.tbx_seq)
+        QWidget.setTabOrder(self.tbx_seq, self.cbx_mov)
         QWidget.setTabOrder(self.cbx_mov, self.cbx_sde)
         QWidget.setTabOrder(self.cbx_sde, self.btn_save)
-        QWidget.setTabOrder(self.btn_save, self.btn_help)
-        QWidget.setTabOrder(self.btn_help, self.btn_switch)
+        QWidget.setTabOrder(self.btn_save, self.btn_switch)
+        QWidget.setTabOrder(self.btn_switch, self.btn_help)
 
         self.retranslateUi(frm_lineal_turn)
 
@@ -2374,6 +2382,15 @@ class Ui_frm_lineal_turn(object):
 #if QT_CONFIG(shortcut)
         self.btn_switch.setShortcut(QCoreApplication.translate("frm_lineal_turn", u"Ctrl+Q", None))
 #endif // QT_CONFIG(shortcut)
+#if QT_CONFIG(tooltip)
+        self.tbx_seq.setToolTip(QCoreApplication.translate("frm_lineal_turn", u"Digite el n\u00famero de l\u00ednea", None))
+#endif // QT_CONFIG(tooltip)
+#if QT_CONFIG(statustip)
+        self.tbx_seq.setStatusTip("")
+#endif // QT_CONFIG(statustip)
+        self.tbx_seq.setText(QCoreApplication.translate("frm_lineal_turn", u"0", None))
+        self.tbx_seq.setPlaceholderText("")
+        self.lbl_seq.setText(QCoreApplication.translate("frm_lineal_turn", u"N\u00famero de secuencia", None))
         self.btn_help.setText("")
 #if QT_CONFIG(shortcut)
         self.btn_help.setShortcut(QCoreApplication.translate("frm_lineal_turn", u"F1", None))

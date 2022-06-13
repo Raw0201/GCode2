@@ -1,23 +1,17 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'collectOlNEwU.ui'
+## Form generated from reading UI file 'collectZCuZTX.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.3.0
+## Created by: Qt User Interface Compiler version 6.1.1
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
 
-from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
-    QMetaObject, QObject, QPoint, QRect,
-    QSize, QTime, QUrl, Qt)
-from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
-    QFont, QFontDatabase, QGradient, QIcon,
-    QImage, QKeySequence, QLinearGradient, QPainter,
-    QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QComboBox, QFrame, QLabel,
-    QMainWindow, QPushButton, QSizePolicy, QToolButton,
-    QWidget)
+from PySide6.QtCore import *  # type: ignore
+from PySide6.QtGui import *  # type: ignore
+from PySide6.QtWidgets import *  # type: ignore
+
 import resources_rc
 
 class Ui_frm_collect(object):
@@ -2218,7 +2212,7 @@ class Ui_frm_collect(object):
         self.lbl_clt = QLabel(self.frame)
         self.lbl_clt.setObjectName(u"lbl_clt")
         self.lbl_clt.setEnabled(True)
-        self.lbl_clt.setGeometry(QRect(20, 10, 121, 26))
+        self.lbl_clt.setGeometry(QRect(15, 10, 121, 26))
         self.cbx_clt = QComboBox(self.frame)
         self.cbx_clt.setObjectName(u"cbx_clt")
         self.cbx_clt.setGeometry(QRect(10, 30, 170, 26))

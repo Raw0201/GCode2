@@ -1,23 +1,17 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'miscVtwlXO.ui'
+## Form generated from reading UI file 'miscskPPIx.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.3.0
+## Created by: Qt User Interface Compiler version 6.1.1
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
 
-from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
-    QMetaObject, QObject, QPoint, QRect,
-    QSize, QTime, QUrl, Qt)
-from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
-    QFont, QFontDatabase, QGradient, QIcon,
-    QImage, QKeySequence, QLinearGradient, QPainter,
-    QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QComboBox, QFrame, QLabel,
-    QLineEdit, QMainWindow, QPushButton, QSizePolicy,
-    QToolButton, QWidget)
+from PySide6.QtCore import *  # type: ignore
+from PySide6.QtGui import *  # type: ignore
+from PySide6.QtWidgets import *  # type: ignore
+
 import resources_rc
 
 class Ui_frm_misc(object):
@@ -2224,11 +2218,11 @@ class Ui_frm_misc(object):
         self.lbl_com = QLabel(self.frame)
         self.lbl_com.setObjectName(u"lbl_com")
         self.lbl_com.setEnabled(True)
-        self.lbl_com.setGeometry(QRect(20, 10, 73, 26))
+        self.lbl_com.setGeometry(QRect(15, 10, 74, 26))
         self.lbl_chk = QLabel(self.frame)
         self.lbl_chk.setObjectName(u"lbl_chk")
         self.lbl_chk.setEnabled(True)
-        self.lbl_chk.setGeometry(QRect(20, 110, 111, 26))
+        self.lbl_chk.setGeometry(QRect(15, 110, 53, 26))
         self.cbx_chk = QComboBox(self.frame)
         self.cbx_chk.setObjectName(u"cbx_chk")
         self.cbx_chk.setGeometry(QRect(10, 130, 170, 26))
@@ -2249,7 +2243,7 @@ class Ui_frm_misc(object):
         self.lbl_stp = QLabel(self.frame)
         self.lbl_stp.setObjectName(u"lbl_stp")
         self.lbl_stp.setEnabled(True)
-        self.lbl_stp.setGeometry(QRect(20, 60, 111, 26))
+        self.lbl_stp.setGeometry(QRect(15, 60, 107, 26))
         self.cbx_col = QComboBox(self.frame)
         self.cbx_col.setObjectName(u"cbx_col")
         self.cbx_col.setGeometry(QRect(10, 180, 170, 26))
@@ -2258,7 +2252,7 @@ class Ui_frm_misc(object):
         self.lbl_col = QLabel(self.frame)
         self.lbl_col.setObjectName(u"lbl_col")
         self.lbl_col.setEnabled(True)
-        self.lbl_col.setGeometry(QRect(20, 160, 111, 26))
+        self.lbl_col.setGeometry(QRect(15, 160, 76, 26))
         self.cbx_sde = QComboBox(self.frame)
         self.cbx_sde.setObjectName(u"cbx_sde")
         self.cbx_sde.setGeometry(QRect(10, 230, 170, 26))
@@ -2267,7 +2261,7 @@ class Ui_frm_misc(object):
         self.lbl_sde = QLabel(self.frame)
         self.lbl_sde.setObjectName(u"lbl_sde")
         self.lbl_sde.setEnabled(True)
-        self.lbl_sde.setGeometry(QRect(20, 210, 111, 26))
+        self.lbl_sde.setGeometry(QRect(15, 210, 103, 26))
         self.tbx_com.raise_()
         self.lbl_com.raise_()
         self.cbx_chk.raise_()

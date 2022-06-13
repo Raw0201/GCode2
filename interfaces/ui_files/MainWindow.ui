@@ -2476,7 +2476,7 @@ PlotWidget {
   <widget class="QStatusBar" name="statusbar"/>
   <widget class="QDockWidget" name="dock_functions">
    <property name="sizePolicy">
-    <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+    <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
      <horstretch>0</horstretch>
      <verstretch>0</verstretch>
     </sizepolicy>
@@ -2484,7 +2484,13 @@ PlotWidget {
    <property name="minimumSize">
     <size>
      <width>191</width>
-     <height>1039</height>
+     <height>856</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>524287</width>
+     <height>1200</height>
     </size>
    </property>
    <property name="styleSheet">
@@ -3020,6 +3026,58 @@ PlotWidget {
               </property>
              </widget>
             </item>
+            <item row="0" column="0">
+             <widget class="QPushButton" name="btn_turn_ini">
+              <property name="toolTip">
+               <string>Agrega los comandos de preparación para torneados (Tornos K16-E16)</string>
+              </property>
+              <property name="statusTip">
+               <string>Agrega los comandos de preparación para torneados (Tornos K16-E16)</string>
+              </property>
+              <property name="text">
+               <string>Iniciar Torneados</string>
+              </property>
+             </widget>
+            </item>
+            <item row="5" column="0">
+             <widget class="QPushButton" name="btn_rough_turn_cycle">
+              <property name="toolTip">
+               <string>Agrega un ciclo de torneado de desbaste al contorno</string>
+              </property>
+              <property name="statusTip">
+               <string>Agrega un ciclo de torneado de desbaste al contorno</string>
+              </property>
+              <property name="text">
+               <string>Ciclo desbaste</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="0">
+             <widget class="QPushButton" name="btn_thread">
+              <property name="toolTip">
+               <string>Realizar un maquinado de roscado</string>
+              </property>
+              <property name="statusTip">
+               <string>Realizar un maquinado de roscado</string>
+              </property>
+              <property name="text">
+               <string>Roscado</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QPushButton" name="btn_radial_turn">
+              <property name="toolTip">
+               <string>Realizar un movimiento radial de mecanizado para torneado</string>
+              </property>
+              <property name="statusTip">
+               <string>Realizar un movimiento radial de mecanizado para torneado</string>
+              </property>
+              <property name="text">
+               <string>Torneado radial</string>
+              </property>
+             </widget>
+            </item>
             <item row="1" column="0">
              <widget class="QPushButton" name="btn_lineal_turn">
               <property name="sizePolicy">
@@ -3051,42 +3109,16 @@ PlotWidget {
               </property>
              </widget>
             </item>
-            <item row="0" column="0">
-             <widget class="QPushButton" name="btn_turn_ini">
+            <item row="6" column="0">
+             <widget class="QPushButton" name="btn_rough_turn_cycle_end">
               <property name="toolTip">
-               <string>Agrega los comandos de preparación para torneados (Tornos K16-E16)</string>
+               <string>Finaliza el ciclo de torneado de desbaste al contorno</string>
               </property>
               <property name="statusTip">
-               <string>Agrega los comandos de preparación para torneados (Tornos K16-E16)</string>
+               <string>Finaliza el ciclo de torneado de desbaste al contorno</string>
               </property>
               <property name="text">
-               <string>Iniciar Torneados</string>
-              </property>
-             </widget>
-            </item>
-            <item row="2" column="0">
-             <widget class="QPushButton" name="btn_radial_turn">
-              <property name="toolTip">
-               <string>Realizar un movimiento radial de mecanizado para torneado</string>
-              </property>
-              <property name="statusTip">
-               <string>Realizar un movimiento radial de mecanizado para torneado</string>
-              </property>
-              <property name="text">
-               <string>Torneado radial</string>
-              </property>
-             </widget>
-            </item>
-            <item row="3" column="0">
-             <widget class="QPushButton" name="btn_thread">
-              <property name="toolTip">
-               <string>Realizar un maquinado de roscado</string>
-              </property>
-              <property name="statusTip">
-               <string>Realizar un maquinado de roscado</string>
-              </property>
-              <property name="text">
-               <string>Roscado</string>
+               <string>Finalizar desbaste</string>
               </property>
              </widget>
             </item>

@@ -40,6 +40,7 @@ class Lineal_turn(Subtask, Ui_frm_lineal_turn):
             "Xin": self.tbx_xin.text(),
             "Zin": self.tbx_zin.text(),
             "Fed": self.tbx_fed.text(),
+            "Seq": self.tbx_seq.text(),
             "Mov": self.cbx_mov.currentText(),
             "Sde": self.cbx_sde.currentText(),
             "Blk": False,
@@ -71,6 +72,7 @@ class Lineal_turn(Subtask, Ui_frm_lineal_turn):
             data["Xin"] = foper(data["Xin"])
             data["Zin"] = foper(data["Zin"])
             data["Fed"] = foper(data["Fed"])
+            data["Seq"] = foper(data["Seq"])
 
         except ValueError:
             data_type_error(self)
@@ -118,12 +120,13 @@ class Lineal_turn(Subtask, Ui_frm_lineal_turn):
         """
 
         self.modification = True
-        xin, zin, fed, mov, sde, blk = data.values()
+        xin, zin, fed, seq, mov, sde, blk = data.values()
 
         self.tbx_xin.setText(str(xin))
         self.tbx_xin.setSelection(0, 100)
         self.tbx_zin.setText(str(zin))
         self.tbx_fed.setText(str(fed))
+        self.tbx_seq.setText(str(seq))
         self.cbx_mov.setCurrentText(str(mov))
         self.cbx_sde.setCurrentText(str(sde))
         self.btn_save.setText("Actualizar")

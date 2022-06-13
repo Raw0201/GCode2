@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'radial_millXMzSgZ.ui'
+## Form generated from reading UI file 'radial_millNbzwhR.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.1.1
 ##
@@ -2217,7 +2217,7 @@ class Ui_frm_radial_mill(object):
         self.lbl_xin = QLabel(self.frame)
         self.lbl_xin.setObjectName(u"lbl_xin")
         self.lbl_xin.setEnabled(True)
-        self.lbl_xin.setGeometry(QRect(20, 10, 105, 26))
+        self.lbl_xin.setGeometry(QRect(15, 10, 105, 26))
         self.btn_save = QPushButton(self.frame)
         self.btn_save.setObjectName(u"btn_save")
         self.btn_save.setGeometry(QRect(10, 480, 171, 24))
@@ -2228,7 +2228,7 @@ class Ui_frm_radial_mill(object):
         self.lbl_rot = QLabel(self.frame)
         self.lbl_rot.setObjectName(u"lbl_rot")
         self.lbl_rot.setEnabled(True)
-        self.lbl_rot.setGeometry(QRect(20, 360, 118, 26))
+        self.lbl_rot.setGeometry(QRect(15, 360, 90, 26))
         self.cbx_rot = QComboBox(self.frame)
         self.cbx_rot.setObjectName(u"cbx_rot")
         self.cbx_rot.setGeometry(QRect(10, 380, 170, 26))
@@ -2243,7 +2243,7 @@ class Ui_frm_radial_mill(object):
         self.lbl_zin = QLabel(self.frame)
         self.lbl_zin.setObjectName(u"lbl_zin")
         self.lbl_zin.setEnabled(True)
-        self.lbl_zin.setGeometry(QRect(20, 110, 105, 26))
+        self.lbl_zin.setGeometry(QRect(15, 110, 105, 26))
         self.tbx_fed = QLineEdit(self.frame)
         self.tbx_fed.setObjectName(u"tbx_fed")
         self.tbx_fed.setGeometry(QRect(10, 180, 170, 26))
@@ -2253,7 +2253,7 @@ class Ui_frm_radial_mill(object):
         self.lbl_fed = QLabel(self.frame)
         self.lbl_fed.setObjectName(u"lbl_fed")
         self.lbl_fed.setEnabled(True)
-        self.lbl_fed.setGeometry(QRect(20, 160, 98, 26))
+        self.lbl_fed.setGeometry(QRect(15, 160, 97, 26))
         self.btn_switch = QPushButton(self.frame)
         self.btn_switch.setObjectName(u"btn_switch")
         self.btn_switch.setGeometry(QRect(10, 530, 171, 24))
@@ -2270,7 +2270,7 @@ class Ui_frm_radial_mill(object):
         self.lbl_xcn = QLabel(self.frame)
         self.lbl_xcn.setObjectName(u"lbl_xcn")
         self.lbl_xcn.setEnabled(True)
-        self.lbl_xcn.setGeometry(QRect(20, 210, 131, 26))
+        self.lbl_xcn.setGeometry(QRect(15, 210, 132, 26))
         self.tbx_yin = QLineEdit(self.frame)
         self.tbx_yin.setObjectName(u"tbx_yin")
         self.tbx_yin.setGeometry(QRect(10, 80, 170, 26))
@@ -2280,7 +2280,7 @@ class Ui_frm_radial_mill(object):
         self.lbl_yin = QLabel(self.frame)
         self.lbl_yin.setObjectName(u"lbl_yin")
         self.lbl_yin.setEnabled(True)
-        self.lbl_yin.setGeometry(QRect(20, 60, 105, 26))
+        self.lbl_yin.setGeometry(QRect(15, 60, 105, 26))
         self.cbx_sys = QComboBox(self.frame)
         self.cbx_sys.setObjectName(u"cbx_sys")
         self.cbx_sys.setGeometry(QRect(10, 430, 170, 26))
@@ -2289,7 +2289,7 @@ class Ui_frm_radial_mill(object):
         self.lbl_sys = QLabel(self.frame)
         self.lbl_sys.setObjectName(u"lbl_sys")
         self.lbl_sys.setEnabled(True)
-        self.lbl_sys.setGeometry(QRect(20, 410, 141, 26))
+        self.lbl_sys.setGeometry(QRect(15, 410, 139, 26))
         self.tbx_ycn = QLineEdit(self.frame)
         self.tbx_ycn.setObjectName(u"tbx_ycn")
         self.tbx_ycn.setGeometry(QRect(10, 280, 170, 26))
@@ -2299,7 +2299,7 @@ class Ui_frm_radial_mill(object):
         self.lbl_ycn = QLabel(self.frame)
         self.lbl_ycn.setObjectName(u"lbl_ycn")
         self.lbl_ycn.setEnabled(True)
-        self.lbl_ycn.setGeometry(QRect(20, 260, 91, 26))
+        self.lbl_ycn.setGeometry(QRect(15, 260, 90, 26))
         self.tbx_zcn = QLineEdit(self.frame)
         self.tbx_zcn.setObjectName(u"tbx_zcn")
         self.tbx_zcn.setGeometry(QRect(10, 330, 170, 26))
@@ -2309,7 +2309,7 @@ class Ui_frm_radial_mill(object):
         self.lbl_zcn = QLabel(self.frame)
         self.lbl_zcn.setObjectName(u"lbl_zcn")
         self.lbl_zcn.setEnabled(True)
-        self.lbl_zcn.setGeometry(QRect(20, 310, 91, 26))
+        self.lbl_zcn.setGeometry(QRect(15, 310, 90, 26))
         self.tbx_xin.raise_()
         self.lbl_xin.raise_()
         self.btn_save.raise_()

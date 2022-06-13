@@ -24,6 +24,7 @@ def collect_data(window: QMainWindow, data_class: str):
         "Mill_end",
         "Drill_ini",
         "Drill_end",
+        "Rough_turn_cycle_end",
     }:
         window.subtask1.show()
     else:

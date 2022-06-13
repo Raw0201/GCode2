@@ -34,6 +34,8 @@ def load_main_buttons(window: QMainWindow):
         window.btn_radial_turn,
         window.btn_thread,
         window.btn_cutoff,
+        window.btn_rough_turn_cycle,
+        window.btn_rough_turn_cycle_end,
     )
 
     window.milling_buttons_list = (
@@ -180,4 +182,13 @@ def load_main_buttons_connections(window: QMainWindow):
     )
     window.btn_tapping.clicked.connect(
         lambda: collect_data(window, "Tapping"),
+    )
+    window.btn_rough_turn_cycle.clicked.connect(
+        lambda: collect_data(window, "Rough_turn_cycle"),
+    )
+    window.btn_rough_turn_cycle_end.clicked.connect(
+        lambda: collect_data(window, "Rough_turn_cycle_end"),
+    )
+    window.btn_flat_mill.clicked.connect(
+        lambda: collect_data(window, "Flat_mill"),
     )

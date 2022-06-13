@@ -3,21 +3,15 @@
 ################################################################################
 ## Form generated from reading UI file 'cutoff.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.3.0
+## Created by: Qt User Interface Compiler version 6.1.1
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
 
-from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
-    QMetaObject, QObject, QPoint, QRect,
-    QSize, QTime, QUrl, Qt)
-from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
-    QFont, QFontDatabase, QGradient, QIcon,
-    QImage, QKeySequence, QLinearGradient, QPainter,
-    QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QFrame, QLabel, QLineEdit,
-    QMainWindow, QPushButton, QSizePolicy, QToolButton,
-    QWidget)
+from PySide6.QtCore import *  # type: ignore
+from PySide6.QtGui import *  # type: ignore
+from PySide6.QtWidgets import *  # type: ignore
+
 import resources_rc
 
 class Ui_frm_cutoff(object):
@@ -2223,7 +2217,7 @@ class Ui_frm_cutoff(object):
         self.lbl_dia = QLabel(self.frame)
         self.lbl_dia.setObjectName(u"lbl_dia")
         self.lbl_dia.setEnabled(True)
-        self.lbl_dia.setGeometry(QRect(20, 10, 111, 26))
+        self.lbl_dia.setGeometry(QRect(15, 10, 110, 26))
         self.btn_save = QPushButton(self.frame)
         self.btn_save.setObjectName(u"btn_save")
         self.btn_save.setGeometry(QRect(10, 130, 171, 24))
@@ -2234,7 +2228,7 @@ class Ui_frm_cutoff(object):
         self.lbl_cfr = QLabel(self.frame)
         self.lbl_cfr.setObjectName(u"lbl_cfr")
         self.lbl_cfr.setEnabled(True)
-        self.lbl_cfr.setGeometry(QRect(20, 60, 121, 26))
+        self.lbl_cfr.setGeometry(QRect(15, 60, 115, 26))
         self.tbx_cfr = QLineEdit(self.frame)
         self.tbx_cfr.setObjectName(u"tbx_cfr")
         self.tbx_cfr.setGeometry(QRect(10, 80, 170, 26))

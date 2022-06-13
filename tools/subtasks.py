@@ -16,6 +16,8 @@ from subtasks import (
     radial_turn,
     thread,
     cutoff,
+    rough_turn_cycle,
+    rough_turn_cycle_end,
     mill_ini,
     mill_end,
     lineal_mill,
@@ -26,6 +28,7 @@ from subtasks import (
     drill,
     csink,
     tapping,
+    flat_mill,
 )
 
 tasks_list = {
@@ -97,6 +100,14 @@ tasks_list = {
         "Name": cutoff.Cutoff,
         "Description": "        Tronzado de pieza",
     },
+    "Rough_turn_cycle": {
+        "Name": rough_turn_cycle.Rough_turn_cycle,
+        "Description": "        Ciclo de torneado desbaste",
+    },
+    "Rough_turn_cycle_end": {
+        "Name": rough_turn_cycle_end.Rough_turn_cycle_end,
+        "Description": "        Finalizar ciclo de torneado desbaste",
+    },
     "Mill_ini": {
         "Name": mill_ini.Mill_ini,
         "Description": "    * Iniciar fresados",
@@ -136,6 +147,10 @@ tasks_list = {
     "Tapping": {
         "Name": tapping.Tapping,
         "Description": "        Roscado rígido",
+    },
+    "Flat_mill": {
+        "Name": flat_mill.Flat_mill,
+        "Description": "        Fresado paleta",
     },
 }
 

@@ -3,21 +3,15 @@
 ################################################################################
 ## Form generated from reading UI file 'spindle_index.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.3.0
+## Created by: Qt User Interface Compiler version 6.1.1
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
 
-from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
-    QMetaObject, QObject, QPoint, QRect,
-    QSize, QTime, QUrl, Qt)
-from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
-    QFont, QFontDatabase, QGradient, QIcon,
-    QImage, QKeySequence, QLinearGradient, QPainter,
-    QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QComboBox, QFrame, QLabel,
-    QLineEdit, QMainWindow, QPushButton, QSizePolicy,
-    QToolButton, QWidget)
+from PySide6.QtCore import *  # type: ignore
+from PySide6.QtGui import *  # type: ignore
+from PySide6.QtWidgets import *  # type: ignore
+
 import resources_rc
 
 class Ui_frm_spindle_index(object):
@@ -2224,7 +2218,7 @@ class Ui_frm_spindle_index(object):
         self.lbl_grd = QLabel(self.frame)
         self.lbl_grd.setObjectName(u"lbl_grd")
         self.lbl_grd.setEnabled(True)
-        self.lbl_grd.setGeometry(QRect(20, 10, 73, 26))
+        self.lbl_grd.setGeometry(QRect(15, 10, 111, 26))
         self.btn_save = QPushButton(self.frame)
         self.btn_save.setObjectName(u"btn_save")
         self.btn_save.setGeometry(QRect(10, 130, 171, 24))
@@ -2240,7 +2234,7 @@ class Ui_frm_spindle_index(object):
         self.lbl_rot = QLabel(self.frame)
         self.lbl_rot.setObjectName(u"lbl_rot")
         self.lbl_rot.setEnabled(True)
-        self.lbl_rot.setGeometry(QRect(20, 60, 111, 26))
+        self.lbl_rot.setGeometry(QRect(15, 60, 91, 26))
         self.btn_help = QToolButton(self.centralwidget)
         self.btn_help.setObjectName(u"btn_help")
         self.btn_help.setGeometry(QRect(183, -2, 29, 29))
@@ -2274,7 +2268,7 @@ class Ui_frm_spindle_index(object):
         self.tbx_grd.setStatusTip("")
 #endif // QT_CONFIG(statustip)
         self.tbx_grd.setPlaceholderText("")
-        self.lbl_grd.setText(QCoreApplication.translate("frm_spindle_index", u"Grados", None))
+        self.lbl_grd.setText(QCoreApplication.translate("frm_spindle_index", u"Grados de rotaci\u00f3n", None))
 #if QT_CONFIG(tooltip)
         self.btn_save.setToolTip(QCoreApplication.translate("frm_spindle_index", u"Agregar los datos al programa CNC", None))
 #endif // QT_CONFIG(tooltip)

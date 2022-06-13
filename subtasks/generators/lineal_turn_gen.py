@@ -41,7 +41,7 @@ def gen_b12(data: list) -> list:
         list: Lista de líneas de tape generadas
     """
 
-    xin, zin, fed, mov, sde, blk = data.values()
+    xin, zin, fed, seq, mov, sde, blk = data.values()
     blank_space = fspace()
     blk = "/" if blk else ""
 
@@ -51,9 +51,10 @@ def gen_b12(data: list) -> list:
     xin = "" if xin == "" else f"X{fnum4(xin)}"
     zin = "" if zin == "" else f"Z{fnum4(zin)}"
     fed = "" if fed == "" else f"F{ffed(fed)}"
+    seq = "" if seq == 0 else f"N{int(seq)}"
     mov = "" if mov == "" else swiss_g_codes[f"MOVIMIENTO {mov}"]
 
-    lines1 = [f"{blk}{mov}{xin}{zin}{fed}"]
+    lines1 = [f"{blk}{seq}{mov}{xin}{zin}{fed}"]
     lines2 = [blank_space]
 
     return [lines1, lines2]
@@ -69,7 +70,7 @@ def gen_a16(data: list) -> list:
         list: Lista de líneas de tape generadas
     """
 
-    xin, zin, fed, mov, sde, blk = data.values()
+    xin, zin, fed, seq, mov, sde, blk = data.values()
     blank_space = fspace()
     blk = "/" if blk else ""
 
@@ -79,9 +80,10 @@ def gen_a16(data: list) -> list:
     xin = "" if xin == "" else f"X{fnum4(xin)}"
     zin = "" if zin == "" else f"Z{fnum4(zin)}"
     fed = "" if fed == "" else f"F{ffed(fed)}"
+    seq = "" if seq == 0 else f"N{int(seq)}"
     mov = "" if mov == "" else swiss_g_codes[f"MOVIMIENTO {mov}"]
 
-    lines1 = [f"{blk}{mov}{xin}{zin}{fed}"]
+    lines1 = [f"{blk}{seq}{mov}{xin}{zin}{fed}"]
     lines2 = [blank_space]
 
     return [lines1, lines2]
@@ -97,16 +99,17 @@ def gen_k16(data: list) -> list:
         list: Lista de líneas de tape generadas
     """
 
-    xin, zin, fed, mov, sde, blk = data.values()
+    xin, zin, fed, seq, mov, sde, blk = data.values()
     blank_space = fspace()
     blk = "/" if blk else ""
 
     xin = "" if xin == "" else f"X{fnum4(xin)}"
     zin = "" if zin == "" else f"Z{fnum4(zin)}"
     fed = "" if fed == "" else f"F{ffed(fed)}"
+    seq = "" if seq == 0 else f"N{int(seq)}"
     mov = "" if mov == "" else swiss_g_codes[f"MOVIMIENTO {mov}"]
 
-    lines1 = [f"{blk}{mov}{xin}{zin}{fed}"]
+    lines1 = [f"{blk}{seq}{mov}{xin}{zin}{fed}"]
     lines2 = [blank_space]
 
     return [lines2, lines1] if sde == "$2" else [lines1, lines2]
@@ -122,16 +125,17 @@ def gen_e16(data: list) -> list:
         list: Lista de líneas de tape generadas
     """
 
-    xin, zin, fed, mov, sde, blk = data.values()
+    xin, zin, fed, seq, mov, sde, blk = data.values()
     blank_space = fspace()
     blk = "/" if blk else ""
 
     xin = "" if xin == "" else f"X{fnum4(xin)}"
     zin = "" if zin == "" else f"Z{fnum4(zin)}"
     fed = "" if fed == "" else f"F{ffed(fed)}"
+    seq = "" if seq == 0 else f"N{int(seq)}"
     mov = "" if mov == "" else swiss_g_codes[f"MOVIMIENTO {mov}"]
 
-    lines1 = [f"{blk}{mov}{xin}{zin}{fed}"]
+    lines1 = [f"{blk}{seq}{mov}{xin}{zin}{fed}"]
     lines2 = [blank_space]
 
     return [lines2, lines1] if sde == "$2" else [lines1, lines2]
@@ -147,7 +151,7 @@ def gen_omni(data: list) -> list:
         list: Lista de líneas de tape generadas
     """
 
-    xin, zin, fed, mov, sde, blk = data.values()
+    xin, zin, fed, seq, mov, sde, blk = data.values()
     blank_space = fspace()
     blk = "/" if blk else ""
 
@@ -157,8 +161,9 @@ def gen_omni(data: list) -> list:
     xin = "" if xin == "" else f"X{fnum4(xin)}"
     zin = "" if zin == "" else f"Z{fnum4(zin)}"
     fed = "" if fed == "" else f"F{ffed(fed)}"
+    seq = "" if seq == 0 else f"N{int(seq)}"
 
-    lines1 = [f"{blk}{xin}{zin}{fed}"]
+    lines1 = [f"{blk}{seq}{xin}{zin}{fed}"]
     lines2 = [blank_space]
 
     return [lines1, lines2]
@@ -174,7 +179,7 @@ def gen_romi(data: list) -> list:
         list: Lista de líneas de tape generadas
     """
 
-    xin, zin, fed, mov, sde, blk = data.values()
+    xin, zin, fed, seq, mov, sde, blk = data.values()
     blank_space = fspace()
     blk = "/" if blk else ""
 
@@ -184,9 +189,10 @@ def gen_romi(data: list) -> list:
     xin = "" if xin == "" else f"X{fnum4(xin)}"
     zin = "" if zin == "" else f"Z{fnum4(zin)}"
     fed = "" if fed == "" else f"F{ffed(fed)}"
+    seq = "" if seq == 0 else f"N{int(seq)}"
     mov = "" if mov == "" else lathe_g_codes[f"MOVIMIENTO {mov}"]
 
-    lines1 = [f"{blk}{mov}{xin}{zin}{fed}"]
+    lines1 = [f"{blk}{seq}{mov}{xin}{zin}{fed}"]
     lines2 = [blank_space]
 
     return [lines1, lines2]
@@ -202,7 +208,7 @@ def gen_hardinge(data: list) -> list:
         list: Lista de líneas de tape generadas
     """
 
-    xin, zin, fed, mov, sde, blk = data.values()
+    xin, zin, fed, seq, mov, sde, blk = data.values()
     blank_space = fspace()
     blk = "/" if blk else ""
 
@@ -212,9 +218,10 @@ def gen_hardinge(data: list) -> list:
     xin = "" if xin == "" else f"X{fnum4(xin)}"
     zin = "" if zin == "" else f"Z{fnum4(zin)}"
     fed = "" if fed == "" else f"F{ffed(fed)}"
+    seq = "" if seq == 0 else f"N{int(seq)}"
     mov = "" if mov == "" else lathe_g_codes[f"MOVIMIENTO {mov}"]
 
-    lines1 = [f"{blk}{mov}{xin}{zin}{fed}"]
+    lines1 = [f"{blk}{seq}{mov}{xin}{zin}{fed}"]
     lines2 = [blank_space]
 
     return [lines1, lines2]
@@ -230,7 +237,7 @@ def gen_mazak(data: list) -> list:
         list: Lista de líneas de tape generadas
     """
 
-    xin, zin, fed, mov, sde, blk = data.values()
+    xin, zin, fed, seq, mov, sde, blk = data.values()
     blank_space = fspace()
     blk = "/" if blk else ""
 

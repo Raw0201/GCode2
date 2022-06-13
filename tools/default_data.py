@@ -2,7 +2,7 @@ from tools.constants import *
 from PySide6.QtWidgets import QMainWindow
 
 
-def load_persistent_data(window: QMainWindow):
+def load_constant_data(window: QMainWindow):
     """Carga datos persistentes
 
     Args:
@@ -67,6 +67,7 @@ def load_default_machining_data(window: QMainWindow):
     window.main_tape_number = ""
     window.tape_description = ""
 
+    window.current_sequence_number = 0
     window.current_bar_diameter = 0
     window.current_part_lenght = 0
     window.current_chuck_position = 0
