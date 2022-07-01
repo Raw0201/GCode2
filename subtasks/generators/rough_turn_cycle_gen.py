@@ -54,7 +54,7 @@ def gen_b12(data: list) -> list:
     fed = f"F{ffed(fed)}"
 
     lines1 = [f"{blk}G71{cut}{rtr}", f"{blk}G71{sqi}{sqf}{ovx}{ovz}{fed}"]
-    lines2 = [blank_space]
+    lines2 = [blank_space for _ in lines1]
 
     return [lines1, lines2]
 
@@ -82,7 +82,7 @@ def gen_a16(data: list) -> list:
     fed = f"F{ffed(fed)}"
 
     lines1 = [f"{blk}G71{cut}{rtr}", f"{blk}G71{sqi}{sqf}{ovx}{ovz}{fed}"]
-    lines2 = [blank_space]
+    lines2 = [blank_space for _ in lines1]
 
     return [lines1, lines2]
 
@@ -110,7 +110,7 @@ def gen_k16(data: list) -> list:
     fed = f"F{ffed(fed)}"
 
     lines1 = [f"{blk}G71{cut}{rtr}", f"{blk}G71{sqi}{sqf}{ovx}{ovz}{fed}"]
-    lines2 = [blank_space]
+    lines2 = [blank_space for _ in lines1]
 
     return [lines1, lines2]
 
@@ -129,8 +129,16 @@ def gen_e16(data: list) -> list:
     blank_space = fspace()
     blk = "/" if blk else ""
 
-    lines1 = [blank_space]
-    lines2 = [blank_space]
+    cut = f"U{fnum3(cut)}"
+    rtr = "R.02"
+    sqi = f"P{int(seq)}"
+    sqf = f"P{int(seq + 100)}"
+    ovx = f"U{fnum3(ovr)}"
+    ovz = f"W{fnum3(ovr)}"
+    fed = f"F{ffed(fed)}"
+
+    lines1 = [f"{blk}G71{cut}{rtr}", f"{blk}G71{sqi}{sqf}{ovx}{ovz}{fed}"]
+    lines2 = [blank_space for _ in lines1]
 
     return [lines1, lines2]
 
@@ -154,7 +162,7 @@ def gen_omni(data: list) -> list:
     fed = f"F{ffed(fed)}"
 
     lines1 = [f"{blk}G75{cut}{ovx}{fed}"]
-    lines2 = [blank_space]
+    lines2 = [blank_space for _ in lines1]
 
     return [lines1, lines2]
 
@@ -173,8 +181,16 @@ def gen_romi(data: list) -> list:
     blank_space = fspace()
     blk = "/" if blk else ""
 
-    lines1 = [blank_space]
-    lines2 = [blank_space]
+    cut = f"U{fnum3(cut)}"
+    rtr = "R.02"
+    sqi = f"P{int(seq)}"
+    sqf = f"P{int(seq + 100)}"
+    ovx = f"U{fnum3(ovr)}"
+    ovz = f"W{fnum3(ovr)}"
+    fed = f"F{ffed(fed)}"
+
+    lines1 = [f"{blk}G71{cut}{rtr}", f"{blk}G71{sqi}{sqf}{ovx}{ovz}{fed}"]
+    lines2 = [blank_space for _ in lines1]
 
     return [lines1, lines2]
 
@@ -193,8 +209,16 @@ def gen_hardinge(data: list) -> list:
     blank_space = fspace()
     blk = "/" if blk else ""
 
-    lines1 = [blank_space]
-    lines2 = [blank_space]
+    cut = f"U{fnum3(cut)}"
+    rtr = "R.02"
+    sqi = f"P{int(seq)}"
+    sqf = f"P{int(seq + 100)}"
+    ovx = f"U{fnum3(ovr)}"
+    ovz = f"W{fnum3(ovr)}"
+    fed = f"F{ffed(fed)}"
+
+    lines1 = [f"{blk}G71{cut}{rtr}", f"{blk}G71{sqi}{sqf}{ovx}{ovz}{fed}"]
+    lines2 = [blank_space for _ in lines1]
 
     return [lines1, lines2]
 

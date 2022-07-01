@@ -1,6 +1,6 @@
 from PySide6.QtWidgets import QMainWindow
 
-from tools.subwindows import key_pressed
+from tools.sub_windows import key_pressed
 from interfaces.ui_graph import Ui_frm_graph
 
 
@@ -15,9 +15,9 @@ class Graph(QMainWindow, Ui_frm_graph):
         self.rapid_horizontal = [-0.05, 0]
         self.rapid_vertical = [-0.05, 0]
 
-        self.construir_grafico()
+        self.graph_constructor()
 
-    def construir_grafico(self):
+    def graph_constructor(self):
 
         self.graph1_widget.setTitle("X - Z")
         self.graph1_widget.plot(

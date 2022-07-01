@@ -5,11 +5,11 @@ from tools.default_data import *
 
 
 def collect_data(window: QMainWindow, data_class: str):
-    """Crea una subtarea para recolectar datos de configuración
+    """Crea una sub tarea para recolectar datos de configuración
 
     Args:
         window (QMainWindow): Ventana principal
-        data_class (str): Clase de la subtarea
+        data_class (str): Clase de la sub tarea
     """
 
     subtask_class = tools.subtasks.tasks_list[data_class]["Name"]

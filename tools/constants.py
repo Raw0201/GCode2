@@ -9,5 +9,5 @@ MACHINES = (
     "HARDINGE",
     "MAZAK",
 )
-WINPOSX = 0
-WINPOSY = 0
+WIN_POS_X = 0
+WIN_POS_Y = 0

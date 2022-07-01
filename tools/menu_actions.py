@@ -25,7 +25,7 @@ def load_menu_actions(window):
     window.actionGraph.triggered.connect(lambda: graph_window(window))
     window.actionVersion.triggered.connect(lambda: version_window(window))
 
-    window.actionGo_to.triggered.connect(lambda: subrutine_prep(window))
+    window.actionGo_to.triggered.connect(lambda: subroutine_prep(window))
     window.actionReturn_to.triggered.connect(lambda: return_to(window))
 
     window.actionShow_functions.triggered.connect(
@@ -109,8 +109,8 @@ def graph_window(window: QMainWindow):
         window (QMainWindow): Ventana principal
     """
 
-    window.subwindow = graph.Graph()
-    window.subwindow.show()
+    window.sub_window = graph.Graph()
+    window.sub_window.show()
 
 
 def version_window(window: QMainWindow):
@@ -120,5 +120,5 @@ def version_window(window: QMainWindow):
         window (QMainWindow): Ventana principal
     """
 
-    window.subwindow = version.Version()
-    window.subwindow.show()
+    window.sub_window = version.Version()
+    window.sub_window.show()

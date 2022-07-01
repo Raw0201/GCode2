@@ -292,15 +292,15 @@ def prefab_sub_header(window: QMainWindow, description: str) -> list:
     return [
         "Inicio de subrutina",
         {
-            "Pgr": window.current_subrutine,
+            "Pgr": window.current_subroutine,
             "Mnp": window.current_main_program,
             "Dsc": description,
             "Plt": window.platter_data,
-            "Tol": window.subrutine_tool,
-            "Typ": window.subrutine_tool_type,
-            "Dia": window.subrutine_tool_diameter,
-            "Spc": window.subrutine_tool_specification,
-            "Mch": window.subrutine_machine,
+            "Tol": window.subroutine_tool,
+            "Typ": window.subroutine_tool_type,
+            "Dia": window.subroutine_tool_diameter,
+            "Spc": window.subroutine_tool_specification,
+            "Mch": window.subroutine_machine,
         },
     ]
 

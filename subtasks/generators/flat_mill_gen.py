@@ -267,36 +267,27 @@ def flat_mill_alt(data: list, tmd: int, lmd: int, tdn: str, ldn: str) -> list:
     cuts = math.ceil((mat - wdt) / 2 / cut)
     cuts = cuts if cuts % 2 == 0 else cuts + 1
 
-    params = (
-        tmd,
-        lmd,
-        tdn,
-        ldn,
-        wdt,
-        lgt,
-        fed,
-        cut,
-        tcm,
-        lcm,
-        dia,
-        cuts,
-    )
-    tin, lsc, lin, lnd, tst, lst, tfd, sfd = flat_milling_params(params)
+    params = tmd, lmd, wdt, lgt, fed, cut, tcm, lcm, dia, cuts
+    tin, lsc, lin, lnd = flat_milling_params(params)
 
-    lines1 = [f"{blk}G00{tst}{lsc}", f"{blk}G01{lst}{sfd}"]
+    tin = tin - (cut * tmd)
+    lines1 = [
+        f"{blk}G00{tdn}{fnum3(tin)}{ldn}{fnum3(lsc)}",
+        f"{blk}G01{ldn}{fnum3(lin)}F{ffed(fed)}",
+    ]
     cyls = int(cuts / 2)
 
     for cyl in range(cyls):
         tcr = "" if cyl == 0 else f"{blk}{tdn}{fnum3(tin)}"
-        cfd = f"F{ffed(fed * 0.5)}" if cyl + 1 == cyls else f"F{ffed(fed)}"
+        cfd = fed * 0.5 if cyl + 1 == cyls else fed
         lines1.append(tcr)
         lcr = f"{blk}{ldn}{fnum3(lnd)}"
         lines1.append(lcr)
         tin = tin - (cut * tmd)
 
-        tcr = f"{blk}{tdn}{fnum3(tin)}{tfd}"
+        tcr = f"{blk}{tdn}{fnum3(tin)}F{ffed(fed * 0.1)}"
         lines1.append(tcr)
-        lcr = f"{blk}{ldn}{fnum3(lin)}{cfd}"
+        lcr = f"{blk}{ldn}{fnum3(lin)}F{ffed(cfd)}"
         lines1.append(lcr)
         tin = tin - (cut * tmd)
 
@@ -326,30 +317,21 @@ def flat_mill_inn(data: list, tmd: int, lmd: int, tdn: str, ldn: str) -> list:
 
     cuts = math.ceil((mat - wdt) / 2 / cut)
 
-    params = (
-        tmd,
-        lmd,
-        tdn,
-        ldn,
-        wdt,
-        lgt,
-        fed,
-        cut,
-        tcm,
-        lcm,
-        dia,
-        cuts,
-    )
-    tin, lsc, lin, lnd, tst, lst, tfd, sfd = flat_milling_params(params)
+    params = tmd, lmd, wdt, lgt, fed, cut, tcm, lcm, dia, cuts
+    tin, lsc, lin, lnd = flat_milling_params(params)
 
-    lines1 = [f"{blk}G00{tst}{lsc}", f"{blk}G01{lst}{sfd}"]
+    tin = tin - (cut * tmd)
+    lines1 = [
+        f"{blk}G00{tdn}{fnum3(tin)}{ldn}{fnum3(lsc)}",
+        f"{blk}G01{ldn}{fnum3(lin)}F{ffed(fed)}",
+    ]
     cyls = cuts
 
     for cyl in range(cyls):
         tcr = "" if cyl == 0 else f"{blk}G01{tdn}{fnum3(tin)}"
-        cfd = f"F{ffed(fed * 0.5)}" if cyl + 1 == cyls else f"F{ffed(fed)}"
+        cfd = f"F{ffed(fed * 0.5)}" if cyl + 1 == cyls else ""
         lines1.append(tcr)
-        lcr = f"{blk}{ldn}{fnum3(lnd)}"
+        lcr = f"{blk}{ldn}{fnum3(lnd)}{cfd}"
         lines1.append(lcr)
         tsc = f"{blk}{tdn}{fnum3(tin + (cut * tmd))}"
         lines1.append(tsc)
@@ -383,34 +365,25 @@ def flat_mill_out(data: list, tmd: int, lmd: int, tdn: str, ldn: str) -> list:
 
     cuts = math.ceil((mat - wdt) / 2 / cut)
 
-    params = (
-        tmd,
-        lmd,
-        tdn,
-        ldn,
-        wdt,
-        lgt,
-        fed,
-        cut,
-        tcm,
-        lcm,
-        dia,
-        cuts,
-    )
-    tin, lsc, lin, lnd, tst, lst, tfd, sfd = flat_milling_params(params)
+    params = tmd, lmd, wdt, lgt, fed, cut, tcm, lcm, dia, cuts
+    tin, lsc, lin, lnd = flat_milling_params(params)
 
-    lines1 = [f"{blk}G00{tst}{lsc}", f"{blk}G01{lst}{sfd}"]
+    tin = tin - (cut * tmd)
+    lines1 = [
+        f"{blk}G00{tdn}{fnum3(tin)}{ldn}{fnum3(lsc)}",
+        f"{blk}G01{ldn}{fnum3(lin)}F{ffed(fed)}",
+    ]
     cyls = cuts
 
     for cyl in range(cyls):
         tsc = f"{blk}G00{tdn}{fnum3(tin + (cut * 2 * tmd))}"
-        cfd = f"F{ffed(fed * 0.5)}" if cyl + 1 == cyls else f"F{ffed(fed)}"
+        cfd = fed * 0.5 if cyl + 1 == cyls else fed
         lines1.append(tsc)
         lcr = f"{blk}{ldn}{fnum3(lnd)}"
         lines1.append(lcr)
-        tcr = f"{blk}G01{tdn}{fnum3(tin)}{tfd}"
+        tcr = f"{blk}G01{tdn}{fnum3(tin)}F{ffed(fed * 0.1)}"
         lines1.append(tcr)
-        lcr = f"{blk}{ldn}{fnum3(lin)}{cfd}"
+        lcr = f"{blk}{ldn}{fnum3(lin)}F{ffed(cfd)}"
         lines1.append(lcr)
         tin = tin - (cut * tmd)
 
@@ -441,36 +414,27 @@ def flat_mill_alto(data: list, tmd: int, lmd: int, tdn: str, ldn: str) -> list:
     cuts = math.ceil((mat - wdt) / 2 / cut)
     cuts = cuts if cuts % 2 == 0 else cuts + 1
 
-    params = (
-        tmd,
-        lmd,
-        tdn,
-        ldn,
-        wdt,
-        lgt,
-        fed,
-        cut,
-        tcm,
-        lcm,
-        dia,
-        cuts,
-    )
-    tin, lsc, lin, lnd, tst, lst, tfd, sfd = flat_milling_params(params)
+    params = tmd, lmd, wdt, lgt, fed, cut, tcm, lcm, dia, cuts
+    tin, lsc, lin, lnd = flat_milling_params(params)
 
-    lines1 = [f"{blk}{tst}{lsc}F300.", f"{blk}{lst}{sfd}"]
+    tin = tin - (cut * tmd)
+    lines1 = [
+        f"{blk}{tdn}{fnum3(tin)}{ldn}{fnum3(lsc)}F300.",
+        f"{blk}{ldn}{fnum3(lin)}F{ffed(fed)}",
+    ]
     cyls = int(cuts / 2)
 
     for cyl in range(cyls):
         tcr = "" if cyl == 0 else f"{blk}{tdn}{fnum3(tin)}"
-        cfd = f"F{ffed(fed * 0.5)}" if cyl + 1 == cyls else f"F{ffed(fed)}"
+        cfd = fed * 0.5 if cyl + 1 == cyls else fed
         lines1.append(tcr)
         lcr = f"{blk}{ldn}{fnum3(lnd)}"
         lines1.append(lcr)
         tin = tin - (cut * tmd)
 
-        tcr = f"{blk}{tdn}{fnum3(tin)}{tfd}"
+        tcr = f"{blk}{tdn}{fnum3(tin)}F{ffed(fed * 0.1)}"
         lines1.append(tcr)
-        lcr = f"{blk}{ldn}{fnum3(lin)}{cfd}"
+        lcr = f"{blk}{ldn}{fnum3(lin)}F{ffed(cfd)}"
         lines1.append(lcr)
         tin = tin - (cut * tmd)
 
@@ -500,28 +464,18 @@ def flat_mill_inno(data: list, tmd: int, lmd: int, tdn: str, ldn: str) -> list:
 
     cuts = math.ceil((mat - wdt) / 2 / cut)
 
-    params = (
-        tmd,
-        lmd,
-        tdn,
-        ldn,
-        wdt,
-        lgt,
-        fed,
-        cut,
-        tcm,
-        lcm,
-        dia,
-        cuts,
-    )
-    tin, lsc, lin, lnd, tst, lst, tfd, sfd = flat_milling_params(params)
+    params = tmd, lmd, wdt, lgt, fed, cut, tcm, lcm, dia, cuts
+    tin, lsc, lin, lnd = flat_milling_params(params)
 
-    lines1 = [f"{blk}{tst}{lsc}F300.", f"{blk}{lst}{sfd}"]
+    tin = tin - (cut * tmd)
+    lines1 = [
+        f"{blk}{tdn}{fnum3(tin)}{ldn}{fnum3(lsc)}F300.",
+        f"{blk}{ldn}{fnum3(lin)}F{ffed(fed)}",
+    ]
     cyls = cuts
 
     for cyl in range(cyls):
-        tcr = "" if cyl == 0 else f"{blk}{tdn}{fnum3(tin)}{cfd}"
-        cfd = f"F{ffed(fed * 0.5)}" if cyl + 1 == cyls else f"F{ffed(fed)}"
+        tcr = "" if cyl == 0 else f"{blk}{tdn}{fnum3(tin)}F{ffed(fed)}"
         lines1.append(tcr)
         lcr = f"{blk}{ldn}{fnum3(lnd)}"
         lines1.append(lcr)
@@ -557,34 +511,25 @@ def flat_mill_outo(data: list, tmd: int, lmd: int, tdn: str, ldn: str) -> list:
 
     cuts = math.ceil((mat - wdt) / 2 / cut)
 
-    params = (
-        tmd,
-        lmd,
-        tdn,
-        ldn,
-        wdt,
-        lgt,
-        fed,
-        cut,
-        tcm,
-        lcm,
-        dia,
-        cuts,
-    )
-    tin, lsc, lin, lnd, tst, lst, tfd, sfd = flat_milling_params(params)
+    params = tmd, lmd, wdt, lgt, fed, cut, tcm, lcm, dia, cuts
+    tin, lsc, lin, lnd = flat_milling_params(params)
 
-    lines1 = [f"{blk}{tst}{lsc}F300.", f"{blk}{lst}{sfd}"]
+    tin = tin - (cut * tmd)
+    lines1 = [
+        f"{blk}{tdn}{fnum3(tin)}{ldn}{fnum3(lsc)}F300.",
+        f"{blk}{ldn}{fnum3(lin)}F{ffed(fed)}",
+    ]
     cyls = cuts
 
     for cyl in range(cyls):
         tsc = f"{blk}{tdn}{fnum3(tin + (cut * 2 * tmd))}F300."
-        cfd = f"F{ffed(fed * 0.5)}" if cyl + 1 == cyls else f"F{ffed(fed)}"
+        cfd = fed * 0.5 if cyl + 1 == cyls else fed
         lines1.append(tsc)
         lcr = f"{blk}{ldn}{fnum3(lnd)}"
         lines1.append(lcr)
-        tcr = f"{blk}{tdn}{fnum3(tin)}{tfd}"
+        tcr = f"{blk}{tdn}{fnum3(tin)}F{ffed(fed * 0.1)}"
         lines1.append(tcr)
-        lcr = f"{blk}{ldn}{fnum3(lin)}{cfd}"
+        lcr = f"{blk}{ldn}{fnum3(lin)}F{ffed(cfd)}"
         lines1.append(lcr)
         tin = tin - (cut * tmd)
 
@@ -615,36 +560,29 @@ def flat_mill_altm(data: list, tmd: int, lmd: int, tdn: str, ldn: str) -> list:
     cuts = math.ceil((mat - wdt) / 2 / cut)
     cuts = cuts if cuts % 2 == 0 else cuts + 1
 
-    params = (
-        tmd,
-        lmd,
-        tdn,
-        ldn,
-        wdt,
-        lgt,
-        fed,
-        cut,
-        tcm,
-        lcm,
-        dia,
-        cuts,
-    )
-    tin, lsc, lin, lnd, tst, lst, tfd, sfd = flat_milling_params_m(params)
+    params = tmd, lmd, wdt, lgt, fed, cut, tcm, lcm, dia, cuts
+    tin, lsc, lin, lnd = flat_milling_params(params)
 
-    lines1 = [f"{blk}G00{lsc}{tst}", f"{blk}G91G01{lst}{sfd}"]
+    tin = tin - (cut * tmd)
+    lin -= (lgt * lmd)
+    lnd = lin * -1
+
+    lines1 = [
+        f"{blk}G00{ldn}{fnum3(lsc)}{tdn}{fnum3(tin)}",
+        f"{blk}G91G01{ldn}.025F{ffed(fed)}",
+    ]
     cyls = int(cuts / 2)
 
     for cyl in range(cyls):
         tcr = "" if cyl == 0 else f"{blk}{tdn}{fnum3(tin)}"
-        cfd = f"F{ffed(fed * 0.5)}" if cyl + 1 == cyls else f"F{ffed(fed)}"
+        cfd = fed * 0.5 if cyl + 1 == cyls else fed
         tin = cut * tmd * -1
         lines1.append(tcr)
         lcr = f"{blk}{ldn}{fnum3(lnd)}"
         lines1.append(lcr)
-
-        tcr = f"{blk}{tdn}{fnum3(tin)}{tfd}"
+        tcr = f"{blk}{tdn}{fnum3(tin)}F{ffed(fed * 0.1)}"
         lines1.append(tcr)
-        lcr = f"{blk}{ldn}{fnum3(lin)}{cfd}"
+        lcr = f"{blk}{ldn}{fnum3(lin)}F{ffed(cfd)}"
         lines1.append(lcr)
 
     lines2 = [blank_space for _ in lines1]
@@ -673,36 +611,29 @@ def flat_mill_innm(data: list, tmd: int, lmd: int, tdn: str, ldn: str) -> list:
 
     cuts = math.ceil((mat - wdt) / 2 / cut)
 
-    params = (
-        tmd,
-        lmd,
-        tdn,
-        ldn,
-        wdt,
-        lgt,
-        fed,
-        cut,
-        tcm,
-        lcm,
-        dia,
-        cuts,
-    )
-    tin, lsc, lin, lnd, tst, lst, tfd, sfd = flat_milling_params_m(params)
+    params = tmd, lmd, wdt, lgt, fed, cut, tcm, lcm, dia, cuts
+    tin, lsc, lin, lnd = flat_milling_params(params)
 
-    lines1 = [f"{blk}G90G00{lsc}{tst}", f"{blk}G91G01{lst}{sfd}"]
+    tin = tin - (cut * tmd)
+    lin -= (lgt * lmd)
+    lnd = lin * -1
+
+    lines1 = [
+        f"{blk}G90G00{ldn}{fnum3(lsc)}{tdn}{fnum3(tin)}",
+        f"{blk}G91G01{ldn}.025F{ffed(fed)}",
+    ]
     cyls = cuts
 
     for cyl in range(cyls):
         tcr = "" if cyl == 0 else f"{blk}G01{tdn}{fnum3(cut * -3 * tmd)}"
-        cfd = f"F{ffed(fed * 0.5)}" if cyl + 1 == cyls else f"F{ffed(fed)}"
+        cfd = f"F{ffed(fed * 0.5)}" if cyl + 1 == cyls else ""
         lines1.append(tcr)
-        lcr = f"{blk}{ldn}{fnum3(lnd)}"
+        lcr = f"{blk}{ldn}{fnum3(lnd)}{cfd}"
         lines1.append(lcr)
         tsc = f"{blk}{tdn}{fnum3(cut * 2 * tmd)}"
         lines1.append(tsc)
         lcr = f"{blk}G00{ldn}{fnum3(lin)}"
         lines1.append(lcr)
-        tin = tin - (cut * tmd)
 
     lines2 = [blank_space for _ in lines1]
     del lines2[-1]
@@ -730,37 +661,31 @@ def flat_mill_outm(data: list, tmd: int, lmd: int, tdn: str, ldn: str) -> list:
 
     cuts = math.ceil((mat - wdt) / 2 / cut)
 
-    params = (
-        tmd,
-        lmd,
-        tdn,
-        ldn,
-        wdt,
-        lgt,
-        fed,
-        cut,
-        tcm,
-        lcm,
-        dia,
-        cuts,
-    )
-    tin, lsc, lin, lnd, tst, lst, tfd, sfd = flat_milling_params_m(params)
-    fct = f"{tdn}{fnum4(cut * tmd)}"
+    params = tmd, lmd, wdt, lgt, fed, cut, tcm, lcm, dia, cuts
+    tin, lsc, lin, lnd = flat_milling_params(params)
 
-    lines1 = [f"{blk}G90G00{lsc}{tst}", f"{blk}G91G01{lst}{fct}{sfd}"]
+    fct = cut * tmd
+    tin = tin - (cut * tmd)
+    lin -= (lgt * lmd)
+    lnd = lin * -1
+
+    lines1 = [
+        f"{blk}G90G00{ldn}{fnum3(lsc)}{tdn}{fnum3(tin)}",
+        f"{blk}G91G01{ldn}.025{tdn}{fnum3(fct)}F{ffed(fed)}",
+    ]
     cyls = cuts
 
     for cyl in range(cyls):
         tsc = f"{blk}G00{tdn}{fnum3(cut * 2 * tmd)}"
-        cfd = f"F{ffed(fed * 0.5)}" if cyl + 1 == cyls else f"F{ffed(fed)}"
+        cfd = fed * 0.5 if cyl + 1 == cyls else fed
         lines1.append(tsc)
         lcr = f"{blk}{ldn}{fnum3(lnd)}"
         lines1.append(lcr)
-        tcr = f"{blk}G01{tdn}{fnum3(fnum3(cut * -3 * tmd))}{tfd}"
+        ctr = cut * -3 * tmd
+        tcr = f"{blk}G01{tdn}{fnum3(fnum3(ctr))}F{ffed(fed * 0.1)}"
         lines1.append(tcr)
-        lcr = f"{blk}{ldn}{fnum3(lin)}{cfd}"
+        lcr = f"{blk}{ldn}{fnum3(lin)}F{ffed(cfd)}"
         lines1.append(lcr)
-        tin = tin - (cut * tmd)
 
     lines2 = [blank_space for _ in lines1]
     del lines2[-1]
@@ -778,41 +703,10 @@ def flat_milling_params(params: list) -> list:
         list: Lista de dimensiones calculadas
     """
 
-    tmd, lmd, tdn, ldn, wdt, lgt, fed, cut, tcm, lcm, dia, cuts = params
-    tin = ((wdt / 2) + (dia / 2) + (cut * (cuts - 1)) + tcm) * tmd
+    tmd, lmd, wdt, lgt, fed, cut, tcm, lcm, dia, cuts = params
+    tin = ((wdt / 2) + (dia / 2) + (cut * cuts) + tcm) * tmd
     lsc = (((dia / 2) + 0.025) * lmd * -1) + lcm
     lin = ((dia / 2) * lmd * -1) + lcm
     lnd = (lgt * lmd) + lcm
 
-    tst = f"{tdn}{fnum3(tin)}"
-    lsc = f"{ldn}{fnum3(lsc)}"
-    lst = f"{ldn}{fnum3(lin)}"
-    tfd = f"F{ffed(fed * 0.1)}"
-    sfd = f"F{ffed(fed)}"
-
-    return tin, lsc, lin, lnd, tst, lst, tfd, sfd
-
-
-def flat_milling_params_m(params: list) -> list:
-    """Calcula dimensiones para fresado de cara plana para mazak
-
-    Args:
-        params (list): Lista de datos a procesar
-
-    Returns:
-        list: Lista de dimensiones calculadas
-    """
-
-    tmd, lmd, tdn, ldn, wdt, lgt, fed, cut, tcm, lcm, dia, cuts = params
-    tin = ((wdt / 2) + (dia / 2) + (cut * (cuts - 1)) + tcm) * tmd
-    lsc = (((dia / 2) + 0.025) * lmd * -1) + lcm
-    lin = ((lgt + (dia / 2)) * lmd * -1) + lcm
-    lnd = ((lgt + (dia / 2)) * lmd) + lcm
-
-    tst = f"{tdn}{fnum4(tin)}"
-    lsc = f"{ldn}{fnum4(lsc)}"
-    lst = f"{ldn}.025"
-    tfd = f"F{ffed(fed * 0.1)}"
-    sfd = f"F{ffed(fed)}"
-
-    return tin, lsc, lin, lnd, tst, lst, tfd, sfd
+    return tin, lsc, lin, lnd

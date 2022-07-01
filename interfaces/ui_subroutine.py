@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'subrutineYhBuQM.ui'
+## Form generated from reading UI file 'subroutinevKAyLG.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.1.1
 ##
@@ -14,22 +14,22 @@ from PySide6.QtWidgets import *  # type: ignore
 
 import resources_rc
 
-class Ui_frm_subrutine(object):
-    def setupUi(self, frm_subrutine):
-        if not frm_subrutine.objectName():
-            frm_subrutine.setObjectName(u"frm_subrutine")
-        frm_subrutine.resize(210, 180)
+class Ui_frm_subroutine(object):
+    def setupUi(self, frm_subroutine):
+        if not frm_subroutine.objectName():
+            frm_subroutine.setObjectName(u"frm_subroutine")
+        frm_subroutine.resize(210, 180)
         sizePolicy = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(frm_subrutine.sizePolicy().hasHeightForWidth())
-        frm_subrutine.setSizePolicy(sizePolicy)
-        frm_subrutine.setMinimumSize(QSize(210, 180))
-        frm_subrutine.setMaximumSize(QSize(210, 180))
+        sizePolicy.setHeightForWidth(frm_subroutine.sizePolicy().hasHeightForWidth())
+        frm_subroutine.setSizePolicy(sizePolicy)
+        frm_subroutine.setMinimumSize(QSize(210, 180))
+        frm_subroutine.setMaximumSize(QSize(210, 180))
         icon = QIcon()
         icon.addFile(u":/icons/gear.png", QSize(), QIcon.Normal, QIcon.Off)
-        frm_subrutine.setWindowIcon(icon)
-        frm_subrutine.setStyleSheet(u"/* ---------------------------------------------------------------------------\n"
+        frm_subroutine.setWindowIcon(icon)
+        frm_subroutine.setStyleSheet(u"/* ---------------------------------------------------------------------------\n"
 "\n"
 "    Created by the qtsass compiler v0.1.1\n"
 "    \n"
@@ -2195,7 +2195,7 @@ class Ui_frm_subrutine(object):
 "  /* Fix cut labels in plots #134 */\n"
 "  padding: 0px;\n"
 "}")
-        self.centralwidget = QWidget(frm_subrutine)
+        self.centralwidget = QWidget(frm_subroutine)
         self.centralwidget.setObjectName(u"centralwidget")
         self.frame = QFrame(self.centralwidget)
         self.frame.setObjectName(u"frame")
@@ -2252,7 +2252,7 @@ class Ui_frm_subrutine(object):
         icon1.addFile(u":/icons/question.png", QSize(), QIcon.Normal, QIcon.Off)
         self.btn_help.setIcon(icon1)
         self.btn_help.setIconSize(QSize(20, 20))
-        frm_subrutine.setCentralWidget(self.centralwidget)
+        frm_subroutine.setCentralWidget(self.centralwidget)
 #if QT_CONFIG(shortcut)
         self.lbl_sub.setBuddy(self.lbl_sub)
         self.lbl_rep.setBuddy(self.lbl_rep)
@@ -2261,43 +2261,43 @@ class Ui_frm_subrutine(object):
         QWidget.setTabOrder(self.tbx_rep, self.btn_save)
         QWidget.setTabOrder(self.btn_save, self.btn_help)
 
-        self.retranslateUi(frm_subrutine)
+        self.retranslateUi(frm_subroutine)
 
-        QMetaObject.connectSlotsByName(frm_subrutine)
+        QMetaObject.connectSlotsByName(frm_subroutine)
     # setupUi
 
-    def retranslateUi(self, frm_subrutine):
-        frm_subrutine.setWindowTitle(QCoreApplication.translate("frm_subrutine", u"GCode Editor", None))
+    def retranslateUi(self, frm_subroutine):
+        frm_subroutine.setWindowTitle(QCoreApplication.translate("frm_subroutine", u"GCode Editor", None))
 #if QT_CONFIG(tooltip)
-        self.tbx_sub.setToolTip(QCoreApplication.translate("frm_subrutine", u"Digite el n\u00famero de subrutina", None))
+        self.tbx_sub.setToolTip(QCoreApplication.translate("frm_subroutine", u"Digite el n\u00famero de subrutina", None))
 #endif // QT_CONFIG(tooltip)
 #if QT_CONFIG(statustip)
         self.tbx_sub.setStatusTip("")
 #endif // QT_CONFIG(statustip)
         self.tbx_sub.setPlaceholderText("")
-        self.lbl_sub.setText(QCoreApplication.translate("frm_subrutine", u"Subrutina", None))
-        self.lbl_rep.setText(QCoreApplication.translate("frm_subrutine", u"Cantidad de repeticiones", None))
+        self.lbl_sub.setText(QCoreApplication.translate("frm_subroutine", u"Subrutina", None))
+        self.lbl_rep.setText(QCoreApplication.translate("frm_subroutine", u"Cantidad de repeticiones", None))
 #if QT_CONFIG(tooltip)
-        self.btn_save.setToolTip(QCoreApplication.translate("frm_subrutine", u"Agregar los datos al programa CNC", None))
+        self.btn_save.setToolTip(QCoreApplication.translate("frm_subroutine", u"Agregar los datos al programa CNC", None))
 #endif // QT_CONFIG(tooltip)
 #if QT_CONFIG(statustip)
         self.btn_save.setStatusTip("")
 #endif // QT_CONFIG(statustip)
-        self.btn_save.setText(QCoreApplication.translate("frm_subrutine", u"Agregar", None))
+        self.btn_save.setText(QCoreApplication.translate("frm_subroutine", u"Agregar", None))
 #if QT_CONFIG(shortcut)
-        self.btn_save.setShortcut(QCoreApplication.translate("frm_subrutine", u"Ctrl+S", None))
+        self.btn_save.setShortcut(QCoreApplication.translate("frm_subroutine", u"Ctrl+S", None))
 #endif // QT_CONFIG(shortcut)
 #if QT_CONFIG(tooltip)
-        self.tbx_rep.setToolTip(QCoreApplication.translate("frm_subrutine", u"Digite la cantidad de repeticiones", None))
+        self.tbx_rep.setToolTip(QCoreApplication.translate("frm_subroutine", u"Digite la cantidad de repeticiones", None))
 #endif // QT_CONFIG(tooltip)
 #if QT_CONFIG(statustip)
         self.tbx_rep.setStatusTip("")
 #endif // QT_CONFIG(statustip)
-        self.tbx_rep.setText(QCoreApplication.translate("frm_subrutine", u"0", None))
+        self.tbx_rep.setText(QCoreApplication.translate("frm_subroutine", u"0", None))
         self.tbx_rep.setPlaceholderText("")
         self.btn_help.setText("")
 #if QT_CONFIG(shortcut)
-        self.btn_help.setShortcut(QCoreApplication.translate("frm_subrutine", u"F1", None))
+        self.btn_help.setShortcut(QCoreApplication.translate("frm_subroutine", u"F1", None))
 #endif // QT_CONFIG(shortcut)
     # retranslateUi
 

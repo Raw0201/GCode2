@@ -1,7 +1,7 @@
 from PySide6.QtWidgets import QMainWindow
 
 from main import *
-from tools import subtasks
+from tools import sub_tasks
 from tools.formatting import *
 from tools.config_list import *
 from tools.validations import *
@@ -10,10 +10,10 @@ from tools.main_window import *
 from tools.default_data import *
 from tools.message_boxes import *
 from tools.prefab_blocks import *
-from tools.combobox_lists import *
+from tools.combo_box_lists import *
 from tools.file_management import *
 
-from subtasks.subtask import Subtask
+from subtasks.sub_task import Subtask
 from subtasks.generators.flat_mill_gen import flat_mill_gen
 from interfaces.ui_flat_mill import Ui_frm_flat_mill
 
@@ -22,14 +22,14 @@ class Flat_mill(Subtask, Ui_frm_flat_mill):
     def __init__(self, main_window):
         super().__init__()
         self.window = main_window
-        self.task = subtasks.tasks_list["Flat_mill"]["Description"]
+        self.task = sub_tasks.tasks_list["Flat_mill"]["Description"]
         self.image = "flat_mill.png"
 
         self.cbx_dyr.addItems(directions_list)
         self.cbx_pos.addItems(positions_list)
 
     def collector(self):
-        """Recolecta los datos de la subtarea ingresados por el usuario"""
+        """Recolecta los datos de la sub tarea ingresados por el usuario"""
 
         data = {
             "Wdt": self.tbx_wdt.text(),

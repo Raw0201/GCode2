@@ -1,7 +1,7 @@
 from PySide6.QtWidgets import QMainWindow
 
 from main import *
-from tools import subtasks
+from tools import sub_tasks
 from tools.formatting import *
 from tools.config_list import *
 from tools.validations import *
@@ -11,10 +11,10 @@ from tools.default_data import *
 from tools.message_boxes import *
 from tools.prefab_blocks import *
 from tools.thread_tables import *
-from tools.combobox_lists import *
+from tools.combo_box_lists import *
 from tools.file_management import *
 
-from subtasks.subtask import Subtask
+from subtasks.sub_task import Subtask
 from subtasks.generators.tapping_gen import tapping_gen
 from interfaces.ui_tapping import Ui_frm_tapping
 
@@ -23,7 +23,7 @@ class Tapping(Subtask, Ui_frm_tapping):
     def __init__(self, main_window):
         super().__init__()
         self.window = main_window
-        self.task = subtasks.tasks_list["Tapping"]["Description"]
+        self.task = sub_tasks.tasks_list["Tapping"]["Description"]
         self.image = "tapping.png"
 
         self.cbx_sde.addItems(tape_sides_list)
@@ -33,7 +33,7 @@ class Tapping(Subtask, Ui_frm_tapping):
         self.cbx_znd.addItems(retraction_positions[1:])
 
     def collector(self):
-        """Recolecta los datos de la subtarea ingresados por el usuario"""
+        """Recolecta los datos de la sub tarea ingresados por el usuario"""
 
         data = {
             "Dpt": self.tbx_dpt.text(),

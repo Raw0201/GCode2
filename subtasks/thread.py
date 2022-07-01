@@ -1,7 +1,7 @@
 from PySide6.QtWidgets import QMainWindow
 
 from main import *
-from tools import subtasks
+from tools import sub_tasks
 from tools.formatting import *
 from tools.config_list import *
 from tools.validations import *
@@ -11,10 +11,10 @@ from tools.default_data import *
 from tools.thread_tables import *
 from tools.message_boxes import *
 from tools.prefab_blocks import *
-from tools.combobox_lists import *
+from tools.combo_box_lists import *
 from tools.file_management import *
 
-from subtasks.subtask import Subtask
+from subtasks.sub_task import Subtask
 from subtasks.generators.thread_gen import thread_gen
 from interfaces.ui_thread import Ui_frm_thread
 
@@ -23,7 +23,7 @@ class Thread(Subtask, Ui_frm_thread):
     def __init__(self, main_window):
         super().__init__()
         self.window = main_window
-        self.task = subtasks.tasks_list["Thread"]["Description"]
+        self.task = sub_tasks.tasks_list["Thread"]["Description"]
         self.image = "thread.png"
 
         self.cbx_thd.addItems(thread_table)
@@ -32,7 +32,7 @@ class Thread(Subtask, Ui_frm_thread):
         self.cbx_rgh.addItems(yes_no_list)
 
     def collector(self):
-        """Recolecta los datos de la subtarea ingresados por el usuario"""
+        """Recolecta los datos de la sub tarea ingresados por el usuario"""
 
         data = {
             "Zin": self.tbx_zin.text(),

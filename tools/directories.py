@@ -21,7 +21,7 @@ def create_machine_folders():
 
 
 def update_file_dir(window: QMainWindow):
-    """Actualiza el forder de guardado
+    """Actualiza el folder de guardado
 
     Args:
         window (QMainWindow): Ventana principal

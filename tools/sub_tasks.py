@@ -3,7 +3,7 @@ from subtasks import (
     header_sub,
     free,
     comment,
-    subrutine,
+    subroutine,
     collect,
     end,
     tool_call,
@@ -29,6 +29,7 @@ from subtasks import (
     csink,
     tapping,
     flat_mill,
+    face_mill,
 )
 
 tasks_list = {
@@ -48,8 +49,8 @@ tasks_list = {
         "Name": comment.Comment,
         "Description": "        Comentario",
     },
-    "Subrutine": {
-        "Name": subrutine.Subrutine,
+    "Subroutine": {
+        "Name": subroutine.Subroutine,
         "Description": "        -> Subrutina",
     },
     "Collect": {
@@ -152,17 +153,21 @@ tasks_list = {
         "Name": flat_mill.Flat_mill,
         "Description": "        Fresado paleta",
     },
+    "Face_mill": {
+        "Name": face_mill.Face_mill,
+        "Description": "        Fresado caras",
+    },
 }
 
 
 def get_task_class(description: str) -> object:
-    """Obtiene la clase de la subtarea
+    """Obtiene la clase de la sub tarea
 
     Args:
-        description (str): Descripción de la subtarea
+        description (str): Descripción de la sub tarea
 
     Returns:
-        object: Clase de la subtarea
+        object: Clase de la sub tarea
     """
 
     main_values = list(tasks_list.values())

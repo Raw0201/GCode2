@@ -1,6 +1,6 @@
 from PySide6.QtWidgets import QMainWindow
 
-from tools import subtasks
+from tools import sub_tasks
 from tools.config_list import *
 
 from subtasks.generators.free_gen import free_gen
@@ -10,11 +10,11 @@ class Free(QMainWindow):
     def __init__(self, main_window):
         super().__init__()
         self.window = main_window
-        self.task = subtasks.tasks_list["Free"]["Description"]
+        self.task = sub_tasks.tasks_list["Free"]["Description"]
         self.modification = False
 
     def collector(self):
-        """Recolecta los datos de la subtarea ingresados por el usuario"""
+        """Recolecta los datos de la sub tarea ingresados por el usuario"""
 
         data = {
             "Fre": "  ",

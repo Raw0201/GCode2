@@ -1,7 +1,7 @@
 from PySide6.QtWidgets import QMainWindow
 
 from main import *
-from tools import subtasks
+from tools import sub_tasks
 from tools.formatting import *
 from tools.config_list import *
 from tools.validations import *
@@ -11,10 +11,10 @@ from tools.default_data import *
 from tools.cutoff_table import *
 from tools.message_boxes import *
 from tools.prefab_blocks import *
-from tools.combobox_lists import *
+from tools.combo_box_lists import *
 from tools.file_management import *
 
-from subtasks.subtask import Subtask
+from subtasks.sub_task import Subtask
 from subtasks.generators.cutoff_gen import cutoff_gen
 from interfaces.ui_cutoff import Ui_frm_cutoff
 
@@ -23,16 +23,16 @@ class Cutoff(Subtask, Ui_frm_cutoff):
     def __init__(self, main_window):
         super().__init__()
         self.window = main_window
-        self.task = subtasks.tasks_list["Cutoff"]["Description"]
+        self.task = sub_tasks.tasks_list["Cutoff"]["Description"]
         self.image = "cutoff.png"
 
     def collector(self):
-        """Recolecta los datos de la subtarea ingresados por el usuario"""
+        """Recolecta los datos de la sub tarea ingresados por el usuario"""
 
         data = {
             "Dia": self.tbx_dia.text(),
             "Cfr": self.tbx_cfr.text(),
-            "Lgt": self.window.current_part_lenght,
+            "Lgt": self.window.current_part_length,
             "Chk": self.window.current_chuck_position,
             "Cof": self.window.current_cutoff_tool,
             "Blk": False,
@@ -103,7 +103,7 @@ class Cutoff(Subtask, Ui_frm_cutoff):
             list: Lista de líneas de tape
         """
 
-        data["Lgt"] = self.current_part_lenght
+        data["Lgt"] = self.current_part_length
         data["Chk"] = self.current_chuck_position
         data["Cof"] = self.current_cutoff_tool
 

@@ -1,7 +1,7 @@
 from PySide6.QtWidgets import QMainWindow
 
 from main import *
-from tools import subtasks
+from tools import sub_tasks
 from tools.formatting import *
 from tools.config_list import *
 from tools.validations import *
@@ -10,10 +10,10 @@ from tools.main_window import *
 from tools.default_data import *
 from tools.message_boxes import *
 from tools.prefab_blocks import *
-from tools.combobox_lists import *
+from tools.combo_box_lists import *
 from tools.file_management import *
 
-from subtasks.subtask import Subtask
+from subtasks.sub_task import Subtask
 from subtasks.generators.radial_turn_gen import radial_turn_gen
 from interfaces.ui_radial_turn import Ui_frm_radial_turn
 
@@ -22,7 +22,7 @@ class Radial_turn(Subtask, Ui_frm_radial_turn):
     def __init__(self, main_window):
         super().__init__()
         self.window = main_window
-        self.task = subtasks.tasks_list["Radial_turn"]["Description"]
+        self.task = sub_tasks.tasks_list["Radial_turn"]["Description"]
         self.image = "radial_turn.png"
 
         self.btn_switch.clicked.connect(
@@ -34,7 +34,7 @@ class Radial_turn(Subtask, Ui_frm_radial_turn):
         self.cbx_sde.setCurrentText(self.window.current_side)
 
     def collector(self):
-        """Recolecta los datos de la subtarea ingresados por el usuario"""
+        """Recolecta los datos de la sub tarea ingresados por el usuario"""
 
         data = {
             "Xin": self.tbx_xin.text(),

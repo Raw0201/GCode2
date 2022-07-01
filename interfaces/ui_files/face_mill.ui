@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>frm_subrutine</class>
- <widget class="QMainWindow" name="frm_subrutine">
+ <class>frm_face_mill</class>
+ <widget class="QMainWindow" name="frm_face_mill">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
     <width>210</width>
-    <height>180</height>
+    <height>580</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -19,13 +19,13 @@
   <property name="minimumSize">
    <size>
     <width>210</width>
-    <height>180</height>
+    <height>580</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
     <width>210</width>
-    <height>180</height>
+    <height>580</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -202,7 +202,6 @@ QStatusBar QLabel {
   /* Fixes Spyder #9120, #9121 */
   background: transparent;
 }
-
 
 /* QGroupBox --------------------------------------------------------------
 
@@ -2155,7 +2154,7 @@ PlotWidget {
       <x>10</x>
       <y>10</y>
       <width>190</width>
-      <height>160</height>
+      <height>560</height>
      </rect>
     </property>
     <property name="sizePolicy">
@@ -2167,13 +2166,13 @@ PlotWidget {
     <property name="minimumSize">
      <size>
       <width>190</width>
-      <height>160</height>
+      <height>560</height>
      </size>
     </property>
     <property name="maximumSize">
      <size>
       <width>190</width>
-      <height>160</height>
+      <height>560</height>
      </size>
     </property>
     <property name="frameShape">
@@ -2182,10 +2181,10 @@ PlotWidget {
     <property name="frameShadow">
      <enum>QFrame::Raised</enum>
     </property>
-    <widget class="QLineEdit" name="tbx_sub">
+    <widget class="QLineEdit" name="tbx_wdt">
      <property name="geometry">
       <rect>
-       <x>13</x>
+       <x>10</x>
        <y>30</y>
        <width>170</width>
        <height>26</height>
@@ -2204,7 +2203,7 @@ PlotWidget {
       </size>
      </property>
      <property name="toolTip">
-      <string>Digite el número de subrutina</string>
+      <string>Digite la dimensión total del espesor de las caras</string>
      </property>
      <property name="statusTip">
       <string/>
@@ -2216,7 +2215,7 @@ PlotWidget {
       <string/>
      </property>
     </widget>
-    <widget class="QLabel" name="lbl_sub">
+    <widget class="QLabel" name="lbl_wdt">
      <property name="enabled">
       <bool>true</bool>
      </property>
@@ -2224,41 +2223,22 @@ PlotWidget {
       <rect>
        <x>15</x>
        <y>10</y>
-       <width>62</width>
+       <width>114</width>
        <height>26</height>
       </rect>
      </property>
      <property name="text">
-      <string>Subrutina</string>
+      <string>Espesor de las caras</string>
      </property>
      <property name="buddy">
-      <cstring>lbl_sub</cstring>
-     </property>
-    </widget>
-    <widget class="QLabel" name="lbl_rep">
-     <property name="enabled">
-      <bool>true</bool>
-     </property>
-     <property name="geometry">
-      <rect>
-       <x>15</x>
-       <y>60</y>
-       <width>142</width>
-       <height>26</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Cantidad de repeticiones</string>
-     </property>
-     <property name="buddy">
-      <cstring>lbl_rep</cstring>
+      <cstring>lbl_wdt</cstring>
      </property>
     </widget>
     <widget class="QPushButton" name="btn_save">
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>130</y>
+       <y>530</y>
        <width>171</width>
        <height>24</height>
       </rect>
@@ -2291,10 +2271,160 @@ PlotWidget {
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QLineEdit" name="tbx_rep">
+    <widget class="QLabel" name="lbl_dyr">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
      <property name="geometry">
       <rect>
-       <x>13</x>
+       <x>15</x>
+       <y>310</y>
+       <width>129</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Dirección de los cortes</string>
+     </property>
+     <property name="buddy">
+      <cstring>lbl_dyr</cstring>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="cbx_dyr">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>330</y>
+       <width>170</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>170</width>
+       <height>26</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>170</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="toolTip">
+      <string>Seleccione la dirección de los cortes</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="tbx_mat">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>180</y>
+       <width>170</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>170</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>170</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="toolTip">
+      <string>Digite la dimensión del diámetro de la punta sin maquinar</string>
+     </property>
+     <property name="statusTip">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="placeholderText">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lbl_mat">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>15</x>
+       <y>160</y>
+       <width>120</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Diámetro de la punta</string>
+     </property>
+     <property name="buddy">
+      <cstring>lbl_wdt</cstring>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="tbx_fed">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>230</y>
+       <width>170</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>170</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>170</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="toolTip">
+      <string>Digite la velocidad de avance de corte</string>
+     </property>
+     <property name="statusTip">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="placeholderText">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lbl_fed">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>15</x>
+       <y>210</y>
+       <width>95</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Avance de corte</string>
+     </property>
+     <property name="buddy">
+      <cstring>lbl_wdt</cstring>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="tbx_lgt">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
        <y>80</y>
        <width>170</width>
        <height>26</height>
@@ -2313,7 +2443,157 @@ PlotWidget {
       </size>
      </property>
      <property name="toolTip">
-      <string>Digite la cantidad de repeticiones</string>
+      <string>Digite la dimensión de la longitud de la cara</string>
+     </property>
+     <property name="statusTip">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="placeholderText">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lbl_lgt">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>15</x>
+       <y>60</y>
+       <width>113</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Longitud de la cara</string>
+     </property>
+     <property name="buddy">
+      <cstring>lbl_wdt</cstring>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="cbx_pos">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>380</y>
+       <width>170</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>170</width>
+       <height>26</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>170</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="toolTip">
+      <string>Seleccione la posición de la cara plana</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lbl_pos">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>15</x>
+       <y>360</y>
+       <width>110</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Posición de la cara</string>
+     </property>
+     <property name="buddy">
+      <cstring>lbl_dyr</cstring>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lbl_cut">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>15</x>
+       <y>260</y>
+       <width>127</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Profundidad por corte</string>
+     </property>
+     <property name="buddy">
+      <cstring>lbl_dyr</cstring>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="tbx_cut">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>280</y>
+       <width>170</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>170</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>170</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="toolTip">
+      <string>Digite la dimensión de la profundidad por corte</string>
+     </property>
+     <property name="statusTip">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="placeholderText">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="tbx_tcm">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>430</y>
+       <width>170</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>170</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>170</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="toolTip">
+      <string>Digite la dimensión de la compensación en el eje transversal (ancho)</string>
      </property>
      <property name="statusTip">
       <string/>
@@ -2328,11 +2608,155 @@ PlotWidget {
       <string/>
      </property>
     </widget>
-    <zorder>tbx_sub</zorder>
-    <zorder>lbl_sub</zorder>
+    <widget class="QLabel" name="lbl_tcm">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>15</x>
+       <y>410</y>
+       <width>150</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Compensación transversal</string>
+     </property>
+     <property name="buddy">
+      <cstring>lbl_wdt</cstring>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="tbx_lcm">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>480</y>
+       <width>170</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>170</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>170</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="toolTip">
+      <string>Digite la dimensión de la compensación en el eje longitudinal (largo)</string>
+     </property>
+     <property name="statusTip">
+      <string/>
+     </property>
+     <property name="text">
+      <string>0</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="placeholderText">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lbl_lcm">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>15</x>
+       <y>460</y>
+       <width>158</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Compensación longitudinal</string>
+     </property>
+     <property name="buddy">
+      <cstring>lbl_wdt</cstring>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="tbx_ang">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>130</y>
+       <width>170</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>170</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>170</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="toolTip">
+      <string>Digite la dimensión del ángulo de la cara</string>
+     </property>
+     <property name="statusTip">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="placeholderText">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lbl_ang">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>15</x>
+       <y>110</y>
+       <width>103</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Ángulo de la cara</string>
+     </property>
+     <property name="buddy">
+      <cstring>lbl_wdt</cstring>
+     </property>
+    </widget>
+    <zorder>tbx_wdt</zorder>
+    <zorder>lbl_wdt</zorder>
     <zorder>btn_save</zorder>
-    <zorder>tbx_rep</zorder>
-    <zorder>lbl_rep</zorder>
+    <zorder>cbx_dyr</zorder>
+    <zorder>lbl_dyr</zorder>
+    <zorder>tbx_mat</zorder>
+    <zorder>lbl_mat</zorder>
+    <zorder>tbx_fed</zorder>
+    <zorder>lbl_fed</zorder>
+    <zorder>tbx_lgt</zorder>
+    <zorder>lbl_lgt</zorder>
+    <zorder>cbx_pos</zorder>
+    <zorder>lbl_pos</zorder>
+    <zorder>tbx_cut</zorder>
+    <zorder>lbl_cut</zorder>
+    <zorder>tbx_tcm</zorder>
+    <zorder>lbl_tcm</zorder>
+    <zorder>tbx_lcm</zorder>
+    <zorder>lbl_lcm</zorder>
+    <zorder>tbx_ang</zorder>
+    <zorder>lbl_ang</zorder>
    </widget>
    <widget class="QToolButton" name="btn_help">
     <property name="geometry">
@@ -2369,8 +2793,16 @@ PlotWidget {
   </widget>
  </widget>
  <tabstops>
-  <tabstop>tbx_sub</tabstop>
-  <tabstop>tbx_rep</tabstop>
+  <tabstop>tbx_wdt</tabstop>
+  <tabstop>tbx_lgt</tabstop>
+  <tabstop>tbx_ang</tabstop>
+  <tabstop>tbx_mat</tabstop>
+  <tabstop>tbx_fed</tabstop>
+  <tabstop>tbx_cut</tabstop>
+  <tabstop>cbx_dyr</tabstop>
+  <tabstop>cbx_pos</tabstop>
+  <tabstop>tbx_tcm</tabstop>
+  <tabstop>tbx_lcm</tabstop>
   <tabstop>btn_save</tabstop>
   <tabstop>btn_help</tabstop>
  </tabstops>

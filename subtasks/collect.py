@@ -1,7 +1,7 @@
 from PySide6.QtWidgets import QMainWindow
 
 from main import *
-from tools import subtasks
+from tools import sub_tasks
 from tools.formatting import *
 from tools.config_list import *
 from tools.validations import *
@@ -10,10 +10,10 @@ from tools.main_window import *
 from tools.default_data import *
 from tools.message_boxes import *
 from tools.prefab_blocks import *
-from tools.combobox_lists import *
+from tools.combo_box_lists import *
 from tools.file_management import *
 
-from subtasks.subtask import Subtask
+from subtasks.sub_task import Subtask
 from subtasks.generators.collect_gen import collect_gen
 from interfaces.ui_collect import Ui_frm_collect
 
@@ -22,13 +22,13 @@ class Collect(Subtask, Ui_frm_collect):
     def __init__(self, main_window):
         super().__init__()
         self.window = main_window
-        self.task = subtasks.tasks_list["Collect"]["Description"]
+        self.task = sub_tasks.tasks_list["Collect"]["Description"]
         self.image = "collect.png"
 
         self.cbx_clt.addItems(collect_modes)
 
     def collector(self):
-        """Recolecta los datos de la subtarea ingresados por el usuario"""
+        """Recolecta los datos de la sub tarea ingresados por el usuario"""
 
         data = {
             "Clt": self.cbx_clt.currentText(),

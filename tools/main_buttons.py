@@ -12,7 +12,7 @@ def load_main_buttons(window: QMainWindow):
         window.btn_header,
         window.btn_free,
         window.btn_comment,
-        window.btn_subrutine,
+        window.btn_subroutine,
         window.btn_collect,
         window.btn_end,
     )
@@ -51,7 +51,7 @@ def load_main_buttons(window: QMainWindow):
         window.btn_bevel_mill,
         window.btn_facing_mill,
         window.btn_slotting_mill,
-        window.btn_concaver_mill,
+        window.btn_concave_r_mill,
     )
 
     window.drilling_buttons_list = (
@@ -114,8 +114,8 @@ def load_main_buttons_connections(window: QMainWindow):
     window.btn_comment.clicked.connect(
         lambda: collect_data(window, "Comment"),
     )
-    window.btn_subrutine.clicked.connect(
-        lambda: collect_data(window, "Subrutine")
+    window.btn_subroutine.clicked.connect(
+        lambda: collect_data(window, "Subroutine")
     )
     window.btn_collect.clicked.connect(
         lambda: collect_data(window, "Collect"),
@@ -191,4 +191,7 @@ def load_main_buttons_connections(window: QMainWindow):
     )
     window.btn_flat_mill.clicked.connect(
         lambda: collect_data(window, "Flat_mill"),
+    )
+    window.btn_face_mill.clicked.connect(
+        lambda: collect_data(window, "Face_mill"),
     )

@@ -5,7 +5,7 @@ from PySide6.QtCore import QLibraryInfo, QTranslator
 from PySide6.QtWidgets import QApplication, QMainWindow
 
 from tools.widgets import *
-from tools.subtasks import *
+from tools.sub_tasks import *
 from tools.directories import *
 from tools.menu_actions import *
 from tools.main_buttons import *
@@ -27,7 +27,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         load_constant_data(self)
         load_default_tape_conditions(self)
         load_default_machining_data(self)
-        load_default_subrutine_data(self)
+        load_default_subroutine_data(self)
 
         # ? Botones y acciones de la pantalla principal *
         # ? ----------------------------------------------------------------- *

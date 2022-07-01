@@ -1,0 +1,17 @@
+{
+    "python.formatting.provider": "black",
+    "cSpell.words": [
+        "csink",
+        "Csink",
+        "Digite",
+        "fnum",
+        "fspace",
+        "HARDINGE",
+        "MAZAK",
+        "OMNITURN",
+        "Pixmap",
+        "ROMI",
+        "Subrut",
+        "ttype"
+    ]
+}

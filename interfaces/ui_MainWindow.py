@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'MainWindowxAZgby.ui'
+## Form generated from reading UI file 'MainWindowqGktxZ.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.1.1
 ##
@@ -2472,7 +2472,7 @@ class Ui_MainWindow(object):
         sizePolicy3.setVerticalStretch(0)
         sizePolicy3.setHeightForWidth(self.dock_functions.sizePolicy().hasHeightForWidth())
         self.dock_functions.setSizePolicy(sizePolicy3)
-        self.dock_functions.setMinimumSize(QSize(191, 856))
+        self.dock_functions.setMinimumSize(QSize(191, 858))
         self.dock_functions.setMaximumSize(QSize(524287, 1200))
         self.dock_functions.setStyleSheet(u"")
         self.dockWidgetContents = QWidget()
@@ -2574,12 +2574,12 @@ class Ui_MainWindow(object):
         self.gridLayout.setHorizontalSpacing(3)
         self.gridLayout.setVerticalSpacing(5)
         self.gridLayout.setContentsMargins(1, 10, 1, 1)
-        self.btn_subrutine = QPushButton(self.groupBox_program)
-        self.btn_subrutine.setObjectName(u"btn_subrutine")
-        sizePolicy3.setHeightForWidth(self.btn_subrutine.sizePolicy().hasHeightForWidth())
-        self.btn_subrutine.setSizePolicy(sizePolicy3)
+        self.btn_subroutine = QPushButton(self.groupBox_program)
+        self.btn_subroutine.setObjectName(u"btn_subroutine")
+        sizePolicy3.setHeightForWidth(self.btn_subroutine.sizePolicy().hasHeightForWidth())
+        self.btn_subroutine.setSizePolicy(sizePolicy3)
 
-        self.gridLayout.addWidget(self.btn_subrutine, 3, 0, 1, 1)
+        self.gridLayout.addWidget(self.btn_subroutine, 3, 0, 1, 1)
 
         self.btn_collect = QPushButton(self.groupBox_program)
         self.btn_collect.setObjectName(u"btn_collect")
@@ -2773,10 +2773,10 @@ class Ui_MainWindow(object):
 
         self.gridLayout_7.addWidget(self.btn_face_mill, 3, 0, 1, 1)
 
-        self.btn_concaver_mill = QPushButton(self.groupBox_mill_cycles)
-        self.btn_concaver_mill.setObjectName(u"btn_concaver_mill")
+        self.btn_concave_r_mill = QPushButton(self.groupBox_mill_cycles)
+        self.btn_concave_r_mill.setObjectName(u"btn_concave_r_mill")
 
-        self.gridLayout_7.addWidget(self.btn_concaver_mill, 7, 0, 1, 1)
+        self.gridLayout_7.addWidget(self.btn_concave_r_mill, 7, 0, 1, 1)
 
         self.btn_slotting_mill = QPushButton(self.groupBox_mill_cycles)
         self.btn_slotting_mill.setObjectName(u"btn_slotting_mill")
@@ -2913,8 +2913,8 @@ class Ui_MainWindow(object):
         QWidget.setTabOrder(self.btn_face_mill, self.btn_bevel_mill)
         QWidget.setTabOrder(self.btn_bevel_mill, self.btn_facing_mill)
         QWidget.setTabOrder(self.btn_facing_mill, self.btn_slotting_mill)
-        QWidget.setTabOrder(self.btn_slotting_mill, self.btn_concaver_mill)
-        QWidget.setTabOrder(self.btn_concaver_mill, self.btn_center)
+        QWidget.setTabOrder(self.btn_slotting_mill, self.btn_concave_r_mill)
+        QWidget.setTabOrder(self.btn_concave_r_mill, self.btn_center)
         QWidget.setTabOrder(self.btn_center, self.btn_drill)
         QWidget.setTabOrder(self.btn_drill, self.btn_csink)
         QWidget.setTabOrder(self.btn_csink, self.btn_platter_data)
@@ -2995,7 +2995,7 @@ class Ui_MainWindow(object):
         self.dock_functions.dockLocationChanged.connect(self.dock_functions.update)
 
         self.tabWidget_principal.setCurrentIndex(0)
-        self.tabWidget_functions.setCurrentIndex(0)
+        self.tabWidget_functions.setCurrentIndex(2)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -3398,12 +3398,12 @@ class Ui_MainWindow(object):
         self.btn_tool_close.setText(QCoreApplication.translate("MainWindow", u"Cerrar &herramienta", None))
         self.groupBox_program.setTitle(QCoreApplication.translate("MainWindow", u"Programa", None))
 #if QT_CONFIG(tooltip)
-        self.btn_subrutine.setToolTip(QCoreApplication.translate("MainWindow", u"Llama la subrutina dentro del programa principal", None))
+        self.btn_subroutine.setToolTip(QCoreApplication.translate("MainWindow", u"Llama la subrutina dentro del programa principal", None))
 #endif // QT_CONFIG(tooltip)
 #if QT_CONFIG(statustip)
-        self.btn_subrutine.setStatusTip(QCoreApplication.translate("MainWindow", u"Llama la subrutina dentro del programa principal", None))
+        self.btn_subroutine.setStatusTip(QCoreApplication.translate("MainWindow", u"Llama la subrutina dentro del programa principal", None))
 #endif // QT_CONFIG(statustip)
-        self.btn_subrutine.setText(QCoreApplication.translate("MainWindow", u"Llamar s&ubrutina", None))
+        self.btn_subroutine.setText(QCoreApplication.translate("MainWindow", u"Llamar s&ubrutina", None))
 #if QT_CONFIG(tooltip)
         self.btn_collect.setToolTip(QCoreApplication.translate("MainWindow", u"Activar el proceso de recolecci\u00f3n de la pieza", None))
 #endif // QT_CONFIG(tooltip)
@@ -3551,12 +3551,12 @@ class Ui_MainWindow(object):
 #endif // QT_CONFIG(statustip)
         self.btn_face_mill.setText(QCoreApplication.translate("MainWindow", u"Caras", None))
 #if QT_CONFIG(tooltip)
-        self.btn_concaver_mill.setToolTip(QCoreApplication.translate("MainWindow", u"Realizar un mecanizado de ch\u00f3cola", None))
+        self.btn_concave_r_mill.setToolTip(QCoreApplication.translate("MainWindow", u"Realizar un mecanizado de ch\u00f3cola", None))
 #endif // QT_CONFIG(tooltip)
 #if QT_CONFIG(statustip)
-        self.btn_concaver_mill.setStatusTip(QCoreApplication.translate("MainWindow", u"Realizar un mecanizado de ch\u00f3cola", None))
+        self.btn_concave_r_mill.setStatusTip(QCoreApplication.translate("MainWindow", u"Realizar un mecanizado de ch\u00f3cola", None))
 #endif // QT_CONFIG(statustip)
-        self.btn_concaver_mill.setText(QCoreApplication.translate("MainWindow", u"Ch\u00f3cola", None))
+        self.btn_concave_r_mill.setText(QCoreApplication.translate("MainWindow", u"Ch\u00f3cola", None))
 #if QT_CONFIG(tooltip)
         self.btn_slotting_mill.setToolTip(QCoreApplication.translate("MainWindow", u"Realizar un mecanizado de ranurado", None))
 #endif // QT_CONFIG(tooltip)

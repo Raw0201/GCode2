@@ -1,7 +1,7 @@
 from tools.formatting import *
 
 
-def subrutine_gen(machine: str, data: list) -> list:
+def subroutine_gen(machine: str, data: list) -> list:
     """Genera las líneas de tape
 
     Args:

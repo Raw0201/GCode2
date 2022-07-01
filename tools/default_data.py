@@ -69,7 +69,7 @@ def load_default_machining_data(window: QMainWindow):
 
     window.current_sequence_number = 0
     window.current_bar_diameter = 0
-    window.current_part_lenght = 0
+    window.current_part_length = 0
     window.current_chuck_position = 0
     window.current_cutoff_tool = ""
     window.current_tool = 0
@@ -89,22 +89,22 @@ def load_default_machining_data(window: QMainWindow):
     window.first_zps = None
 
 
-def load_default_subrutine_data(window: QMainWindow):
+def load_default_subroutine_data(window: QMainWindow):
     """Carga los valores por defecto de datos de subrutina
 
     Args:
         window (QMainWindow): Ventana principal
     """
 
-    window.current_subrutine = 0
+    window.current_subroutine = 0
     window.current_main_program = ""
     window.platter_data = []
-    window.subrutine_tool = 0
-    window.subrutine_tool_diameter = 0
-    window.subrutine_comment = ""
-    window.last_subrutine_number = 3999
-    window.subrutine_machine = ""
-    window.subrutine_folder = ""
+    window.subroutine_tool = 0
+    window.subroutine_tool_diameter = 0
+    window.subroutine_comment = ""
+    window.last_subroutine_number = 3999
+    window.subroutine_machine = ""
+    window.subroutine_folder = ""
 
 
 def load_default_window_components(window: QMainWindow):

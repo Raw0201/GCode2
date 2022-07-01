@@ -1,7 +1,7 @@
 from PySide6.QtWidgets import QMainWindow
 
 from main import *
-from tools import subtasks
+from tools import sub_tasks
 from tools.formatting import *
 from tools.config_list import *
 from tools.validations import *
@@ -10,10 +10,10 @@ from tools.main_window import *
 from tools.default_data import *
 from tools.message_boxes import *
 from tools.prefab_blocks import *
-from tools.combobox_lists import *
+from tools.combo_box_lists import *
 from tools.file_management import *
 
-from subtasks.subtask import Subtask
+from subtasks.sub_task import Subtask
 from subtasks.generators.header_sub_gen import header_sub_gen
 from interfaces.ui_header_sub import Ui_frm_header_sub
 
@@ -22,22 +22,22 @@ class Header_sub(Subtask, Ui_frm_header_sub):
     def __init__(self, main_window):
         super().__init__()
         self.window = main_window
-        self.task = subtasks.tasks_list["Header_sub"]["Description"]
+        self.task = sub_tasks.tasks_list["Header_sub"]["Description"]
         self.image = "header.png"
 
     def collector(self):
-        """Recolecta los datos de la subtarea ingresados por el usuario"""
+        """Recolecta los datos de la sub tarea ingresados por el usuario"""
 
         data = {
             "Pgr": self.tbx_pgr.text(),
             "Mnp": self.tbx_mnp.text(),
             "Dsc": self.tbx_dsc.text(),
             "Plt": self.window.platter_data,
-            "Tol": self.window.subrutine_tool,
-            "Typ": self.window.subrutine_tool_type,
-            "Dia": self.window.subrutine_tool_diameter,
-            "Spc": self.window.subrutine_tool_specification,
-            "Mch": self.window.subrutine_machine,
+            "Tol": self.window.subroutine_tool,
+            "Typ": self.window.subroutine_tool_type,
+            "Dia": self.window.subroutine_tool_diameter,
+            "Spc": self.window.subroutine_tool_specification,
+            "Mch": self.window.subroutine_machine,
         }
         self.validator(data)
 

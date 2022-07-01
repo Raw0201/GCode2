@@ -458,7 +458,7 @@ def update_data(window: QMainWindow):
     window.modified_task = False
 
 
-def subrutine_prep(window: QMainWindow):
+def subroutine_prep(window: QMainWindow):
     """Verifica si se ha seleccionado una subrutina
 
     Args:
@@ -470,11 +470,11 @@ def subrutine_prep(window: QMainWindow):
     with contextlib.suppress(KeyError, IndexError):
         if window.config_list[index][1]["Sub"]:
             save_config(window)
-            load_subrutine_data(window, index)
-            search_subrutine(window)
+            load_subroutine_data(window, index)
+            search_subroutine(window)
 
 
-def load_subrutine_data(window: QMainWindow, index: int):
+def load_subroutine_data(window: QMainWindow, index: int):
     """Carga los datos para la subrutina
 
     Args:
@@ -482,22 +482,22 @@ def load_subrutine_data(window: QMainWindow, index: int):
         index (int): Ubicación de la subrutina en la lista de tapes
     """
 
-    window.current_subrutine = window.config_list[index][1]["Sub"]
+    window.current_subroutine = window.config_list[index][1]["Sub"]
     window.current_main_program = window.main_tape_number
-    window.subrutine_machine = window.current_machine
-    window.subrutine_folder = window.current_folder
+    window.subroutine_machine = window.current_machine
+    window.subroutine_folder = window.current_folder
 
     for line in window.tape1_list:
-        window.subrutine_tool = line[2]
-        window.subrutine_tool_type = line[3]
-        window.subrutine_tool_diameter = line[4]
-        window.subrutine_tool_specification = line[5]
-        window.subrutine_comment = line[6]
+        window.subroutine_tool = line[2]
+        window.subroutine_tool_type = line[3]
+        window.subroutine_tool_diameter = line[4]
+        window.subroutine_tool_specification = line[5]
+        window.subroutine_comment = line[6]
         while line[0] == index:
             break
 
 
-def search_subrutine(window: QMainWindow):
+def search_subroutine(window: QMainWindow):
     """Busca o crea la subrutina
 
     Args:
@@ -505,19 +505,19 @@ def search_subrutine(window: QMainWindow):
     """
 
     try:
-        subrutine = f"{window.current_subrutine}.json"
+        subroutine = f"{window.current_subroutine}.json"
         machine = window.current_machine
         if machine in {"B12", "A16", "K16", "E16"}:
-            subrutine = f"({machine}) {subrutine}"
-        with open(subrutine) as file:
-            load_subrutine(window, file)
+            subroutine = f"({machine}) {subroutine}"
+        with open(subroutine) as file:
+            load_subroutine(window, file)
     except FileNotFoundError:
-        dialog = new_subrutine_question(window)
+        dialog = new_subroutine_question(window)
         if dialog == QMessageBox.Yes:
-            create_subrutine(window)
+            create_subroutine(window)
 
 
-def load_subrutine(window: QMainWindow, file: str):
+def load_subroutine(window: QMainWindow, file: str):
     """Carga una subrutina existente
 
     Args:
@@ -530,10 +530,10 @@ def load_subrutine(window: QMainWindow, file: str):
     description = window.config_list[0][1]["Dsc"]
     window.config_list[0] = prefab_sub_header(window, description)
     window.save_required = False
-    update_after_subrutine(window)
+    update_after_subroutine(window)
 
 
-def create_subrutine(window: QMainWindow):
+def create_subroutine(window: QMainWindow):
     """Crea una subrutina nueva
 
     Args:
@@ -543,12 +543,12 @@ def create_subrutine(window: QMainWindow):
     create_new_tape(window)
     description = ""
     window.config_list = [prefab_sub_header(window, description)]
-    window.config_list.append(prefab_comment(window.subrutine_comment, "$1"))
+    window.config_list.append(prefab_comment(window.subroutine_comment, "$1"))
     window.save_required = True
-    update_after_subrutine(window)
+    update_after_subroutine(window)
 
 
-def update_after_subrutine(window: QMainWindow):
+def update_after_subroutine(window: QMainWindow):
     """Actualiza las ventanas después de la carga de subrutina
 
     Args:
@@ -557,18 +557,18 @@ def update_after_subrutine(window: QMainWindow):
 
     update_data(window)
     load_main_title(window)
-    window.current_folder = window.subrutine_folder
+    window.current_folder = window.subroutine_folder
     os.chdir(window.current_folder)
 
 
 def return_to(window: QMainWindow):
-    """Regresa al programa raiz de la subrutina
+    """Regresa al programa raíz de la subrutina
 
     Args:
         window (QMainWindow): Ventana principal
     """
 
-    subrutine = window.config_list[0][1]["Pgr"]
+    subroutine = window.config_list[0][1]["Pgr"]
 
     with contextlib.suppress(KeyError):
         previous_program = window.config_list[0][1]["Mnp"]
@@ -579,23 +579,23 @@ def return_to(window: QMainWindow):
             program = f"{previous_program}.json"
             with open(program) as file:
                 window.config_list = json.load(file)
-                update_after_subrutine(window)
-                find_subrutine(window, subrutine)
+                update_after_subroutine(window)
+                find_subroutine(window, subroutine)
         except FileNotFoundError:
             file_open_error(window)
 
 
-def find_subrutine(window: QMainWindow, subrutine: str):
+def find_subroutine(window: QMainWindow, subroutine: str):
     """Selecciona la posición de la subrutina seleccionada
 
     Args:
         window (QMainWindow): Ventana principal
-        subrutine (str): Subrutina seleccionada
+        subroutine (str): Subrutina seleccionada
     """
 
     for num, line in enumerate(window.config_list):
         with contextlib.suppress(KeyError):
-            while line[1]["Sub"] == subrutine:
+            while line[1]["Sub"] == subroutine:
                 window.current_selection = [num]
                 update_config_widget_selection(window)
                 update_tape1_widget_selection(window)

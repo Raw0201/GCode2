@@ -17,7 +17,7 @@ def new_tape_question(self) -> QMessageBox:
     )
 
 
-def new_subrutine_question(self) -> QMessageBox:
+def new_subroutine_question(self) -> QMessageBox:
     """Mensaje de creación de nueva subrutina
 
     Returns:

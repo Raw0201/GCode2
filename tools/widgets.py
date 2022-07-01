@@ -94,7 +94,7 @@ def update_config_widget_selection(window: QMainWindow):
 
 
 def update_tape1_widget_selection(window: QMainWindow):
-    """Actualiza la seleccion de items en el widget de tape1
+    """Actualiza la selección de items en el widget de tape1
 
     Args:
         window (QMainWindow): Ventana principal
@@ -117,7 +117,7 @@ def update_tape1_widget_selection(window: QMainWindow):
 
 
 def update_tape2_widget_selection(window: QMainWindow):
-    """Actualiza la seleccion de items en el widget de tape2
+    """Actualiza la selección de items en el widget de tape2
 
     Args:
         window (QMainWindow): Ventana principal
